@@ -8,6 +8,7 @@
 - Built with Linaro 2014.09 gcc 4.9.2
 - CM : Change install method from boot.img to zImage. So better compatibility.
 - CM : Built on recently CM sources.
+- CM : OTG Support. (Just for testing...)
 - SPARSEMEM kernel option fixed.
 - Coretex-A15 memcopy optimized
 - memutils: memcpy, memmove, copy_page optimized

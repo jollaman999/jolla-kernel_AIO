@@ -8,6 +8,7 @@
 - Linaro 2014.09 gcc 4.9.2 로 빌드
 - CM : 기존 boot.img 설치방식에서 zImage 설치 방식으로 전환하여 호환성 강화
 - CM: 최신 CM 소스에서 빌드
+- CM : OTG 기능 추가 (테스트 용..)
 - SPARSEMEM 커널 옵션 수정
 - Coretex-A15 memcopy 최적화
 - memutils: memcpy, memmove, copy_page 최적화
