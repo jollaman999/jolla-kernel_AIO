@@ -1,0 +1,768 @@
+﻿########################################################## AROMA CONFIG ##########################################################
+
+##
+# Fix Colorspace Issue
+# You can use one of following values:
+#   "rgba", "abgr", "argb", "bgra"
+
+ini_set("force_colorspace","rgba");
+
+
+##
+# Initializing Information
+#
+
+ini_set("rom_name",             "jolla-kernel");
+ini_set("rom_version",          "v11.1");
+ini_set("rom_author",           "jollaman999");
+ini_set("rom_device",           "LG Optimus G");
+ini_set("rom_date",             "Oct 5, 2014");
+
+
+##
+# Show Simple Splash
+#
+
+splash(
+  #-- Duration 2000ms / 2 seconds
+    2000,
+  
+  #-- <AROMA Resource Dir>/jolla-kernel.png
+    "jolla-kernel"
+);
+
+
+##
+# Font Selection
+#
+
+fontresload( "0", "ttf/Roboto-Regular.ttf;ttf/DroidSansArabic.ttf;ttf/DroidSansFallback.ttf;", "12" ); #-- Use sets of font (Font Family)
+
+##
+# SHOW LANGUAGE SELECTION
+#
+
+selectbox(
+  #-- Title
+    "Select Language",
+  
+  #-- Sub Title
+    "Please select installer language that you want to use while Installing ROM",
+  
+  #-- Icon:
+    "@default",
+  
+  #-- Will be saved in /tmp/aroma/lang.prop
+    "lang.prop",
+  
+    "한국어",        "jolla-kernel 설치를 환영합니다.",                                 1,     #-- selected.0 = 1
+    "English",     "Welcome to jolla-kernel Installation",                     0      #-- selected.0 = 2
+);
+
+##
+# SET LANGUAGE & FONT FAMILY
+#
+
+if prop("lang.prop","selected.0")=="1" then
+  loadlang("langs/ko.lang");
+  fontresload( "0", "ttf/DroidSansFallback.ttf;ttf/Roboto-Regular.ttf", "12" ); #-- "0" = Small Font ( Look at Fonts & UNICODE Demo Below )
+  fontresload( "1", "ttf/DroidSansFallback.ttf;ttf/Roboto-Regular.ttf", "18" ); #-- "1" = Big Font
+endif;
+
+if prop("lang.prop","selected.0")=="2" then
+  loadlang("langs/en.lang");
+  fontresload( "0", "ttf/Roboto-Regular.ttf", "12" ); #-- "0" = Small Font ( Look at Fonts & UNICODE Demo Below )
+  fontresload( "1", "ttf/Roboto-Regular.ttf", "18" ); #-- "1" = Big Font
+endif;
+
+##
+# SET THEME
+#
+
+theme("xNXT");
+
+##
+#   SHOW ROM/Mod INFORMATION
+#
+
+viewbox(
+  #-- Title
+    "<~welcome.title>",
+  
+  #-- Text
+    "<~welcome.text1>"+
+	  "\n\n"+
+    
+    "<~welcome.text2>\n\n"+
+	
+    "  <~welcome.version>\t: <b><#selectbg_g>"+ini_get("rom_version")+"</#></b>\n"+
+	  "  <~welcome.updated>\t: <b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n\n\n"+
+
+    "<~welcome.next>",
+  
+  #-- Icon
+    "@welcome"
+);
+
+##
+# LICENSE
+#
+
+if prop("lang.prop","selected.0")=="1" then
+agreebox(
+  #-- Title
+    "<~terms.title>",
+  
+  #-- Subtitle / Description
+    "<~terms.desc>",
+  
+  #-- Icon:
+    "@license",
+  
+  #-- Text Content 
+  resread("license/ko.txt"),
+
+  #-- Checkbox Text
+    "<~terms.check>",
+  
+  #-- Unchecked Alert Message
+    "<~terms.confirm>"
+);
+endif;
+## endif prop("lang.prop","selected.0")=="1"
+
+if prop("lang.prop","selected.0")=="2" then
+agreebox(
+  #-- Title
+    "<~terms.title>",
+  
+  #-- Subtitle / Description
+    "<~terms.desc>",
+  
+  #-- Icon:
+    "@license",
+  
+  #-- Text Content 
+  resread("license/en.txt"),
+
+  #-- Checkbox Text
+    "<~terms.check>",
+  
+  #-- Unchecked Alert Message
+    "<~terms.confirm>"
+);
+endif;
+## endif prop("lang.prop","selected.0")=="2"
+
+
+##
+# MAIN MENU- INSTALLER n MISC
+#
+menubox(
+  #-- Title
+    "<~main.title>",
+  
+  #-- Sub Title
+    "<~main.subtutle>",
+  
+  #-- Icon
+    "@apps",
+    
+  #-- Will be saved in /tmp/aroma/menu.prop
+    "menu.prop",
+    
+     #-------------------------+-----------------[ Menubox Items ]-------------------------+---------------#
+     # TITLE                   |  SUBTITLE                                                 |   Item Icons  #
+     #-------------------------+-----------------------------------------------------------+---------------#	
+	
+    "<~main.inst>",              "<~main.instdesc>",                                           "@install",      #-- selected = 1
+    "<~main.sysinfo>",           "<~main.sysinfodesc>",                                        "@info",         #-- selected = 2
+    "<~main.changelog>",         "<~main.changelogdesc>",                                      "@agreement",    #-- selected = 3
+    "<~main.quit>",              "<~main.quitdesc>",                                           "@install"       #-- selected = 4
+
+);
+
+##
+# System Info 
+#
+
+if prop("menu.prop","selected")=="2" then
+
+  #-- Show Please Wait
+  pleasewait("<~sysinfo.wait>");
+
+  #-- Fetch System Information
+  setvar(
+    #-- Variable Name
+      "sysinfo",
+    
+    #-- Variable Value
+      "<@center><b>"+"<~sysinfo.maintext>"+"</b></@>\n\n"+
+      
+      "<~sysinfo.device>"+"\t\t: <#469>"+"LG Optimus G"+"</#>\n"+
+      "<~sysinfo.board>"+"\t\t: <#469>"+"msm8960"+"</#>\n"+
+      "<~sysinfo.manufac>"+"\t\t: <#469>"+"LG Electronics"+"</#>\n"+
+	  
+	  "\n"+
+	  
+      "<~sysinfo.system>"+"\t: <b><#selectbg_g>"+getdisksize("/system","m")+" MB</#></b>\n"+
+        "\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/system","m")+" MB</#></b>\n\n"+
+      "<~sysinfo.data>"+"\t: <b><#selectbg_g>"+getdisksize("/data","m")+" MB</#></b>\n"+
+        "\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/data","m")+" MB</#></b>\n\n"+
+      "<~sysinfo.sdcard>"+"\t: <b><#selectbg_g>"+getdisksize("/sdcard","m")+" MB</#></b>\n"+
+        "\tFree\t\t: <b><#selectbg_g>"+getdiskfree("/sdcard","m")+" MB</#></b>\n\n"+
+
+      ""
+  );
+  
+  #-- Show Textbox
+  textbox(
+    #-- Title
+      "<~sysinfo.title>",
+    
+    #-- Subtitle
+      "<~sysinfo.subtitle>",
+    
+    #-- Icon
+      "@info",
+    
+    #-- Text
+      getvar("sysinfo")
+  );
+  
+  #-- Show Alert
+  alert(
+    #-- Alert Title
+      "<~sysinfo.alert.title>",
+    
+    #-- Alert Text
+      "<~sysinfo.alert.text>",
+    
+    #-- Alert Icon
+      "@alert"
+  );
+  
+  #-- Back to Menu ( 2 Wizard UI to Back )
+  back("2");
+  
+endif;
+
+
+##
+# CHANGELOG DISPLAY
+#
+
+if prop("menu.prop","selected")=="3" then
+
+if prop("lang.prop","selected.0")=="1" then
+    #-- TextDialog 
+ textdialog(
+    #-- Title
+    "<~changelog.title>",
+	  #-- Text
+    resread("changelog/ko.txt"),
+    #-- Custom OK Button Text (Optional)
+    "<~changelog.exit>"
+ );
+ 
+  #-- Back to Menu ( 2 Wizard UI to Back )
+  back("1");
+endif;
+## endif prop("lang.prop","selected.0")=="1"
+
+if prop("lang.prop","selected.0")=="2" then
+    #-- TextDialog 
+ textdialog(
+    #-- Title
+    "<~changelog.title>",
+	  #-- Text
+    resread("changelog/en.txt"),
+    #-- Custom OK Button Text (Optional)
+    "<~changelog.exit>"
+ );
+ 
+  #-- Back to Menu ( 2 Wizard UI to Back )
+  back("1");
+endif;
+## endif prop("lang.prop","selected.0")=="2"
+
+endif;
+## endif prop("menu.prop","selected")=="3"
+
+
+##
+# QUIT INSTALLER
+#
+
+if prop("menu.prop","selected")=="4" then
+
+#-- Exit
+	if
+	  confirm(
+		#-- Title
+		  "<~quit.title>",
+		#-- Text
+		  "<~quit.text>",
+		#-- Icon (Optional)
+		  "@alert"
+	  )=="yes"
+	then
+	  #-- Exit 
+	  exit("");
+	endif;
+
+endif;
+
+
+##
+#  Select Type of Install
+#
+
+if prop("menu.prop","selected")=="1" then
+
+
+##
+# Sub Window 1 - Main (Install Kernel / Uninstall Multirom)
+#
+
+selectbox(
+  #-- Title
+    "<~window1.title>",
+  
+  #-- Sub Title
+    "<~window1.subtitle>",
+  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window1.prop
+    "window1.prop",
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+  
+    "<~window1.subtitle>",         "",                                                 2,      #-- Group 1. key = "selected.1"
+        "<~window1.option1>",         "<~window1.option1desc>",                              0,      #-- selected.1 = 1
+        "<~window1.option2>",         "<~window1.option2desc>",                              0,      #-- selected.1 = 2
+        "<~window1.option3>",         "<~window1.option3desc>",                              1       #-- selected.1 = 3
+
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Alert Window - Warning about Multi ROM Selection
+#
+if prop("window1.prop","selected.1")=="2" then
+  alert( "<~multirom.attention>", "<~multirom.attentiondesc>");
+endif;
+## endif - window1.prop
+
+
+
+
+
+if prop("window1.prop","selected.1")!="3" then
+
+
+
+
+
+##
+# Sub Window 2 - Rom Selection
+#
+
+selectbox(
+  #-- Title
+    "<~window2.title>",
+  
+  #-- Sub Title
+    "<~window2.subtitle>",
+  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window2.prop
+    "window2.prop",
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+  
+    "<~window2.option1>",         "",                                                 2,      #-- Group 1. key = "selected.1"
+        "<~window2.option1-1>",         "<~window2.option1-1desc>",                              1,      #-- selected.1 = 1
+        "<~window2.option1-2>",         "<~window2.option1-2desc>",                              0       #-- selected.1 = 2
+
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+
+
+
+if prop("window2.prop","selected.1")=="1" then
+
+##
+# Sub Window 2-1 - CM/AOSP Kernel Selection
+#
+
+selectbox(
+  #-- Title
+    "<~window2-1.title>",
+  
+  #-- Sub Title
+    "<~window2-1.subtitle>",
+  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window2-1.prop
+    "window2-1.prop",
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+  
+    "<~window2.option1>",         "",                                                 2,      #-- Group 1. key = "selected.1"
+        "<~window2-1.option1-1>",         "<~window2-1.option1-1desc>",                              1,      #-- selected.1 = 1
+        "<~window2-1.option1-2>",         "<~window2-1.option1-2desc>",                              0       #-- selected.1 = 2
+
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Alert Window - Warning about Kernel Selection
+#
+
+alert( "<~kernel1.attention>", "<~kernel1.attentiondesc>");
+
+##
+# Sub Window with CheckBoxes - Kernel1 Options
+#
+## multirom enabled
+if prop("window1.prop","selected.1")=="1" then
+
+checkbox(
+  # Title
+	"<~checkbox1.title>",
+  
+  # Sub Title
+	"<~checkbox1.subtitle>",
+ 
+  # Icon
+	"@update",
+  
+  # Will be saved in /tmp/aroma/checkbox1.prop
+	"checkbox1.prop",
+  
+  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+  # TITLE            |  SUBTITLE                                                 | Initial Value #
+  #------------------+-----------------------------------------------------------+---------------#
+  
+  "<~checkbox1.item1>",      "",                                                       2,      #-- group 1
+    "<~checkbox1.item1-1>",  "<~checkbox1.item1-1desc>",                               0,      #-- item.1.1
+	"<~checkbox1.item2>",      "",                                                       2,      #-- group 2
+    "<~checkbox1.item2-1>",  "<~checkbox1.item2-1desc>",                               1,      #-- item.2.1
+	"<~checkbox1.item3>",      "",                                                       2,      #-- group 3
+    "<~checkbox1.item3-1>",  "<~checkbox1.item3-1desc>",                               0       #-- item.3.1
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+);
+
+if prop("checkbox1.prop","item.3.1")=="1" then
+    alert( "<~fs.attention>", "<~fs.attentiondesc>");
+endif;
+## endif - checkbox1.prop
+if prop("checkbox1.prop","item.1.1")=="1" then
+  alert( "<~multirom.attention>", "<~multirom.attentiondesc>");
+endif;
+## endif - checkbox1.prop
+
+endif;
+## endif - window1.prop
+
+
+## multirom disabled
+if prop("window1.prop","selected.1")=="2" then
+
+checkbox(
+  # Title
+	"<~checkbox1.title>",
+  
+  # Sub Title
+	"<~checkbox1.subtitle>",
+ 
+  # Icon
+	"@update",
+  
+  # Will be saved in /tmp/aroma/checkbox1.prop
+	"checkbox1.prop",
+  
+  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+  # TITLE            |  SUBTITLE                                                 | Initial Value #
+  #------------------+-----------------------------------------------------------+---------------#
+  
+  "<~checkbox1.item1uninst>","",                                                       2,      #-- group 1
+    "<~checkbox1.item1-1>",  "<~checkbox1.item1-1desc>",                               3,      #-- item.1.1
+	"<~checkbox1.item2>",      "",                                                       2,      #-- group 2
+    "<~checkbox1.item2-1>",  "<~checkbox1.item2-1desc>",                               1,      #-- item.2.1
+	"<~checkbox1.item3>",      "",                                                       2,      #-- group 3
+    "<~checkbox1.item3-1>",  "<~checkbox1.item3-1desc>",                               0       #-- item.3.1
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+);
+
+if prop("checkbox1.prop","item.3.1")=="1" then
+    alert( "<~fs.attention>", "<~fs.attentiondesc>");
+endif;
+## endif - checkbox1.prop
+
+## multirom - second roms delete check
+checkbox(
+  # Title
+	"<~checkbox2.title>",
+  
+  # Sub Title
+	"<~checkbox2.subtitle>",
+ 
+  # Icon
+	"@update",
+  
+  # Will be saved in /tmp/aroma/checkbox2.prop
+	"checkbox2.prop",
+  
+  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+  # TITLE            |  SUBTITLE                                                 | Initial Value #
+  #------------------+-----------------------------------------------------------+---------------#
+  
+  "<~checkbox2.item1>",      "",                                                       2,      #-- group 1
+    "<~checkbox2.item1-1>",  "<~checkbox2.item1-1desc>",                               0       #-- item.1.1
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+);
+
+##
+# Alert Window - Warning about Delte Second Roms
+#
+if prop("checkbox2.prop","item.1.1")=="1" then
+  alert( "<~multidel.attention>", "<~multidel.attentiondesc>");
+endif;
+## endif - checkbox2.prop
+
+endif;
+## endif - window1.prop
+
+
+endif;
+## endif - window2-1.prop
+
+
+
+
+if prop("window2.prop","selected.1")=="2" then
+
+##
+# Sub Window 2-2 - Stock Kernel Selection
+#
+
+selectbox(
+  #-- Title
+    "<~window2-2.title>",
+  
+  #-- Sub Title
+    "<~window2-2.subtitle>",
+  
+  #-- Icon:
+     "icons/install",
+	 
+  #-- Will be saved in /tmp/aroma/window2-2.prop
+    "window2-2.prop",
+  
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#  
+  
+    "<~window2.option1>",         "",                                                 2,      #-- Group 1. key = "selected.1"
+        "<~window2-2.option1-1>",         "<~window2-2.option1-1desc>",                              1,      #-- selected.1 = 1
+        "<~window2-2.option1-2>",         "<~window2-2.option1-2desc>",                              0,      #-- selected.1 = 2
+        "<~window2-2.option1-3>",         "<~window2-2.option1-3desc>",                              0       #-- selected.1 = 3
+
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+##
+# Alert Window - Warning about Kernel Selection
+#
+
+alert( "<~kernel2.attention>", "<~kernel2.attentiondesc>");
+
+##
+# Sub Window with CheckBoxes - Stock Kernel Options
+#
+## multirom enabled
+if prop("window1.prop","selected.1")=="1" then
+
+checkbox(
+  # Title
+	"<~checkbox1.title>",
+  
+  # Sub Title
+	"<~checkbox1.subtitle>",
+ 
+  # Icon
+	"@update",
+  
+  # Will be saved in /tmp/aroma/checkbox1.prop
+	"checkbox1.prop",
+  
+  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+  # TITLE            |  SUBTITLE                                                 | Initial Value #
+  #------------------+-----------------------------------------------------------+---------------#
+  
+  "<~checkbox1.item1stock>", "",                                                       2,      #-- group 1
+    "<~checkbox1.item1-1>",  "<~checkbox1.item1-1desc>",                               3       #-- item.1.1
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+);
+
+endif;
+## endif - window1.prop
+
+
+## multirom disabled
+if prop("window1.prop","selected.1")=="2" then
+
+checkbox(
+  # Title
+	"<~checkbox1.title>",
+  
+  # Sub Title
+	"<~checkbox1.subtitle>",
+ 
+  # Icon
+	"@update",
+  
+  # Will be saved in /tmp/aroma/checkbox1.prop
+	"checkbox1.prop",
+  
+  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+  # TITLE            |  SUBTITLE                                                 | Initial Value #
+  #------------------+-----------------------------------------------------------+---------------#
+  
+  "<~checkbox1.item1uninst>","",                                                       2,      #-- group 1
+    "<~checkbox1.item1-1>",  "<~checkbox1.item1-1desc>",                               3       #-- item.1.1
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+);
+
+## multirom - second roms delete check
+checkbox(
+  # Title
+	"<~checkbox2.title>",
+  
+  # Sub Title
+	"<~checkbox2.subtitle>",
+ 
+  # Icon
+	"@update",
+  
+  # Will be saved in /tmp/aroma/checkbox2.prop
+	"checkbox2.prop",
+  
+  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+  # TITLE            |  SUBTITLE                                                 | Initial Value #
+  #------------------+-----------------------------------------------------------+---------------#
+  
+  "<~checkbox2.item1>",      "",                                                       2,      #-- group 1
+    "<~checkbox2.item1-1>",  "<~checkbox2.item1-1desc>",                               0       #-- item.1.1
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+);
+
+##
+# Alert Window - Warning about Delte Second Roms
+#
+if prop("checkbox2.prop","item.1.1")=="1" then
+  alert( "<~multidel.attention>", "<~multidel.attentiondesc>");
+endif;
+## endif - checkbox2.prop
+
+endif;
+## endif - window1.prop
+
+endif;
+## endif - window2-2.prop
+
+
+
+
+endif;
+## endif prop("window1.prop","selected.1")!="3"
+
+
+
+
+# Installation UI
+
+ini_set("text_next", "<~ini_set.next>");
+ini_set("icon_next", "@installbutton");
+  
+viewbox(
+  #-- Title
+    "<~ini_set.title>",
+
+  #-- Text
+  "<~ini_set.text1>\n\n"+
+	"<~ini_set.text2>\n\n"+
+	"<~ini_set.text3>\n\n"+
+	"<~ini_set.text4>",
+  
+  #-- Icon
+    "@install"
+);
+
+alert( "<~ini_set.attention>", "<~ini_set.attentiondesc>");
+endif;
+## endif - menu.prop
+
+##
+# INSTALLATION PROCESS
+#
+
+if prop("menu.prop","selected")== "1" 
+then
+
+ini_set("text_next", "<~text_next>");
+ini_set("icon_next", "@next");
+
+install(
+  "<~ini_set.title>",
+  "\n" +
+  "<~inst.text>" +
+  "",
+  "icons/install"
+);
+
+ini_set("text_next", "<~inst.finish.button>");
+ini_set("icon_next", "@finish");
+
+checkviewbox(
+  #-- Title
+    "<~inst.finish>",
+	
+  #-- Text
+    "<#selectbg_g><b>"+"<~inst.thx>"+"</b></#>\n\n"+
+    "<b>"+ini_get("rom_name")+"</b> "+"<~inst.info>"+"\n\n",
+    
+#-- Icon
+    "@welcome",
+
+  #-- Checkbox Text
+    "<~inst.finish>",
+
+  #-- Initial Checkbox value ( 0=unchecked, 1=checked ) -  (Optional, default:0)
+    "1",
+
+  #-- Save checked value in variable "reboot_it" (Optional)
+    "reboot_it"
+);
+endif;
+
+## Do not reboot to initialize multirom

@@ -1,0 +1,175 @@
+﻿### LICENSE:
+#
+# Copyright (C) 2011 Ahmad Amarullah ( http://amarullz.com/ )
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+### LANGUAGE STRING RESOURCE FILE
+#
+#   Language  : English
+#   By        : jollaman999
+#
+
+#
+#--- COMMON SYSTEM STRING RESOURCE
+#
+text_ok=OK
+text_next=Next >
+text_back=< Back
+text_yes=Yes
+text_no=No
+text_about=About
+text_calibrating=Calibrating Tools
+text_quit=Quit Installation
+text_quit_msg=Are you sure to quit the installer?
+
+welcome.title=Welcome
+welcome.text1=Now proceed with jolla-kernel installation
+welcome.text2= jolla-kernel Vesion Info
+welcome.version=VERSION
+welcome.updated=UPDATED
+welcome.next=Press Next.
+
+main.title=jolla-kernel Installation Menu
+main.subtutle=Select what you want.
+main.inst=jolla-kernel Installation
+main.instdesc=jolla-kernel Installation with multirom and various options
+main.sysinfo=System Info
+main.sysinfodesc=Get and show device/partition informations
+main.changelog=ChangeLog
+main.changelogdesc=Show jolla-kernel's ChangeLog
+main.quit=Quit Install
+main.quitdesc=Quit jolla-kernel installation :(
+
+sysinfo.wait=Getting System Information...
+sysinfo.maintext=Optimus G System Information
+sysinfo.device=Device Name
+sysinfo.board=Board Name
+sysinfo.manufac=Manufacturer
+sysinfo.system=System Size
+sysinfo.data=Data Size
+sysinfo.sdcard=SDCard Size
+sysinfo.title=System Information
+sysinfo.subtitle=Current system Information on your Optimus G
+sysinfo.alert.title=Finished
+sysinfo.alert.text=You will be back to Menu
+
+changelog.title=jolla-kernel Changelog
+changelog.exit=Close
+
+quit.title=Exit
+quit.text=Are you sure want to exit the Installer?
+
+terms.title=Terms and Conditions
+terms.desc=Please read carefully The Terms and Conditions Below.
+terms.check=I Agree with this Terms and Conditions.
+terms.confirm=Please check the agreement.
+
+changelog.title= Changelog
+changelog.desc=jolla-kernel Changelog
+
+window1.title=Kernel Installation Option
+window1.subtitle=Select kernel installation option.
+window1.option1=Install Kernel or Multi ROM
+window1.option1desc=If you want to install kernel or Multi ROM, select this.
+window1.option2=Uninstall multirom and reinstall Kernel
+window1.option2desc=If you installed multirom and want to uninstall, select this.\
+(Do this option only in main rom!!)
+window1.option3=jolla-TWRP Install Only
+window1.option3desc=Only install jolla-kernel based MultiROM TWRP.\
+If you want to move your main rom to second rom, select this.\
+\
+After intall recovery, go to Advanced->MultiROM->Swap ROMs\
+then select Move primary ROM to secandaries.\
+After you move your rom, install Multi ROM.
+
+window2.title=Rom Type Selection
+window2.subtitle=Select your rom type.
+window2.option1=Rom type
+window2.option1-1=CM/AOSP based
+window2.option1-1desc=If you want to install to CM/AOSP based roms, select this.
+window2.option1-2=Stock based
+window2.option1-2desc=If you want to install to stock based roms like MIUI, GEE3 and stock, select this.
+
+window2-1.title=CM/AOSP based
+window2-1.subtitle=Select kernel type.
+window2-1.option1-1=mod kernel
+window2-1.option1-1desc=for CM GEE, Axxion, DU(new) etc..
+window2-1.option1-2=nonmod kernel
+window2-1.option1-2desc=for DU(old), DayDream etc..
+
+window2-2.title=Stock based
+window2-2.subtitle=Select kernel type.
+window2-2.option1-1=Stock
+window2-2.option1-1desc=for stock rom
+window2-2.option1-2=MIUI
+window2-2.option1-2desc=for stock based MIUI rom
+window2-2.option1-3=GEE3
+window2-2.option1-3desc=for stock based GEE3 rom
+
+kernel1.attention=Kernel Selection Warning
+kernel1.attentiondesc=If you select kernel which is not compatible with your rom, there will be screen showing issue.\
+Also some of roms are not supported.\
+If you use a rom which is not supported please send boot.img file to admin@jollaman999.com.
+kernel2.attention=Kernel Selection Warning
+kernel2.attentiondesc=If you select kernel which is not compatible with your rom, your device won't boot.
+fs.attention=F2FS Warning
+fs.attentiondesc=If /data and /cache partition are not formatted to f2fs, your device won't boot.\
+Also if you use multirom, some of roms are not suppot f2fs.
+
+checkbox1.title=Kernel Installatin Options
+checkbox1.subtitle=Select what you want.
+checkbox1.item1=Multi ROM Boot
+checkbox1.item1uninst=Uninstall Multi ROM is selected.
+checkbox1.item1-1=Install Multi ROM Boot
+checkbox1.item1stock=Multi ROM Boot is only possible to install on main GEE rom.
+checkbox1.item1-1desc=Install Multi ROM Boot that is possible to boot various roms with jolla-TWRP.
+checkbox1.item2=Camera Driver
+checkbox1.item2-1=Stock Camera Driver
+checkbox1.item2-1desc=Install stock's camera driver\
+If you have problem with stock camera, reflash your rom. Then reinstall kernel with uncheck this option.
+checkbox1.item3=File System
+checkbox1.item3-1=Use F2FS
+checkbox1.item3-1desc=Install F2FS kernel\
+Use /data and /cache partitions to f2fs\
+(If you not install multirom, F2FS compatible Philz recovery will be install to default.)
+
+checkbox2.title=Multi ROM Delete Option
+checkbox2.subtitle=Select Multi ROM delete option.
+checkbox2.item1=Delete Multi ROM
+checkbox2.item1-1=Delete second roms
+checkbox2.item1-1desc=This will remove all of roms except main rom.
+
+multirom.attention=Multi ROM Warning
+multirom.attentiondesc=Do this option only in main rom!!
+
+multidel.attention=Delete second roms Warning
+multidel.attentiondesc=This will remove all of roms except main rom!!\
+Please check again if there are backup needed.
+
+ini_set.next=Begin Inst
+ini_set.title=Proceed Installation
+ini_set.text1=<b>S.C.V Ready!!</b>
+ini_set.text2=Proceed installation with press <b>Begin Inst</b>.
+ini_set.text3=If you want to check options, press <b>Back</b> button.
+ini_set.text4=If you want to exit, press menu -> Exit.
+
+ini_set.attention=Alert
+ini_set.attentiondesc=Now Start Installation
+
+inst.title=jolla-kernel Installation
+inst.text=Wait a moment while installing jolla-kernel.
+inst.finish=Installation Finished.
+inst.finish.button=Finish
+inst.thx=Thank you for choosing jolla-kernel.
+inst.info= is now installed on your device.

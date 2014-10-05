@@ -1,0 +1,92 @@
+﻿<@center><b><#selectbg_g>jolla-kernel 체인지로그</#></b>
+
+<b><#selectbg_g>jollaman999 @xda 개발자</#></b>
+<b><#selectbg_g>https://github.com/jollaman999</#></b>
+
+<b><#selectbg_g>[v11.1]</#></b></@>
+- SPARSEMEM 커널 옵션 수정
+- Coretex-A15 memcopy 최적화
+- memutils: memcpy, memmove, copy_page 최적화
+- lge_touch_core: 펌웨어 업그레이드 후 발생하는 i2c 에러 수정
+- ext4: WB_SYNC_ALL pass called from sync(2) 스피드업
+
+<b><#selectbg_g>[v11]</#></b>
+- 스톡 : 커널 로고 드라이버 수정 및 jolla-kernel 로고 포함
+- Linux 3.4.104 커널 적용
+- jolla-kernel 버젼 정보 표시되도록 수정
+- Faux Sound v3.6 으로 버젼업
+- 스톡 : OTG 기능 추가 (USB 인식은 되나 작동하지 않음..)
+- GEEB : SDCard 지원
+- WQ_POWER_EFFICIENT_DEFAULT 전원 절약 패치 적용
+- 커널 모드 NEON 지원
+- msdos, ntfs 파일시스템 지원
+- 스톡 : 백라이트 레벨 커널 로그 비활성화
+
+<b><#selectbg_g>[v10_Stock]</#></b>
+- 2014/09/19 스톡 G3 커널 추가
+- 2014/09/18 스톡 Sound 포팅
+- 스톡 포팅 사항 : GPU, Video, Wifi, LED, Vibrator, IOMMU 포팅
+
+<b><#selectbg_g>[v10]</#></b>
+
+- 스톡 카메라 포팅!! (카메라 화질 및 초점 조절 기능등 향상!!/덕분에 어두운 곳애서 초점 맞추는 건 불가 해졌습니다..)
+(스톡 카메라 포팅에 힘써주신 faust93 xda 개발자님께 진심으로 감사의 말씀을 전합니다!)
+- 랜덤으로 핫리붓 되는 현상 개선!!
+(롬 플래싱 후 초기 부팅시, 혹은 사용중 간혈적으로 핫리붓이 되는 증상이 android 와 커널을 이어주는 binder 라는 부분에서 에러가 나는것으로 판단되었습니다. Gproj 커널과 비교해가며 고생끝에 드디어 수정했습니다!! ㅠㅠ 이제 ART 모드로 가셔도 핫리붓 되는 증상이 없습니다!!)
+- 기본 최저 클럭 상향 조정 (81MHz->270MHz)
+(일부기기에서 81MHz 가 노크온시나 사용중 커널크래시가 나는것으로 판단되어 상향 조정하였습니다.)
+- Intelli-plug 드라이버 사용 (배터리 면에서 기존의 Hotplug 드라이버 보다 배터리 효율이 더 나은것으로 판단되어 Intelli-plug 로 다시 복구했습니다.)
+- 스토틀링 온도 제한 하향 조정 및 1134MHz 클럭으로 복원되지 않는 증상 수정.
+(기존 온도가 높게 판단이 되어 하향 조정 했으며, 쓰로틀링 후 1026MHz 에 고정되는 증상이 있어 수정하였습니다.)
+- 클럭 관련하여 384MHZ L2 캐시 전압, 일부 구조체 변수명 잘못된 문제 수정.
+- 안드로이드 로깅(logcat) 관련 최적화 및 기본으로 비활성화 적용
+(커널 및 앱 이상유무를 판단할 때 주로 사용되는데 평소 사용시는 필요가 없고, 오히려 자원만 낭비되어 비활성화 하였습니다.)
+- F2FS : Linux 3.16.2 버젼 기준 업데이트 적용
+- 커널 설정 일부 잘못된 부분들 수정 및 최적화
+- 그외 일부 마이너 패치들 적용
+-  omni 커널 지원
+- 2014/09/10 GEEB 커널 지원
+- 2014/09/12 기존 카메라 드라이버 (mako/넥서스4 기반) 가 포함된 버젼들 추가 업로드
+
+
+<b><#selectbg_g>[v9_Refresh]</#></b>
+
+- 커널 안정화 : Linux 3.4.103 패치를 하면서 소스상에서 잘못된 부분들 수정
+- mod/nonmod 커널 동시 지원
+- 사용자 측에서 조절 가능한 쓰로틀링 기능적용 (Trickstermod 앱에서 온도및 클럭 단계별 조절가능)
+(※ 온도제한 기능은 TricksterMod 앱의 특정 메뉴에서 '온도 제어' 기능을 통해 직접 설정 하실 수 있습니다.)
+(※ 온도 제한 기능은 부팅시 기본 클럭값인 1134MHz 에 최적화 되어있습니다. 오버클럭을 하시거나 더 나은 성능을 원하신다면 '온도 제어' 기능 메뉴에서 클럭및 온도를 상향 조정 해주시기 바랍니다.)
+
+<b><#selectbg_g>[v9]</#></b>
+
+- Intelli-plug 제거 (호환성 부족) 및 MSM_HOTPLUG 드라이버 적용 (더 나은 핫플러깅 지원)
+- 사용되지 않는 USB 네트워크 드라이버들 비활성화
+- ARM RWSEM, AES, SHA1 알고리즘 최적화
+- ARM CPU 를 위한 최적화 적용 (Allow CPU-supported unaligned accesses, Manage only online cpus)
+- 안드로이드 logcat 버퍼 사이즈 감소 256->128
+- 커널 안정화를 위한 전압 및 클럭 부분들 수정
+- Intellidemand 거버너 v5.0 으로 업데이트 및 유사 기능을 구현하는 Slim 거버너 제거
+- Smartmax 거버너 suspend_ideal_freq 수정 594000 -> 702000
+- IO 성능 향상 및 앞서 버퍼 크기 읽기 사이즈 증가 128->512
+- L2 캐시 수정으로 인한 전체적인 성능 향상
+- 마운트시 기본으로 noatime, nodirtime 옵션을 적용토록 하여 IO 성능 향상
+- writeback, sched, SELinux 최적화
+- Faux Sound v3.5 로 업데이트
+- Linux 3.16.1 기준 F2FS 업데이트
+- 노크온 밀어서 깨우기 사용되지 않는 부분 제거
+- ZRAM 지원
+- 온도제한 및 스로틀링 기능을 jolla-kernel 에 최적화하여 직접 수정 (@myfluxi, @motley 님 소스 참고)
+
+※ 온도제한 기능은 TricksterMod 앱의 특정 메뉴에서 제한 온도, 최소 클럭, 사용 유무를 직접 설정 하실 수 있습니다.
+※ 온도 제한 기능은 부팅시 기본 클럭값인 1134MHz 에 최적화 되어있습니다. 오버클럭을 하시거나 더 나은 성능을 원하신다면 '온도 제어' 기능 메뉴에서 클럭및 온도를 상향 조정 해주시기 바랍니다.
+
+※ jolla-kernel 의 모든 기능들은 TricksterMod 앱에서 지원됩니다. 그외의 커널 컨트롤 앱에서는 일부 지원되지 않는 기능들이 있을 수 있습니다.
+
+
+<b><#selectbg_g>[Thanks to..]</#></b>
+The Linux Kernel Archives : https://www.kernel.org/
+cm-11.0 : https://github.com/CyanogenMod
+Developers : jaegeuk, xboxfanj, Loller79, faust93, Docker-J, faux123, MikeEx, flar2, justin0406, Tasssadar, pushistiky, myfluxi, motley, ThatKawaiiGuy, CallMeAldy, anarkia1976, mrg666 and all of commited in their sources & all of xda developers
+
+<#selectbg_g>->></#>
+<#selectbg_g>->></#> 제 jolla-kernel 을 선택해 주셔서 감사합니다!! :)

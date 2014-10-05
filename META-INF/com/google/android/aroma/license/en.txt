@@ -1,0 +1,23 @@
+<@center><b><#selectbg_g>jolla-kernel License</#></b>
+Version 1.0, Oct 2014
+
+<b><#selectbg_g>TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION</#></b></@>
+
+<b><#selectbg_g>1. Responsibility.</#></b>
+
+<@fill><q>  I have no response all about install my kernel to your device.
+  It's own your risk.</q></@>
+
+<b><#selectbg_g>2. Redistribution.</#></b>
+<@fill><q>  My kernel only publish in Korean forum and xda. You can redestribute, but please write a link directly. You should not publish any fixed of my kernel info.</q></@>
+
+<b><#selectbg_g>3. Asking & Bug reporting.</#></b>
+<@fill><q>  I'm always welcome to asking and bug reporting. Please write a comment in forum. Or you can send a message or e-mail to admin@jollaman999.com. But you may not ask already wrote in forum.</q></@>
+
+<b><#selectbg_g>4. Kernel Source.</#></b>
+<@fill><q>  You are fill free to use jolla-kernel's source and redistribute that was fixed. You can check kernel source in https://github.com/jollaman999.</q></@>
+
+<b><#selectbg_g>6. Trademark.</#></b>
+<@fill><q>  jolla-kernel, jollaman999 and jolla-kernel's logo are own of jollaman999.</q></@>
+
+<@center><b><#selectbg_g>END OF TERMS AND CONDITIONS</#></b></@>

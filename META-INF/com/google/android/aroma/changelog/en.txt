@@ -1,0 +1,80 @@
+﻿<@center><b><#selectbg_g>jolla-kernel ChangeLog</#></b>
+
+<b><#selectbg_g>jollaman999 @xda developers</#></b>
+<b><#selectbg_g>https://github.com/jollaman999</#></b>
+
+<b><#selectbg_g>[v11.1]</#></b></@>
+- SPARSEMEM kernel option fixed.
+- Coretex-A15 memcopy optimized
+- memutils: memcpy, memmove, copy_page optimized
+- lge_touch_core: fix i2c error after firmware upgrade
+- ext4: Speedup WB_SYNC_ALL pass called from sync(2)
+
+<b><#selectbg_g>[v11]</#></b>
+- Stock : Fix kernel logo driver and jolla-kernel logo included.
+- Linux 3.4.104 Kernel Applied.
+- Fix to showing jolla-kernel version.
+- Update faux sound to v3.6
+- Stock : OTG Support. (USB Recognized but not working...)
+- GEEB : SDCard support.
+- WQ_POWER_EFFICIENT_DEFAULT power save patch applied.
+- Support kernel mode NEON.
+- Support msdos, ntfs filesystems.
+- Stock : Disable backlight level kernel log messages
+
+<b><#selectbg_g>[v10_Stock]</#></b>
+- Stock Drivers Ported : GPU, Video, Wifi, LED, Vibrator, IOMMU
+
+<b><#selectbg_g>[v10]</#></b>
+
+- Stock Camera ported.
+- Random hot reboot fixed. (When you flashing and booting first time, or when you using, there was random hot reboot. I found the error in binder which is connection between Android and Kernel. So I compared with Gproj kernel source and fixed it. Also, you can use ART runtime without random hot reboot as well.)
+- Minimum clock increased. (81MHz -> 270MHz) (There was kernel crash with some of devices. So increased it.)
+- Back to intelli-plug driver from MSM_HOTPLUG driver. (I think intelli-plug is better for battery life.)
+- Throttling temperature limit decreased. And fixed bug that clock can't back to 1134MHz. (I think maximum temperature is high. So decreased it. And when throttling began, it has locked into 1026MHz. So fixed it.)
+- 384Mhz L2 Cache voltage optimized. And fixed one of missed structure valuable.
+- Android Logger (logcat) optimized and deactivated it. (Don't use it commonly.)
+- F2FS : Updated based on Linux 3.16.2.
+- Kernel settings fixed and optimzed.
+- Some of minor patches applied.
+- OMNI Kernel support. (OMNI ROM)
+
+
+<b><#selectbg_g>[v9_Refresh]</#></b>
+
+- Kernel stability : Fix some of conflicts in the source while patching Linux 3.4.103.
+- mod/normal kernel both support.
+- User can personalize throttling options. (You can personalize temperature and clock per level with Trickster Mod app.)
+(※ You can use temperature limit option with Trickster Mod app, 'Temperature control'.)
+
+<b><#selectbg_g>[v9]</#></b>
+
+- Deleted intelli-plug for compatibility and added MSM_Hotplug driver for better hot-plugging.
+- Deleted unused USB network driver.
+- ARM RWSEM, AES, SHA1 algorithm optimization
+- Optimization for ARM CPUs. (Allow CPU-supported unaligned acesses, Manage only online CPUs.)
+- Android logcat buffer size decreased. (256 -> 128)
+- Voltage and clock value changed for kernel stability.
+- Intellidemand cpu governer updated to ver 5.0 and deleted Slim governer which is simillar with Intellidemand.
+- Smartmax governer's suspend_ideal_freq increased. (594000 -> 702000)
+- I/O performance increased and buffer reading size increased. (128 -> 512)
+- Modified L2 cache size to increase overall kernel performance.
+- Using noatime, nodirtime for default mount options. It gives I/O performance increasing.
+- writeback, sched, SElinux optimization.
+- FAUX sound updated to v3.5
+- F2FS : Updated based on Linux 3.16.1.
+- Deleted unused parts of Knock on's Swipe to Wake.
+- ZRAM support.
+- Temperature limit and throttling function optimized for jolla-kernel (referenced from myfluxi and motley's source)
+
+※ You can use temperature limit option with Trickster Mod app, 'Temperature control'.
+※ jolla-kernel's all functions are available with Trickster Mod app. (Some of functions are not available with other kernel control apps.)
+
+
+<b><#selectbg_g>[Thanks to..]</#></b>
+The Linux Kernel Archives : https://www.kernel.org/
+cm-11.0 : https://github.com/CyanogenMod
+Developers : jaegeuk, xboxfanj, Loller79, faust93, Docker-J, faux123, MikeEx, flar2, justin0406, Tasssadar, pushistiky, myfluxi, motley, ThatKawaiiGuy, CallMeAldy, anarkia1976, mrg666 and all of commited in their sources & all of xda developers
+
+<#selectbg_g>->></#>
+<#selectbg_g>->></#> Thank You for choosing my jolla-kernel!! :)

@@ -1,0 +1,175 @@
+﻿### LICENSE:
+#
+# Copyright (C) 2011 Ahmad Amarullah ( http://amarullz.com/ )
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+### LANGUAGE STRING RESOURCE FILE
+#
+#   Language  : Korean
+#   By        : jollaman999
+#
+
+#
+#--- COMMON SYSTEM STRING RESOURCE
+#
+text_ok=확인
+text_next=다음 >
+text_back=< 이전
+text_yes=예
+text_no=아니오
+text_about=정보
+text_calibrating=조정 도구
+text_quit=설치 종료
+text_quit_msg=설치를 종료하시겠습니까?
+
+welcome.title=환영합니다
+welcome.text1=지금부터 jolla-kernel의 설치를 진행합니다.
+welcome.text2=jolla-kernel 버젼 정보
+welcome.version=VERSION
+welcome.updated=UPDATED
+welcome.next=다음 버튼을 눌러 주세요.
+
+main.title=jolla-kernel 설치 메뉴
+main.subtutle=원하시는 작업을 선택해 주세요.
+main.inst=jolla-kernel 설치
+main.instdesc=멀티롬 및 다양한 옵션들과 함께 jolla-kernel 설치를 진행합니다.
+main.sysinfo=시스템 정보
+main.sysinfodesc=기기 및 파티션 정보를 보여줍니다.
+main.changelog=체인지로그
+main.changelogdesc=jolla-kernel 의 체인지 로그를 보여줍니다.
+main.quit=설치 종료
+main.quitdesc=jolla-kernel 의 설치를 종료합니다 :(
+
+sysinfo.wait=시스템 정보 조회중...
+sysinfo.maintext=Optimus G 시스템 정보
+sysinfo.device=장치명
+sysinfo.board=보드명
+sysinfo.manufac=제조업체
+sysinfo.system=System 용량
+sysinfo.data=Data 용량
+sysinfo.sdcard=SDCard 용량
+sysinfo.title=시스템 정보
+sysinfo.subtitle=당신의 Optimus G 시스템 정보입니다.
+sysinfo.alert.title=완료
+sysinfo.alert.text=메뉴로 돌아갑니다.
+
+changelog.title=jolla-kernel 체인지로그
+changelog.exit=닫기
+
+quit.title=종료
+quit.text=정말로 설치를 종료하시겠습니까?
+
+terms.title=사용권 동의
+terms.desc=아래 내용을 자세히 읽어주시기 바랍니다.
+terms.check=위 내용에 동의합니다.
+terms.confirm=사용권에 동의하지 않으셨습니다.
+
+changelog.title=체인지로그
+changelog.desc=jolla-kernel 체인지로그
+
+window1.title=설치 옵션 선택
+window1.subtitle=설치 옵션을 선택해 주세요
+window1.option1=커널 및 멀티롬 설치
+window1.option1desc=커널 또는 멀티롬 설치를 진행하시려면 이 옵션을 선택합니다.
+window1.option2=멀티롬 제거 및 커널 재설치
+window1.option2desc=멀티롬이 설치되어있고 제거하길 원하실 경우 이 옵션을 선택합니다.\
+(이 옵션은 메인롬에서만 진행해 주시기 바랍니다!!)
+window1.option3=jolla-TWRP 만 설치
+window1.option3desc=jolla-kernel 기반의 MultiROM TWRP 만 설치합니다.\
+메인롬을 세컨롬으로 이동하시고자 할 경우 이 옵션을 선택합니다.\
+\
+리커버리 설치후 Advanced->MultiROM->Swap ROMs\
+메뉴로 가셔서 Move primary ROM to secandaries 옵션을 통하여 롬을 이동해 줍니다.\
+롬을 이동하신 후 멀티롬을 설치해 주시기 바랍니다.
+
+window2.title=롬 종류 선택
+window2.subtitle=롬 종류를 선택해 주세요.
+window2.option1=롬 종류
+window2.option1-1=CM/AOSP 기반
+window2.option1-1desc=CM/AOSP 기반 롬에 설치 하실 경우 선택합니다.
+window2.option1-2=스톡 기반
+window2.option1-2desc=스톡, MIUI, GEE3 등 스톡 기반 롬에 설치 하실 경우 선택합니다.
+
+window2-1.title=CM/AOSP 기반
+window2-1.subtitle=커널 종류를 선택해 주세요.
+window2-1.option1-1=mod 커널
+window2-1.option1-1desc=CM GEE, Axxion, DU(최신) 등
+window2-1.option1-2=nonmod 커널
+window2-1.option1-2desc=DU(구버젼), DayDream 등
+
+window2-2.title=스톡 기반
+window2-2.subtitle=커널 종류를 선택해 주세요.
+window2-2.option1-1=스톡
+window2-2.option1-1desc=스톡용 커널
+window2-2.option1-2=MIUI
+window2-2.option1-2desc=스톡기반 MIUI 용 커널
+window2-2.option1-3=GEE3
+window2-2.option1-3desc=스톡기반 GEE3 용 커널
+
+kernel1.attention=커널 선택 경고
+kernel1.attentiondesc=해당 롬에 맞지 않는 커널을 선택 하실 경우 화면 표시에 문제가 있을 수 있습니다.\
+또한 일부 롬에 따라 커널이 지원되지 않을 수 있습니다.\
+이 경우 해당롬의 boot.img 파일을 admin@jollaman999.com 으로 보내주시기 바랍니다.
+kernel2.attention=커널 선택 경고
+kernel2.attentiondesc=해당 롬에 맞지 않는 커널을 선택 하실 경우 부팅이 되지 않을 수 있습니다.
+fs.attention=F2FS 경고
+fs.attentiondesc=/data, /cache 영역이 f2fs로 포맷되어 있지 않을 경우 기기가 부팅되지 않습니다.\
+또한 멀티롬 이용시 특정롬이 f2fs를 지원하지 않을 경우 해당롬은 이용이 불가합니다.
+
+checkbox1.title=커널 설치 옵션
+checkbox1.subtitle=원하시는 옵션에 체크해 주세요.
+checkbox1.item1=멀티롬 부팅
+checkbox1.item1stock=멀티롬 부팅은 메인 GEE 롬에만 설치하실 수 있습니다.
+checkbox1.item1uninst=멀티롬 제거가 선택되었습니다.
+checkbox1.item1-1=멀티롬 부팅 설치
+checkbox1.item1-1desc=jolla-TWRP 와 함께 여러 롬들을 부팅할 수 있게 해주는 멀티롬을 설치합니다.
+checkbox1.item2=카메라 드라이버
+checkbox1.item2-1=스톡 카메라 드라이버
+checkbox1.item2-1desc=스톡 기반 카메라 드라이버를 설치합니다.\
+카메라 이용에 문제가 있을경우 롬을 재설치 해주시고, 이 옵션에 체크 해제 후 커널을 재설치 해주시기 바랍니다.
+checkbox1.item3=파일 시스템
+checkbox1.item3-1=F2FS 사용
+checkbox1.item3-1desc=F2FS 커널을 설치합니다.\
+/data, /cache를 f2fs로 사용합니다.\
+(멀티롬을 설치하시지 않을경우 F2FS 호환 Philz 리커버리가 기본으로 설치됩니다.)
+
+checkbox2.title=멀티롬 제거 옵션
+checkbox2.subtitle=멀티롬 제거 옵션을 선택해 주세요.
+checkbox2.item1=멀티롬 제거
+checkbox2.item1-1=세컨롬들 제거
+checkbox2.item1-1desc=메인롬을 제외한 나머지 세컨롬들을 모두 제거합니다.
+
+multirom.attention=멀티롬 경고
+multirom.attentiondesc=이 옵션은 메인롬에서만 진행해 주시기 바랍니다!!
+
+multidel.attention=세컨롬들 제거 경고
+multidel.attentiondesc=이 작업을 수행하면 메인롬을 제외한 모든 롬들이 지워집니다!!\
+세컨롬들을 제거하시기 전에 백업이 필요한지 다시 한번 확인해 주시기 바랍니다.
+
+ini_set.next=설치 진행
+ini_set.title=설치 진행
+ini_set.text1=<b>건설 로봇 준비 완료!!</b>
+ini_set.text2=<b>설치 진행</b> 버튼을 눌러 설치를 진행합니다.
+ini_set.text3=설치 옵션들을 확인하시려면 <b>이전</b> 버튼을 눌러주시기 바랍니다.
+ini_set.text4=설치를 종료하시려면 메뉴 -> 설치 종료를 눌러주시기 바랍니다.
+
+ini_set.attention=알림
+ini_set.attentiondesc=지금부터 설치가 진행됩니다.
+
+inst.title=jolla-kernel 설치
+inst.text=jolla-kernel 을 설치하는 동안 잠시만 기다려 주시기 바랍니다.
+inst.finish=설치가 완료되었습니다.
+inst.finish.button=완료
+inst.thx=jolla-kernel 을 선택해 주셔서 감사합니다.
+inst.info= 이 기기에 설치되었습니다.
