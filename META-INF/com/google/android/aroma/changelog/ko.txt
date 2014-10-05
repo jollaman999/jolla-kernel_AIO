@@ -4,11 +4,16 @@
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
 <b><#selectbg_g>[v11.1]</#></b></@>
+- GUI 아로마 인스톨러 적용 및 멀티롬 기능과 함께 얼인원 적용
+- Linaro 2014.09 gcc 4.9.2 로 빌드
+- CM : 기존 boot.img 설치방식에서 zImage 설치 방식으로 전환하여 호환성 강화
+- CM: 최신 CM 소스에서 빌드
 - SPARSEMEM 커널 옵션 수정
 - Coretex-A15 memcopy 최적화
 - memutils: memcpy, memmove, copy_page 최적화
 - lge_touch_core: 펌웨어 업그레이드 후 발생하는 i2c 에러 수정
 - ext4: WB_SYNC_ALL pass called from sync(2) 스피드업
+- 최신 CM 커널 패치 적용
 
 <b><#selectbg_g>[v11]</#></b>
 - 스톡 : 커널 로고 드라이버 수정 및 jolla-kernel 로고 포함

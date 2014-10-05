@@ -4,11 +4,16 @@
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
 <b><#selectbg_g>[v11.1]</#></b></@>
+- GUI Aroma Installer Applied and All-In-One applied with Multi ROM function.
+- Built with Linaro 2014.09 gcc 4.9.2
+- CM : Change install method from boot.img to zImage. So better compatibility.
+- CM : Built on recently CM sources.
 - SPARSEMEM kernel option fixed.
 - Coretex-A15 memcopy optimized
 - memutils: memcpy, memmove, copy_page optimized
 - lge_touch_core: fix i2c error after firmware upgrade
 - ext4: Speedup WB_SYNC_ALL pass called from sync(2)
+- Applied recently CM kernel patches.
 
 <b><#selectbg_g>[v11]</#></b>
 - Stock : Fix kernel logo driver and jolla-kernel logo included.
