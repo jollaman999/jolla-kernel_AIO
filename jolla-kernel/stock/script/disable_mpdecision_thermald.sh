@@ -1,5 +1,5 @@
 #!/sbin/sh
-# backup the old prima stuff
+# Disable stock's mpdecision and thermal engines.
 
 if [ ! -d /system/bin/mpdecision_bak ] ; then
         busybox mv /system/bin/mpdecision /system/bin/mpdecision_bak
