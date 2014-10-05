@@ -65,10 +65,8 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
       ui_print(">>>Stock Camera<<<");
 
       ui_print("-> Setting Camera...");
-      package_extract_file("jolla-kernel/gee/camera/camera_bakup.sh", "/tmp/camera_bakup.sh");
       package_extract_dir("jolla-kernel/gee/camera/system", "/system");
-      set_perm(0, 0, 0777, "/tmp/camera_bakup.sh");
-      run_program("/tmp/camera_bakup.sh");
+      delete("/system/lib/hw/camera.qcom.so");
       set_perm(0, 0, 0755, "/system/bin/mm-qcamera-daemon");
       
       #### F2FS Specify ####
@@ -192,10 +190,8 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
       ui_print(">>>Stock Camera<<<");
 
       ui_print("-> Setting Camera...");
-      package_extract_file("jolla-kernel/gee/camera/camera_bakup.sh", "/tmp/camera_bakup.sh");
       package_extract_dir("jolla-kernel/gee/camera/system", "/system");
-      set_perm(0, 0, 0777, "/tmp/camera_bakup.sh");
-      run_program("/tmp/camera_bakup.sh");
+      delete("/system/lib/hw/camera.qcom.so");
       set_perm(0, 0, 0755, "/system/bin/mm-qcamera-daemon");
       
       #### F2FS Specify ####
