@@ -11,6 +11,21 @@ fi
 
 /tmp/busybox chattr -R -i "$base"
 
-find "$base" -type f -exec rm {} \;
+cd "$base"
+rm -rf icons
+rm -rf infos
+rm -rf res
+rm -rf ubuntu-init
+rm -rf ubuntu-touch-init
+rm -rf ubuntu-touch-sysimage-init
+rm adbd
+rm busybox
+rm exfat-fuse
+rm fw_mounter
+rm kexec
+rm lz4
+rm multirom
+rm ntfs-3g
+rm trampoline
 
 return $?
