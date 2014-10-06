@@ -11,8 +11,6 @@ fi
 
 /tmp/busybox chattr -R -i "$base"
 
-mv $base/roms ../
-rm -rf $base/*
-mv ../roms $base/
+find "$base" -type f -exec rm {} \;
 
 return $?
