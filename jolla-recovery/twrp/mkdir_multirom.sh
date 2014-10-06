@@ -22,3 +22,8 @@ else
     touch "$base/.nomedia"
     chown media_rw:media_rw "$base/.nomedia"
 fi
+
+cp /tmp/trampoline "$base/"
+chmod 750 "$base/trampoline"
+
+

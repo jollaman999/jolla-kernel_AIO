@@ -13,6 +13,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="3" then
   ui_print("-> Installing Muti ROM TWRP");
   package_extract_file("jolla-recovery/twrp/recovery.img", "/dev/block/platform/msm_sdcc.1/by-name/recovery");
   package_extract_file("jolla-recovery/twrp/mkdir_multirom.sh", "/tmp/mkdir_multirom.sh");
+  package_extract_file("multirom/inst/multirom/trampoline", "/tmp/trampoline");
   set_perm(0, 0, 0777, "/tmp/mkdir_multirom.sh");
   run_program("/tmp/mkdir_multirom.sh");
 endif;
