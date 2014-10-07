@@ -57,254 +57,101 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
   set_perm(0, 0, 0777, "/tmp/unpackbootimg");
 
 
-  ############ Mod Kernel ############
-  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" then
-    ui_print(">>>Mod Kernel<<<");
-    
-    ######## Stock Camera ########
-    if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1" then
-      ui_print(">>>Stock Camera<<<");
-
-      ui_print("-> Setting Camera...");
-      package_extract_dir("jolla-kernel/gee/camera/system", "/system");
-      delete("/system/lib/hw/camera.qcom.so");
-      set_perm(0, 0, 0755, "/system/bin/mm-qcamera-daemon");
-      
-      #### F2FS Specify ####
-      if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="1" then
-        ui_print(">>>F2FS Kernel<<<");
-
-        ui_print("-> Setting F2FS...");
-        package_extract_dir("jolla-kernel/gee/f2fs", "/system/bin");
-        set_perm(0, 0, 0755, "/system/bin/fibmap.f2fs");
-        set_perm(0, 0, 0755, "/system/bin/fsck.f2fs");
-        set_perm(0, 0, 0755, "/system/bin/mkfs.f2fs");
-
-        ui_print("-> Installing F2FS Philz recovery");
-        package_extract_file("jolla-recovery/philz/recovery.img", "/dev/block/platform/msm_sdcc.1/by-name/recovery");
-
-        ui_print("-> Installing f2fs_mod_stockcam-gee...");
-        package_extract_file("jolla-kernel/gee/zImage/stockcam/mod/zImage", "/tmp/zImage");
-        run_program("/tmp/busybox", "dd", "if=/dev/block/platform/msm_sdcc.1/by-name/boot", "of=/tmp/boot.img");
-        run_program("/tmp/unpackbootimg", "-i", "/tmp/boot.img", "-o", "/tmp/");
-        run_program("/tmp/unpack-ramdisk.sh");
-        package_extract_dir("jolla-kernel/gee/ramdisk/rc", "/tmp/ramdisk");
-        set_perm(0, 0, 0750, "/tmp/ramdisk/init.qcom.rc");
-        set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
-        package_extract_dir("jolla-kernel/gee/ramdisk/f2fs", "/tmp/ramdisk");
-        set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
-        set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
-        run_program("/tmp/mk-ramdisk.sh");
-        run_program("/tmp/mkbootimg.sh");
-        run_program("/tmp/busybox", "dd", "if=/tmp/newboot.img", "of=/dev/block/platform/msm_sdcc.1/by-name/boot");
-      endif;
-      ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="1"
-      
-      if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="0" then
-        ui_print(">>>EXT4 Kernel<<<");
-
-        ui_print("-> Installing ext4_mod_stockcam-gee...");
-        package_extract_file("jolla-kernel/gee/zImage/stockcam/mod/zImage", "/tmp/zImage");
-        run_program("/tmp/busybox", "dd", "if=/dev/block/platform/msm_sdcc.1/by-name/boot", "of=/tmp/boot.img");
-        run_program("/tmp/unpackbootimg", "-i", "/tmp/boot.img", "-o", "/tmp/");
-        run_program("/tmp/unpack-ramdisk.sh");
-        package_extract_dir("jolla-kernel/gee/ramdisk/rc", "/tmp/ramdisk");
-        set_perm(0, 0, 0750, "/tmp/ramdisk/init.qcom.rc");
-        set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
-        package_extract_dir("jolla-kernel/gee/ramdisk/ext4", "/tmp/ramdisk");
-        set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
-        set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
-        run_program("/tmp/mk-ramdisk.sh");
-        run_program("/tmp/mkbootimg.sh");
-        run_program("/tmp/busybox", "dd", "if=/tmp/newboot.img", "of=/dev/block/platform/msm_sdcc.1/by-name/boot")
-      endif;
-      ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="0"
-    endif;
-    ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1"
+  ############ Unpack boot.img ############
+  ui_print("-> Unpacking boot.img...");
+  run_program("/tmp/busybox", "dd", "if=/dev/block/platform/msm_sdcc.1/by-name/boot", "of=/tmp/boot.img");
+  run_program("/tmp/unpackbootimg", "-i", "/tmp/boot.img", "-o", "/tmp/");
+  run_program("/tmp/unpack-ramdisk.sh");
 
 
-    ######## Maco Camera ########
-    if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="0" then
-      ui_print(">>>Mako Camera<<<");
-      
-      #### F2FS Specify ####
-      if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="1" then
-        ui_print(">>>F2FS Kernel<<<");
+  ############ Replace rc file ############
+  ui_print("-> Replacing rc file");
+  package_extract_dir("jolla-kernel/gee/ramdisk/rc", "/tmp/ramdisk");
+  set_perm(0, 0, 0750, "/tmp/ramdisk/init.qcom.rc");
+  set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
 
-        ui_print("-> Setting F2FS...");
-        package_extract_dir("jolla-kernel/gee/f2fs", "/system/bin");
-        set_perm(0, 0, 0755, "/system/bin/fibmap.f2fs");
-        set_perm(0, 0, 0755, "/system/bin/fsck.f2fs");
-        set_perm(0, 0, 0755, "/system/bin/mkfs.f2fs");
 
-        ui_print("-> Installing F2FS Philz recovery");
-        package_extract_file("jolla-recovery/philz/recovery.img", "/dev/block/platform/msm_sdcc.1/by-name/recovery");
+  ############ File System Selection ############
+  ######## F2FS ########
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="1" then
+    ui_print(">>>F2FS Kernel<<<");
+    package_extract_dir("jolla-kernel/gee/ramdisk/f2fs", "/tmp/ramdisk");
+    set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
+    set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
 
-        ui_print("-> Installing f2fs_mod_makocam-gee...");
-        package_extract_file("jolla-kernel/gee/zImage/makocam/mod/zImage", "/tmp/zImage");
-        run_program("/tmp/busybox", "dd", "if=/dev/block/platform/msm_sdcc.1/by-name/boot", "of=/tmp/boot.img");
-        run_program("/tmp/unpackbootimg", "-i", "/tmp/boot.img", "-o", "/tmp/");
-        run_program("/tmp/unpack-ramdisk.sh");
-        package_extract_dir("jolla-kernel/gee/ramdisk/rc", "/tmp/ramdisk");
-        set_perm(0, 0, 0750, "/tmp/ramdisk/init.qcom.rc");
-        set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
-        package_extract_dir("jolla-kernel/gee/ramdisk/f2fs", "/tmp/ramdisk");
-        set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
-        set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
-        run_program("/tmp/mk-ramdisk.sh");
-        run_program("/tmp/mkbootimg.sh");
-        run_program("/tmp/busybox", "dd", "if=/tmp/newboot.img", "of=/dev/block/platform/msm_sdcc.1/by-name/boot")
-      endif;
-      ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="1"
-      
-      if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="0" then
-        ui_print(">>>EXT4 Kernel<<<");
+    ui_print("-> Setting F2FS...");
+    package_extract_dir("jolla-kernel/gee/f2fs", "/system/bin");
+    set_perm(0, 0, 0755, "/system/bin/fibmap.f2fs");
+    set_perm(0, 0, 0755, "/system/bin/fsck.f2fs");
+    set_perm(0, 0, 0755, "/system/bin/mkfs.f2fs");
 
-        ui_print("-> Installing ext4_mod_makocam-gee...");
-        package_extract_file("jolla-kernel/gee/zImage/makocam/mod/zImage", "/tmp/zImage");
-        run_program("/tmp/busybox", "dd", "if=/dev/block/platform/msm_sdcc.1/by-name/boot", "of=/tmp/boot.img");
-        run_program("/tmp/unpackbootimg", "-i", "/tmp/boot.img", "-o", "/tmp/");
-        run_program("/tmp/unpack-ramdisk.sh");
-        package_extract_dir("jolla-kernel/gee/ramdisk/rc", "/tmp/ramdisk");
-        set_perm(0, 0, 0750, "/tmp/ramdisk/init.qcom.rc");
-        set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
-        package_extract_dir("jolla-kernel/gee/ramdisk/ext4", "/tmp/ramdisk");
-        set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
-        set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
-        run_program("/tmp/mk-ramdisk.sh");
-        run_program("/tmp/mkbootimg.sh");
-        run_program("/tmp/busybox", "dd", "if=/tmp/newboot.img", "of=/dev/block/platform/msm_sdcc.1/by-name/boot")
-      endif;
-      ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="0"
-    endif;
-    ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="0"
+    ui_print("-> Installing F2FS Philz recovery");
+    package_extract_file("jolla-recovery/philz/recovery.img", "/dev/block/platform/msm_sdcc.1/by-name/recovery");
   endif;
-  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1"
+  ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="1"
 
-
-  ############ Nonmod Kernel ############
-  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
-    ui_print(">>>Nonmod Kernel<<<");
-    
-    ######## Stock Camera ########
-    if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1" then
-      ui_print(">>>Stock Camera<<<");
-
-      ui_print("-> Setting Camera...");
-      package_extract_dir("jolla-kernel/gee/camera/system", "/system");
-      delete("/system/lib/hw/camera.qcom.so");
-      set_perm(0, 0, 0755, "/system/bin/mm-qcamera-daemon");
-      
-      #### F2FS Specify ####
-      if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="1" then
-        ui_print(">>>F2FS Kernel<<<");
-
-        ui_print("-> Setting F2FS...");
-        package_extract_dir("jolla-kernel/gee/f2fs", "/system/bin");
-        set_perm(0, 0, 0755, "/system/bin/fibmap.f2fs");
-        set_perm(0, 0, 0755, "/system/bin/fsck.f2fs");
-        set_perm(0, 0, 0755, "/system/bin/mkfs.f2fs");
-
-        ui_print("-> Installing F2FS Philz recovery");
-        package_extract_file("jolla-recovery/philz/recovery.img", "/dev/block/platform/msm_sdcc.1/by-name/recovery");
-
-        ui_print("-> Installing f2fs_nonmod_stockcam-gee...");
-        package_extract_file("jolla-kernel/gee/zImage/stockcam/nonmod/zImage", "/tmp/zImage");
-        run_program("/tmp/busybox", "dd", "if=/dev/block/platform/msm_sdcc.1/by-name/boot", "of=/tmp/boot.img");
-        run_program("/tmp/unpackbootimg", "-i", "/tmp/boot.img", "-o", "/tmp/");
-        run_program("/tmp/unpack-ramdisk.sh");
-        package_extract_dir("jolla-kernel/gee/ramdisk/rc", "/tmp/ramdisk");
-        set_perm(0, 0, 0750, "/tmp/ramdisk/init.qcom.rc");
-        set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
-        package_extract_dir("jolla-kernel/gee/ramdisk/f2fs", "/tmp/ramdisk");
-        set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
-        set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
-        run_program("/tmp/mk-ramdisk.sh");
-        run_program("/tmp/mkbootimg.sh");
-        run_program("/tmp/busybox", "dd", "if=/tmp/newboot.img", "of=/dev/block/platform/msm_sdcc.1/by-name/boot")
-      endif;
-      ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="1"
-      
-      if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="0" then
-        ui_print(">>>EXT4 Kernel<<<");
-
-        ui_print("-> Installing ext4_nonmod_stockcam-gee...");
-        package_extract_file("jolla-kernel/gee/zImage/stockcam/nonmod/zImage", "/tmp/zImage");
-        run_program("/tmp/busybox", "dd", "if=/dev/block/platform/msm_sdcc.1/by-name/boot", "of=/tmp/boot.img");
-        run_program("/tmp/unpackbootimg", "-i", "/tmp/boot.img", "-o", "/tmp/");
-        run_program("/tmp/unpack-ramdisk.sh");
-        package_extract_dir("jolla-kernel/gee/ramdisk/rc", "/tmp/ramdisk");
-        set_perm(0, 0, 0750, "/tmp/ramdisk/init.qcom.rc");
-        set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
-        package_extract_dir("jolla-kernel/gee/ramdisk/ext4", "/tmp/ramdisk");
-        set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
-        set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
-        run_program("/tmp/mk-ramdisk.sh");
-        run_program("/tmp/mkbootimg.sh");
-        run_program("/tmp/busybox", "dd", "if=/tmp/newboot.img", "of=/dev/block/platform/msm_sdcc.1/by-name/boot")
-      endif;
-      ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="0"
-    endif;
-    ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1"
-
-
-    ######## Maco Camera ########
-    if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="0" then
-      ui_print(">>>Mako Camera<<<");
-      
-      #### F2FS Specify ####
-      if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="1" then
-        ui_print(">>>F2FS Kernel<<<");
-
-        ui_print("-> Setting F2FS...");
-        package_extract_dir("jolla-kernel/gee/f2fs", "/system/bin");
-        set_perm(0, 0, 0755, "/system/bin/fibmap.f2fs");
-        set_perm(0, 0, 0755, "/system/bin/fsck.f2fs");
-        set_perm(0, 0, 0755, "/system/bin/mkfs.f2fs");
-
-        ui_print("-> Installing F2FS Philz recovery");
-        package_extract_file("jolla-recovery/philz/recovery.img", "/dev/block/platform/msm_sdcc.1/by-name/recovery");
-
-        ui_print("-> Installing f2fs_nonmod_makocam-gee...");
-        package_extract_file("jolla-kernel/gee/zImage/makocam/nonmod/zImage", "/tmp/zImage");
-        run_program("/tmp/busybox", "dd", "if=/dev/block/platform/msm_sdcc.1/by-name/boot", "of=/tmp/boot.img");
-        run_program("/tmp/unpackbootimg", "-i", "/tmp/boot.img", "-o", "/tmp/");
-        run_program("/tmp/unpack-ramdisk.sh");
-        package_extract_dir("jolla-kernel/gee/ramdisk/rc", "/tmp/ramdisk");
-        set_perm(0, 0, 0750, "/tmp/ramdisk/init.qcom.rc");
-        set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
-        package_extract_dir("jolla-kernel/gee/ramdisk/f2fs", "/tmp/ramdisk");
-        set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
-        set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
-        run_program("/tmp/mk-ramdisk.sh");
-        run_program("/tmp/mkbootimg.sh");
-        run_program("/tmp/busybox", "dd", "if=/tmp/newboot.img", "of=/dev/block/platform/msm_sdcc.1/by-name/boot")
-      endif;
-      ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="1"
-      
-      if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="0" then
-        ui_print(">>>EXT4 Kernel<<<");
-
-        ui_print("-> Installing ext4_nonmod_makocam-gee...");
-        package_extract_file("jolla-kernel/gee/zImage/makocam/nonmod/zImage", "/tmp/zImage");
-        run_program("/tmp/busybox", "dd", "if=/dev/block/platform/msm_sdcc.1/by-name/boot", "of=/tmp/boot.img");
-        run_program("/tmp/unpackbootimg", "-i", "/tmp/boot.img", "-o", "/tmp/");
-        run_program("/tmp/unpack-ramdisk.sh");
-        package_extract_dir("jolla-kernel/gee/ramdisk/rc", "/tmp/ramdisk");
-        set_perm(0, 0, 0750, "/tmp/ramdisk/init.qcom.rc");
-        set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
-        package_extract_dir("jolla-kernel/gee/ramdisk/ext4", "/tmp/ramdisk");
-        set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
-        set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
-        run_program("/tmp/mk-ramdisk.sh");
-        run_program("/tmp/mkbootimg.sh");
-        run_program("/tmp/busybox", "dd", "if=/tmp/newboot.img", "of=/dev/block/platform/msm_sdcc.1/by-name/boot")
-      endif;
-      ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="0"
-    endif;
-    ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1"
+  ######## EXT4 ########
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="0" then
+    ui_print(">>>EXT4 Kernel<<<");
+    package_extract_dir("jolla-kernel/gee/ramdisk/ext4", "/tmp/ramdisk");
+    set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
+    set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
   endif;
-  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2"
+  ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="0"
+
+
+  ############ Camera/Kernel Selection ############
+  ######## Stock Camera ########
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1" then
+    ui_print(">>>Stock Camera<<<");
+
+    ui_print("-> Setting Camera...");
+    package_extract_dir("jolla-kernel/gee/camera/system", "/system");
+    delete("/system/lib/hw/camera.qcom.so");
+    set_perm(0, 0, 0755, "/system/bin/mm-qcamera-daemon");
+    
+    #### mod ####
+    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" then
+    ui_print(">>>mod Kernel<<<");
+      package_extract_file("jolla-kernel/gee/zImage/stockcam/mod/zImage", "/tmp/zImage");
+    endif;
+    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" then
+
+    #### nonmod ####
+    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
+    ui_print(">>>nonod Kernel<<<");
+      package_extract_file("jolla-kernel/gee/zImage/stockcam/nonmod/zImage", "/tmp/zImage");
+    endif;
+    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
+  endif;
+  ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1" then
+
+  ######## Maco Camera ########
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="0" then
+    ui_print(">>>Mako Camera<<<");
+
+    #### mod ####
+    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" then
+    ui_print(">>>mod Kernel<<<");
+      package_extract_file("jolla-kernel/gee/zImage/makocam/mod/zImage", "/tmp/zImage");
+    endif;
+    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" then
+
+    #### nonmod ####
+    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
+    ui_print(">>>nonod Kernel<<<");
+      package_extract_file("jolla-kernel/gee/zImage/makocam/nonmod/zImage", "/tmp/zImage");
+    endif;
+    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
+  endif;
+  ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="0"
+
+
+  ############ Repack boot.img ############
+  ui_print("-> Repacking boot.img...");
+  run_program("/tmp/mk-ramdisk.sh");
+  run_program("/tmp/mkbootimg.sh");
+  run_program("/tmp/busybox", "dd", "if=/tmp/newboot.img", "of=/dev/block/platform/msm_sdcc.1/by-name/boot")
 
 endif;
 ## endif file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1"
