@@ -4,7 +4,7 @@ jolla-kernel_G-AIO
 jolla-kernel_G All-In-One Aroma Installer
 
 
-This is flashable zip contens of jolla-kernel All-In-One Aroma Installer.
+This is flashable zip contens of jolla-kernel_G All-In-One Aroma Installer.
 
 You can choose my jolla-kernel easilly in GUI mode.
 Also you can install Multi ROM or TWRP recovery.
