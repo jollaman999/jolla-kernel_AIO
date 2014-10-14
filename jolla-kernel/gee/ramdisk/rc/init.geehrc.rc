@@ -47,6 +47,16 @@ on init
     mkdir /sns 0775 system system
     mkdir /sns/cal 0771 system system
 
+    # Frandom Support
+    chmod 666 /dev/frandom
+    chmod 666 /dev/erandom
+    mv /dev/random /dev/random.jolla
+    ln /dev/frandom /dev/random
+    mv /dev/urandom /dev/urandom.jolla
+    ln /dev/erandom /dev/urandom
+    mv /dev/hw_random /dev/hw_random.jolla
+    ln /dev/erandom /dev/hw_random
+
     # Setup custom emergency number list based on
     # the MCC. This is needed by RIL.
     setprop persist.radio.custom_ecc "1"
@@ -74,6 +84,11 @@ on boot
     chmod 2770 /dev/socket/qmux_bluetooth
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
+
+    # yongmin.jung@lge.com 2012.11.27 write wlan serial number on boot in init.gee.rc
+    write /sys/devices/platform/wcnss_wlan.0/serial_number ${ro.serialno}
+
+    setprop wifi.interface wlan0
 
     chmod 666 /proc/cmdline
 
@@ -358,38 +373,39 @@ service wpa_supplicant /system/bin/wpa_supplicant \
     oneshot
 
 service p2p_supplicant /system/bin/wpa_supplicant \
-    -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
-    -I/system/etc/wifi/p2p_supplicant_overlay.conf -N \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf \
-    -O/data/misc/wifi/sockets -puse_p2p_group_interface=1 \
-    -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
-#   we will start as root and wpa_supplicant will switch to user wifi
-#   after setting up the capabilities required for WEXT
-#   user wifi
-#   group wifi inet keystore
+    -O/data/misc/wifi/sockets -N \
+    -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
+    -I/system/etc/wifi/p2p_supplicant.conf -d \
+    -puse_p2p_group_interface=1use_multi_chan_concurrent=1 -e/data/misc/wifi/entropy.bin \
+    -g@android:wpa_wlan0
+    #   we will start as root and wpa_supplicant will switch to user wifi
+    #   after setting up the capabilities required for WEXT
+    #   user wifi
+    #   group wifi inet keystore
     class main
     socket wpa_wlan0 dgram 660 wifi wifi
     disabled
     oneshot
 
-service dhcpcd_wlan0 /system/bin/dhcpcd -aABDKL
-    class main
+service dhcpcd_wlan0 /system/bin/dhcpcd -ABDKL
+    class late_start
     disabled
     oneshot
 
-service dhcpcd_p2p /system/bin/dhcpcd -aABKL
-    class main
+service dhcpcd_p2p /system/bin/dhcpcd -ABKLG
+    class late_start
     disabled
     oneshot
 
-service iprenew_wlan0 /system/bin/dhcpcd -n
-    class main
+service iprenew_wlan0 /system/bin/dhcpcd -nK
+    class late_start
     disabled
     oneshot
 
-service iprenew_p2p /system/bin/dhcpcd -n
-    class main
+service iprenew_p2p /system/bin/dhcpcd -nK
+    class late_start
     disabled
     oneshot
 
@@ -398,6 +414,26 @@ service dhcpcd_bt-pan /system/bin/dhcpcd -BKLG
     oneshot
 
 service iprenew_bt-pan /system/bin/dhcpcd -n
+    disabled
+    oneshot
+
+service dhcpcd_bnep0 /system/bin/dhcpcd -BKLG
+    disabled
+    oneshot
+
+service dhcpcd_bnep1 /system/bin/dhcpcd -BKLG
+    disabled
+    oneshot
+
+service dhcpcd_bnep2 /system/bin/dhcpcd -BKLG
+    disabled
+    oneshot
+
+service dhcpcd_bnep3 /system/bin/dhcpcd -BKLG
+    disabled
+    oneshot
+
+service dhcpcd_bnep4 /system/bin/dhcpcd -BKLG
     disabled
     oneshot
 
