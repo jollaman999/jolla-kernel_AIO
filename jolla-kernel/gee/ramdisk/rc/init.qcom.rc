@@ -50,12 +50,12 @@ on init
     # Frandom Support
     chmod 666 /dev/frandom
     chmod 666 /dev/erandom
-    mv /dev/random /dev/random.jolla
-    ln /dev/frandom /dev/random
-    mv /dev/urandom /dev/urandom.jolla
-    ln /dev/erandom /dev/urandom
-    mv /dev/hw_random /dev/hw_random.jolla
-    ln /dev/erandom /dev/hw_random
+    rm /dev/random
+    symlink /dev/frandom /dev/random
+    rm /dev/urandom
+    symlink /dev/erandom /dev/urandom
+    rm /dev/hw_random
+    symlink /dev/erandom /dev/hw_random
 
     # Setup custom emergency number list based on
     # the MCC. This is needed by RIL.
