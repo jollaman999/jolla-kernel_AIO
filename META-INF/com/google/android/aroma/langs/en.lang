@@ -105,9 +105,9 @@ window2-1.title=CM/AOSP based
 window2-1.subtitle=Select kernel type.
 window2-1.option1=Kernel Type
 window2-1.option1-1=mod kernel
-window2-1.option1-1desc=for CM GEE, AOSP, Carbon, Dirty Unicorns(new), Axxion Kat, Liquid Smooth, OMNI etc..
+window2-1.option1-1desc=for CM GEE, AOSP, Carbon, Axxion Kat, Liquid Smooth, OMNI etc..
 window2-1.option1-2=nonmod kernel
-window2-1.option1-2desc=for Dirty Unicorns(old), Paranoid, DayDream etc..
+window2-1.option1-2desc=for Dirty Unicorns, Paranoid, DayDream etc..
 
 window2-2.title=Stock based
 window2-2.subtitle=Select kernel type.
