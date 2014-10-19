@@ -85,11 +85,8 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
     set_perm(0, 0, 0755, "/system/bin/fsck.f2fs");
     set_perm(0, 0, 0755, "/system/bin/mkfs.f2fs");
 
-	if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.1")!="1" then
-	    ui_print("-> Installing F2FS Philz recovery");
-	    package_extract_file("jolla-recovery/philz/recovery.img", "/dev/block/platform/msm_sdcc.1/by-name/recovery");
-	endif;
-	## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.1")!="1"
+    ui_print("-> Installing F2FS Philz recovery");
+    package_extract_file("jolla-recovery/philz/recovery.img", "/dev/block/platform/msm_sdcc.1/by-name/recovery");
   endif;
   ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="1"
 
