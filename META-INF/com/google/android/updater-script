@@ -191,7 +191,6 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="2" then
   #### MIUI Kernel
   if file_getprop("/tmp/aroma-data/window2-2.prop","selected.1")=="2" then
     ui_print(">>>MIUI Kernel<<<");
-    package_extract_dir("jolla-kernel/stock/miui", "/system");
     package_extract_file("jolla-kernel/stock/kernel/miui/boot.img", "/dev/block/platform/msm_sdcc.1/by-name/boot");
   endif;
   ## endif file_getprop("/tmp/aroma-data/window2-2.prop","selected.1")=="2"
