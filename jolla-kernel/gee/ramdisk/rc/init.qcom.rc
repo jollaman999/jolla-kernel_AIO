@@ -47,16 +47,6 @@ on init
     mkdir /sns 0775 system system
     mkdir /sns/cal 0771 system system
 
-    # Frandom Support
-    chmod 666 /dev/frandom
-    chmod 666 /dev/erandom
-    rm /dev/random
-    symlink /dev/frandom /dev/random
-    rm /dev/urandom
-    symlink /dev/erandom /dev/urandom
-    rm /dev/hw_random
-    symlink /dev/erandom /dev/hw_random
-
     # Setup custom emergency number list based on
     # the MCC. This is needed by RIL.
     setprop persist.radio.custom_ecc "1"

@@ -1,13 +1,5 @@
 #!/system/bin/sh
 
-## frandom Support
-rm /dev/random
-ln -s /dev/frandom /dev/random
-rm /dev/urandom
-ln -s /dev/erandom /dev/urandom
-rm /dev/hw_random
-ln -s /dev/erandom /dev/hw_random
-
 ## jollaman999
 echo 270000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 echo 270000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
