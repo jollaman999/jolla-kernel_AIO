@@ -69,15 +69,16 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
   ## mod/nonmod ##
   if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")!="3" then
     ui_print(">>> init <<<");
-    package_extract_dir("jolla-kernel/gee/ramdisk/rc", "/tmp/ramdisk");
+    package_extract_file("jolla-kernel/gee/ramdisk/rc/init.qcom.rc", "/tmp/ramdisk/init.qcom.rc");
+    package_extract_file("jolla-kernel/gee/ramdisk/rc/init.geehrc.rc", "/tmp/ramdisk/init.geehrc.rc");
     set_perm(0, 0, 0750, "/tmp/ramdisk/init.qcom.rc");
     set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
   endif;
   ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")!="3" then
 
   ## L ##
-  ui_print(">>> L - init <<<");
   if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
+    ui_print(">>> L - init <<<");
     package_extract_file("jolla-kernel/gee/ramdisk/rc/init.mako.rc", "/tmp/ramdisk/init.mako.rc");
     set_perm(0, 0, 0750, "/tmp/ramdisk/init.mako.rc");
   endif;
