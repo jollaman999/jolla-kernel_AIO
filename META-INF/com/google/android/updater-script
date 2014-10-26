@@ -103,6 +103,8 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
       ui_print(">>>L - F2FS Kernel<<<");
       package_extract_file("jolla-kernel/gee/ramdisk/f2fs/fstab.mako", "/tmp/ramdisk/fstab.mako");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.mako");
+      package_extract_file("jolla-kernel/gee/f2fs-L/e2fsck", "/system/bin/e2fsck");
+      set_perm(0, 0, 0755, "/system/bin/e2fsck");
     endif;
     ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
 
