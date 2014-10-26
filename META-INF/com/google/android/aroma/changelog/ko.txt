@@ -3,7 +3,13 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[v11.1]</#></b></@>
+<b><#selectbg_g>[v12]</#></b></@>
+- 고스트 터치 현상 수정!!
+- 스톡 와이파이 드라이버 포팅 (버젼업 3.2.3.13 -> 3.2.7.27) (어느정도 속도 향상이 있습니다.)
+- 스톡 LED 드라이버 포팅 (기존에 LED 가 빠르게 깜박여서 신경이 쓰이던 부분 해결)
+- Android L 커널 지원
+
+<b><#selectbg_g>[v11.1]</#></b>
 - GUI 아로마 인스톨러 적용 및 멀티롬 기능과 함께 얼인원 적용
 - Linaro 2014.09 gcc 4.9.2 로 빌드
 - CM : 기존 boot.img 설치방식에서 zImage 설치 방식으로 전환하여 호환성 강화

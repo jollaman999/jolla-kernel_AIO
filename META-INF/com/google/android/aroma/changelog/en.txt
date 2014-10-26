@@ -3,7 +3,13 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[v11.1]</#></b></@>
+<b><#selectbg_g>[v12]</#></b></@>
+- GHOST TOUCH FIXED!!
+- Stock Wifi driver ported (Version 3.2.3.13 -> 3.2.7.27) (Speed up)
+- Stock LED driver ported (LED duration fixed)
+- Android L Kernel support
+
+<b><#selectbg_g>[v11.1]</#></b>
 - GUI Aroma Installer Applied and All-In-One applied with Multi ROM function.
 - Built with Linaro 2014.09 gcc 4.9.2
 - CM : Change install method from boot.img to zImage. So better compatibility.
