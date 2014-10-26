@@ -108,6 +108,8 @@ window2-1.option1-1=mod kernel
 window2-1.option1-1desc=for CM GEE, AOSP, Carbon, Axxion Kat, Liquid Smooth, OMNI etc..
 window2-1.option1-2=nonmod kernel
 window2-1.option1-2desc=for Dirty Unicorns, Paranoid, DayDream etc..
+window2-1.option1-3=L kernel
+window2-1.option1-3desc=for Android L
 
 window2-2.title=Stock based
 window2-2.subtitle=Select kernel type.
@@ -136,6 +138,7 @@ checkbox1.item1-1=Install Multi ROM Boot
 checkbox1.item1stock=Multi ROM Boot is only possible to install on main GEE rom.
 checkbox1.item1-1desc=Install Multi ROM Boot that is possible to boot various roms with jolla-TWRP.
 checkbox1.item2=Camera Driver
+checkbox1.item2L=Stock Camera Driver is not supported in Android L
 checkbox1.item2-1=Stock Camera Driver
 checkbox1.item2-1desc=Install stock's camera driver\
 If you have problem with stock camera, reflash your rom. Then reinstall kernel with uncheck this option.
