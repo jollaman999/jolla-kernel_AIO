@@ -319,6 +319,7 @@ on post-fs-data
     write /sys/devices/system/cpu/cpufreq/smartmax/touch_poke_freq 702000
     write /sys/devices/system/cpu/cpufreq/smartmax/up_rate 30000
     write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_gpuclk 320000000
+    write /sys/module/intelli_plug/parameters/intelli_plug_active 1
 ##
     write /sys/module/pm_8x60/modes/cpu0/wfi/suspend_enabled 1
     write /sys/module/pm_8x60/modes/cpu0/power_collapse/suspend_enabled 1
