@@ -13,10 +13,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "jolla-kernel");
-ini_set("rom_version",          "v13.1-stock_cam");
+ini_set("rom_version",          "v13-stock_cam");
 ini_set("rom_author",           "jollaman999");
 ini_set("rom_device",           "LG Optimus G");
-ini_set("rom_date",             "Nov 18, 2014");
+ini_set("rom_date",             "Nov 17, 2014");
 
 
 ##
