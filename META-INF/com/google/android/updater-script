@@ -23,10 +23,10 @@ endif;
 
 if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
-############################ GEE Kernel ###############################
+############################ GEEB Kernel ###############################
 if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
 
-  ui_print(">>>Installing GEE Kernel<<<");
+  ui_print(">>>Installing GEEB Kernel<<<");
   
   ui_print("-> Extracting scripts...");
   package_extract_dir("jolla-kernel/gee/script", "/tmp");

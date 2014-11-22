@@ -1,7 +1,7 @@
-jolla-kernel_G-AIO
+jolla-kernel_G-AIO-GEEB
 ====================
 
-jolla-kernel_G All-In-One Aroma Installer
+jolla-kernel_G All-In-One Aroma Installer for GEEB
 
 
 This is flashable zip contens of jolla-kernel_G All-In-One Aroma Installer.
