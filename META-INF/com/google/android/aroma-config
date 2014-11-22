@@ -18,7 +18,6 @@ ini_set("rom_author",           "jollaman999");
 ini_set("rom_device",           "GEEB/e970");
 ini_set("rom_date",             "Nov 22, 2014");
 
-
 ##
 # Show Simple Splash
 #
