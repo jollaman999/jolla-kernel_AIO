@@ -137,14 +137,9 @@ checkbox1.item1stock=멀티롬 부팅은 메인 GEE 롬에만 설치하실 수 �
 checkbox1.item1uninst=멀티롬 제거가 선택되었습니다.
 checkbox1.item1-1=멀티롬 부팅 설치
 checkbox1.item1-1desc=jolla-TWRP 와 함께 여러 롬들을 부팅할 수 있게 해주는 멀티롬을 설치합니다.
-checkbox1.item2=카메라 드라이버
-checkbox1.item2L=Android L 에서는 스톡 카메라 드라이버가 지원되지 않습니다.
-checkbox1.item2-1=스톡 카메라 드라이버
-checkbox1.item2-1desc=스톡 기반 카메라 드라이버를 설치합니다.\
-카메라 이용에 문제가 있을경우 롬을 재설치 해주시고, 이 옵션에 체크 해제 후 커널을 재설치 해주시기 바랍니다.
-checkbox1.item3=파일 시스템
-checkbox1.item3-1=F2FS 사용
-checkbox1.item3-1desc=F2FS 커널을 설치합니다.\
+checkbox1.item2=파일 시스템
+checkbox1.item2-1=F2FS 사용
+checkbox1.item2-1desc=F2FS 커널을 설치합니다.\
 /data, /cache를 f2fs로 사용합니다.\
 (멀티롬을 설치하시지 않을경우 F2FS 호환 Philz 리커버리가 기본으로 설치됩니다.)
 
