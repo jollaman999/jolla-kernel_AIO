@@ -468,7 +468,7 @@ if prop("window1.prop","selected.1")=="1" then
 		  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 	);
 
-if prop("checkbox1.prop","item.3.1")=="1" then
+if prop("checkbox1.prop","item.2.1")=="1" then
     alert( "<~fs.attention>", "<~fs.attentiondesc>");
 endif;
 ## endif - checkbox1.prop
@@ -537,7 +537,7 @@ checkbox(
 );
 
 ##
-# Alert Window - Warning about Delte Second Roms
+# Alert Window - Warning about Delete Second Roms
 #
 if prop("checkbox2.prop","item.1.1")=="1" then
   alert( "<~multidel.attention>", "<~multidel.attentiondesc>");
