@@ -210,8 +210,8 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="2" then
   package_extract_dir("jolla-kernel/stock/common", "/system");
 
   ui_print("-> Extracting prima scripts...");
-  package_extract_file("jolla-kernel/gee/prima_set_perm.sh", "/tmp/prima_set_perm.sh");
-  package_extract_file("jolla-kernel/gee/prima_bakup.sh", "/tmp/prima_bakup.sh");
+  package_extract_file("jolla-kernel/gee/script/prima_set_perm.sh", "/tmp/prima_set_perm.sh");
+  package_extract_file("jolla-kernel/gee/script/prima_bakup.sh", "/tmp/prima_bakup.sh");
   
   ui_print("-> Backup previous prima...");
   set_perm(0, 0, 0777, "/tmp/prima_bakup.sh");
