@@ -3,7 +3,27 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[v12]</#></b></@>
+<b><#selectbg_g>[v0xD]</#></b></@>
+- f2fs: Linux 3.17.4 까지 최신 업데이트 적용
+- random: Linux 3.17.4 까지 최신 업데이트 적용
+- CM, L : 롤리팝 커널에 기반한 최신 kgsl 업데이트 적용
+- CM, L : 롤리팝 커널 기반 와이파이 적용
+- L : cm-12.0 준비 (알려진 문제점: 랜덤 스크린 깜박임)
+- GEEB 카메라 수정
+- Stock: GEEB sdcard 램디스크 라인들 추가
+- block: bfq io 스케줄러 추가 및 기본으로 적용
+- cpufreq: dancedance, smartassV2 새 거버너 추가
+- leds: 스톡 커널에 기반하여 깜박임 주기만 재포팅
+- codel net 스케줄러 적용
+- tcp: 일부 성능 최적화 및 TCP Small Queues 적용
+- ext4 새 random 드라이버에 기반한 업데이트 적용 및 FIDTRIM 지원
+- zlib: 사용되지 않는 코드 제거
+- sound: 일부 수정 및 팝 노이즈 현상 수정
+- TDMB 드라이버 추가 (GEE 전용 및 테스트 되지 않음)
+- Stock KK 에 기반하여 mako 에서 GEE로 전환하면서 일부 수정해야 할 부분 개선
+- 그 외..
+
+<b><#selectbg_g>[v12]</#></b>
 - 고스트 터치 현상 수정!!
 - 스톡 와이파이 드라이버 포팅 (버젼업 3.2.3.13 -> 3.2.7.27) (어느정도 속도 향상이 있습니다.)
 - 스톡 LED 드라이버 포팅 (기존에 LED 가 빠르게 깜박여서 신경이 쓰이던 부분 해결)
