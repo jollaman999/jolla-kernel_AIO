@@ -1,4 +1,4 @@
-﻿### LICENSE:
+### LICENSE:
 #
 # Copyright (C) 2011 Ahmad Amarullah ( http://amarullz.com/ )
 #
@@ -137,9 +137,14 @@ checkbox1.item1uninst=Uninstall Multi ROM is selected.
 checkbox1.item1-1=Install Multi ROM Boot
 checkbox1.item1stock=Multi ROM Boot is only possible to install on main GEE rom.
 checkbox1.item1-1desc=Install Multi ROM Boot that is possible to boot various roms with jolla-TWRP.
-checkbox1.item2=File System
-checkbox1.item2-1=Use F2FS
-checkbox1.item2-1desc=Install F2FS kernel\
+checkbox1.item2=Camera Driver
+checkbox1.item2L=Stock Camera Driver is not supported in Android L
+checkbox1.item2-1=Stock Camera Driver
+checkbox1.item2-1desc=Install stock's camera driver\
+If you have problem with stock camera, reflash your rom. Then reinstall kernel with uncheck this option.
+checkbox1.item3=File System
+checkbox1.item3-1=Use F2FS
+checkbox1.item3-1desc=Install F2FS kernel\
 Use /data and /cache partitions to f2fs\
 (If you not install multirom, F2FS compatible Philz recovery will be install to default.)
 
