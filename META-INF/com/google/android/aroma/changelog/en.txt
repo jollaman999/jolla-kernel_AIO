@@ -3,7 +3,27 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[v12]</#></b></@>
+<b><#selectbg_g>[v0xD]</#></b></@>
+- f2fs: Applied latest updates until Linux 3.17.4
+- random: Applied latest updates until Linux 3.17.4
+- CM, L : Latest kgsl driver updated based on Lollipop kernel
+- CM, L : Wifi updated based on Lollipop kernel
+- L : cm-12.0 Ready (Know issue: Random screen flicking)
+- GEEB camera fixed
+- Stock: GEEB sdcard ramdisk lines added
+- block: bfq io-scheduler added and set to default
+- cpufreq: dancedance, smartassV2 new governors added
+- leds: re-ported based on Stock KK only for duty cycles
+- codel net-scheduler applied
+- tcp: Some of optimized and TCP Small Queues applied
+- ext4 optimized based on new random driver and FIDTRIM support
+- zlib: clean up some dead code
+- sound: Some of fixed with pop noise fix
+- TDMB driver added (only for GEE and not tested)
+- Some of mako to GEE related fixes based on Stock KK
+- And more..
+
+<b><#selectbg_g>[v12]</#></b>
 - GHOST TOUCH FIXED!!
 - Stock Wifi driver ported (Version 3.2.3.13 -> 3.2.7.27) (Speed up)
 - Stock LED driver ported (LED duration fixed)
