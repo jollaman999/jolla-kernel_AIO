@@ -16,7 +16,7 @@ ini_set("rom_name",             "jolla-kernel");
 ini_set("rom_version",          "v0xD");
 ini_set("rom_author",           "jollaman999");
 ini_set("rom_device",           "GEEB/e970");
-ini_set("rom_date",             "Nov 22, 2014");
+ini_set("rom_date",             "Nov 24, 2014");
 
 ##
 # Show Simple Splash
