@@ -4,10 +4,10 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 /dev/block/platform/msm_sdcc.1/by-name/system       /system         ext4    ro,barrier=0                                                   wait
-/dev/block/platform/msm_sdcc.1/by-name/cache        /cache          f2fs    noatime,nosuid,nodev,nobarrier,discard,nodiratime,inline_xattr,inline_data,errors=recover                     wait,check
-/dev/block/platform/msm_sdcc.1/by-name/userdata     /data           f2fs    noatime,nosuid,nodev,nobarrier,discard,nodiratime,inline_xattr,inline_data,errors=recover     wait,check,encryptable=/dev/block/platform/msm_sdcc.1/by-name/encrypt
+/dev/block/platform/msm_sdcc.1/by-name/cache        /cache          ext4    noatime,nodiratime,nosuid,nodev,barrier=0,data=ordered,errors=panic                     wait,check
+/dev/block/platform/msm_sdcc.1/by-name/userdata     /data           ext4    noatime,nodiratime,nosuid,nodev,barrier=0,data=ordered,noauto_da_alloc,errors=panic     wait,check,encryptable=/dev/block/platform/msm_sdcc.1/by-name/encrypt
 /dev/block/platform/msm_sdcc.1/by-name/persist      /persist        ext4    nosuid,nodev,barrier=1,data=ordered,nodelalloc                  wait
-/dev/block/platform/msm_sdcc.1/by-name/modem        /firmware       vfat    ro,uid=1000,gid=1000,dmask=227,fmask=337                        wait
+/dev/block/platform/msm_sdcc.1/by-name/modem        /firmware       vfat    ro,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:radio_efs_file:s0                        wait
 /dev/block/platform/msm_sdcc.1/by-name/boot         /boot           emmc    defaults                                                        defaults
 /dev/block/platform/msm_sdcc.1/by-name/recovery     /recovery       emmc    defaults                                                        defaults
 /dev/block/platform/msm_sdcc.1/by-name/sns          /sns            ext4    nosuid,nodev,barrier=1,data=ordered                             wait,check
