@@ -50,6 +50,11 @@ on init
     setprop persist.radio.custom_ecc_voice "{515:117},{452:113,114,115}"
     setprop persist.radio.custom_ecc_hard "911,*911,#911,112,999,000,08,118,120,122,110,119,995,111,113,125,127,133"
 
+on charger-fs
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system  /system ro barrier=0
+    start rmt_storage
+
+
 on fs
     mount_all ./fstab.qcom
     restorecon_recursive /persist
@@ -312,7 +317,7 @@ on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
 
 service rmt_storage /system/bin/rmt_storage
-    class core
+    class main
     user root
 
 service config_bluetooth /system/bin/sh /system/etc/init.qcom.bt.sh "onboot"
@@ -414,7 +419,7 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
     oneshot
 on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
-    write /proc/sys/net/ipv4/tcp_adv_win_scale  1
+    write /proc/sys/net/ipv4/tcp_adv_win_scale 2
 
 service charger /sbin/healthd -c
     class charger

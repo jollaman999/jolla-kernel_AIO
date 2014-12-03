@@ -174,7 +174,7 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
   endif;
   ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1" then
 
-  ######## Maco Camera ########
+  ######## Maco Camera/L-kernel ########
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")!="1" then
     ui_print(">>>Mako Camera<<<");
 
