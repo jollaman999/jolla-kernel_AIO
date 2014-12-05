@@ -39,6 +39,11 @@ on init
     symlink /storage/emulated/legacy /storage/sdcard0
     symlink /mnt/shell/emulated/0 /storage/emulated/legacy
 
+    # External SD card support
+    mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
+    mkdir /storage/sdcard1 0700 root root
+    export SECONDARY_STORAGE /storage/sdcard1
+
     mkdir /sns 0775 system system
     mkdir /sns/cal 0771 system system
 
