@@ -104,12 +104,12 @@ window2.option1-2desc=스톡, MIUI, GEE3 등 스톡 기반 롬에 설치 하실 
 window2-1.title=CM/AOSP 기반
 window2-1.subtitle=커널 종류를 선택해 주세요.
 window2-1.option1=커널 종류
-window2-1.option1-1=mod 커널
+window2-1.option1-1=mod 커널 (Kitkat)
 window2-1.option1-1desc=CM GEE, AOSP, Carbon, Axxion Kat, Liquid Smooth, OMNI 등
-window2-1.option1-2=nonmod 커널
+window2-1.option1-2=nonmod 커널 (Kitkat)
 window2-1.option1-2desc=Dirty Unicorns, Paranoid, DayDream 등
-window2-1.option1-3=L 커널
-window2-1.option1-3desc=Android L 용 커널
+window2-1.option1-3=L 커널 (Lollipop)
+window2-1.option1-3desc=CM12/Lollipop 기반 롬들 용
 
 window2-2.title=스톡 기반
 window2-2.subtitle=커널 종류를 선택해 주세요.
@@ -138,7 +138,7 @@ checkbox1.item1uninst=멀티롬 제거가 선택되었습니다.
 checkbox1.item1-1=멀티롬 부팅 설치
 checkbox1.item1-1desc=jolla-TWRP 와 함께 여러 롬들을 부팅할 수 있게 해주는 멀티롬을 설치합니다.
 checkbox1.item2=카메라 드라이버
-checkbox1.item2L=Android L 에서는 스톡 카메라 드라이버가 지원되지 않습니다.
+checkbox1.item2L=Lollipop 에서는 스톡 카메라 드라이버가 기본으로 지원됩니다.
 checkbox1.item2-1=스톡 카메라 드라이버
 checkbox1.item2-1desc=스톡 기반 카메라 드라이버를 설치합니다.\
 카메라 이용에 문제가 있을경우 롬을 재설치 해주시고, 이 옵션에 체크 해제 후 커널을 재설치 해주시기 바랍니다.
