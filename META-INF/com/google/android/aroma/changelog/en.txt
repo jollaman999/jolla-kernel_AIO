@@ -3,7 +3,26 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[v0xD]</#></b></@>
+<b><#selectbg_g>[v0xE]</#></b></@>
+- Power: Applied gproj based power sources. (Battery standby time greatly improved!!)
+- doubletap2wake: Fixed 3 taps issue when phone is suspended!!
+- doubletap2wake: You can wake your device by 10 taps in a second!! (Configurable tap counts!!)
+  0 : Off
+  1~9 : Wake by n+1 taps. (n = Your setting)
+
+  Example)
+  0 : Doubletap2wake will not working.
+  1 : Wake by double taps.
+  2 : Wake by triple taps.
+  9 : Wake by 10 taps.
+
+  Recognizing Time : 100ms * 'touch counts'
+  (So when you set to 9, you can wake your device by 10 taps in 1 second. :p)
+- doubletap2wake: Adjusted recognizing time.
+- io-sched: Remove bfq io-scheduler that eat more batery. Back to fiops as default io-scheduler.
+- Remove TDMB driver that not compatible with jolla-kernel.
+
+<b><#selectbg_g>[v0xD]</#></b>
 - f2fs: Applied latest updates until Linux 3.17.4
 - random: Applied latest updates until Linux 3.17.4
 - CM, L : Latest kgsl driver updated based on Lollipop kernel
