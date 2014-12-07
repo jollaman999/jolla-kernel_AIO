@@ -80,6 +80,7 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
     ui_print(">>> L - init <<<");
     package_extract_dir("jolla-kernel/gee/ramdisk/rc-L", "/tmp/ramdisk");
     set_perm(0, 0, 0750, "/tmp/ramdisk/init.qcom.rc");
+    set_perm(0, 0, 0750, "/tmp/ramdisk/init.geeb.rc");
     set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
     set_perm(0, 0, 0750, "/tmp/ramdisk/init.mako.rc");
   endif;
@@ -113,6 +114,7 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
       set_perm(0, 0, 0755, "/system/bin/fsck.f2fs");
       package_extract_dir("jolla-kernel/gee/ramdisk/f2fs-L", "/tmp/ramdisk");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
+      set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geeb");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.mako");
     endif;
@@ -140,6 +142,7 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
       ui_print(">>>L - EXT4 Kernel<<<");
       package_extract_dir("jolla-kernel/gee/ramdisk/ext4-L", "/tmp/ramdisk");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
+      set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geeb");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.mako");
     endif;
@@ -154,8 +157,8 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
     ui_print(">>>Stock Camera<<<");
 
     ui_print("-> Setting Camera...");
-    package_extract_dir("jolla-kernel/gee/camera/system", "/system");
     delete("/system/lib/hw/camera.qcom.so");
+    package_extract_dir("jolla-kernel/gee/camera/system", "/system");
     set_perm(0, 0, 0755, "/system/bin/mm-qcamera-daemon");
     
     #### mod ####
@@ -196,6 +199,17 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
     if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
     ui_print(">>>L Kernel<<<");
       package_extract_file("jolla-kernel/gee/zImage/L/zImage", "/tmp/zImage");
+    ui_print(">>>Stock Camera<<<");
+      ui_print("-> Setting Camera...");
+      delete("/system/lib/hw/camera.qcom.so");
+      delete("/system/lib/hw/camera.geeb.so");
+      delete("/system/lib/hw/camera.geehrc.so");
+      delete("/system/lib/hw/camera.mako.so");
+      delete("/system/lib/libcamera_fast_af.so");
+      delete("/system/lib/libmorpho_noise_reduction.so");
+      package_extract_dir("jolla-kernel/gee/camera/system", "/system");
+      package_extract_dir("jolla-kernel/gee/camera-L", "/system/lib");
+      set_perm(0, 0, 0755, "/system/bin/mm-qcamera-daemon");
     endif;
     ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
   endif;
