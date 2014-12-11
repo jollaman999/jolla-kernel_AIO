@@ -424,9 +424,10 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
   
     "<~window2-1.option1>",         "",                                                 2,      #-- Group 1. key = "selected.1"
-        "<~window2-1.option1-1>",         "<~window2-1.option1-1desc>",                              1,      #-- selected.1 = 1
+        "<~window2-1.option1-1>",         "<~window2-1.option1-1desc>",                              0,      #-- selected.1 = 1
         "<~window2-1.option1-2>",         "<~window2-1.option1-2desc>",                              0,      #-- selected.1 = 2
-        "<~window2-1.option1-3>",         "<~window2-1.option1-3desc>",                              0       #-- selected.1 = 3
+        "<~window2-1.option1-3>",         "<~window2-1.option1-3desc>",                              1,      #-- selected.1 = 3
+        "<~window2-1.option1-4>",         "<~window2-1.option1-4desc>",                              0       #-- selected.1 = 4
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
@@ -444,8 +445,6 @@ alert( "<~kernel1.attention>", "<~kernel1.attentiondesc>");
 ## multirom enabled
 if prop("window1.prop","selected.1")=="1" then
 
-	## mod/nonmod kernel selected
-	if prop("window2-1.prop","selected.1")!="3" then
 		checkbox(
 		  # Title
 			"<~checkbox1.title>",
@@ -471,38 +470,6 @@ if prop("window1.prop","selected.1")=="1" then
 		    "<~checkbox1.item3-1>",  "<~checkbox1.item3-1desc>",                               0       #-- item.3.1
 			  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 		);
-	endif;
-	## endif - prop("window2-1.prop","selected.1")!="3" then
-
-	## L kernel selected
-	if prop("window2-1.prop","selected.1")=="3" then
-		checkbox(
-		  # Title
-			"<~checkbox1.title>",
-		  
-		  # Sub Title
-			"<~checkbox1.subtitle>",
-		 
-		  # Icon
-			"@update",
-		  
-		  # Will be saved in /tmp/aroma/checkbox1.prop
-			"checkbox1.prop",
-		  
-		  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-		  # TITLE            |  SUBTITLE                                                 | Initial Value #
-		  #------------------+-----------------------------------------------------------+---------------#
-		  
-		  "<~checkbox1.item1>",      "",                                                       2,      #-- group 1
-		    "<~checkbox1.item1-1>",  "<~checkbox1.item1-1desc>",                               0,      #-- item.1.1
-		  "<~checkbox1.item2L>",     "",                                                       2,      #-- group 2
-		    "<~checkbox1.item2-1>",  "<~checkbox1.item2-1desc>",                               3,      #-- item.2.1
-		  "<~checkbox1.item3>",      "",                                                       2,      #-- group 3
-		    "<~checkbox1.item3-1>",  "<~checkbox1.item3-1desc>",                               0       #-- item.3.1
-			  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-		);
-	endif;
-	## endif - prop("window2-1.prop","selected.1")=="3" then	
 
 if prop("checkbox1.prop","item.3.1")=="1" then
     alert( "<~fs.attention>", "<~fs.attentiondesc>");
@@ -520,8 +487,6 @@ endif;
 ## multirom disabled
 if prop("window1.prop","selected.1")=="2" then
 
-	## mod/nonmod kernel selected
-	if prop("window2-1.prop","selected.1")!="3" then
 		checkbox(
 		  # Title
 			"<~checkbox1.title>",
@@ -547,38 +512,6 @@ if prop("window1.prop","selected.1")=="2" then
 		    "<~checkbox1.item3-1>",  "<~checkbox1.item3-1desc>",                               0       #-- item.3.1
 			  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 		);
-	endif;
-	## endif - prop("window2-1.prop","selected.1")!="3" then
-
-	## L kernel selected
-	if prop("window2-1.prop","selected.1")=="3" then
-		checkbox(
-		  # Title
-			"<~checkbox1.title>",
-		  
-		  # Sub Title
-			"<~checkbox1.subtitle>",
-		 
-		  # Icon
-			"@update",
-		  
-		  # Will be saved in /tmp/aroma/checkbox1.prop
-			"checkbox1.prop",
-		  
-		  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-		  # TITLE            |  SUBTITLE                                                 | Initial Value #
-		  #------------------+-----------------------------------------------------------+---------------#
-		  
-		  "<~checkbox1.item1>",      "",                                                       2,      #-- group 1
-		    "<~checkbox1.item1-1>",  "<~checkbox1.item1-1desc>",                               3,      #-- item.1.1
-		  "<~checkbox1.item2L>",     "",                                                       2,      #-- group 2
-		    "<~checkbox1.item2-1>",  "<~checkbox1.item2-1desc>",                               3,      #-- item.2.1
-		  "<~checkbox1.item3>",      "",                                                       2,      #-- group 3
-		    "<~checkbox1.item3-1>",  "<~checkbox1.item3-1desc>",                               0       #-- item.3.1
-			  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-		);
-	endif;
-	## endif - prop("window2-1.prop","selected.1")=="3" then
 
 if prop("checkbox1.prop","item.3.1")=="1" then
     alert( "<~fs.attention>", "<~fs.attentiondesc>");
