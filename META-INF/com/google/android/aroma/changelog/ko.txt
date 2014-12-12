@@ -3,7 +3,12 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[v0xE]</#></b></@>
+<b><#selectbg_g>[v15]</#></b></@>
+- Linux 3.4.105 적용.
+- 최신 롤리팝 mako 커널 패치 적용.
+- Makefile 최적화
+
+<b><#selectbg_g>[v0xE]</#></b>
 - 파워: Gproj 기반 파워 소스 적용. (대기 배터리 시간 대폭 향상!!)
 - 노크온: 폰이 일시정지 상태일때 3번 탭해야 하는 문제점 해결!!
 - 노크온: 1초안에 10번을 두들겨야 폰을 깨울수 있습니다!! (터치 수 설정가능!!)
