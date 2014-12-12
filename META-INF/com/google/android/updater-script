@@ -196,14 +196,14 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
 
     #### L - mod ####
     if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
-    ui_print(">>>L Kernel<<<");
+    ui_print(">>>L-mod Kernel<<<");
       package_extract_file("jolla-kernel/gee/zImage/L-stockcam/mod/zImage", "/tmp/zImage");
     endif;
     ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
 
     #### L - nonmod ####
     if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
-    ui_print(">>>L Kernel<<<");
+    ui_print(">>>L-nonmod Kernel<<<");
       package_extract_file("jolla-kernel/gee/zImage/L-stockcam/nonmod/zImage", "/tmp/zImage");
     endif;
     ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
@@ -230,14 +230,14 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
 
     #### L - mod ####
     if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
-    ui_print(">>>L Kernel<<<");
+    ui_print(">>>L-mod Kernel<<<");
       package_extract_file("jolla-kernel/gee/zImage/L-makocam/mod/zImage", "/tmp/zImage");
     endif;
     ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
 
     #### L - nonmod ####
     if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
-    ui_print(">>>L Kernel<<<");
+    ui_print(">>>L-nonmod Kernel<<<");
       package_extract_file("jolla-kernel/gee/zImage/L-makocam/nonmod/zImage", "/tmp/zImage");
     endif;
     ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
