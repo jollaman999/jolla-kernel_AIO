@@ -12,6 +12,8 @@
 - L-kernel: makocam kernel added
 - Support Stock camera diriver selection mode for L-kernel
 - Support mod/nonmod kernel selection for L-kernel
+- Recovery-twrp: Update kernel to jolla-kernel_v16
+- Recovery-philz: Update kernel to jolla-kernel_v16
 
 <b><#selectbg_g>[v15]</#></b>
 - Only provided with my cm-12.0 UNOFFICIAL roms.

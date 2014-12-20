@@ -12,8 +12,10 @@
 - L-kernel: makocam 커널 추가
 - L-kernel 스톡 카메라 드라이버 설치 여부 선택 지원
 - L-kernel mod/nonmod 커널 선택 지원
+- Recovery-twrp: jolla-kernel_v16 으로 커널 업데이트
+- Recovery-philz: jolla-kernel_v16 으로 커널 업데이트
 
-<b><#selectbg_g>[v15]/#></b>
+<b><#selectbg_g>[v15]</#></b>
 - 본인의 cm-12.0 UNOFFICIAL 롬에 포함된 상태로만 제공됨.
 - Linux 3.4.105 적용.
 - 최신 롤리팝 mako 커널 패치 적용.
