@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[v15]</#></b></@>
+<b><#selectbg_g>[v16]</#></b></@>
+- Android 기기를 USB 키보드/마우스로 사용가능 (필요한 어플 포함됨)
+- L-kernel: 'seccomp' 와 함께 최신 Cyanogenmod 패치 적용
+- f2fs: 최신 리눅스 커널 트리 패치 적용
+(2014년 12월 9일자 까지 적용 f2fs: avoid to ra unneeded blocks in recover flow)
+- f2fs: 새 'inline_dentry' 마운트 옵션 적용
+- L-kernel: makocam 커널 추가
+- L-kernel 스톡 카메라 드라이버 설치 여부 선택 지원
+- L-kernel mod/nonmod 커널 선택 지원
+
+<b><#selectbg_g>[v15]/#></b>
+- 본인의 cm-12.0 UNOFFICIAL 롬에 포함된 상태로만 제공됨.
 - Linux 3.4.105 적용.
 - 최신 롤리팝 mako 커널 패치 적용.
 - Makefile 최적화
