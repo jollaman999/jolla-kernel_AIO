@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[v15]</#></b></@>
+<b><#selectbg_g>[v16]</#></b></@>
+- Use Android device as USB keyboard/mouse support (Required app included)
+- L-kernel: Applied latest Cyanogenmod patches with 'seccomp'
+- f2fs: Latest linux kernel tree patches applied
+(Until Dec 9, 2014 f2fs: avoid to ra unneeded blocks in recover flow)
+- f2fs: New 'inline_dentry' mount option applied
+- L-kernel: makocam kernel added
+- Support Stock camera diriver selection mode for L-kernel
+- Support mod/nonmod kernel selection for L-kernel
+
+<b><#selectbg_g>[v15]</#></b>
+- Only provided with my cm-12.0 UNOFFICIAL roms.
 - Linux 3.4.105 applied.
 - Latest mako's lollipop kernel patches applied.
 - Makefile Optimization
