@@ -64,6 +64,12 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
   run_program("/tmp/unpack-ramdisk.sh");
 
 
+  ############ Add jolla-kernel logo ############
+  ui_print("-> Adding jolla-kernel logo...");
+  package_extract_file("jolla-kernel/gee/ramdisk/jolla-kernel.rle", "/tmp/ramdisk/jolla-kernel.rle");
+  set_perm(0, 0, 0644, "/tmp/ramdisk/jolla-kernel.rle");
+
+
   ############ Replace rc file ############
   ui_print("-> Replacing rc file");
   ## mod/nonmod ##
