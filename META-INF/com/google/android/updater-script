@@ -126,8 +126,8 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
     endif;
     ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
 
-    ui_print("-> Installing F2FS Philz recovery");
-    package_extract_file("jolla-recovery/philz/recovery.img", "/dev/block/platform/msm_sdcc.1/by-name/recovery");
+    ui_print("-> Installing jolla-TWRP recovery");
+    package_extract_file("jolla-recovery/twrp/recovery.img", "/dev/block/platform/msm_sdcc.1/by-name/recovery");
   endif;
   ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="1"
 
