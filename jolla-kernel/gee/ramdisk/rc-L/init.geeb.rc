@@ -21,6 +21,8 @@ on early-init
     chown system system /sys/kernel/debug/kgsl/proc
 
 on init
+    chmod 0701 /mnt/media_rw
+    mkdir /mnt/media_rw/usb 0775 system system
     # See storage config details at http://source.android.com/tech/storage/
     mkdir /mnt/shell/emulated 0700 shell shell
     mkdir /storage/emulated 0555 root root
@@ -28,6 +30,7 @@ on init
     # Set permissions for persist partition
     mkdir /persist 0771 system system
     mkdir /firmware 0771 system system
+    mkdir /storage/usb 0000 system system
 
     # Support legacy paths
     symlink /storage/emulated/legacy /sdcard
@@ -35,9 +38,14 @@ on init
     symlink /storage/emulated/legacy /storage/sdcard0
     symlink /mnt/shell/emulated/0 /storage/emulated/legacy
 
+    # External SD card support
+    mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
+    mkdir /storage/sdcard1 0700 root root
+
     export EXTERNAL_STORAGE /storage/emulated/legacy
     export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
     export EMULATED_STORAGE_TARGET /storage/emulated
+    export SECONDARY_STORAGE /storage/sdcard1
 
     mkdir /sns 0775 system system
     mkdir /sns/cal 0771 system system
@@ -429,6 +437,14 @@ service charger /sbin/healthd -c
 # virtual sdcard daemon running as media_rw (1023)
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
     class late_start
+
+service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard1 /storage/sdcard1
+    class late_start
+    disabled
+
+service fuse_usb /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/usb /storage/usb
+    class late_start
+    disabled
 
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
