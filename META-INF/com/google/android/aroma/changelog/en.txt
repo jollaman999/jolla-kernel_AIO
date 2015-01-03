@@ -11,6 +11,7 @@
 - Dynamic Thermal Control: Automatically adjust throttling settings when CPU clock changed. (Own making!!)
 (Solve the existing problem coming back to 1134Mhz despite you change the CPU clock!!)
 - Greatly improved battery life due to the source stabilization. (Light user can be used up to a day or more to use.)
+- gpu: Fixed to use minimum gpu frequency when sleep. (Improved battery life) (Own making!!)
 - Added jolla-kernel logo
 - random: Applied all of latest Linux patches
 - f2fs: Applied all of latest Linux patches
