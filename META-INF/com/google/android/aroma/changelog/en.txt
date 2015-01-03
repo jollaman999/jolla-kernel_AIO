@@ -3,7 +3,27 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[v16]</#></b></@>
+<b><#selectbg_g>[Gen2-v1.0]</#></b></@>
+- No more update for Kitkat and Stock.
+- Restart with Clean Code!!
+(Rebuild with Google mako source. Applied latest Linux patches with some of fixes for joll-kernel directly. So all of sources and kernel performance are stable.)
+- Applied patches from Linux 3.4.1 to 3.4.105 one by one. (So sources and performance are stable.)
+- Dynamic Thermal Control: Automatically adjust throttling settings when CPU clock changed. (Own making!!)
+(Solve the existing problem coming back to 1134Mhz despite you change the CPU clock!!)
+- Greatly improved battery life due to the source stabilization. (Light user can be used up to a day or more to use.)
+- Added jolla-kernel logo
+- random: Applied all of latest Linux patches
+- f2fs: Applied all of latest Linux patches
+- Faux Sound: Applied faux123's latest sources
+- Faux Gamma Control: Applied faux123's latest sources
+- Intelli-plug: Applied faux123's latest sources
+- GPU simple governor: Applied faux123's latest sources
+- MTP: Applied Google latest sources
+- cpufreq: smartmax: Fix some of default values of smartmax governor. (Improved battery life)
+- LZ4 compression format support.
+- And applied more patches.
+
+<b><#selectbg_g>[v16]</#></b>
 - Use Android device as USB keyboard/mouse support (Required app included)
 - L-kernel: Applied latest Cyanogenmod patches with 'seccomp'
 - f2fs: Latest linux kernel tree patches applied

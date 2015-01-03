@@ -3,7 +3,27 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[v16]</#></b></@>
+<b><#selectbg_g>[Gen2-v1.0]</#></b></@>
+- Kitkat, Stock 업데이트 중단
+- Restart with Clean Code!!
+(Google mako 소스로 새로 제작을 들어갔으며 각종 Linux 패치들을 joll-kernel 에 맞게끔 직접 수정해가며 진행. 이로써 소스 안정화 및 전체적인 커널 성능 안정화.)
+- Linux 3.4.1 부터 3.4.105 까지 하나하나 개별적으로 패치 진행. (소스 및 성능 안정화.)
+- Dynamic Thermal Control: CPU 클럭 변경시 자동으로 스로틀링 설정을 조절해 주는 기능 (직접 제작!!)
+(기존에 CPU 클럭을 변경해도 다시 1134Mhz 로 돌아오는 문제 해결!!)
+- 소스안정화로 인한 배터리 사용시간 대폭 향상 (라이트하게 사용시 최대 하루이상 사용가능)
+- jolla-kernel 로고 추가
+- random: 최신 Linux 소스 패치 모두 적용
+- f2fs: 최신 Linux 소스 패치 모두 적용
+- Faux Sound: faux123 님의 최신 소스 적용
+- Faux Gamma Control: faux123 님의 최신 소스 적용
+- Intelli-plug: faux123 님의 최신 소스 적용
+- GPU simple 거버너: faux123 님의 최신 소스 적용
+- MTP: Google 최신 소스 적용
+- cpufreq: smartmax: Smartmax 거버너 기본값 일부 수정 (배터리 사용시간 증가)
+- LZ4 압축 포맷 지원
+- 그외 몇몇 최적화 패치들 적용
+
+<b><#selectbg_g>[v16]</#></b>
 - Android 기기를 USB 키보드/마우스로 사용가능 (필요한 어플 포함됨)
 - L-kernel: 'seccomp' 와 함께 최신 Cyanogenmod 패치 적용
 - f2fs: 최신 리눅스 커널 트리 패치 적용
