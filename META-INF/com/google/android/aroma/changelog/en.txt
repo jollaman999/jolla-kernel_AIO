@@ -20,6 +20,8 @@
 - Intelli-plug: Applied faux123's latest sources
 - GPU simple governor: Applied faux123's latest sources
 - MTP: Applied Google latest sources
+- TCP Congestion: Added cubic, highspeed, hybla, htcp, vegas, veno, scalable, lp. yeah, illinois.
+- io-scheduler: Added fifo, vr, zen.
 - cpufreq: smartmax: Fix some of default values of smartmax governor. (Improved battery life)
 - LZ4 compression format support.
 - And applied more patches.

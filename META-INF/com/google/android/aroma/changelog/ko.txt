@@ -20,6 +20,8 @@
 - Intelli-plug: faux123 님의 최신 소스 적용
 - GPU simple 거버너: faux123 님의 최신 소스 적용
 - MTP: Google 최신 소스 적용
+- TCP Congestion: cubic, highspeed, hybla, htcp, vegas, veno, scalable, lp. yeah, illinois 추가
+- io-scheduler: fifo, vr, zen 추가
 - cpufreq: smartmax: Smartmax 거버너 기본값 일부 수정 (배터리 사용시간 증가)
 - LZ4 압축 포맷 지원
 - 그외 몇몇 최적화 패치들 적용
