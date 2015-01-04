@@ -26,6 +26,19 @@
 - LZ4 압축 포맷 지원
 - 그외 몇몇 최적화 패치들 적용
 
+<b><#selectbg_g>[v17_Final - AOSP 기반 킷캣 커널에만 해당]</#></b>
+- Dynamic_thermal_control 추가
+- gpu: 슬립 상태에서 최소 GPU 클럭을 사용하도록 수정. (배터리 사용시간 증가) (직접 제작!!)
+- jolla-kernel 로고 추가
+- io-scheduler: fifo, vr, zen 추가
+- cpufreq: smartmax: Smartmax 거버너 기본값 일부 수정 (배터리 사용시간 증가)
+- MTP: Google 최신 소스 적용
+- futex 최적화
+- 몇몇 cpufreq 패치 적용
+
+그리고 더이상 킷캣과 스톡 업데이트를 진행하지 않습니다.
+제 jolla-kernel 을 이용해 주셔서 감사합니다!!
+
 <b><#selectbg_g>[v16]</#></b>
 - Android 기기를 USB 키보드/마우스로 사용가능 (필요한 어플 포함됨)
 - L-kernel: 'seccomp' 와 함께 최신 Cyanogenmod 패치 적용

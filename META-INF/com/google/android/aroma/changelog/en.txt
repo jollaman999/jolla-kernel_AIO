@@ -26,6 +26,19 @@
 - LZ4 compression format support.
 - And applied more patches.
 
+<b><#selectbg_g>[v17_Final - Only for AOSP based Kitkat kernel]</#></b>
+- Added dynamic_thermal_control
+- gpu: Fixed to use minimum gpu frequency when sleep. (Improved battery life) (Own making!!)
+- Added jolla-kernel logo
+- io-scheduler: Added fifo, vr, zen.
+- cpufreq: smartmax: Fix some of default values of smartmax governor. (Improved battery life)
+- MTP: Applied Google latest sources
+- futex optimization
+- Applied some of cpufreq patches
+
+And no more update for Kitkat and Stock.
+Thanks for using my jolla-kernel!!
+
 <b><#selectbg_g>[v16]</#></b>
 - Use Android device as USB keyboard/mouse support (Required app included)
 - L-kernel: Applied latest Cyanogenmod patches with 'seccomp'
