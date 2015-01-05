@@ -3,7 +3,15 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v1.0]</#></b></@>
+<b><#selectbg_g>[Gen2-v1.1, v17.1_Final]</#></b></@>
+- dynamic_thermal_control: Prevent dynamic_thermal call when device is hot and go to ideal state
+(When device is hot and go to ideal state 'dynamic_thermal' called and change the msm_thermal settings.
+So the original max frequency get lower clock step by step when device is hot.
+This patch fix this bug.)
+
+This patch only applied for AOSP based Kikat & Lollipop kernel.
+
+<b><#selectbg_g>[Gen2-v1.0]</#></b>
 - No more update for Kitkat and Stock.
 - Restart with Clean Code!!
 (Rebuild with Google mako source. Applied latest Linux patches with some of fixes for joll-kernel directly. So all of sources and kernel performance are stable.)

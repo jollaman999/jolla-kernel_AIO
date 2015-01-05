@@ -3,7 +3,15 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v1.0]</#></b></@>
+<b><#selectbg_g>[Gen2-v1.1, v17.1_Final]</#></b></@>
+- dynamic_thermal_control: 기기가 과열된 후 아이들 상태 진입시 dynamic_thermal 이 작동되는 현상 방지
+(기기가 과열된 후 아이들 상태에 진입시 'dynamic_thermal' 이 작동하여 온도제어 설정을 변경하는 현상이 있었습니다.
+따라서 기기가 과열될 시 본래의 최대 클럭이 단계적으로 낮아지는 현상이 있었습니다.
+이 패치는 이러한 버그를 수정하였습니다.)
+
+이 패치는 AOSP 기반 킷캣, 롤리팝 커널에만 적용됩니다.
+
+<b><#selectbg_g>[Gen2-v1.0]</#></b>
 - Kitkat, Stock 업데이트 중단
 - Restart with Clean Code!!
 (Google mako 소스로 새로 제작을 들어갔으며 각종 Linux 패치들을 joll-kernel 에 맞게끔 직접 수정해가며 진행. 이로써 소스 안정화 및 전체적인 커널 성능 안정화.)
