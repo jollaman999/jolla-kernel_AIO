@@ -42,6 +42,11 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
   
   ui_print("-> Extracting Common Files...");		
   package_extract_dir("jolla-kernel/gee/common", "/system");
+  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+    run_program("/tmp/busybox", "rm", "-rf", "/system/lib/modules/*.ko");
+    package_extract_dir("jolla-kernel/gee/modules-L", "/system/lib/modules");
+  endif;
+  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
   
   ui_print("-> Setting prima Permissions...");
   set_perm(0, 0, 0777, "/tmp/prima_set_perm.sh");
@@ -73,16 +78,16 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
   ############ Replace rc file ############
   ui_print("-> Replacing rc file");
   ## mod/nonmod ##
-  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")!="3" then
+  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
     ui_print(">>> init <<<");
     package_extract_dir("jolla-kernel/gee/ramdisk/rc", "/tmp/ramdisk");
     set_perm(0, 0, 0750, "/tmp/ramdisk/init.qcom.rc");
     set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
   endif;
-  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")!="3" then
+  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
 
   ## L ##
-  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
+  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
     ui_print(">>> L - init <<<");
     package_extract_dir("jolla-kernel/gee/ramdisk/rc-L", "/tmp/ramdisk");
     set_perm(0, 0, 0750, "/tmp/ramdisk/init.qcom.rc");
@@ -90,7 +95,7 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
     set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
     set_perm(0, 0, 0750, "/tmp/ramdisk/init.mako.rc");
   endif;
-  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
+  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
 
 
   ############ File System Selection ############
@@ -104,16 +109,16 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
     set_perm(0, 0, 0755, "/system/bin/mkfs.f2fs");
 
     ## mod/nonmod ##
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")!="3" then
+    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
       ui_print(">>>F2FS Kernel<<<");
       package_extract_dir("jolla-kernel/gee/ramdisk/f2fs", "/tmp/ramdisk");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
     endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")!="3" then
+    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
 
     ## L ##
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
+    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
       ui_print(">>>L - F2FS Kernel<<<");
       package_extract_dir("jolla-kernel/gee/f2fs-L", "/system/bin");
       set_perm(0, 0, 0755, "/system/bin/e2fsck");
@@ -124,7 +129,7 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.mako");
     endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
+    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
 
     ui_print("-> Installing jolla-TWRP recovery");
     package_extract_file("jolla-recovery/twrp/recovery.img", "/dev/block/platform/msm_sdcc.1/by-name/recovery");
@@ -135,16 +140,16 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="0" then
 
     ## mod/nonmod ##
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")!="3" then
+    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
       ui_print(">>>EXT4 Kernel<<<");
       package_extract_dir("jolla-kernel/gee/ramdisk/ext4", "/tmp/ramdisk");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
     endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")!="3" then
+    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
 
     ## L ##
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
+    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
       ui_print(">>>L - EXT4 Kernel<<<");
       package_extract_dir("jolla-kernel/gee/ramdisk/ext4-L", "/tmp/ramdisk");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
@@ -152,7 +157,7 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.mako");
     endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
+    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
   endif;
   ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="0"
 
