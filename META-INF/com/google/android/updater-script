@@ -43,7 +43,9 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
   ui_print("-> Extracting Common Files...");		
   package_extract_dir("jolla-kernel/gee/common", "/system");
   if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
-    run_program("/tmp/busybox", "rm", "-rf", "/system/lib/modules/*.ko");
+    ui_print("-> Installing L modules...");
+    set_perm(0, 0, 0777, "/tmp/modules_remover.sh");
+    run_program("/tmp/modules_remover.sh");
     package_extract_dir("jolla-kernel/gee/modules-L", "/system/lib/modules");
   endif;
   ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
