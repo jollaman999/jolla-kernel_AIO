@@ -1,5 +1,5 @@
 #!/sbin/sh
-# Setting prima permissions
+# Remove old kernel modules
 
 rm -rf /system/lib/modules/*
 
