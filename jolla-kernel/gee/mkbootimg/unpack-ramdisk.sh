@@ -11,9 +11,8 @@ cd /tmp/ramdisk
 gunzip -c ../boot.img-ramdisk.gz | cpio -i
 
 # add init.d support if not already supported
-find *.rc -maxdepth 0 -type f -exec grep -i "/system/etc/init.d" {} \; > /tmp/sysinit_found.tmp
-found=$(grep -oh "/system/etc/init.d" /tmp/sysinit_found.tmp);
-if [ "$found" != '/system/etc/init.d' ]; then
+foundcount="$(find *.rc -maxdepth 0 -type f -exec grep -i '/system/etc/init.d\|/system/bin/sysinit' '{}' \; | grep -ic '/system/etc/init.d\|/system/bin/sysinit')";
+if [ "$foundcount" -eq 0 ]; then
         #find busybox in /system
         bblocation=$(find /system/ -name 'busybox')
         if [ -n "$bblocation" ] && [ -e "$bblocation" ] ; then
