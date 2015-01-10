@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v1.1, v17.1_Final]</#></b></@>
+<b><#selectbg_g>[Gen2-v1.2, v17.2_Final]</#></b></@>
+- LP/KK: smartmax: sampling_rate_screen_off 파라미터 추가 - Thanks to gu5t3r
+(화면이 켜져있을때 smartmax 는 sampling_rate 값을 기준으로 클럭을 올립니다.
+그리고 화면이 꺼져있을때, smartmax 는 sampling_rate_screen_off 값을 기준으로 클럭을 천천히 올립니다.)
+- LP: mm: 앞서 읽기 버퍼 값 512 로 조정
+- LP: msm: vidc: 현재 퍼포먼스 레벨을 가져오는 기능 추가
+- LP: 소스상에서 cm12 와의 빌드 호환성 수정. (커널 기능들에는 변화 없음.)
+- aroma-installer: LP 커널과 KK 커널 설치 로직 수정.
+- aroma-installer: LP 커널 모듈 설치 로직 수정.
+- aroma-installer: init.d 지원 찾는 로직 수정 - Thanks to gu5t3r.
+
+<b><#selectbg_g>[Gen2-v1.1, v17.1_Final]</#></b>
 - dynamic_thermal_control: 기기가 과열된 후 아이들 상태 진입시 dynamic_thermal 이 작동되는 현상 방지
 (기기가 과열된 후 아이들 상태에 진입시 'dynamic_thermal' 이 작동하여 온도제어 설정을 변경하는 현상이 있었습니다.
 따라서 기기가 과열될 시 본래의 최대 클럭이 단계적으로 낮아지는 현상이 있었습니다.

@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v1.1, v17.1_Final]</#></b></@>
+<b><#selectbg_g>[Gen2-v1.2, v17.2_Final]</#></b></@>
+- LP/KK: smartmax: Added sampling_rate_screen_off parameter - Thanks to gu5t3r
+(When screen on, smartmax will increase clock based on sampling_rate.
+And when screen off, smartmax will increase clock slowly based on sampling_rate_screen_off.)
+- LP: mm: Set VM_MAX_READAHEAD to 512
+- LP: msm: vidc: Get the current performance level
+- LP: Fix some of sources for compatibility with cm12 build. (Kernels's functions are not changed.)
+- aroma-installer: Fix logic of LP kernel and KK kernel installation.
+- aroma-installer: Fix logic of LP kernel modules installation.
+- aroma-installer: Fix logic of finding init.d support - Thanks to gu5t3r.
+
+<b><#selectbg_g>[Gen2-v1.1, v17.1_Final]</#></b>
 - dynamic_thermal_control: Prevent dynamic_thermal call when device is hot and go to ideal state
 (When device is hot and go to ideal state 'dynamic_thermal' called and change the msm_thermal settings.
 So the original max frequency get lower clock step by step when device is hot.
