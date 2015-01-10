@@ -103,6 +103,7 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
   if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
     package_extract_file("jolla-kernel/gee/sysinit/sysinit", "/system/bin/sysinit");
     set_perm(0, 2000, 0755, "/system/bin/sysinit");
+    run_program("chcon", "u:object_r:system_file:s0", "/system/bin/sysinit");
   endif;
   ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
 
