@@ -40,15 +40,15 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
   set_perm(0, 0, 0777, "/tmp/cleaner.sh");
   run_program("/tmp/cleaner.sh");
   
-  ui_print("-> Extracting Common Files...");		
+  ui_print("-> Extracting Common Files...");
   package_extract_dir("jolla-kernel/gee/common", "/system");
-  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
     ui_print("-> Installing L modules...");
     set_perm(0, 0, 0777, "/tmp/modules_remover.sh");
     run_program("/tmp/modules_remover.sh");
     package_extract_dir("jolla-kernel/gee/modules-L", "/system/lib/modules");
   endif;
-  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
   
   ui_print("-> Setting prima Permissions...");
   set_perm(0, 0, 0777, "/tmp/prima_set_perm.sh");
@@ -79,17 +79,9 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
 
   ############ Replace rc file ############
   ui_print("-> Replacing rc file");
-  ## mod/nonmod ##
-  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
-    ui_print(">>> init <<<");
-    package_extract_dir("jolla-kernel/gee/ramdisk/rc", "/tmp/ramdisk");
-    set_perm(0, 0, 0750, "/tmp/ramdisk/init.qcom.rc");
-    set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
-  endif;
-  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
 
   ## L ##
-  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
     ui_print(">>> L - init <<<");
     package_extract_dir("jolla-kernel/gee/ramdisk/rc-L", "/tmp/ramdisk");
     set_perm(0, 0, 0750, "/tmp/ramdisk/init.qcom.rc");
@@ -97,37 +89,23 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
     set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
     set_perm(0, 0, 0750, "/tmp/ramdisk/init.mako.rc");
   endif;
-  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
 
   ############ Add missed sysinit for L ############
-  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
+    ui_print(">>> L - sysinit <<<");
     package_extract_file("jolla-kernel/gee/sysinit/sysinit", "/system/bin/sysinit");
     set_perm(0, 2000, 0755, "/system/bin/sysinit");
     run_program("chcon", "u:object_r:system_file:s0", "/system/bin/sysinit");
   endif;
-  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
 
   ############ File System Selection ############
   ######## F2FS ########
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="1" then
 
-    ui_print("-> Setting F2FS...");
-    package_extract_dir("jolla-kernel/gee/f2fs", "/system/bin");
-    set_perm(0, 0, 0755, "/system/bin/fibmap.f2fs");
-    set_perm(0, 0, 0755, "/system/bin/fsck.f2fs");
-    set_perm(0, 0, 0755, "/system/bin/mkfs.f2fs");
-
-    ## mod/nonmod ##
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
-      ui_print(">>>F2FS Kernel<<<");
-      package_extract_dir("jolla-kernel/gee/ramdisk/f2fs", "/tmp/ramdisk");
-      set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
-      set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
-    endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
-
     ## L ##
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
       ui_print(">>>L - F2FS Kernel<<<");
       package_extract_dir("jolla-kernel/gee/f2fs-L", "/system/bin");
       set_perm(0, 0, 0755, "/system/bin/e2fsck");
@@ -138,7 +116,7 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.mako");
     endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
 
     ui_print("-> Installing jolla-TWRP recovery");
     package_extract_file("jolla-recovery/twrp/recovery.img", "/dev/block/platform/msm_sdcc.1/by-name/recovery");
@@ -148,17 +126,8 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
   ######## EXT4 ########
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="0" then
 
-    ## mod/nonmod ##
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
-      ui_print(">>>EXT4 Kernel<<<");
-      package_extract_dir("jolla-kernel/gee/ramdisk/ext4", "/tmp/ramdisk");
-      set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
-      set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
-    endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
-
     ## L ##
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
       ui_print(">>>L - EXT4 Kernel<<<");
       package_extract_dir("jolla-kernel/gee/ramdisk/ext4-L", "/tmp/ramdisk");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
@@ -166,7 +135,7 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.mako");
     endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
   endif;
   ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="0"
 
@@ -176,17 +145,8 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1" then
     ui_print(">>>Stock Camera<<<");
 
-    ## Stock Camera Settings for KK ##
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
-      ui_print("-> Setting Camera for KK...");
-      delete("/system/lib/hw/camera.qcom.so");
-      package_extract_dir("jolla-kernel/gee/camera/system", "/system");
-      set_perm(0, 0, 0755, "/system/bin/mm-qcamera-daemon");
-    endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2"
-
     ## Stock Camera Settings for L ##
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
       ui_print("-> Setting Camera for L...");
       delete("/system/lib/hw/camera.qcom.so");
       delete("/system/lib/hw/camera.geeb.so");
@@ -194,39 +154,25 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
       delete("/system/lib/hw/camera.mako.so");
       delete("/system/lib/libcamera_fast_af.so");
       delete("/system/lib/libmorpho_noise_reduction.so");
-      package_extract_dir("jolla-kernel/gee/camera/system", "/system");
+      package_extract_dir("jolla-kernel/gee/camera-common/system", "/system");
       package_extract_dir("jolla-kernel/gee/camera-L", "/system/lib");
       set_perm(0, 0, 0755, "/system/bin/mm-qcamera-daemon");
     endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4"
-    
-    #### mod ####
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" then
-    ui_print(">>>mod Kernel<<<");
-      package_extract_file("jolla-kernel/gee/zImage/stockcam/mod/zImage", "/tmp/zImage");
-    endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" then
-
-    #### nonmod ####
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
-    ui_print(">>>nonod Kernel<<<");
-      package_extract_file("jolla-kernel/gee/zImage/stockcam/nonmod/zImage", "/tmp/zImage");
-    endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
+    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2"
 
     #### L - mod ####
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
+    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" then
     ui_print(">>>L-mod Kernel<<<");
       package_extract_file("jolla-kernel/gee/zImage/L-stockcam/mod/zImage", "/tmp/zImage");
     endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
+    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" then
 
     #### L - nonmod ####
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
     ui_print(">>>L-nonmod Kernel<<<");
       package_extract_file("jolla-kernel/gee/zImage/L-stockcam/nonmod/zImage", "/tmp/zImage");
     endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
   endif;
   ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1" then
 
@@ -234,33 +180,19 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")!="1" then
     ui_print(">>>Mako Camera<<<");
 
-    #### mod ####
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" then
-    ui_print(">>>mod Kernel<<<");
-      package_extract_file("jolla-kernel/gee/zImage/makocam/mod/zImage", "/tmp/zImage");
-    endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" then
-
-    #### nonmod ####
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
-    ui_print(">>>nonod Kernel<<<");
-      package_extract_file("jolla-kernel/gee/zImage/makocam/nonmod/zImage", "/tmp/zImage");
-    endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
-
     #### L - mod ####
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
+    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" then
     ui_print(">>>L-mod Kernel<<<");
       package_extract_file("jolla-kernel/gee/zImage/L-makocam/mod/zImage", "/tmp/zImage");
     endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" then
+    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" then
 
     #### L - nonmod ####
-    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+    if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
     ui_print(">>>L-nonmod Kernel<<<");
       package_extract_file("jolla-kernel/gee/zImage/L-makocam/nonmod/zImage", "/tmp/zImage");
     endif;
-    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+    ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
 
   endif;
   ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")!="1"
@@ -274,16 +206,9 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
 
   ############ Copy USB-Keyboard.apk ############
   ui_print("-> Copying USB-Keyboard.apk...");
-  ## For KK
-  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
-    package_extract_file("jolla-kernel/app/USB-Keyboard.apk", "/system/app/USB-Keyboard.apk");
-    set_perm(0, 0, 0644, "/system/app/USB-Keyboard.apk");
-    package_extract_dir("jolla-kernel/app/lib", "/system/lib");
-  endif;
-  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
 
   ## For L
-  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+  if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
     run_program("/tmp/busybox", "mkdir", "/system/app/USB-Keyboard");
     run_program("/tmp/busybox", "chown", "root.root", "/system/app/USB-Keyboard");
     run_program("/tmp/busybox", "chmod", "755", "/system/app/USB-Keyboard");
@@ -292,7 +217,7 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
     run_program("/tmp/busybox", "mkdir", "-p", "/system/app/USB-Keyboard/lib/arm");
     package_extract_dir("jolla-kernel/app/lib", "/system/app/USB-Keyboard/lib/arm");
   endif;
-  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="3" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="4" then
+  ## endif file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
 
 endif;
 ## endif file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1"
