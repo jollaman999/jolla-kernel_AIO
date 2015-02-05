@@ -3,7 +3,43 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v1.2, v17.2_Final]</#></b></@>
+<b><#selectbg_g>[Gen2-v2.0]</#></b></@>
+- 체인지로그는 CM/AOSP 커널에만 적용됩니다.
+- CM/AOSP 킷캣 커널 제거
+- Linux 3.4.106
+- 최신 Linaro_4.9.3-2015.01-build 로 빌드
+- smartmax: sampling_rate_screen_off: usecs_to_jiffies 함수 두번 실행되는 현상 수정
+- wlan: prima 드라이버 버젼업 v3.2.3.197
+- zram 지원
+- arm-crypto: sha-1, aes, sha256, sha512, arc4 - ARM neon 최적화
+- KEYS: close race between key lookup and freeing
+- Low-memory-killer: 로직 최적화 from Motorola
+- int_sqrt: 3배 빠른 integer sqrt
+- readahead: make context readahead more conservative
+- sound: 320kbps 오디오 녹음 지원
+- arm: Perf 업데이트 from Cyanogen Mod kernel_msm
+- acpuclock-8064: 작동하지 않는 상위 클럭들 제거 (1782~1890MHz)
+- gpu: 작동하지 않는 607.5MHz 제거 후 450MHz 다시 추가
+- clocks: 불안전한 하위 클럭들 제거 (81~162MHz)
+- smartmax: 기본값들 수정
+- fs: 모든 파티션에 noatime, nodiratime 항상 사용! I/O 속도 향상!
+- board-mako: CAF 로 부터 빠진 업데이트 적용
+- board-mako: Krait Retention 지원
+- msm: mdm2: QSC 에 전원 들어오기전 누수 감소
+- smartassV2: 기본값들 수정
+- gee_defconfig: smartassV2 cpu 커버너 컴파일
+- mako-sound: Stock KK 노이즈 픽스 포팅
+- mako-regulator: Gproj 파워 포팅 중에 pm8xxx-adc 빠진 사항 추가
+- sound: Nuplayer fix 변경사항 취소
+- sound: wcd9310: 기본 게인 값 증가 (통화시 스피커/마이크 및 이어폰/스피커 볼륨 향상)
+- board-mako: DC 전압 값 증가 for 옵지 (Stock KK)
+- mako: tabla 관련 빠진 사항 추가 for 옵지
+- cpufreq: 호환 되지 않는 거버너들 제거 (nightmare, interactiveX)
+- wcd9xxx: 3.3V 로우 배터리에서 헤드폰 발견 문제 수정 (Stock KK)
+- intelli_plug: 화면 꺼짐시 최대 클럭값 702MHz 로 고정
+- sound: 기계음 수정!! (intelli_plug,wcd9310: 화면 꺼진 상태로 음악 재생시 강제로 2코어가 작동하도록 수정)
+
+<b><#selectbg_g>[Gen2-v1.2, v17.2_Final]</#></b>
 - LP/KK: smartmax: sampling_rate_screen_off 파라미터 추가 - Thanks to gu5t3r
 (화면이 켜져있을때 smartmax 는 sampling_rate 값을 기준으로 클럭을 올립니다.
 그리고 화면이 꺼져있을때, smartmax 는 sampling_rate_screen_off 값을 기준으로 클럭을 천천히 올립니다.)

@@ -3,7 +3,43 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v1.2, v17.2_Final]</#></b></@>
+<b><#selectbg_g>[Gen2-v2.0]</#></b></@>
+- Change logs only applied for CM/AOSP kernels
+- Removed CM/AOSP KK kernels.
+- Linux 3.4.106
+- Compiled with latest Linaro_4.9.3-2015.01-build
+- smartmax: sampling_rate_screen_off: Do not call usecs_to_jiffies function twice.
+- wlan: prima updated to v3.2.3.197
+- zram Support
+- arm-crypto: sha-1, aes, sha256, sha512, arc4 optimization for ARM neon
+- KEYS: close race between key lookup and freeing
+- Low-memory-killer: Logic optimization from Motorola
+- int_sqrt: Improve 3x faster integer sqrt
+- readahead: make context readahead more conservative
+- sound: Enable 320kbps audio recording
+- arm: Perf update from Cyanogen Mod kernel_msm
+- acpuclock-8064: Remove not working high level clocks (1782~1890MHz)
+- gpu: Remove not working 607.5MHz and re-added 450MHz
+- clocks: Remove unsafe lower cpu freqs (81~162MHz)
+- smartmax: Fix default values
+- fs: Always set noatime no diratime on all partitions! I/O Boost!
+- board-mako: add missing updates from CAF
+- board-mako: Enable Krait Retention
+- msm: mdm2: Decrease leakage before QSC power-up
+- smartassV2: Fix default values
+- gee_defconfig: Compile smartassV2 cpu governor
+- mako-sound: Noise fix ported from Stock KK
+- mako-regulator: Add missed pm8xxx-adc regulator while ported Gproj power
+- sound: Revert Nuplayer fix
+- sound: wcd9310: Increase default gain (Increase volume for call speaker/mic and headphone/speaker)
+- board-mako: Increase DC voltage level for G (Stock KK)
+- mako: Add missed some of related with tabla for G
+- cpufreq: Remove uncomfortable governors (nightmare, interactiveX)
+- wcd9xxx: Fix headphone detect issue in 3.3V low batt (Stock KK)
+- intelli_plug: Set screen off max to 702MHz
+- sound: Buzzing sound FIX!! (intelli_plug,wcd9310: Force set 2cpus working when playing music while screen off)
+
+<b><#selectbg_g>[Gen2-v1.2, v17.2_Final]</#></b>
 - LP/KK: smartmax: Added sampling_rate_screen_off parameter - Thanks to gu5t3r
 (When screen on, smartmax will increase clock based on sampling_rate.
 And when screen off, smartmax will increase clock slowly based on sampling_rate_screen_off.)
