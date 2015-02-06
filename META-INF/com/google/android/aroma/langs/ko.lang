@@ -143,7 +143,7 @@ checkbox1.item3=파일 시스템
 checkbox1.item3-1=F2FS 사용
 checkbox1.item3-1desc=F2FS 커널을 설치합니다.\
 /data, /cache를 f2fs로 사용합니다.\
-(멀티롬을 설치하시지 않을경우 F2FS 호환 Philz 리커버리가 기본으로 설치됩니다.)
+(멀티롬을 설치하시지 않을경우 F2FS 호환 TWRP 리커버리가 기본으로 설치됩니다.)
 
 checkbox2.title=멀티롬 제거 옵션
 checkbox2.subtitle=멀티롬 제거 옵션을 선택해 주세요.

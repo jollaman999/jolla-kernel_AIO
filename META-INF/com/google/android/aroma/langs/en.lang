@@ -143,7 +143,7 @@ checkbox1.item3=File System
 checkbox1.item3-1=Use F2FS
 checkbox1.item3-1desc=Install F2FS kernel\
 Use /data and /cache partitions to f2fs\
-(If you not install multirom, F2FS compatible Philz recovery will be install to default.)
+(If you not install multirom, F2FS compatible TWRP recovery will be install to default.)
 
 checkbox2.title=Multi ROM Delete Option
 checkbox2.subtitle=Select Multi ROM delete option.
