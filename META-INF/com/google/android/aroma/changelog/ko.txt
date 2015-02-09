@@ -3,7 +3,13 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v2.0]</#></b></@>
+<b><#selectbg_g>[Gen2-v2.2]</#></b></@>
+- f2fs: Linux 3.4.x 용 f2fs 소스로 재작업 (이제 에러 없이 완벽하게 정상작동 합니다!!)
+  (기존에 f2fs 커널을 이미 사용중이던 분들도 /data, /cache 포맷 후 사용해 주실 것을 권장드립니다.)
+- jolla-twrp: TWRP v2.8.4 버젼업, jolla-kernel_Gen2-v2.2 적용, 롤리팝 멀티롬 지원
+- multirom: v30 버젼업, 롤리팝 호환
+
+<b><#selectbg_g>[Gen2-v2.0]</#></b>
 - 체인지로그는 CM/AOSP 커널에만 적용됩니다.
 - CM/AOSP 킷캣 커널 제거
 - Linux 3.4.106
