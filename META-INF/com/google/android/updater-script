@@ -116,7 +116,7 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
       set_perm(0, 0, 0755, "/system/bin/lsattr");
       set_perm(0, 0, 0755, "/system/bin/mke2fs");
       set_perm(0, 0, 0755, "/system/bin/resize2fs");
-      set_perm(0, 0, 0755, "/system/bin/tunee2fs");
+      set_perm(0, 0, 0755, "/system/bin/tune2fs");
       package_extract_dir("jolla-kernel/gee/ramdisk/f2fs-L", "/tmp/ramdisk");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.qcom");
       set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geeb");
