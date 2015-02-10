@@ -108,15 +108,9 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
     if file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="1" || file_getprop("/tmp/aroma-data/window2-1.prop","selected.1")=="2" then
       ui_print(">>>L - F2FS Kernel<<<");
       package_extract_dir("jolla-kernel/gee/f2fs-L/system", "/system");
-      set_perm(0, 0, 0755, "/system/bin/badblocks");
       set_perm(0, 0, 0755, "/system/bin/blkid");
-      set_perm(0, 0, 0755, "/system/bin/chattr");
       set_perm(0, 0, 0755, "/system/bin/e2fsck");
       set_perm(0, 0, 0755, "/system/bin/fsck.f2fs");
-      set_perm(0, 0, 0755, "/system/bin/lsattr");
-      set_perm(0, 0, 0755, "/system/bin/mke2fs");
-      set_perm(0, 0, 0755, "/system/bin/resize2fs");
-      set_perm(0, 0, 0755, "/system/bin/tune2fs");
       set_perm(0, 0, 0755, "/system/bin/vdc");
       set_perm(0, 0, 0755, "/system/bin/vold");
       package_extract_dir("jolla-kernel/gee/ramdisk/f2fs-L", "/tmp/ramdisk");
