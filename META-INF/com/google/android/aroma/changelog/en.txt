@@ -4,6 +4,7 @@
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
 <b><#selectbg_g>[Gen2-v2.2]</#></b></@>
+- 2015/10/Feb Added - f2fs: Make f2fs working with both cm & aosp based roms
 - f2fs: Re-work with f2fs sources for Linux 3.4.x (Now working perfectly with no errors!!)
   (/data, /cache re-format recommended if you using f2fs already.)
 - jolla-twrp: TWRP v2.8.4 version up, jolla-kernel_Gen2-v2.2 applied, Lollipop multirom support

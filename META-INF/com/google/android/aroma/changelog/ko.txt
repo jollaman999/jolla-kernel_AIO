@@ -4,6 +4,7 @@
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
 <b><#selectbg_g>[Gen2-v2.2]</#></b></@>
+- 2015/02/10 추가 - f2fs: cm 기반, aosp 기반 롬들 모두에서 f2fs 가 작동하도록 수정
 - f2fs: Linux 3.4.x 용 f2fs 소스로 재작업 (이제 에러 없이 완벽하게 정상작동 합니다!!)
   (기존에 f2fs 커널을 이미 사용중이던 분들도 /data, /cache 포맷 후 사용해 주실 것을 권장드립니다.)
 - jolla-twrp: TWRP v2.8.4 버젼업, jolla-kernel_Gen2-v2.2 적용, 롤리팝 멀티롬 지원
