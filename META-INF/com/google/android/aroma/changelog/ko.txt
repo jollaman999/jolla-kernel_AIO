@@ -4,6 +4,7 @@
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
 <b><#selectbg_g>[Gen2-v2.3]</#></b></@>
+- 2015/02/18 추가 - lge_touch_core: 노크온 비활성화 했을시 하드웨어키 작동 안하는 버그 수정
 - intelli_plug: wcd9310 디버그 메세지 비활성화
 - msm_thermal: 화면 꺼짐시 작동 중지
 - msm_thermal: 온도 체크 로직 단순화 (대기 배터리 개선)

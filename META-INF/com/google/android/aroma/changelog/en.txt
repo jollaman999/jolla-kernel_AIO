@@ -4,6 +4,7 @@
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
 <b><#selectbg_g>[Gen2-v2.3]</#></b></@>
+- 2015/18/Feb Added - lge_touch_core: Fix bug of hardware keys not working when dt2w is disabled
 - intelli_plug: Turn off wcd9310 debug messages
 - msm_thermal: Do not working when screen turned off
 - msm_thermal: Make temperature check logic simpler (Improve battery life)
