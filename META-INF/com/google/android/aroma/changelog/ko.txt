@@ -3,7 +3,19 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v2.2]</#></b></@>
+<b><#selectbg_g>[Gen2-v2.3]</#></b></@>
+- intelli_plug: wcd9310 디버그 메세지 비활성화
+- msm_thermal: 화면 꺼짐시 작동 중지
+- msm_thermal: 온도 체크 로직 단순화 (대기 배터리 개선)
+- ipv4: try to cache dst_entries which would cause a redirect (CM 업데이트)
+- intelli_plug/wcd9310: 화면 꺼진 상태에서 음악 재생시 intelli_plug 강제 작동
+- dt2w: 노크온이 간혹 안되는 현상 수정
+- smartmax: sampling_rate_screen_off 기능을 early suspend 를 통해 수행하도록 수정
+- dynamic_thermal_control: 하드 코딩된 CPU 클럭 테이블을 지우고 현재 테이블로 부터 얻어오도록 수정
+- jolla-twrp: jolla-kernel_Gen2-v2.3 적용
+- 스톡 킷캣 커널 업데이트 적용
+
+<b><#selectbg_g>[Gen2-v2.2]</#></b>
 - 2015/02/10 추가 - f2fs: cm 기반, aosp 기반 롬들 모두에서 f2fs 가 작동하도록 수정
 - f2fs: Linux 3.4.x 용 f2fs 소스로 재작업 (이제 에러 없이 완벽하게 정상작동 합니다!!)
   (기존에 f2fs 커널을 이미 사용중이던 분들도 /data, /cache 포맷 후 사용해 주실 것을 권장드립니다.)
