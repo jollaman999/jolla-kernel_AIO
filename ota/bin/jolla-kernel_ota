@@ -1,0 +1,6 @@
+#!/system/bin/sh
+
+KERNEL_VER=$(cat /proc/version)
+
+sed -i 's/DO_NOT_EDIT/'$KERNEL_VER'/' /system/kernel.ota.prop
+

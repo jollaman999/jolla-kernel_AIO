@@ -400,13 +400,19 @@ endif;
 
 ############################ OTA Updater ############################
 ui_print("-> Installing OTA Updater...");
+package_extract_file("jolla-kernel/gee/script/busybox", "/tmp/busybox");
+set_perm(0, 0, 0777, "/tmp/busybox");
 package_extract_dir("ota", "/system");
 if file_getprop("/tmp/aroma-data/window2.prop","selected.1")!="2" then
-  run_program("/sbin/busybox", "mkdir", "/system/app/OTA-Updater");
+  run_program("/tmp/busybox", "mkdir", "/system/app/OTA-Updater");
   set_perm(0, 0, 0755, "/system/app/OTA-Updater");
-  run_program("/sbin/busybox", "mv", "/system/app/OTA-Updater.apk", "/system/app/OTA-Updater/");
+  run_program("/tmp/busybox", "mv", "/system/app/OTA-Updater.apk", "/system/app/OTA-Updater/");
 endif;
 ## endif file_getprop("/tmp/aroma-data/window2.prop","selected.1")!="2" then
+set_perm(0, 2000, 0755, "/system/bin/jolla-kernel_ota");
+run_program("/tmp/busybox", "chcon", "u:object_r:system_file:s0", "/system/bin/jolla-kernel_ota");
+
+
 
 ui_print("");
 ui_print("====================Done===================");
