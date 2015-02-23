@@ -3,7 +3,16 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v2.3]</#></b></@>
+<b><#selectbg_g>[Gen2-v2.4]</#></b></@>
+- sched: Various optimizations and updates applied from faux123's mako kk_mr2
+- lowmemorykiller: Some of optimizations applied from faux123's mako kk_mr2
+- zram: Some of optimizations applied for Android from faux123's mako kk_mr2
+- gee_defconfig: Disable unneeded mpdecision
+- jolla-twrp: jolla-kernel_Gen2-v2.4 applied
+- Updates applied to Stock_KK kernels
+- OTA Updater included
+
+<b><#selectbg_g>[Gen2-v2.3]</#></b>
 - 2015/18/Feb Added - lge_touch_core: Fix bug of hardware keys not working when dt2w is disabled
 - intelli_plug: Turn off wcd9310 debug messages
 - msm_thermal: Do not working when screen turned off

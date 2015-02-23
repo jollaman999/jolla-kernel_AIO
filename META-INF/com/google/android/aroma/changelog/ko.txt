@@ -3,7 +3,16 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v2.3]</#></b></@>
+<b><#selectbg_g>[Gen2-v2.4]</#></b></@>
+- sched: faux123's mako kk_mr2 로 부터 다양한 최적화 및 업데이트 적용
+- lowmemorykiller: faux123's mako kk_mr2 로 부터 일부 최적화 적용
+- zram: faux123's mako kk_mr2 로 부터 안드로이드를 위한 일부 최적화 적용
+- gee_defconfig: 필요없는 mpdecision 비활성화
+- jolla-twrp: jolla-kernel_Gen2-v2.4 적용
+- Stock_KK 커널들에 업데이트 적용
+- OTA 업데이터 포함됨
+
+<b><#selectbg_g>[Gen2-v2.3]</#></b>
 - 2015/02/18 추가 - lge_touch_core: 노크온 비활성화 했을시 하드웨어키 작동 안하는 버그 수정
 - intelli_plug: wcd9310 디버그 메세지 비활성화
 - msm_thermal: 화면 꺼짐시 작동 중지
