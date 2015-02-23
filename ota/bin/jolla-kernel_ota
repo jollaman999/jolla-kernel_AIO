@@ -2,7 +2,11 @@
 
 KERNEL=$(cat /proc/version)
 
+mount -o rw,remount /system
+
 sed -i '/fullver/d' /system/kernel.ota.prop
 sed -i '/\}/d' /system/kernel.ota.prop
 echo \ \ \ \ \"fullver\"\: \"$KERNEL\" >> /system/kernel.ota.prop
 echo \} >> /system/kernel.ota.prop
+
+mount -o ro,remount /system
