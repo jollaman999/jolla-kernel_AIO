@@ -152,9 +152,6 @@ on boot
 
 # msm specific files that need to be created on /data
 on post-fs-data
-    # Start jolla-kernel_ota
-    start jolla-kernel_ota
-
     mkdir /data/media 0770 media_rw media_rw
 
     # Create the directories used by the Wireless subsystem
@@ -296,10 +293,10 @@ on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
 
 # jolla-kernel OTA service
-service jolla-kernel_ota /system/bin/jolla-kernel_ota
+service jolla-kernel_ota /system/bin/sh /system/bin/jolla-kernel_ota
+    class main
     user root
     oneshot
-    disabled
 
 service rmt_storage /system/bin/rmt_storage
     class main

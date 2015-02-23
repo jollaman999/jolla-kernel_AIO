@@ -3,8 +3,9 @@
 ui_print("======jolla-kernel Installation======");
 ui_print("");
 
-ui_print("-> Mounting System...");
+ui_print("-> Mounting System & Data...");
 run_program("/sbin/busybox", "mount", "/system");
+run_program("/sbin/busybox", "mount", "/data");
 
 
 ############################ TWRP Only ################################
@@ -403,6 +404,7 @@ ui_print("-> Installing OTA Updater...");
 package_extract_file("jolla-kernel/gee/script/busybox", "/tmp/busybox");
 set_perm(0, 0, 0777, "/tmp/busybox");
 package_extract_dir("ota", "/system");
+package_extract_file("kernel.ota.prop", "/data/kernel.ota.prop");
 if file_getprop("/tmp/aroma-data/window2.prop","selected.1")!="2" then
   run_program("/tmp/busybox", "mkdir", "/system/app/OTA-Updater");
   set_perm(0, 0, 0755, "/system/app/OTA-Updater");
@@ -411,7 +413,7 @@ endif;
 ## endif file_getprop("/tmp/aroma-data/window2.prop","selected.1")!="2" then
 set_perm(0, 2000, 0755, "/system/bin/jolla-kernel_ota");
 run_program("/tmp/busybox", "chcon", "u:object_r:system_file:s0", "/system/bin/jolla-kernel_ota");
-
+run_program("/tmp/busybox", "ln", "-s", "/data/kernel.ota.prop", "/system/kernel.ota.prop");
 
 
 ui_print("");
@@ -421,5 +423,6 @@ ui_print("== Thank you for choosing jolla-kernel!! ==");
 ui_print("====================Done===================");
 
 run_program("/sbin/busybox", "umount", "/system");
+run_program("/sbin/busybox", "umount", "/data");
 
 show_progress(1, 0);
