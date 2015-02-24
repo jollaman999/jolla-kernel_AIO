@@ -3,7 +3,14 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v2.4]</#></b></@>
+<b><#selectbg_g>[Gen2-v2.5]</#></b></@>
+- f2fs: Update to latest f2fs linux-3.4 branch's sources
+- random: Update to latest Linux 4.0-rc1 sources
+- hw_random: Update to latest Linux 4.0-rc1 sources
+- jolla-twrp: jolla-kernel_Gen2-v2.5 applied
+- Updates applied to Stock_KK kernels
+
+<b><#selectbg_g>[Gen2-v2.4]</#></b>
 - sched: Various optimizations and updates applied from faux123's mako kk_mr2
 - lowmemorykiller: Some of optimizations applied from faux123's mako kk_mr2
 - zram: Some of optimizations applied for Android from faux123's mako kk_mr2

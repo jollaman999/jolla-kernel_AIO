@@ -13,7 +13,7 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "jolla-kernel");
-ini_set("rom_version",          "Gen2-v2.4");
+ini_set("rom_version",          "Gen2-v2.5");
 ini_set("rom_author",           "jollaman999");
 ini_set("rom_device",           "GEE/e975");
 ini_set("rom_date",             "Feb 24, 2015");
