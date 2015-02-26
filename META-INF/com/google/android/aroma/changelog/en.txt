@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v2.5]</#></b></@>
+<b><#selectbg_g>[Gen2-v2.5_Update2]</#></b></@>
+==AIO Updates==
+- ota: Fix FC issue when data is wiped
+- unpack-ramdisk.sh: Fix init.d not working issue in some of roms
+
+<b><#selectbg_g>[Gen2-v2.5_Update1]</#></b>
+==AIO Updates==
+- Lollipop - f2fs: Allow use of either f2fs or ext4 for system, data and cache
+- Lollipop - rc-L: Remove useless cpu online lines
+- ota: Restore sysinit SELinux permission by ota service script
+
+<b><#selectbg_g>[Gen2-v2.5]</#></b>
 - f2fs: Update to latest f2fs linux-3.4 branch's sources
 - random: Update to latest Linux 4.0-rc1 sources
 - hw_random: Update to latest Linux 4.0-rc1 sources

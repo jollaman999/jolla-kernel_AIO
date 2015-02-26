@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v2.5]</#></b></@>
+<b><#selectbg_g>[Gen2-v2.5_Update2]</#></b></@>
+==AIO 업데이트==
+- ota: data 가 와이프 되었을시 강제종료 되는 현상 수정
+- unpack-ramdisk.sh: 일부 롬에서 init.d 가 작동하지 않는 문제 수정
+
+<b><#selectbg_g>[Gen2-v2.5_Update1]</#></b>
+==AIO 업데이트==
+- 롤리팝 - f2fs: system, data, cache 파티션을 f2fs 또는 ext4 로 사용할 수 있도록 함.
+- 롤리팝 - rc-L: 필요없는 cpu 활성화 라인들 제거
+- ota: sysinit SELinux 퍼미션을 ota 서비스 스크립트를 통해 수정 하도록 함.
+
+<b><#selectbg_g>[Gen2-v2.5]</#></b>
 - f2fs: 최신 f2fs linux-3.4 브랜치 소스로 업데이트
 - random: 최신 Linux 4.0-rc1 소스로 업데이트
 - hw_random: 최신 Linux 4.0-rc1 소스로 업데이트
