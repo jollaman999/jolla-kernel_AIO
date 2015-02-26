@@ -2,6 +2,9 @@
 
 KERNEL=$(cat /proc/version)
 
+rm /data/kernel.ota.prop
+cp /system/jolla-kernel.info /data/kernel.ota.prop
+
 sed -i '/fullver/d' /data/kernel.ota.prop
 sed -i '/\}/d' /data/kernel.ota.prop
 echo \ \ \ \ \"fullver\"\: \"$KERNEL\" >> /data/kernel.ota.prop
