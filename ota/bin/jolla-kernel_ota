@@ -8,6 +8,3 @@ sed -i '/fullver/d' /data/kernel.ota.prop
 sed -i '/\}/d' /data/kernel.ota.prop
 echo \ \ \ \ \"fullver\"\: \"$KERNEL\" >> /data/kernel.ota.prop
 echo \} >> /data/kernel.ota.prop
-
-# Restore sysinit SELinux permission
-busybox chcon u:object_r:system_file:s0 /system/bin/sysinit
