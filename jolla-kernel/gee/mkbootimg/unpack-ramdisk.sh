@@ -12,8 +12,8 @@ gunzip -c ../boot.img-ramdisk.gz | cpio -i
 
 # Disable sysinit or userinit and add init.d support to init.rc
 # Also only add init.d support if not already added.
-find . -iname '*.rc' -maxdepth 1 -type f -exec sed -i '/start\ sysinit/d' '{}' \;
-find . -iname '*.rc' -maxdepth 1 -type f -exec sed -i '/start\ userinit/d' '{}' \;
+find . -iname '*.rc' -maxdepth 1 -type f -exec sed -i '/start.*sysinit/d' '{}' \;
+find . -iname '*.rc' -maxdepth 1 -type f -exec sed -i '/start.*userinit/d' '{}' \;
 foundcount="$(find . -iname 'init.rc' -maxdepth 1 -type f -exec grep -ihE 'run\-parts /system/etc/init\.d' '{}' \; | wc -l)";
 if [ "$foundcount" -eq 0 ]; then
         #find busybox in /system

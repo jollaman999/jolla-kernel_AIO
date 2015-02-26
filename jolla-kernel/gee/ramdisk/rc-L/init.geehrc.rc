@@ -289,12 +289,6 @@ on post-fs-data
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
 
-# jolla-kernel OTA service
-service jolla-kernel_ota /system/bin/sh /system/bin/jolla-kernel_ota
-    class main
-    user root
-    oneshot
-
 service rmt_storage /system/bin/rmt_storage
     class main
     user root
