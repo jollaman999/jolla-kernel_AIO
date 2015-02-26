@@ -125,8 +125,10 @@ If you use a rom which is not supported please send boot.img file to admin@jolla
 kernel2.attention=Kernel Selection Warning
 kernel2.attentiondesc=If you select kernel which is not compatible with your rom, your device won't boot.
 fs.attention=F2FS Warning
-fs.attentiondesc=If /data and /cache partition are not formatted to f2fs, your device won't boot.\
-Also if you use multirom, some of roms are not suppot f2fs.
+fs.attentiondesc=You can use /system, /data and /cache partitions to EXT4 or F2FS.\
+F2FS file system is in continuous developing state.\
+Also some of roms will not suppot f2fs.\
+So use with caution.
 
 checkbox1.title=Kernel Installatin Options
 checkbox1.subtitle=Select what you want.
@@ -140,9 +142,8 @@ checkbox1.item2-1=Stock Camera Driver
 checkbox1.item2-1desc=Install stock's camera driver\
 If you have problem with stock camera, reflash your rom. Then reinstall kernel with uncheck this option.
 checkbox1.item3=File System
-checkbox1.item3-1=Use F2FS
-checkbox1.item3-1desc=Install F2FS kernel\
-Use /data and /cache partitions to f2fs\
+checkbox1.item3-1=F2FS support (Experimental)
+checkbox1.item3-1desc=Use can change /system, /data and /cache partitions to F2FS.\
 (If you not install multirom, F2FS compatible TWRP recovery will be install to default.)
 
 checkbox2.title=Multi ROM Delete Option

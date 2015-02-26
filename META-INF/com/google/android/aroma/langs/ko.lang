@@ -125,8 +125,10 @@ kernel1.attentiondesc=해당 롬에 맞지 않는 커널을 선택 하실 경우
 kernel2.attention=커널 선택 경고
 kernel2.attentiondesc=해당 롬에 맞지 않는 커널을 선택 하실 경우 부팅이 되지 않을 수 있습니다.
 fs.attention=F2FS 경고
-fs.attentiondesc=/data, /cache 영역이 f2fs로 포맷되어 있지 않을 경우 기기가 부팅되지 않습니다.\
-또한 멀티롬 이용시 특정롬이 f2fs를 지원하지 않을 경우 해당롬은 이용이 불가합니다.
+fs.attentiondesc=/system, /data, /cache 파티션을 EXT4, 또는 F2FS 파일 시스템으로 사용하실 수 있습니다.\
+F2FS 파일시스템은 계속적인 개발 단계에 있습니다.\
+또한 일부 롬은 F2FS를 지원하지 않을 수 있습니다.\
+따라서 사용에 주의해 주시기 바랍니다.
 
 checkbox1.title=커널 설치 옵션
 checkbox1.subtitle=원하시는 옵션에 체크해 주세요.
@@ -140,9 +142,8 @@ checkbox1.item2-1=스톡 카메라 드라이버
 checkbox1.item2-1desc=스톡 기반 카메라 드라이버를 설치합니다.\
 카메라 이용에 문제가 있을경우 롬을 재설치 해주시고, 이 옵션에 체크 해제 후 커널을 재설치 해주시기 바랍니다.
 checkbox1.item3=파일 시스템
-checkbox1.item3-1=F2FS 사용
-checkbox1.item3-1desc=F2FS 커널을 설치합니다.\
-/data, /cache를 f2fs로 사용합니다.\
+checkbox1.item3-1=F2FS 지원 (실험단계)
+checkbox1.item3-1desc=/system, /data, /cache 파티션을 F2FS로 전환 할 수 있습니다.\
 (멀티롬을 설치하시지 않을경우 F2FS 호환 TWRP 리커버리가 기본으로 설치됩니다.)
 
 checkbox2.title=멀티롬 제거 옵션
