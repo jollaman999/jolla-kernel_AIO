@@ -4,16 +4,16 @@
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
 <b><#selectbg_g>[Gen2-v2.5_Update3]</#></b></@>
-- Stock_KK: Gen2-v2.5 Stock_KK 커널에 성공적으로 포팅완료!!
-	- gpu: Stock KK 포팅
-	- mdp/fb: Stock KK 포팅
-	- led: Stock KK 포팅
-	- sound: Stock KK 포팅
-	- vibrator: Stock KK 포팅
-	- backlight: Stock KK 에 맞게 조절
-	- 최신 Linaro toolchain (2015.02) 로 컴파일
-- Lollipop: 최신 Linaro toolchain (2015.02) 로 재컴파일
-- jolla-twrp: kernel: 최신 Linaro toolchain (2015.02) 로 재컴파일
+- Stock_KK: Gen2-v2.5 ported succesfully to Stock_KK kernel!!
+	- gpu: Stock KK porting
+	- mdp/fb: Stock KK porting
+	- led: Stock KK porting
+	- sound: Stock KK porting
+	- vibrator: Stock KK porting
+	- backlight: Adjust for Stock KK
+	- Complied with latest Linaro toolchain (2015.02)
+- Lollipop: Re-complied with latest Linaro toolchain (2015.02)
+- jolla-twrp: kernel: Re-complied with latest Linaro toolchain (2015.02)
 
 <b><#selectbg_g>[Gen2-v2.5_Update2]</#></b>
 ==AIO Updates==
