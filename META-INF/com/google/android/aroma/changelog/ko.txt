@@ -3,7 +3,19 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v2.5_Update2]</#></b></@>
+<b><#selectbg_g>[Gen2-v2.5_Update3]</#></b></@>
+- Stock_KK: Gen2-v2.5 ported succesfully to Stock_KK kernel!!
+	- gpu: Stock KK porting
+	- mdp/fb: Stock KK porting
+	- led: Stock KK porting
+	- sound: Stock KK porting
+	- vibrator: Stock KK porting
+	- backlight: Adjust for Stock KK
+	- Complied with latest Linaro toolchain (2015.02)
+- Lollipop: Re-complied with latest Linaro toolchain (2015.02)
+- jolla-twrp: kernel: Re-complied with latest Linaro toolchain (2015.02)
+
+<b><#selectbg_g>[Gen2-v2.5_Update2]</#></b>
 ==AIO 업데이트==
 - ota: data 가 와이프 되었을시 강제종료 되는 현상 수정
 - unpack-ramdisk.sh: 일부 롬에서 init.d 가 작동하지 않는 문제 수정
