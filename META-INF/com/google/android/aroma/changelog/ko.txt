@@ -3,7 +3,12 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v2.5_Update3]</#></b></@>
+<b><#selectbg_g>[Gen2-v2.5_Update4]</#></b></@>
+- All: LGE 헤드폰 발견 이슈와 함께 노이즈 픽스 변경사항 취소, CPU 전압 최소/최대 범위 수정
+- Stock_KK: 킷캣 호환성 문제 수정
+- jolla-twrp: 커널 업데이트
+
+<b><#selectbg_g>[Gen2-v2.5_Update3]</#></b>
 - Stock_KK: Gen2-v2.5 Stock_KK 커널에 성공적으로 포팅완료!!
 	- gpu: Stock KK 포팅
 	- mdp/fb: Stock KK 포팅
