@@ -3,7 +3,11 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v2.5_Update5]</#></b></@>
+<b><#selectbg_g>[Gen2-v2.5_Update6]</#></b></@>
+- All: f2fs 업데이트
+- jolla-twrp: 커널 업데이트
+
+<b><#selectbg_g>[Gen2-v2.5_Update5]</#></b>
 ==AIO 업데이트==
 - f2fs: vold 바이너리 업데이트 (f2fs 파티션 있을시 부팅 안되는 증상 수정.)
 
