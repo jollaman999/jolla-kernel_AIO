@@ -3,7 +3,13 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v2.5_Update6]</#></b></@>
+<b><#selectbg_g>[Gen2-v2.5_Update7]</#></b></@>
+- Stock: 국내용 Optimus G TDMB 지원
+- Stock: gee_defconfig: MOBICORE 드라이버 활성화 (DRM 과 관련됨)
+- Stock: tdmb: fc8050: 지저분한 디버그 메세지들 비활성화
+- Stock: tdmb: fc8050: 소스내 한글 깨짐 수정
+
+<b><#selectbg_g>[Gen2-v2.5_Update6]</#></b>
 - All: f2fs 업데이트
 - jolla-twrp: 커널 업데이트
 
