@@ -3,7 +3,10 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v2.5_Update7]</#></b></@>
+<b><#selectbg_g>[Gen2-v2.5_Update8]</#></b></@>
+- Stock: sound: msm: Stock KK 포팅 (보이스 레코딩 관련 문제도 수정됨 (Q 보이스, 동영상 촬영, 헤드셋 마이크 등))
+
+<b><#selectbg_g>[Gen2-v2.5_Update7]</#></b>
 - Stock: 국내용 Optimus G TDMB 지원
 - Stock: gee_defconfig: MOBICORE 드라이버 활성화 (DRM 과 관련됨)
 - Stock: tdmb: fc8050: 지저분한 디버그 메세지들 비활성화
