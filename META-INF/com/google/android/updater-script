@@ -240,7 +240,11 @@ if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="2" then
   set_perm(0, 0, 0777, "/tmp/disable_stock_init.sh");
   run_program("/tmp/disable_stock_init.sh");
 
-  ui_print("-> Extracting Common Files...");		
+  ui_print("-> Removing old modules...");
+  set_perm(0, 0, 0777, "/tmp/modules_remover.sh");
+  run_program("/tmp/modules_remover.sh");
+
+  ui_print("-> Extracting Common Files...");
   package_extract_dir("jolla-kernel/stock/common", "/system");
 
   #### Stock Kernel
