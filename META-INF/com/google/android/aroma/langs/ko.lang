@@ -75,8 +75,8 @@ terms.desc=아래 내용을 자세히 읽어주시기 바랍니다.
 terms.check=위 내용에 동의합니다.
 terms.confirm=사용권에 동의하지 않으셨습니다.
 
-changelog.title=체인지로그
-changelog.desc=jolla-kernel 체인지로그
+changelog.title=변경 사항
+changelog.desc=jolla-kernel 변경 사항
 
 window1.title=설치 옵션 선택
 window1.subtitle=설치 옵션을 선택해 주세요
@@ -93,41 +93,21 @@ window1.option3desc=jolla-kernel 기반의 MultiROM TWRP 만 설치합니다.\
 메뉴로 가셔서 Move primary ROM to secandaries 옵션을 통하여 롬을 이동해 줍니다.\
 롬을 이동하신 후 멀티롬을 설치해 주시기 바랍니다.
 
-window2.title=롬 종류 선택
-window2.subtitle=롬 종류를 선택해 주세요.
+window2.title=버젼 선택
+window2.subtitle=해당 Android 버젼을 선택해 주세요.
 window2.option1=롬 종류
-window2.option1-1=CM/AOSP 기반
-window2.option1-1desc=CM/AOSP 기반 롬에 설치 하실 경우 선택합니다.
-window2.option1-2=스톡 기반
-window2.option1-2desc=스톡, MIUI, GEE3 등 스톡 기반 롬에 설치 하실 경우 선택합니다.
+window2.option1-1=5.0
+window2.option1-1desc=CM/AOSP 기반 Android 5.0.x 롬에 설치 하실 경우 선택합니다.
+window2.option1-2=5.1
+window2.option1-2desc=CM/AOSP 기반 Android 5.1.x 롬에 설치 하실 경우 선택합니다.
 
-window2-1.title=CM/AOSP 기반
-window2-1.subtitle=커널 종류를 선택해 주세요.
-window2-1.option1=커널 종류
-window2-1.option1-1=L mod 커널 (Lollipop)
-window2-1.option1-1desc=CM12/Lollipop 기반 롬들 용
-window2-1.option1-2=L nonmod 커널 (Lollipop)
-window2-1.option1-2desc=L mod 커널 설치 후 화면표시에 이상 있을시 설치
-
-window2-2.title=스톡 기반
-window2-2.subtitle=커널 종류를 선택해 주세요.
-window2-2.option1-1=스톡
-window2-2.option1-1desc=스톡용 커널
-window2-2.option1-2=MIUI
-window2-2.option1-2desc=스톡기반 MIUI 용 커널
-window2-2.option1-3=GEE3
-window2-2.option1-3desc=스톡기반 GEE3 용 커널
-
-kernel1.attention=커널 선택 경고
-kernel1.attentiondesc=해당 롬에 맞지 않는 커널을 선택 하실 경우 화면 표시에 문제가 있을 수 있습니다.\
-또한 일부 롬에 따라 커널이 지원되지 않을 수 있습니다.\
-이 경우 해당롬의 boot.img 파일을 admin@jollaman999.com 으로 보내주시기 바랍니다.
-kernel2.attention=커널 선택 경고
-kernel2.attentiondesc=해당 롬에 맞지 않는 커널을 선택 하실 경우 부팅이 되지 않을 수 있습니다.
-fs.attention=F2FS 경고
-fs.attentiondesc=/system, /data, /cache 파티션을 EXT4, 또는 F2FS 파일 시스템으로 사용하실 수 있습니다.\
-F2FS 파일시스템은 계속적인 개발 단계에 있습니다.\
-또한 일부 롬은 F2FS를 지원하지 않을 수 있습니다.\
+kernel1.attention=버젼 선택 경고
+kernel1.attentiondesc=해당 롬의 버젼에 맞지 않는 커널을 선택 하실 경우 부팅이 되지 않을 수 있습니다.
+fs.attention=F2FS 사용안내
+fs.attentiondesc=현재 커널상에는 /system, /data, /cache 파티션을 EXT4, 또는 F2FS 파일 시스템으로 사용할 수 있도록 되어있습니다.\
+F2FS 파일시스템은 TWRP 리커버리에서 Wipe(와이프) 옵션에 들어가 Filesystem type(파일시스템 종류) 을 f2fs로 change(변경) 해주셔야 사용이 가능합니다.\
+/system 파티션은 일부 롬에 따라 f2fs로 변경해도 롬 업데이트 과정에서 EXT4로 되돌아 갈 수 있으며, 지원이 되지 않을 수 있습니다.\
+또한 일부 롬은 자체적으로 F2FS를 지원하지 않을 수 있습니다.\
 따라서 사용에 주의해 주시기 바랍니다.
 
 checkbox1.title=커널 설치 옵션
@@ -137,14 +117,6 @@ checkbox1.item1stock=멀티롬 부팅은 메인 GEE 롬에만 설치하실 수 �
 checkbox1.item1uninst=멀티롬 제거가 선택되었습니다.
 checkbox1.item1-1=멀티롬 부팅 설치
 checkbox1.item1-1desc=jolla-TWRP 와 함께 여러 롬들을 부팅할 수 있게 해주는 멀티롬을 설치합니다.
-checkbox1.item2=카메라 드라이버
-checkbox1.item2-1=스톡 카메라 드라이버
-checkbox1.item2-1desc=스톡 기반 카메라 드라이버를 설치합니다.\
-카메라 이용에 문제가 있을경우 롬을 재설치 해주시고, 이 옵션에 체크 해제 후 커널을 재설치 해주시기 바랍니다.
-checkbox1.item3=파일 시스템
-checkbox1.item3-1=F2FS 지원 (실험단계)
-checkbox1.item3-1desc=/system, /data, /cache 파티션을 F2FS로 전환 할 수 있습니다.\
-(멀티롬을 설치하시지 않을경우 F2FS 호환 TWRP 리커버리가 기본으로 설치됩니다.)
 
 checkbox2.title=멀티롬 제거 옵션
 checkbox2.subtitle=멀티롬 제거 옵션을 선택해 주세요.
@@ -161,7 +133,7 @@ multidel.attentiondesc=이 작업을 수행하면 메인롬을 제외한 모든 
 
 ini_set.next=설치 진행
 ini_set.title=설치 진행
-ini_set.text1=<b>건설 로봇 준비 완료!!</b>
+ini_set.text1=<b>설치 준비 완료!!</b>
 ini_set.text2=<b>설치 진행</b> 버튼을 눌러 설치를 진행합니다.
 ini_set.text3=설치 옵션들을 확인하시려면 <b>이전</b> 버튼을 눌러주시기 바랍니다.
 ini_set.text4=설치를 종료하시려면 메뉴 -> 설치 종료를 눌러주시기 바랍니다.

@@ -93,41 +93,21 @@ After intall recovery, go to Advanced->MultiROM->Swap ROMs\
 then select Move primary ROM to secandaries.\
 After you move your rom, install Multi ROM.
 
-window2.title=Rom Type Selection
-window2.subtitle=Select your rom type.
+window2.title=Version Selection
+window2.subtitle=Select your Android version.
 window2.option1=Rom type
-window2.option1-1=CM/AOSP based
-window2.option1-1desc=If you want to install to CM/AOSP based roms, select this.
-window2.option1-2=Stock based
-window2.option1-2desc=If you want to install to stock based roms like MIUI, GEE3 and stock, select this.
+window2.option1-1=5.0
+window2.option1-1desc=If you want to install to CM/AOSP based Android 5.0.x roms, select this.
+window2.option1-2=5.1
+window2.option1-2desc=If you want to install to CM/AOSP based Android 5.1.x roms, select this.
 
-window2-1.title=CM/AOSP based
-window2-1.subtitle=Select kernel type.
-window2-1.option1=Kernel Type
-window2-1.option1-1=L mod kernel (Lollipop)
-window2-1.option1-1desc=for CM12/Lollipop based roms.
-window2-1.option1-2=L nonmod kernel (Lollipop)
-window2-1.option1-2desc=If you have problem with display after you install L mod kernel, install this.
-
-window2-2.title=Stock based
-window2-2.subtitle=Select kernel type.
-window2-2.option1-1=Stock
-window2-2.option1-1desc=for stock rom
-window2-2.option1-2=MIUI
-window2-2.option1-2desc=for stock based MIUI rom
-window2-2.option1-3=GEE3
-window2-2.option1-3desc=for stock based GEE3 rom
-
-kernel1.attention=Kernel Selection Warning
-kernel1.attentiondesc=If you select kernel which is not compatible with your rom, there will be screen showing issue.\
-Also some of roms are not supported.\
-If you use a rom which is not supported please send boot.img file to admin@jollaman999.com.
-kernel2.attention=Kernel Selection Warning
-kernel2.attentiondesc=If you select kernel which is not compatible with your rom, your device won't boot.
-fs.attention=F2FS Warning
-fs.attentiondesc=You can use /system, /data and /cache partitions to EXT4 or F2FS.\
-F2FS file system is in continuous developing state.\
-Also some of roms will not suppot f2fs.\
+kernel1.attention=Version Selection Warning
+kernel1.attentiondesc=If you select kernel which is not compatible with your rom version, it will not boot.
+fs.attention=F2FS information
+fs.attentiondesc=On current kernel, /system, /data and /cache partitions are able to use by EXT4 or F2FS.\
+You can use F2FS by change file system in Wipe option of TWRP recovery.\
+/system partition will be back to EXT4 in some of roms while updating, unless you changed to F2FS.\
+Also some of roms will not suppot f2fs by ifself.\
 So use with caution.
 
 checkbox1.title=Kernel Installatin Options
@@ -137,14 +117,6 @@ checkbox1.item1uninst=Uninstall Multi ROM is selected.
 checkbox1.item1-1=Install Multi ROM Boot
 checkbox1.item1stock=Multi ROM Boot is only possible to install on main GEE rom.
 checkbox1.item1-1desc=Install Multi ROM Boot that is possible to boot various roms with jolla-TWRP.
-checkbox1.item2=Camera Driver
-checkbox1.item2-1=Stock Camera Driver
-checkbox1.item2-1desc=Install stock's camera driver\
-If you have problem with stock camera, reflash your rom. Then reinstall kernel with uncheck this option.
-checkbox1.item3=File System
-checkbox1.item3-1=F2FS support (Experimental)
-checkbox1.item3-1desc=Use can change /system, /data and /cache partitions to F2FS.\
-(If you not install multirom, F2FS compatible TWRP recovery will be install to default.)
 
 checkbox2.title=Multi ROM Delete Option
 checkbox2.subtitle=Select Multi ROM delete option.
@@ -161,7 +133,7 @@ Please check again if there are backup needed.
 
 ini_set.next=Begin Inst
 ini_set.title=Proceed Installation
-ini_set.text1=<b>S.C.V Ready!!</b>
+ini_set.text1=<b>Installation Ready!!</b>
 ini_set.text2=Proceed installation with press <b>Begin Inst</b>.
 ini_set.text3=If you want to check options, press <b>Back</b> button.
 ini_set.text4=If you want to exit, press menu -> Exit.
