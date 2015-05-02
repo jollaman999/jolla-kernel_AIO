@@ -76,23 +76,12 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
   set_perm(0, 0, 0644, "/tmp/ramdisk/initlogo.rle");
 
 
-  ############ Version Selection ############
-  ######## 5.0 ########
-  if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
-    ui_print(">>>L - 5.0 Kernel<<<");
-    package_extract_dir("jolla-kernel/gproj/ramdisk/5.0", "/tmp/ramdisk");
-  endif;
-  ## endif file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1"
-
-  ######## 5.1 ########
-  if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="2" then
-    ui_print(">>>L - 5.1 Kernel<<<");
-    package_extract_dir("jolla-kernel/gproj/ramdisk/5.1", "/tmp/ramdisk");
-  endif;
-  ## endif file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="2"
-
+  ############ Replace ramdisk ############
+  ui_print(">>>Replacing ramdisk<<<");
+  package_extract_dir("jolla-kernel/gproj/ramdisk", "/tmp/ramdisk");
   set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
   set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
+
 
   ############ Replace zImage ############
   ui_print(">>>Replacing zImage<<<");
@@ -104,6 +93,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
   run_program("/tmp/mk-ramdisk.sh");
   run_program("/tmp/mkbootimg.sh");
   run_program("/tmp/busybox", "dd", "if=/tmp/newboot.img", "of=/dev/block/platform/msm_sdcc.1/by-name/boot");
+
 
   ############ Copy USB-Keyboard.apk ############
   ui_print("-> Copying USB-Keyboard.apk...");

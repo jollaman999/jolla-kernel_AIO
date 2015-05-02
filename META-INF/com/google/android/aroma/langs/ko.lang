@@ -96,13 +96,9 @@ window1.option3desc=jolla-kernel 기반의 MultiROM TWRP 만 설치합니다.\
 window2.title=버젼 선택
 window2.subtitle=해당 Android 버젼을 선택해 주세요.
 window2.option1=롬 종류
-window2.option1-1=Android 5.0.x 또는 cm-12.0
-window2.option1-1desc=CM/AOSP 기반 Android 5.0.x 롬에 설치 하실 경우 선택합니다.
-window2.option1-2=Android 5.1.x 또는 cm-12.1
-window2.option1-2desc=CM/AOSP 기반 Android 5.1.x 롬에 설치 하실 경우 선택합니다.
+window2.option1-1=Lollipop (Android 5.x.x)
+window2.option1-1desc=CM/AOSP 기반 Android 5.x.x 롬에 설치 하실 경우 선택합니다.
 
-kernel1.attention=버젼 선택 경고
-kernel1.attentiondesc=해당 롬의 버젼에 맞지 않는 커널을 선택 하실 경우 부팅이 되지 않을 수 있습니다.
 fs.attention=F2FS 사용안내
 fs.attentiondesc=현재 커널상에는 /system, /data, /cache 파티션을 EXT4, 또는 F2FS 파일 시스템으로 사용할 수 있도록 되어있습니다.\
 F2FS 파일시스템은 TWRP 리커버리에서 Wipe(와이프) 옵션에 들어가 Filesystem type(파일시스템 종류) 을 f2fs로 change(변경) 해주셔야 사용이 가능합니다.\

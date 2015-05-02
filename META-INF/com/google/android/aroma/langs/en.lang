@@ -96,13 +96,9 @@ After you move your rom, install Multi ROM.
 window2.title=Version Selection
 window2.subtitle=Select your Android version.
 window2.option1=Rom type
-window2.option1-1=Android 5.0.x or cm-12.0
-window2.option1-1desc=If you want to install to CM/AOSP based Android 5.0.x roms, select this.
-window2.option1-2=Android 5.1.x or cm-12.1
-window2.option1-2desc=If you want to install to CM/AOSP based Android 5.1.x roms, select this.
+window2.option1-1=Lollipop (Android 5.x.x)
+window2.option1-1desc=If you want to install to CM/AOSP based Android 5.x.x roms, select this.
 
-kernel1.attention=Version Selection Warning
-kernel1.attentiondesc=If you select kernel which is not compatible with your rom version, it will not boot.
 fs.attention=F2FS information
 fs.attentiondesc=On current kernel, /system, /data and /cache partitions are able to use by EXT4 or F2FS.\
 You can use F2FS by change file system in Wipe option of TWRP recovery.\

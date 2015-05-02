@@ -391,18 +391,16 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
   
     "<~window2.option1>",         "",                                                 2,      #-- Group 1. key = "selected.1"
-        "<~window2.option1-1>",         "<~window2.option1-1desc>",                              1,      #-- selected.1 = 1
-        "<~window2.option1-2>",         "<~window2.option1-2desc>",                              0       #-- selected.1 = 2
+        "<~window2.option1-1>",         "<~window2.option1-1desc>",                              1      #-- selected.1 = 1
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
 );
 
 ##
-# Alert Window - Warning about Kernel Selection & Show about F2FS information
+# Alert Window - Show about F2FS information
 #
 
-alert( "<~kernel1.attention>", "<~kernel1.attentiondesc>");
 alert( "<~fs.attention>", "<~fs.attentiondesc>");
 
 ##
