@@ -399,10 +399,11 @@ selectbox(
 );
 
 ##
-# Alert Window - Warning about Kernel Selection
+# Alert Window - Warning about Kernel Selection & Show about F2FS information
 #
 
 alert( "<~kernel1.attention>", "<~kernel1.attentiondesc>");
+alert( "<~fs.attention>", "<~fs.attentiondesc>");
 
 ##
 # Sub Window with CheckBoxes - Kernel1 Options
@@ -431,8 +432,6 @@ if prop("window1.prop","selected.1")=="1" then
 		    "<~checkbox1.item1-1>",  "<~checkbox1.item1-1desc>",                               0       #-- item.1.1
 			  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 		);
-
-alert( "<~fs.attention>", "<~fs.attentiondesc>");
 
 if prop("checkbox1.prop","item.1.1")=="1" then
   alert( "<~multirom.attention>", "<~multirom.attentiondesc>");
