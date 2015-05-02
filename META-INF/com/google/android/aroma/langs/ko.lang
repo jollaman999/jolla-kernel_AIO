@@ -96,9 +96,9 @@ window1.option3desc=jolla-kernel 기반의 MultiROM TWRP 만 설치합니다.\
 window2.title=버젼 선택
 window2.subtitle=해당 Android 버젼을 선택해 주세요.
 window2.option1=롬 종류
-window2.option1-1=5.0
+window2.option1-1=Android 5.0.x 또는 cm-12.0
 window2.option1-1desc=CM/AOSP 기반 Android 5.0.x 롬에 설치 하실 경우 선택합니다.
-window2.option1-2=5.1
+window2.option1-2=Android 5.1.x 또는 cm-12.1
 window2.option1-2desc=CM/AOSP 기반 Android 5.1.x 롬에 설치 하실 경우 선택합니다.
 
 kernel1.attention=버젼 선택 경고

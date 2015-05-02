@@ -96,9 +96,9 @@ After you move your rom, install Multi ROM.
 window2.title=Version Selection
 window2.subtitle=Select your Android version.
 window2.option1=Rom type
-window2.option1-1=5.0
+window2.option1-1=Android 5.0.x or cm-12.0
 window2.option1-1desc=If you want to install to CM/AOSP based Android 5.0.x roms, select this.
-window2.option1-2=5.1
+window2.option1-2=Android 5.1.x or cm-12.1
 window2.option1-2desc=If you want to install to CM/AOSP based Android 5.1.x roms, select this.
 
 kernel1.attention=Version Selection Warning
