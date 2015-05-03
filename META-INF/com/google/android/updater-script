@@ -54,48 +54,46 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
   run_program("/tmp/prima_set_perm.sh");
 
   ui_print("-> Ready to install gproj kernel...");
-  package_extract_dir("jolla-kernel/gproj/AIK", "/tmp/AIK");
-  set_perm(0, 0, 0777, "/tmp/AIK/aik-chmod.sh");
-  set_perm(0, 0, 0777, "/tmp/AIK/cleanup.sh");
-  set_perm(0, 0, 0777, "/tmp/AIK/repackimg.sh");
-  set_perm(0, 0, 0777, "/tmp/AIK/unpackimg.sh");
-  run_program("/tmp/AIK/aik-chmod.sh");
+  package_extract_dir("jolla-kernel/gproj/mkbootimg", "/tmp");
+  set_perm(0, 0, 0777, "/tmp/busybox");
+  set_perm(0, 0, 0777, "/tmp/unpack-ramdisk.sh");
+  set_perm(0, 0, 0777, "/tmp/mk-ramdisk.sh");
+  set_perm(0, 0, 0777, "/tmp/mkbootimg.sh");
+  set_perm(0, 0, 0777, "/tmp/mkbootimg");
+  set_perm(0, 0, 0777, "/tmp/unpackbootimg");
 
 
   ############ Unpack boot.img ############
   ui_print("-> Unpacking boot.img...");
-  run_program("/tmp/busybox", "dd", "if=/dev/block/platform/msm_sdcc.1/by-name/boot", "of=/tmp/AIK/boot.img");
-  run_program("/tmp/AIK/unpackimg.sh", "/tmp/AIK/boot.img");
+  run_program("/tmp/busybox", "dd", "if=/dev/block/platform/msm_sdcc.1/by-name/boot", "of=/tmp/boot.img");
+  run_program("/tmp/unpackbootimg", "-i", "/tmp/boot.img", "-o", "/tmp/");
+  run_program("/tmp/unpack-ramdisk.sh");
 
 
   ############ Add jolla-kernel logo ############
   ui_print("-> Adding jolla-kernel logo...");
-  package_extract_file("jolla-kernel/gproj/ramdisk/initlogo.rle", "/tmp/AIK/ramdisk/initlogo.rle");
-  set_perm(0, 0, 0644, "/tmp/AIK/ramdisk/initlogo.rle");
+  package_extract_file("jolla-kernel/gproj/ramdisk/initlogo.rle", "/tmp/ramdisk/initlogo.rle");
+  set_perm(0, 0, 0644, "/tmp/ramdisk/initlogo.rle");
 
 
   ############ Replace ramdisk ############
   ui_print(">>>Replacing ramdisk<<<");
-  package_extract_dir("jolla-kernel/gproj/ramdisk", "/tmp/AIK/ramdisk");
-  set_perm(0, 0, 0644, "/tmp/AIK/ramdisk/fstab.geehrc");
-  set_perm(0, 0, 0750, "/tmp/AIK/ramdisk/init.geehrc.rc");
-  set_perm(0, 0, 0750, "/tmp/AIK/ramdisk/init.gee-common.rc");
+  package_extract_dir("jolla-kernel/gproj/ramdisk", "/tmp/ramdisk");
+  set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
+  set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
+  set_perm(0, 0, 0750, "/tmp/ramdisk/init.gee-common");
 
 
   ############ Replace zImage ############
   ui_print(">>>Replacing zImage<<<");
-  package_extract_file("jolla-kernel/gproj/zImage/zImage", "/tmp/AIK/split_img/boot.img-zImage");
+  package_extract_file("jolla-kernel/gproj/zImage/zImage", "/tmp/zImage");
 
 
   ############ Repack boot.img ############
   ui_print("-> Repacking boot.img...");
-  run_program("/tmp/AIK/repackimg.sh");
-  run_program("/tmp/busybox", "dd", "if=/tmp/AIK/image-new.img", "of=/dev/block/platform/msm_sdcc.1/by-name/boot");
-
-
-  ############ Clean up working tree ############
-  ui_print("-> Cleaning up working tree...");
-  run_program("/tmp/AIK/cleanup.sh");
+  run_program("/tmp/mk-ramdisk.sh");
+  run_program("/tmp/mkbootimg.sh");
+  run_program("/tmp/busybox", "dd", "if=/tmp/newboot.img", "of=/dev/block/platform/msm_sdcc.1/by-name/boot");
 
 
   ############ Copy USB-Keyboard.apk ############
