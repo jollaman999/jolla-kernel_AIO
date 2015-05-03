@@ -3,7 +3,50 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v2.5_Update8]</#></b></@>
+<b><#selectbg_g>[Gen3-v1.0]</#></b></@>
+== 커널 ==
+- Gproj 기반 커널 개발 시작!
+- kernel.org 의 Linux 3.4.x 패치들 미적용 (이미 여러 수정들이 가해진 커밋들과 충돌하여 안전성이 보장되지 않음.)
+- random: Linux 4.1-rc1 변경사항 백포팅 및 기존 소스들 재작업 하여 소스 안정화
+- wlan: Stock wifi 드라이버 포팅
+- kexec: Gproj 기반 커널에 hardboot 패치 포팅 (멀티롬)
+- seccomp(Secure Computing) 시스템 콜 지원
+- ext4: 메모리 누수, 조건문, 경쟁 상태, 일부 에러 수정 및 random 변경 사항 적용
+- f2fs: 최신 3.4.x 트리 변경사항 적용
+- overclock: 1890MHz 까지 오버 클럭 지원
+- underclock: 최소 클럭 162MHz 및 기본 최소 클럭으로 적용
+- logo: Gproj 기반 커널에 initlogo 패치 포팅
+- dynamic_thermal (최대 클럭 변경사항에 따라 자동으로 온도 설정 최적화) 적용
+- inteli_plug 적용 및 음악 재생시 강제로 작동하도록 하는 사항 적용
+- gpu: 607.5 MHz 까지 오버 클럭 지원
+- gpu: 화면 꺼짐시 최소 클럭으로 작동하는 사항 적용
+- dt2w: suspend 상태에 있을시 작동 방법 수정 (가끔 2번 탭 하여 깨워지지 않는 현상 수정)
+- crypto: 512, 256, arc4 변경 사항 미적용 (소스상에서 충돌)
+- 모든 파티션에 noatime, nodiratime 기본 적용
+- dynamic_fsync 적용
+- cpufreq: Gen2 에서 사용되던 smartmax 기본으로 적용 및 162MHz 최소 클럭에 맞게 수정
+- lge_touch_core: 소스 안정화 및 배터리 감소 현상 수정
+- USB Keyboard 적용
+- 그외 Gen2 에 적용된 사항들 적용
+
+== 리커버리 ==
+- Gproj 기반 리커버리 적용
+- TWRP: v2.8.6.0 로 버젼업
+- TWRP: 검은 여백 나오는 현상 수정
+- kernel: jolla-kernel_Gen3-v1.0 적용
+
+== 멀티롬 ==
+- Gproj 기반 멀티롬 적용
+- multirom: v32 로 버젼업
+- trampoline: v24 로 버젼업
+
+== AIO ==
+- Gen3 로 업데이트 및 Gen2 커널들 제거 (현재 Gproj 만 지원)
+- Aroma 인스톨러 바이너리 v3.0.0 으로 버젼업
+- 스크립트상의 필요없는 구문들 제거
+- F2FS/EXT4 동시 지원 및 별도로 구분 할 필요 없음
+
+<b><#selectbg_g>[Gen2-v2.5_Update8]</#></b>
 - Stock: sound: msm: Stock KK 포팅 (보이스 레코딩 관련 문제도 수정됨 (Q 보이스, 동영상 촬영, 헤드셋 마이크 등))
 
 <b><#selectbg_g>[Gen2-v2.5_Update7]</#></b>

@@ -3,7 +3,50 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen2-v2.5_Update8]</#></b></@>
+<b><#selectbg_g>[Gen3-v1.0]</#></b></@>
+== Kernel ==
+- Gproj based kernel developing started!
+- Not applied Linux 3.4.x patches from kernel.org (Not guarantee stability, cause of conflicts with several modifications of commits that was alredy applied.)
+- random: Backport Linux 4.1-rc1 changes and rework with previous sources for stability.
+- wlan: Stock wifi driver ported.
+- kexec: Hardboot patch ported for Gproj based kernel (multirom)
+- seccomp(Secure Computing) system call support
+- ext4: Memory leak, some of if sentences, race condition and some of errors fixed. Also applied random changes.
+- f2fs: Recent 3.4.x tree changes applied
+- overclock: Overclock support to 1890MHz
+- underclock: Support 162MHz min clock and set as default min clock.
+- logo: initlogo patch ported to Gproj based kernel
+- dynamic_thermal applied (Auto optimization thermal settings when max clock changed)
+- inteli_plug applied. Also applied force working when playing music.
+- gpu: Overclock support to 607.5 MHz
+- gpu: Working with min clock when screen off applied.
+- dt2w: Fix working method when suspended (Fixed sometimes can't wake with 2 taps.)
+- crypto: Not applied 512, 256, arc4 changes (Conflict with sources)
+- noatime, nodiratime applied by default for all of partitions
+- dynamic_fsync applied
+- cpufreq: smartmax applied by default that was used in Gen2. Also fixed for 162MHz min clock.
+- lge_touch_core: Source stabilization and fixed battery decreasing
+- USB Keyboard applied
+- Applied some of Gen2 changes
+
+== Recovery ==
+- Gproj based recovery applied
+- TWRP: Version up to v2.8.6.0
+- TWRP: Fixed black margin appearing
+- kernel: jolla-kernel_Gen3-v1.0 applied
+
+== Multirom ==
+- Gproj based multirom applied
+- multirom: Version up to v32
+- trampoline: Version up to v24
+
+== AIO ==
+- Update to Gen3 and removed Gen2 kernels (Only support Gproj by now)
+- Aroma installer version up to v3.0.0
+- Remove not needed sentences in scripts
+- Both support F2FS/EXT4. No need to distinguish them.
+
+<b><#selectbg_g>[Gen2-v2.5_Update8]</#></b>
 - Stock: sound: msm: Stock KK ported (Also fixed voice recording issue (Q Voice, Video recording, Headset mic etc...))
 
 <b><#selectbg_g>[Gen2-v2.5_Update7]</#></b>
