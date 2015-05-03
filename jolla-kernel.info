@@ -1,6 +1,6 @@
 {
-    "otaid": "jolla-kernel_Gen3",
-    "otaver": "Beta",
-    "otatime": "20150502-1830",
+    "otaid": "jolla-kernel-Gen3",
+    "otaver": "v1.0",
+    "otatime": "20150503-2330",
     "fullver": "AUTO_FILLED_IN_ON_BOOT"
 }
