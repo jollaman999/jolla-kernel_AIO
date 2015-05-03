@@ -77,7 +77,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
 
 
   ############ Replace ramdisk ############
-  ui_print(">>>Replacing ramdisk<<<");
+  ui_print("-> Replacing ramdisk...");
   package_extract_dir("jolla-kernel/gproj/ramdisk", "/tmp/ramdisk");
   set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
   set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
@@ -85,7 +85,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
 
 
   ############ Replace zImage ############
-  ui_print(">>>Replacing zImage<<<");
+  ui_print("-> Replacing zImage...");
   package_extract_file("jolla-kernel/gproj/zImage/zImage", "/tmp/zImage");
 
 
