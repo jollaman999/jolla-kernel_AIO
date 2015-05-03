@@ -57,7 +57,6 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
   package_extract_dir("jolla-kernel/gproj/AIK", "/tmp/AIK");
   set_perm(0, 0, 0777, "/tmp/AIK/aik-chmod.sh");
   set_perm(0, 0, 0777, "/tmp/AIK/cleanup.sh");
-  set_perm(0, 0, 0777, "/tmp/AIK/fix-initd.sh");
   set_perm(0, 0, 0777, "/tmp/AIK/repackimg.sh");
   set_perm(0, 0, 0777, "/tmp/AIK/unpackimg.sh");
   run_program("/tmp/AIK/aik-chmod.sh");
@@ -76,7 +75,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
 
 
   ############ Replace ramdisk ############
-  ui_print("->Replacing ramdisk...");
+  ui_print(">>>Replacing ramdisk<<<");
   package_extract_dir("jolla-kernel/gproj/ramdisk", "/tmp/AIK/ramdisk");
   set_perm(0, 0, 0644, "/tmp/AIK/ramdisk/fstab.geehrc");
   set_perm(0, 0, 0750, "/tmp/AIK/ramdisk/init.geehrc.rc");
@@ -84,13 +83,8 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
 
 
   ############ Replace zImage ############
-  ui_print("->Replacing zImage...");
+  ui_print(">>>Replacing zImage<<<");
   package_extract_file("jolla-kernel/gproj/zImage/zImage", "/tmp/AIK/split_img/boot.img-zImage");
-
-
-  ############ Fix init.d ############
-  ui_print("->Fixing init.d...");
-  run_program("/tmp/AIK/fix-initd.sh");
 
 
   ############ Repack boot.img ############
