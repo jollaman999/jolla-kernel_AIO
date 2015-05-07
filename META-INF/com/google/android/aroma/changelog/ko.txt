@@ -3,7 +3,35 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v1.0]</#></b></@>
+<b><#selectbg_g>[Gen3-v1.1]</#></b></@>
+== Kernel ==
+- 변경사항 취소: "wlan: Stock KK wlan 드라이버 포팅"
+- dt2w: 3번 탭하여 깨워지는 해결 방법 제거 및 코드 최적화
+- dt2w: 'detect_doubletap2wake' 부분에 sinlock 추가
+- dt2w: 일부 로직 수정 및 코드 최적화
+- dt2w: 'msm_pm_enter' 호출시 'touch_nr++' 수행 (슬립상태시 터치 카운트 증가)
+- dt2w: 슬립 상태시 탭 카운트 세지 않음
+- lge_touch_core: 화면이 꺼져있을때 하드웨어키 끄기
+- Google 의 low memory killer 패치들 적용.
+- android: lowmemorykiller: add lmk parameters tunning code.
+- Revert "staging: android: lowmemorykiller: Don't count reserved free memory
+- android/lowmemorykiller: Check all tasks for death pending
+- android/lowmemorykiller: Selectively count free CMA pages
+- android/lowmemorykiller: Wait for memory to be freed
+- android/lowmemorykiller: Ignore tasks with freed mm
+- lowmemorykiller: Account for highmem during kswapd reclaim
+- lowmemorykiller: make default lowmemorykiller debug message useful
+- lowmemorykiller: enhance debug information
+- LMK: Optimize lowmem_shrink.
+- lowmemorykiller: fix GCC-4.7 compiler warning
+- lowmemorykiller.c: convert to use for_each_thread
+- mm, oom: make dump_tasks public
+
+== Recovery ==
+- f2fs: 바이너리 업데이트
+- kernel: jolla-kernel_Gen3-v1.1 적용
+
+<b><#selectbg_g>[Gen3-v1.0]</#></b>
 == 커널 ==
 - Gproj 기반 커널 개발 시작!
 - kernel.org 의 Linux 3.4.x 패치들 미적용 (이미 여러 수정들이 가해진 커밋들과 충돌하여 안전성이 보장되지 않음.)

@@ -3,7 +3,35 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v1.0]</#></b></@>
+<b><#selectbg_g>[Gen3-v1.1]</#></b></@>
+== Kernel ==
+- Revert "wlan: Stock KK wlan drivers ported"
+- dt2w: Remove 3 taps wake solution and optimize codes
+- dt2w: Add spinlock to 'detect_doubletap2wake'
+- dt2w: Optimze codes and fix some of logics
+- dt2w: 'touch_nr++' when 'msm_pm_enter' called (Increase touch count when suspended.)
+- dt2w: Do not check tap counts when screen suspended
+- lge_touch_core: Turn off hardware keys when screen off
+- Applied Google's low memory killer patches.
+- android: lowmemorykiller: add lmk parameters tunning code.
+- Revert "staging: android: lowmemorykiller: Don't count reserved free memory
+- android/lowmemorykiller: Check all tasks for death pending
+- android/lowmemorykiller: Selectively count free CMA pages
+- android/lowmemorykiller: Wait for memory to be freed
+- android/lowmemorykiller: Ignore tasks with freed mm
+- lowmemorykiller: Account for highmem during kswapd reclaim
+- lowmemorykiller: make default lowmemorykiller debug message useful
+- lowmemorykiller: enhance debug information
+- LMK: Optimize lowmem_shrink.
+- lowmemorykiller: fix GCC-4.7 compiler warning
+- lowmemorykiller.c: convert to use for_each_thread
+- mm, oom: make dump_tasks public
+
+== Recovery ==
+- f2fs: Binaries updated
+- kernel: jolla-kernel_Gen3-v1.1 applied
+
+<b><#selectbg_g>[Gen3-v1.0]</#></b>
 == Kernel ==
 - Gproj based kernel developing started!
 - Not applied Linux 3.4.x patches from kernel.org (Not guarantee stability, cause of conflicts with several modifications of commits that was alredy applied.)
