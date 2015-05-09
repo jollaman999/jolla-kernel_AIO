@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v1.1]</#></b></@>
+<b><#selectbg_g>[Gen3-v1.2]</#></b></@>
+== Kernel ==
+- Applied lastest Google patches: msm_rotator, crypto, kgsl, ipv6, sched etc..
+- crypto: Applied lastest patches from kernel.org
+- sched: Various patches from faux123
+- lge_touch_core: Remove IRQF_TRIGGER_LOW, IRQF_NO_SUSPEND flags in prevent suspend
+- Revert "dt2w: Add spinlock to 'detect_doubletap2wake'"
+
+== Recovery ==
+- kernel: jolla-kernel_Gen3-v1.2 applied
+
+<b><#selectbg_g>[Gen3-v1.1]</#></b>
 == Kernel ==
 - Revert "wlan: Stock KK wlan drivers ported"
 - dt2w: Remove 3 taps wake solution and optimize codes

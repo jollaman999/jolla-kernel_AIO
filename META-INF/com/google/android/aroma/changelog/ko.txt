@@ -3,11 +3,22 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v1.1]</#></b></@>
-== Kernel ==
+<b><#selectbg_g>[Gen3-v1.2]</#></b></@>
+== 커널 ==
+- 구글 최신 패치들 적용: msm_rotator, crypto, kgsl, ipv6, sched 등..
+- crypto: kernel.org 최신 패치들 적용
+- sched: faux123 님의 다수 패치들 적용
+- lge_touch_core: Prevent suspend 에 있는 IRQF_TRIGGER_LOW, IRQF_NO_SUSPEND 플래그들 제거
+- 변경사항 취소: "dt2w: 'detect_doubletap2wake' 부분에 spinlock 추가"
+
+== 리커버리 ==
+- kernel: jolla-kernel_Gen3-v1.2 applied
+
+<b><#selectbg_g>[Gen3-v1.1]</#></b>
+== 커널 ==
 - 변경사항 취소: "wlan: Stock KK wlan 드라이버 포팅"
 - dt2w: 3번 탭하여 깨워지는 해결 방법 제거 및 코드 최적화
-- dt2w: 'detect_doubletap2wake' 부분에 sinlock 추가
+- dt2w: 'detect_doubletap2wake' 부분에 spinlock 추가
 - dt2w: 일부 로직 수정 및 코드 최적화
 - dt2w: 'msm_pm_enter' 호출시 'touch_nr++' 수행 (슬립상태시 터치 카운트 증가)
 - dt2w: 슬립 상태시 탭 카운트 세지 않음
@@ -27,7 +38,7 @@
 - lowmemorykiller.c: convert to use for_each_thread
 - mm, oom: make dump_tasks public
 
-== Recovery ==
+== 리커버리 ==
 - f2fs: 바이너리 업데이트
 - kernel: jolla-kernel_Gen3-v1.1 적용
 
