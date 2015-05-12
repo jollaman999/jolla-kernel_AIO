@@ -3,7 +3,7 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v1.2]</#></b></@>
+<b><#selectbg_g>[Gen3-v1.3]</#></b></@>
 == 커널 ==
 - gcc 5.1.1 UBER 툴체인으로 빌드
 - mpdecision: showp1984 님의 mpdecision 적용
