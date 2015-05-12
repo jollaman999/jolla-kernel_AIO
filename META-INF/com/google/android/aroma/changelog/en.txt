@@ -5,6 +5,18 @@
 
 <b><#selectbg_g>[Gen3-v1.2]</#></b></@>
 == Kernel ==
+- Built with gcc 5.1.1 UBER toolchain
+- mpdecision: showp1984's mpdecision applied
+- intelli_plug: Excluded from kernel build
+- Get rid of __cpuinit
+- msm-sleeper (Limit max clock when sleep) added (Default: 702Mhz)
+
+== Recovery ==
+- Built with lastest temasek sources
+- kernel: jolla-kernel_Gen3-v1.3 applied
+
+<b><#selectbg_g>[Gen3-v1.2]</#></b>
+== Kernel ==
 - Applied lastest Google patches: msm_rotator, crypto, kgsl, ipv6, sched etc..
 - crypto: Applied lastest patches from kernel.org
 - sched: Various patches from faux123

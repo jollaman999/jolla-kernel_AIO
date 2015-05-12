@@ -5,6 +5,18 @@
 
 <b><#selectbg_g>[Gen3-v1.2]</#></b></@>
 == 커널 ==
+- gcc 5.1.1 UBER 툴체인으로 빌드
+- mpdecision: showp1984 님의 mpdecision 적용
+- intelli_plug: 커널 빌드에서 제외
+- __cpuinit 선언들 제거
+- msm-sleeper (슬립 상태시 최대 클럭 제한) 추가 (기본값: 702Mhz)
+
+== 리커버리 ==
+- temasek 최신 소스 기반과 함께 빌드
+- kernel: jolla-kernel_Gen3-v1.3 적용
+
+<b><#selectbg_g>[Gen3-v1.2]</#></b>
+== 커널 ==
 - 구글 최신 패치들 적용: msm_rotator, crypto, kgsl, ipv6, sched 등..
 - crypto: kernel.org 최신 패치들 적용
 - sched: faux123 님의 다수 패치들 적용
@@ -12,7 +24,7 @@
 - 변경사항 취소: "dt2w: 'detect_doubletap2wake' 부분에 spinlock 추가"
 
 == 리커버리 ==
-- kernel: jolla-kernel_Gen3-v1.2 applied
+- kernel: jolla-kernel_Gen3-v1.2 적용
 
 <b><#selectbg_g>[Gen3-v1.1]</#></b>
 == 커널 ==
