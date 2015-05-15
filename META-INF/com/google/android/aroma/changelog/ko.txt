@@ -3,7 +3,16 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v1.3]</#></b></@>
+<b><#selectbg_g>[Gen3-v2.0]</#></b></@>
+== 커널 ==
+- Linux 3.4.107
+- Linux 3.4.1 부터 3.4.107 까지 소스 안정화 및 충돌 회피 위해 각 패치들 개별적으로 하나씩 적용
+
+== 리커버리 ==
+- kernel: jolla-kernel_Gen3-v2.0 적용
+- 마운트 안되는 문제 수정
+
+<b><#selectbg_g>[Gen3-v1.3]</#></b>
 == 커널 ==
 - gcc 5.1.1 UBER 툴체인으로 빌드
 - mpdecision: showp1984 님의 mpdecision 적용
