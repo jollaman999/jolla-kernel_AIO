@@ -3,7 +3,53 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v2.1]</#></b></@>
+<b><#selectbg_g>[Gen3-v3.1]</#></b></@>
+== 커널 ==
+- wlan: Stock KK's wifi 드라이버 제거
+- wlan: Codeaurora prima v3.2.3.23 적용
+- freezer: 몇몇 빠진 패치들 적용
+- lge_touch_core: 터치스크린 슬립 모드 방지 시간 경과 기능을 소개합니다.
+  (노크온을 사용하는 도중 터치스크린 슬립 모드 방지 시간이 경과하면,
+  터치스크린 상태가 슬립 상태로 전환됩니다.
+  이 기능은 배터리를 절약해 줄 것입니다.
+  기본값은 30 분 입니다.
+
+  이 값은 아래 명령어를 쳐서 변경 하실 수 있습니다,
+  echo [값] > /sys/devices/virtual/input/lge_touch/prevent_sleep_expire_minute
+
+  범위: 0~1440 (분))
+- cpufreq: mako ondemand 소스 적용
+- cpufreq: smartmax & smartass2 기본값 조정 (부드러운 퍼포먼스)
+- s2w: 코드 단순화
+- block: fiops sync preempts async (fiops io 스케줄러 업데이트)
+- dynamic_thermal: cpufreq 기본 초기값 수정
+- lowmemorykiller: 레드 블랙 트리 패치 사항 취소
+- lowmemorykiller: LGE 패치 사항 취소
+- lowmemorykiller: 구글 최신 소스 적용
+- cpufreq: 구글 mako lollipop-mr1 업데이트
+- cgroup: 구글 mako lollipop-mr1 업데이트
+- f_accessory: 구글 mako lollipop-mr1 업데이트
+- mako: touch: 에러 체크 사항 추가
+- mako: touch: 펌웨어 업그레이드 후 i2c 에러 사항 수정
+- msm: vidc: 구글 mako lollipop-mr1 업데이트
+- msm_fb: display: 구글 mako lollipop-mr1 업데이트
+- msm: scm-pas: 구글 mako lollipop-mr1 업데이트
+- arm: 구글 mako lollipop-mr1 업데이트
+- msm-sleeper: mtp 활성화 되었을시 최대 클럭 제한하지 않음 (화면꺼짐시 mtp 속도 느려지는 현상 개선)
+
+== 리커버리 ==
+- kernel: jolla-kernel_Gen3-v3.1 적용
+
+<b><#selectbg_g>[Gen3-v3.0]</#></b>
+== 커널 ==
+- Linux 3.4.108
+- dynamic_thermal: 온도 제한 값 감소
+
+== 리커버리 ==
+- kernel: jolla-kernel_Gen3-v3.0 적용
+- TWRP: v2.8.7.0 로 버젼업
+
+<b><#selectbg_g>[Gen3-v2.1]</#></b>
 == 커널 ==
 - Blutooth: 구글 최신 패치들 적용
 - cfg80211: 구글 최신 패치들 적용

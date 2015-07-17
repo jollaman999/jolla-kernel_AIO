@@ -13,10 +13,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "jolla-kernel");
-ini_set("rom_version",          "Gen3-v2.1_Update1");
+ini_set("rom_version",          "Gen3-v3.1");
 ini_set("rom_author",           "jollaman999");
 ini_set("rom_device",           "Gproj/e975");
-ini_set("rom_date",             "Jun 10, 2015");
+ini_set("rom_date",             "Jul 17, 2015");
 
 
 ##

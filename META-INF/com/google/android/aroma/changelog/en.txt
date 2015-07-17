@@ -3,7 +3,53 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v2.1]</#></b></@>
+<b><#selectbg_g>[Gen3-v3.1]</#></b></@>
+== Kernel ==
+- wlan: Remove Stock KK's wifi driver
+- wlan: Applied Codeaurora's prima v3.2.3.23
+- freezer: Appiled some of missed patches
+- lge_touch_core: Introduce prevent sleep expire
+  (When prevent sleep's time is expired while using dt2w/s2w,
+  touch screen's state changed to suspend state.
+  This will save our battery time.
+  Default value is 30 minutes.
+
+  You can change this value by typing,
+  echo [value] > /sys/devices/virtual/input/lge_touch/prevent_sleep_expire_minute
+
+  Range: 0~1440 (minutes))
+- cpufreq: Get mako's ondemand source
+- cpufreq: Adjust default values of smartmax & smartass2 (Smoother performance)
+- s2w: Simplify codes
+- block: fiops sync preempts async (fiops io-sched update)
+- dynamic_thermal: Fix init cpufreq values
+- lowmemorykiller: Revert red-black tree patches
+- lowmemorykiller: Revert LGE patches
+- lowmemorykiller: Applied Google's lastest source
+- cpufreq: Google mako lollipop-mr1 update
+- cgroup: Google mako lollipop-mr1 update
+- f_accessory: Google mako lollipop-mr1 update
+- mako: touch: add error checking for reading descriptor
+- mako: touch: fix i2c error after firmware upgrade
+- msm: vidc: Google mako lollipop-mr1 update
+- msm_fb: display: Google mako lollipop-mr1 update
+- msm: scm-pas: Google mako lollipop-mr1 update
+- arm: Google mako lollipop-mr1 update
+- msm-sleeper: Do not limit max frequency when mtp opened (Fix mtp's speed slower when screen turned off)
+
+== Recovery ==
+- kernel: jolla-kernel_Gen3-v3.1 applied
+
+<b><#selectbg_g>[Gen3-v3.0]</#></b>
+== Kernel ==
+- Linux 3.4.108
+- dynamic_thermal: Decrease thermal limit
+
+== Recovery ==
+- kernel: jolla-kernel_Gen3-v3.0 applied
+- TWRP: Version up to v2.8.7.0
+
+<b><#selectbg_g>[Gen3-v2.1]</#></b>
 == Kernel ==
 - Blutooth: Applied google's recent patches
 - cfg80211: Applied google's recent patches
