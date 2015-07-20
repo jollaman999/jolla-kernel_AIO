@@ -3,7 +3,17 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v3.1]</#></b></@>
+<b><#selectbg_g>[Gen3-v3.1_Update1]</#></b></@>
+== OTA ==
+- Remove previous OTA Updater and added jolla-kernel Updater!
+
+== Kernel ==
+- Fix camera video recording issue.
+
+== Recovery ==
+- kernel: jolla-kernel_Gen3-v3.1 (Update1) applied
+
+<b><#selectbg_g>[Gen3-v3.1]</#></b>
 == Kernel ==
 - wlan: Remove Stock KK's wifi driver
 - wlan: Applied Codeaurora's prima v3.2.3.23

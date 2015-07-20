@@ -82,7 +82,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
   set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
   set_perm(0, 0, 0750, "/tmp/ramdisk/init.geehrc.rc");
   set_perm(0, 0, 0750, "/tmp/ramdisk/init.gee-common.rc");
-
+  set_perm(0, 0, 0644, "/tmp/ramdisk/jolla-kernel.prop");
 
   ############ Replace zImage ############
   ui_print("-> Replacing zImage...");
@@ -222,16 +222,16 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   delete("/data/kernel.ota.prop");
   delete("/system/jolla-kernel.info");
   delete("/system/bin/jolla-kernel_ota");
+  run_program("rm", "-rf", "/data/data/com.otaupdater");
+  run_program("rm", "-rf", "/data/user/0/com.otaupdater");
+  run_program("rm", "-rf", "/data/dalvik-cache/arm/*OTA-Updater*");
+  run_program("rm", "-rf", "/sdcard/OTA-Updater");
+  run_program("rm", "-rf", "/system/etc/permissions/com.otaudater.feature.xml");
+  run_program("rm", "-rf", "/system/jolla-kernel.info");
+  run_program("rm", "-rf", "/data/jolla-kernel.info");
+  run_program("rm", "-rf", "/system/kernel.ota.prop");
 
-  package_extract_file("jolla-kernel/gproj/script/busybox", "/tmp/busybox");
-  set_perm(0, 0, 0777, "/tmp/busybox");
-
-  package_extract_dir("ota", "/system");
-  set_perm(0, 2000, 0755, "/system/etc/init.d/00jolla-kernel_ota");
-  run_program("/tmp/busybox", "chcon", "u:object_r:system_file:s0", "/system/etc/init.d/00jolla-kernel_ota");
-  package_extract_file("jolla-kernel.info", "/system/jolla-kernel.info");
-  package_extract_file("jolla-kernel.info", "/data/kernel.ota.prop");
-  run_program("/tmp/busybox", "ln", "-s", "/data/kernel.ota.prop", "/system/kernel.ota.prop");
+  package_extract_dir("updater", "/system");
 endif;
 ## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3"
 

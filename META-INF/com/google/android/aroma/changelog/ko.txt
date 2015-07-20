@@ -3,7 +3,17 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v3.1]</#></b></@>
+<b><#selectbg_g>[Gen3-v3.1_Update1]</#></b></@>
+== OTA ==
+- 기존 OTA 업데이터 삭제 및 jolla-kernel 업데이터 추가!
+
+== 커널 ==
+- 카메라 비디오 레코딩 문제점 해결.
+
+== 리커버리 ==
+- kernel: jolla-kernel_Gen3-v3.1 (Update1) 적용
+
+<b><#selectbg_g>[Gen3-v3.1]</#></b>
 == 커널 ==
 - wlan: Stock KK's wifi 드라이버 제거
 - wlan: Codeaurora prima v3.2.3.23 적용
