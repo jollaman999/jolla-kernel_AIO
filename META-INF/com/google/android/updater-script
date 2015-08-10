@@ -40,18 +40,20 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
   ui_print("-> Removing previous kernel settings...");
   set_perm(0, 0, 0777, "/tmp/cleaner.sh");
   run_program("/tmp/cleaner.sh");
-  
-  ui_print("-> Extracting Common Files...");
-  package_extract_dir("jolla-kernel/gproj/common", "/system");
 
   ui_print("-> Installing kernel modules...");
   set_perm(0, 0, 0777, "/tmp/modules_remover.sh");
   run_program("/tmp/modules_remover.sh");
   package_extract_dir("jolla-kernel/gproj/modules", "/system/lib/modules");
   
-  ui_print("-> Setting prima Permissions...");
+  ui_print("-> Setting prima...");
+  package_extract_dir("jolla-kernel/gproj/prima", "/system");
   set_perm(0, 0, 0777, "/tmp/prima_set_perm.sh");
   run_program("/tmp/prima_set_perm.sh");
+
+  ui_print("-> Setting camera...");
+  package_extract_dir("jolla-kernel/gproj/camera", "/system");
+  set_perm(0, 0, 0755, "/system/bin/mm-qcamera-daemon");
 
   ui_print("-> Ready to install gproj kernel...");
   package_extract_dir("jolla-kernel/gproj/mkbootimg", "/tmp");
