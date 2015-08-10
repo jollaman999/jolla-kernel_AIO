@@ -51,10 +51,6 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
   set_perm(0, 0, 0777, "/tmp/prima_set_perm.sh");
   run_program("/tmp/prima_set_perm.sh");
 
-  ui_print("-> Setting camera...");
-  package_extract_dir("jolla-kernel/gproj/camera", "/system");
-  set_perm(0, 0, 0755, "/system/bin/mm-qcamera-daemon");
-
   ui_print("-> Ready to install gproj kernel...");
   package_extract_dir("jolla-kernel/gproj/mkbootimg", "/tmp");
   set_perm(0, 0, 0777, "/tmp/busybox");
