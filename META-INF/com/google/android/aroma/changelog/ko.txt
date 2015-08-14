@@ -3,7 +3,20 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v3.1_Update1]</#></b></@>
+<b><#selectbg_g>[Gen3-v3.2]</#></b></@>
+== 커널 ==
+- 변경사항 취소 "lge_touch_core: 터치스크린 슬립 모드 방지 시간 경과 기능을 소개합니다."
+- bfq io 스케줄러 추가
+- bluetooth: mako lollipop-mr1.1 소스 적용 (음악 감상중 랜덤 재부팅 현상 수정됨.)
+- camera: Stock KK 카메라 소스 적용
+- lge_touch_core: IRQ 불균형 현상 수정
+- dt2w: 깨어난 후 화면이 다시 꺼지는 현상 수정
+- f2fs: 최신 패치들 적용
+
+== 리커버리 ==
+- kernel: jolla-kernel_Gen3-v3.2 적용
+
+<b><#selectbg_g>[Gen3-v3.1_Update1]</#></b>
 == OTA ==
 - 기존 OTA 업데이터 삭제 및 jolla-kernel 업데이터 추가!
 
