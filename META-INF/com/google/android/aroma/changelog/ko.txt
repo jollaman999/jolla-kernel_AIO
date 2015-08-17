@@ -3,7 +3,25 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v3.2]</#></b></@>
+<b><#selectbg_g>[Gen3-v3.3]</#></b></@>
+== AIO ==
+- e970 기기 지원
+- USB Keyboard/Mouse 앱 업데이트
+
+== 커널 ==
+- dt2w: 2번 이상 터치할 시 짧은 시간 수정
+- Google, cm-12.1 Gproj 커널 업데이트 적용 (proc, vfs, mm, net, binder)
+- random: 최신 Linux 패치들 적용
+- dynamic_thermal: 최대 클럭이 모든 cpu에 적용되지 않는 문제점 수정
+
+== 리커버리 ==
+- kernel: jolla-kernel_Gen3-v3.3 적용
+
+== jolla-kernel Updater ==
+- Flash 다이얼로그가 나타나지 않는 문제점 수정
+- v1.1 로 버젼업
+
+<b><#selectbg_g>[Gen3-v3.2]</#></b>
 == 커널 ==
 - 변경사항 취소 "lge_touch_core: 터치스크린 슬립 모드 방지 시간 경과 기능을 소개합니다."
 - bfq io 스케줄러 추가

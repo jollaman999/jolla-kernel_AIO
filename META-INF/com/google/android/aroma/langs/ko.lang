@@ -113,6 +113,8 @@ checkbox1.item1stock=멀티롬 부팅은 메인 GEE 롬에만 설치하실 수 �
 checkbox1.item1uninst=멀티롬 제거가 선택되었습니다.
 checkbox1.item1-1=멀티롬 부팅 설치
 checkbox1.item1-1desc=jolla-TWRP 와 함께 여러 롬들을 부팅할 수 있게 해주는 멀티롬을 설치합니다.
+checkbox1.item1-2=e970 기기 지원
+checkbox1.item1-2desc=e970 기기의 카메라와 SD카드를 지원합니다.
 
 checkbox2.title=멀티롬 제거 옵션
 checkbox2.subtitle=멀티롬 제거 옵션을 선택해 주세요.
@@ -122,6 +124,8 @@ checkbox2.item1-1desc=메인롬을 제외한 나머지 세컨롬들을 모두 �
 
 multirom.attention=멀티롬 경고
 multirom.attentiondesc=이 옵션은 메인롬에서만 진행해 주시기 바랍니다!!
+geeb.attention=e970 지원 경고
+geeb.attentiondesc=e975/f180 기기에서 이 옵션을 선택하면 카메라가 정상적으로 작동하지 않습니다!!
 
 multidel.attention=세컨롬들 제거 경고
 multidel.attentiondesc=이 작업을 수행하면 메인롬을 제외한 모든 롬들이 지워집니다!!\

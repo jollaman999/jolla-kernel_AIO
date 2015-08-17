@@ -3,7 +3,25 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v3.2]</#></b></@>
+<b><#selectbg_g>[Gen3-v3.3]</#></b></@>
+== AIO ==
+- Support e970 device
+- Update USB Keyboard/Mouse app
+
+== Kernel ==
+- dt2w: Fix short time for more than 2 taps
+- Google, cm-12.1 Gproj kernel updates applied (proc, vfs, mm, net, binder)
+- random: Latest Linux patches applied
+- dynamic_thermal: Fix max freq not applied for all of cpus
+
+== Recovery ==
+- kernel: jolla-kernel_Gen3-v3.3 applied
+
+== jolla-kernel Updater ==
+- Fix flash dialog not showing issue
+- Version up to v1.1
+
+<b><#selectbg_g>[Gen3-v3.2]</#></b>
 == Kernel ==
 - Revert "lge_touch_core: Introduce prevent sleep expire"
 - Added bfq io scheduler

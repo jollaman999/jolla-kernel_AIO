@@ -113,6 +113,8 @@ checkbox1.item1uninst=Uninstall Multi ROM is selected.
 checkbox1.item1-1=Install Multi ROM Boot
 checkbox1.item1stock=Multi ROM Boot is only possible to install on main GEE rom.
 checkbox1.item1-1desc=Install Multi ROM Boot that is possible to boot various roms with jolla-TWRP.
+checkbox1.item1-2=e970 device support
+checkbox1.item1-2desc=Support e970's camera and SDcard.
 
 checkbox2.title=Multi ROM Delete Option
 checkbox2.subtitle=Select Multi ROM delete option.
@@ -122,6 +124,8 @@ checkbox2.item1-1desc=This will remove all of roms except main rom.
 
 multirom.attention=Multi ROM Warning
 multirom.attentiondesc=Do this option only in main rom!!
+geeb.attention=e970 device support Warning
+geeb.attentiondesc=If you select this option in e975/f180 device, camera will not work properly!!
 
 multidel.attention=Delete second roms Warning
 multidel.attentiondesc=This will remove all of roms except main rom!!\

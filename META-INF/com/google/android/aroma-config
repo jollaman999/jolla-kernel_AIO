@@ -13,10 +13,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "jolla-kernel");
-ini_set("rom_version",          "Gen3-v3.2");
+ini_set("rom_version",          "Gen3-v3.3");
 ini_set("rom_author",           "jollaman999");
-ini_set("rom_device",           "Gproj/e975");
-ini_set("rom_date",             "Aug 14, 2015");
+ini_set("rom_device",           "Gproj/e975/e970");
+ini_set("rom_date",             "Aug 18, 2015");
 
 
 ##
@@ -427,12 +427,18 @@ if prop("window1.prop","selected.1")=="1" then
 		  #------------------+-----------------------------------------------------------+---------------#
 		  
 		  "<~checkbox1.item1>",      "",                                                       2,      #-- group 1
-		    "<~checkbox1.item1-1>",  "<~checkbox1.item1-1desc>",                               0       #-- item.1.1
+		    "<~checkbox1.item1-1>",  "<~checkbox1.item1-1desc>",                               0,      #-- item.1.1
+		    "<~checkbox1.item1-2>",  "<~checkbox1.item1-2desc>",                               0       #-- item.1.2
 			  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 		);
 
 if prop("checkbox1.prop","item.1.1")=="1" then
   alert( "<~multirom.attention>", "<~multirom.attentiondesc>");
+endif;
+## endif - checkbox1.prop
+
+if prop("checkbox1.prop","item.1.2")=="1" then
+  alert( "<~geeb.attention>", "<~geeb.attentiondesc>");
 endif;
 ## endif - checkbox1.prop
 

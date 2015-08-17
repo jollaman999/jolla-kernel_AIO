@@ -83,8 +83,16 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
   set_perm(0, 0, 0644, "/tmp/ramdisk/jolla-kernel.prop");
 
   ############ Replace zImage ############
-  ui_print("-> Replacing zImage...");
-  package_extract_file("jolla-kernel/gproj/zImage/zImage", "/tmp/zImage");
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.2")=="0" then
+    ui_print("-> Replacing Gproj zImage...");
+    package_extract_file("jolla-kernel/gproj/zImage/zImage", "/tmp/zImage");
+  endif;
+  ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.2")=="0" then
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.2")=="1" then
+    ui_print("-> Replacing GEEB zImage...");
+    package_extract_file("jolla-kernel/geeb/zImage/zImage", "/tmp/zImage");
+  endif;
+  ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.2")=="1" then
 
 
   ############ Repack boot.img ############
