@@ -18,14 +18,14 @@ rm -rf res
 rm -rf ubuntu-init
 rm -rf ubuntu-touch-init
 rm -rf ubuntu-touch-sysimage-init
-rm adbd
-rm busybox
-rm exfat-fuse
-rm fw_mounter
-rm kexec
-rm lz4
-rm multirom
-rm ntfs-3g
-rm trampoline
+rm -rf adbd
+rm -rf busybox
+rm -rf exfat-fuse
+rm -rf fw_mounter
+rm -rf kexec
+rm -rf lz4
+rm -rf multirom
+rm -rf ntfs-3g
+rm -rf trampoline
 
 return $?

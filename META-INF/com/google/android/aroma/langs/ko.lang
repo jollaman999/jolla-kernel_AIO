@@ -109,12 +109,12 @@ F2FS 파일시스템은 TWRP 리커버리에서 Wipe(와이프) 옵션에 들어
 checkbox1.title=커널 설치 옵션
 checkbox1.subtitle=원하시는 옵션에 체크해 주세요.
 checkbox1.item1=멀티롬 부팅
-checkbox1.item1stock=멀티롬 부팅은 메인 GEE 롬에만 설치하실 수 있습니다.
 checkbox1.item1uninst=멀티롬 제거가 선택되었습니다.
 checkbox1.item1-1=멀티롬 부팅 설치
 checkbox1.item1-1desc=jolla-TWRP 와 함께 여러 롬들을 부팅할 수 있게 해주는 멀티롬을 설치합니다.
-checkbox1.item1-2=e970 기기 지원
-checkbox1.item1-2desc=e970 기기의 카메라와 SD카드를 지원합니다.
+checkbox1.item2=e970
+checkbox1.item2-1=e970 기기 지원
+checkbox1.item2-1desc=e970 기기의 카메라와 SD카드를 지원합니다.
 
 checkbox2.title=멀티롬 제거 옵션
 checkbox2.subtitle=멀티롬 제거 옵션을 선택해 주세요.

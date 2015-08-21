@@ -428,7 +428,8 @@ if prop("window1.prop","selected.1")=="1" then
 		  
 		  "<~checkbox1.item1>",      "",                                                       2,      #-- group 1
 		    "<~checkbox1.item1-1>",  "<~checkbox1.item1-1desc>",                               0,      #-- item.1.1
-		    "<~checkbox1.item1-2>",  "<~checkbox1.item1-2desc>",                               0       #-- item.1.2
+		  "<~checkbox1.item2>",      "",                                                       2,      #-- group 2
+		    "<~checkbox1.item2-1>",  "<~checkbox1.item2-1desc>",                               0       #-- item.2.1
 			  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 		);
 
@@ -467,7 +468,9 @@ checkbox(
   #------------------+-----------------------------------------------------------+---------------#
   
   "<~checkbox1.item1uninst>","",                                                       2,      #-- group 1
-    "<~checkbox1.item1-1>",  "<~checkbox1.item1-1desc>",                               3       #-- item.1.1
+    "<~checkbox1.item1-1>",  "<~checkbox1.item1-1desc>",                               3,      #-- item.1.1
+  "<~checkbox1.item2>",      "",                                                       2,      #-- group 2
+    "<~checkbox1.item2-1>",  "<~checkbox1.item2-1desc>",                               0       #-- item.2.1
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
 

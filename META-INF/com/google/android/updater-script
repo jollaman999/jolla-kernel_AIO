@@ -12,6 +12,7 @@ run_program("/sbin/busybox", "mount", "/data");
 if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="3" then
   ui_print(">>>>>TWRP Only<<<<<");
   ui_print("-> Installing Muti ROM TWRP");
+  show_progress(0.5, 1);
   package_extract_file("jolla-recovery/twrp/recovery.img", "/dev/block/platform/msm_sdcc.1/by-name/recovery");
   package_extract_file("jolla-recovery/twrp/mkdir_multirom.sh", "/tmp/mkdir_multirom.sh");
   package_extract_file("multirom/inst/multirom/trampoline", "/tmp/trampoline");
@@ -24,33 +25,37 @@ endif;
 
 if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
-############################ Gproj Kernel ###############################
-if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
-
+  ############################ Gproj Kernel ###############################
   ui_print(">>>Installing Gproj Kernel<<<");
-  
+
+  show_progress(0.05, 0.1);
   ui_print("-> Extracting scripts...");
   package_extract_dir("jolla-kernel/gproj/script", "/tmp");
   set_perm(0, 0, 0777, "/tmp/busybox");
-  
+
+  show_progress(0.1, 0.1);
   ui_print("-> Backup previous prima...");
   set_perm(0, 0, 0777, "/tmp/prima_bakup.sh");
   run_program("/tmp/prima_bakup.sh");
-  
+
+  show_progress(0.15, 0.1);
   ui_print("-> Removing previous kernel settings...");
   set_perm(0, 0, 0777, "/tmp/cleaner.sh");
   run_program("/tmp/cleaner.sh");
 
+  show_progress(0.2, 0.2);
   ui_print("-> Installing kernel modules...");
   set_perm(0, 0, 0777, "/tmp/modules_remover.sh");
   run_program("/tmp/modules_remover.sh");
   package_extract_dir("jolla-kernel/gproj/modules", "/system/lib/modules");
-  
+
+  show_progress(0.3, 0.1);
   ui_print("-> Setting prima...");
   package_extract_dir("jolla-kernel/gproj/prima", "/system");
   set_perm(0, 0, 0777, "/tmp/prima_set_perm.sh");
   run_program("/tmp/prima_set_perm.sh");
 
+  show_progress(0.4, 0.1);
   ui_print("-> Ready to install gproj kernel...");
   package_extract_dir("jolla-kernel/gproj/mkbootimg", "/tmp");
   set_perm(0, 0, 0777, "/tmp/busybox");
@@ -62,6 +67,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
 
 
   ############ Unpack boot.img ############
+  show_progress(0.5, 1);
   ui_print("-> Unpacking boot.img...");
   run_program("/tmp/busybox", "dd", "if=/dev/block/platform/msm_sdcc.1/by-name/boot", "of=/tmp/boot.img");
   run_program("/tmp/unpackbootimg", "-i", "/tmp/boot.img", "-o", "/tmp/");
@@ -69,12 +75,14 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
 
 
   ############ Add jolla-kernel logo ############
+  show_progress(0.6, 0.1);
   ui_print("-> Adding jolla-kernel logo...");
   package_extract_file("jolla-kernel/gproj/ramdisk/initlogo.rle", "/tmp/ramdisk/initlogo.rle");
   set_perm(0, 0, 0644, "/tmp/ramdisk/initlogo.rle");
 
 
   ############ Replace ramdisk ############
+  show_progress(0.65, 0.1);
   ui_print("-> Replacing ramdisk...");
   package_extract_dir("jolla-kernel/gproj/ramdisk", "/tmp/ramdisk");
   set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.geehrc");
@@ -83,19 +91,21 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
   set_perm(0, 0, 0644, "/tmp/ramdisk/jolla-kernel.prop");
 
   ############ Replace zImage ############
-  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.2")=="0" then
+  show_progress(0.7, 0.1);
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="0" then
     ui_print("-> Replacing Gproj zImage...");
     package_extract_file("jolla-kernel/gproj/zImage/zImage", "/tmp/zImage");
   endif;
-  ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.2")=="0" then
-  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.2")=="1" then
+  ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="0" then
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1" then
     ui_print("-> Replacing GEEB zImage...");
     package_extract_file("jolla-kernel/geeb/zImage/zImage", "/tmp/zImage");
   endif;
-  ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.2")=="1" then
+  ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1" then
 
 
   ############ Repack boot.img ############
+  show_progress(0.75, 1);
   ui_print("-> Repacking boot.img...");
   run_program("/tmp/mk-ramdisk.sh");
   run_program("/tmp/mkbootimg.sh");
@@ -103,143 +113,135 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
 
 
   ############ Copy USB-Keyboard.apk ############
+  show_progress(0.8, 0.1);
   ui_print("-> Copying USB-Keyboard.apk...");
   package_extract_dir("jolla-kernel/app/", "/system/app/");
 
-endif;
-## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1"
+
+  ######## Multi ROM Install ########
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.1")=="1" then
+    show_progress(0.9, 2);
+    ui_print(">>>Installing MultiROM<<<");
+
+    ui_print("-> Extracting binaries...");
+    run_program("/sbin/busybox", "mount", "/data");
+
+    delete_recursive("/tmp/multirom");
+    run_program("/sbin/busybox", "mkdir", "/tmp/multirom");
+    package_extract_dir("multirom/inst/multirom", "/tmp/multirom/");
+    package_extract_dir("multirom/inst/scripts", "/tmp/");
+
+    set_perm(0, 0, 0777, "/tmp/multirom/busybox");
+    set_perm(0, 0, 0777, "/tmp/bbootimg");
+    set_perm(0, 0, 0777, "/tmp/extract_multirom.sh");
+    set_perm(0, 0, 0777, "/tmp/inject_boot.sh");
+
+    assert(run_program("/tmp/extract_multirom.sh") == 0);
+    ui_print("-> Injecting boot image...");
+    assert(run_program("/tmp/inject_boot.sh") == 0);
+
+    ui_print("-> Cleaning up...");
+    delete_recursive("/tmp/boot");
+    delete_recursive("/tmp/multirom");
+    delete("/tmp/bbootimg");
+    delete("/tmp/bootimg.cfg");
+    delete("/tmp/initrd.img");
+    delete("/tmp/zImage");
+    delete("/tmp/boot.img");
+    delete("/tmp/dtb.img");
+    delete("/tmp/second.img");
+    delete("/tmp/newboot.img");
+    delete("/tmp/extract_multirom.sh");
+    delete("/tmp/inject_boot.sh");
+    delete("/tmp/bootdev");
+    delete("/tmp/rd_addr");
+    delete("/tmp/use_mrom_fstab");
+
+    ui_print("-> Installing Muti ROM TWRP");
+    package_extract_file("jolla-recovery/twrp/recovery.img", "/dev/block/platform/msm_sdcc.1/by-name/recovery");
+
+    ui_print("-> MultiROM was Installed!!");
+
+  endif;
+  ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.1")=="1"
 
 
 
-############################ Multi ROM ############################
-
-######## Install ########
-if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
-
-if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.1")=="1" then
-ui_print(">>>Installing MultiROM<<<");
-
-show_progress(1.00000, 10);
-
-ui_print("-> Extracting binaries...");
-run_program("/sbin/busybox", "mount", "/data");
-
-delete_recursive("/tmp/multirom");
-run_program("/sbin/busybox", "mkdir", "/tmp/multirom");
-package_extract_dir("multirom/inst/multirom", "/tmp/multirom/");
-package_extract_dir("multirom/inst/scripts", "/tmp/");
-
-set_perm(0, 0, 0777, "/tmp/multirom/busybox");
-set_perm(0, 0, 0777, "/tmp/bbootimg");
-set_perm(0, 0, 0777, "/tmp/extract_multirom.sh");
-set_perm(0, 0, 0777, "/tmp/inject_boot.sh");
-
-assert(run_program("/tmp/extract_multirom.sh") == 0);
-ui_print("-> Injecting boot image...");
-assert(run_program("/tmp/inject_boot.sh") == 0);
-
-ui_print("-> Cleaning up...");
-delete_recursive("/tmp/boot");
-delete_recursive("/tmp/multirom");
-delete("/tmp/bbootimg");
-delete("/tmp/bootimg.cfg");
-delete("/tmp/initrd.img");
-delete("/tmp/zImage");
-delete("/tmp/boot.img");
-delete("/tmp/dtb.img");
-delete("/tmp/second.img");
-delete("/tmp/newboot.img");
-delete("/tmp/extract_multirom.sh");
-delete("/tmp/inject_boot.sh");
-delete("/tmp/bootdev");
-delete("/tmp/rd_addr");
-delete("/tmp/use_mrom_fstab");
-
-ui_print("-> Installing Muti ROM TWRP");
-package_extract_file("jolla-recovery/twrp/recovery.img", "/dev/block/platform/msm_sdcc.1/by-name/recovery");
-
-ui_print("-> MultiROM was Installed!!");
-
-endif;
-## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.1")=="1"
-
-endif;
-## endif file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1"
-
-
-######## Uninstall ########
+######## Multi ROM Uninstall ########
 if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="2" then
-ui_print(">>>Uninstalling MultiROM<<<");
+  show_progress(0.9, 2);
+  ui_print(">>>Uninstalling MultiROM<<<");
 
-ui_print("-> Extracting binaries...");
-run_program("/sbin/busybox", "mount", "/data");
+  ui_print("-> Extracting binaries...");
+  run_program("/sbin/busybox", "mount", "/data");
 
-package_extract_dir("multirom/uninst/scripts", "/tmp/");
+  package_extract_dir("multirom/uninst/scripts", "/tmp/");
 
-set_perm(0, 0, 0777, "/tmp/busybox");
-set_perm(0, 0, 0777, "/tmp/bbootimg");
-set_perm(0, 0, 0777, "/tmp/lz4");
-set_perm(0, 0, 0777, "/tmp/erase_multirom.sh");
-set_perm(0, 0, 0777, "/tmp/erase_multirom_all.sh");
-set_perm(0, 0, 0777, "/tmp/clear_boot.sh");
+  set_perm(0, 0, 0777, "/tmp/busybox");
+  set_perm(0, 0, 0777, "/tmp/bbootimg");
+  set_perm(0, 0, 0777, "/tmp/lz4");
+  set_perm(0, 0, 0777, "/tmp/erase_multirom.sh");
+  set_perm(0, 0, 0777, "/tmp/erase_multirom_all.sh");
+  set_perm(0, 0, 0777, "/tmp/clear_boot.sh");
 
-ui_print("-> Removing MultiROM from boot.img...");
-assert(run_program("/tmp/clear_boot.sh") == 0);
-if file_getprop("/tmp/aroma-data/checkbox2.prop","item.1.1")=="0" then
-  ui_print("-> Erasing Multi ROM");
-  assert(run_program("/tmp/erase_multirom.sh") == 0);
-endif;
-if file_getprop("/tmp/aroma-data/checkbox2.prop","item.1.1")=="1" then
-  ui_print("-> !!!Erasing Multi ROM with Second Roms!!!");
-  assert(run_program("/tmp/erase_multirom_all.sh") == 0);
-endif;
+  ui_print("-> Removing MultiROM from boot.img...");
+  assert(run_program("/tmp/clear_boot.sh") == 0);
+  if file_getprop("/tmp/aroma-data/checkbox2.prop","item.1.1")=="0" then
+    ui_print("-> Erasing Multi ROM");
+    assert(run_program("/tmp/erase_multirom.sh") == 0);
+  endif;
+  if file_getprop("/tmp/aroma-data/checkbox2.prop","item.1.1")=="1" then
+    ui_print("-> !!!Erasing Multi ROM with Second Roms!!!");
+    assert(run_program("/tmp/erase_multirom_all.sh") == 0);
+  endif;
 
-ui_print("-> Cleaning up...");
-delete_recursive("/tmp/boot");
-delete_recursive("/tmp/multirom");
-delete("/tmp/lz4");
-delete("/tmp/bootimg.cfg");
-delete("/tmp/initrd.img");
-delete("/tmp/zImage");
-delete("/tmp/bbootimg");
-delete("/tmp/boot.img");
-delete("/tmp/newboot.img");
-delete("/tmp/busybox");
-delete("/tmp/erase_multirom.sh");
-delete("/tmp/erase_multirom_all.sh");
-delete("/tmp/clear_boot.sh");
-delete("/tmp/bootdev");
-delete("/tmp/rd_addr");
+  ui_print("-> Cleaning up...");
+  delete_recursive("/tmp/boot");
+  delete_recursive("/tmp/multirom");
+  delete("/tmp/lz4");
+  delete("/tmp/bootimg.cfg");
+  delete("/tmp/initrd.img");
+  delete("/tmp/zImage");
+  delete("/tmp/bbootimg");
+  delete("/tmp/boot.img");
+  delete("/tmp/newboot.img");
+  delete("/tmp/busybox");
+  delete("/tmp/erase_multirom.sh");
+  delete("/tmp/erase_multirom_all.sh");
+  delete("/tmp/clear_boot.sh");
+  delete("/tmp/bootdev");
+  delete("/tmp/rd_addr");
 
-ui_print("-> MultiROM was removed!");
+  ui_print("-> MultiROM was removed!");
 
 endif;
 ## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="2"
 
-endif;
-## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3"
 
 
 ############################ jolla-kernel Updater ############################
-if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
-  ui_print("-> Installing jolla-kernel Updater...");
+show_progress(0.95, 1);
+ui_print("-> Installing jolla-kernel Updater...");
 
-  run_program("rm", "-rf", "/data/jolla-kernel.info");
-  run_program("rm", "-rf", "/data/data/com.otaupdater");
-  run_program("rm", "-rf", "/data/user/0/com.otaupdater");
-  run_program("rm", "-rf", "/data/dalvik-cache/arm/*OTA-Updater*");
-  run_program("rm", "-rf", "/sdcard/OTA-Updater");
-  run_program("rm", "-rf", "/system/app/OTA-Updater");
-  run_program("rm", "-rf", "/system/bin/jolla-kernel_ota");
-  run_program("rm", "-rf", "/system/etc/init.d/00jolla-kernel_ota");
-  run_program("rm", "-rf", "/system/etc/permissions/com.otaudater.feature.xml");
-  run_program("rm", "-rf", "/system/jolla-kernel.info");
-  run_program("rm", "-rf", "/system/kernel.ota.prop");
+run_program("rm", "-rf", "/data/jolla-kernel.info");
+run_program("rm", "-rf", "/data/data/com.otaupdater");
+run_program("rm", "-rf", "/data/user/0/com.otaupdater");
+run_program("rm", "-rf", "/data/dalvik-cache/arm/*OTA-Updater*");
+run_program("rm", "-rf", "/sdcard/OTA-Updater");
+run_program("rm", "-rf", "/system/app/OTA-Updater");
+run_program("rm", "-rf", "/system/bin/jolla-kernel_ota");
+run_program("rm", "-rf", "/system/etc/init.d/00jolla-kernel_ota");
+run_program("rm", "-rf", "/system/etc/permissions/com.otaudater.feature.xml");
+run_program("rm", "-rf", "/system/jolla-kernel.info");
+run_program("rm", "-rf", "/system/kernel.ota.prop");
 
-  package_extract_dir("updater", "/system");
+package_extract_dir("updater", "/system");
+
+
 endif;
 ## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3"
 
+show_progress(1.0, 0);
 ui_print("");
 ui_print("====================Done===================");
 ui_print("==     Kernel Installation Finished!!    ==");
@@ -248,5 +250,3 @@ ui_print("====================Done===================");
 
 run_program("/sbin/busybox", "umount", "/system");
 run_program("/sbin/busybox", "umount", "/data");
-
-show_progress(1, 0);
