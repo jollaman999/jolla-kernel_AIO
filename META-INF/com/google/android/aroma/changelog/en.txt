@@ -3,7 +3,28 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v3.4]</#></b></@>
+<b><#selectbg_g>[Gen3-v3.5]</#></b></@>
+== AIO ==
+- multirom: Update uninstallation script
+- Fix scripts
+	- Fix progress bar
+	- Multi ROM uninstallation is now working properly
+	- Fix Multi ROM uninstallation assert error when re-removing.
+	- Separate e970 as another group item
+- ramdisk: Copy ramdisk for geeb
+- ramdisk: init.gee-common.rc: Switch color calibration to the PCC interface
+
+== Kernel ==
+- video: mdp4: Color temperature interface using PCC
+- j1: display: fixed lcd blink in the first boot.
+- j1: add lcd turn-off sequence on shutdown
+- mipi_lgit: Check for panel off at shutdown
+- gamma control: Added Faux gamma control
+
+== Recovery ==
+- jolla-kernel_Gen3-v3.5 applied
+
+<b><#selectbg_g>[Gen3-v3.4]</#></b>
 == Kernel ==
 - acpuclock-8064: Fix l2 level values in overclock (Fix device get slower when cpu overclocked.)
 

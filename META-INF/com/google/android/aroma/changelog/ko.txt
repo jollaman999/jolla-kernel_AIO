@@ -3,7 +3,28 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v3.4]</#></b></@>
+<b><#selectbg_g>[Gen3-v3.5]</#></b></@>
+== AIO ==
+- multirom: 제거 스크립트 업데이트
+- 스크립트들 수정
+	- 프로그레스바 수정
+	- 멀티롬 제거가 이제 정상적으로 작동합니다
+	- 멀티롬 재 제거시 assert 에러가 발생하는 현상 수정
+	- e970 을 별도의 그룹 아이템으로 분류
+- ramdisk: geeb 용 램디스크 복사
+- ramdisk: init.gee-common.rc: Color calibration 인터페이스를 PCC 로 교체
+
+== 커널 ==
+- video: mdp4: Color calibration 인터페이스를 PCC 로 교체
+- j1: display: 첫 부팅시에 lcd 가 깜박이는 현상 수정
+- j1: 종료시에 lcd turn-off 시퀀스 추가
+- mipi_lgit: 종료시에 패널 꺼짐 확인
+- gamma control: Faux 감마 컨트롤 추가
+
+== 리커버리 ==
+- jolla-kernel_Gen3-v3.5 적용
+
+<b><#selectbg_g>[Gen3-v3.4]</#></b>
 == 커널 ==
 - acpuclock-8064: 오버클럭의 l2 레벨 값들 수정 (cpu 오버클럭시 기기가 느려지는 현상 수정)
 
