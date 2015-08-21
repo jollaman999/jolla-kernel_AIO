@@ -17,8 +17,6 @@
 == Kernel ==
 - video: mdp4: Color temperature interface using PCC
 - j1: display: fixed lcd blink in the first boot.
-- j1: add lcd turn-off sequence on shutdown
-- mipi_lgit: Check for panel off at shutdown
 - gamma control: Added Faux gamma control
 
 == Recovery ==

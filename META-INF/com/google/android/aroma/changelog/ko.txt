@@ -17,8 +17,6 @@
 == 커널 ==
 - video: mdp4: Color calibration 인터페이스를 PCC 로 교체
 - j1: display: 첫 부팅시에 lcd 가 깜박이는 현상 수정
-- j1: 종료시에 lcd turn-off 시퀀스 추가
-- mipi_lgit: 종료시에 패널 꺼짐 확인
 - gamma control: Faux 감마 컨트롤 추가
 
 == 리커버리 ==
