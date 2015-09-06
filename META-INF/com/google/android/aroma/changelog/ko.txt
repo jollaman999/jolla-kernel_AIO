@@ -3,7 +3,24 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v3.6]</#></b></@>
+<b><#selectbg_g>[Gen3-v3.7]</#></b></@>
+== 커널 ==
+- touchscreen: Screen Off Volume Control 을 소개합니다
+	화면이 꺼져있는 동안 기기의 볼륨을 조절 할 수 있습니다.
+	터치스크린을 아래에서 위로 쓸면 볼륨이 증가합니다.
+	반대로 위에서 아래로 쓸면 볼륨이 감소합니다.
+
+	이 기능은 기본적으로 활성화 되어있습니다.
+	아래 명령어를 통하여 끄고 켤 수 있습니다.
+
+	Off: echo 0 > /sys/android_touch/scroff_volctr
+	On:  echo 1 > /sys/android_touch/scroff_volctr
+
+	이 새로운 기능은 Doubletap2Wake 와 Seep2Wake 을 기반으로 합니다.
+	showp1984 님께 감사의 말씀을 드립니다.
+- s2w: 인식 코드 간소화
+
+<b><#selectbg_g>[Gen3-v3.6]</#></b>
 == 커널 ==
 - f2fs: 최신 소스들 적용
 

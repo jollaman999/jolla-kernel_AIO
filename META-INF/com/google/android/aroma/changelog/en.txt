@@ -3,7 +3,24 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v3.6]</#></b></@>
+<b><#selectbg_g>[Gen3-v3.7]</#></b></@>
+== Kernel ==
+- touchscreen: Introduce Screen Off Volume Control
+	You can control your device's volume while screen turned off.
+	If you sweep touchscreen from down to up, volume will increase.
+	Otherwise if you sweep from up to down, volume will decrease.
+
+	This feauture enabled by default.
+	You can turn off/on by type this command.
+
+	Off: echo 0 > /sys/android_touch/scroff_volctr
+	On:  echo 1 > /sys/android_touch/scroff_volctr
+
+	This new feature is based on Doubletap2Wake and Seep2Wake.
+	Thanks to showp1984.
+- s2w: Splify detecting codes
+
+<b><#selectbg_g>[Gen3-v3.6]</#></b>
 == Kernel ==
 - f2fs: Applied latest sources
 
