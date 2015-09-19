@@ -3,7 +3,27 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v3.7]</#></b></@>
+<b><#selectbg_g>[Gen3-v3.8]</#></b></@>
+== 커널 ==
+- scroff_volctr: 봄륨 조절 방식 변경
+	 터치스크린을 SOVC_TIME_GAP (ms) 시간안에 쓸고,
+	손가락을 떼어내면, 볼륨이 한번만 증가/감소 합니다.
+
+	 반면에, 터치스크린을 쓸고 손가락을 터치스크린 위에
+	두고 있으면 SOVC_REEXEC_DELAY (ms) 시간에 기반하여
+	볼륨이 계속적으로 증가/감소합니다.
+
+	#define SOVC_TIME_GAP 250
+	#define SOVC_REEXEC_DELAY 250
+
+	작동 동영상을 보시기 바랍니다.
+	https://youtu.be/htDYZ148Q-w
+- f2fs: 최신 패치들 적용
+
+== 리커버리 ==
+- jolla-kernel_Gen3-v3.8 적용
+
+<b><#selectbg_g>[Gen3-v3.7]</#></b>
 == 커널 ==
 - touchscreen: Screen Off Volume Control 을 소개합니다
 	화면이 꺼져있는 동안 기기의 볼륨을 조절 할 수 있습니다.
