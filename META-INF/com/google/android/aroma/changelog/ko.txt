@@ -3,7 +3,15 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v3.8]</#></b></@>
+<b><#selectbg_g>[Gen3-v4.0]</#></b></@>
+== 커널 ==
+- j1: overclock: 전압 범위를 넓게 수정
+- Linux 3.4.109
+
+== 리커버리 ==
+- jolla-kernel_Gen3-v4.0 적용
+
+<b><#selectbg_g>[Gen3-v3.8]</#></b>
 == 커널 ==
 - scroff_volctr: 봄륨 조절 방식 변경
 	 터치스크린을 SOVC_TIME_GAP (ms) 시간안에 쓸고,

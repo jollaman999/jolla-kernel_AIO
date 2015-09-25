@@ -3,7 +3,15 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v3.8]</#></b></@>
+<b><#selectbg_g>[Gen3-v4.0]</#></b></@>
+== Kernel ==
+- j1: overclock: Fix voltage range widely
+- Linux 3.4.109
+
+== Recovery ==
+- jolla-kernel_Gen3-v4.0 applied
+
+<b><#selectbg_g>[Gen3-v3.8]</#></b>
 == Kernel ==
 - scroff_volctr: Change volume control method
 	 If you sweep touchscreen in SOVC_TIME_GAP (ms) time
