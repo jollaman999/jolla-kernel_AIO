@@ -3,7 +3,26 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v4.0]</#></b></@>
+<b><#selectbg_g>[Gen3-v4.1]</#></b></@>
+== Kernel ==
+- Built with gcc 5.2.1 UBER toolchain
+- touchscreen: Introduce Screen Off Track Control
+	You can control your device's track while screen turned off.
+	If you sweep touchscreen from right to left, you can play next track.
+	Otherwise if you sweep from left to right, you can play previous track.
+
+	This feauture enabled by default.
+	You can turn off/on by type this command.
+
+	Off: echo 0 > /sys/android_touch/scroff_trackctr
+	On:  echo 1 > /sys/android_touch/scroff_trackctr
+
+	This new feature is based on Screen Off Volume Control.
+
+== Recovery ==
+- jolla-kernel_Gen3-v4.1 applied
+
+<b><#selectbg_g>[Gen3-v4.0]</#></b>
 == Kernel ==
 - j1: overclock: Fix voltage range widely
 - Linux 3.4.109
