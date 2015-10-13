@@ -3,7 +3,32 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v4.1]</#></b></@>
+<b><#selectbg_g>[Gen3-v4.2]</#></b></@>
+== 커널 ==
+- gcc 5.2.1 (151001) UBER 툴체인으로 빌드
+- f2fs: 최신 패치들 적용
+- 배터리 드레인 현상 수정! ('ondemand' 를 기본 gpu 거버너로 설정)
+
+== 리커버리 ==
+- 최신 TWRP 멀티롬 리커버리 패치들 적용
+- 최신 CyanogenMod cm-12.1 소스 기반으로 빌드 (Android 5.1.1_r24)
+- f2fs-tools: 최신 패치들 적용
+- jolla-kernel_Gen3-v4.2 적용
+
+== jolla-kernel Updater ==
+- v1.2 로 버젼업
+- 한국어 번역 추가
+- 먀번 실행시 마다 새 업데이트 체크
+- net, http 라이브러리 업데이트
+- 다운로드 리스트에서 zip 파일 플래싱 가능
+- 다운로드 리스트에서 타이틀이 나타나지 않는 문제 수정
+- 밝은 매테리얼 테마 적용
+- 아이콘들 어둡게 수정
+- 앱 시작시 업데이트 체크
+- 다운로드 완료 후 다운로드 다이얼로그 타이틀 업데이트
+- 몇몇 마이너 버그들 수정
+
+<b><#selectbg_g>[Gen3-v4.1]</#></b>
 == 커널 ==
 - gcc 5.2.1 UBER 툴체인으로 빌드
 - touchscreen: Screen Off Track Control 을 소개합니다.

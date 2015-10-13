@@ -3,7 +3,32 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v4.1]</#></b></@>
+<b><#selectbg_g>[Gen3-v4.2]</#></b></@>
+== Kernel ==
+- Built with gcc 5.2.1 (151001) UBER toolchain
+- f2fs: Apply lateset patches
+- Fix battery drain! (Set 'ondemand' governor as default gpu governor)
+
+== Recovery ==
+- Applied latest TWRP multirom recovery patches
+- Built with latest CyanogenMod cm-12.1 sources (Android 5.1.1_r24)
+- f2fs-tools: Apply lateset patches
+- jolla-kernel_Gen3-v4.2 applied
+
+== jolla-kernel Updater ==
+- Version up to v1.2
+- Add Korean translation
+- Always check new update every launch
+- Update net, http libraries
+- Flashing downloaded zip in download list now available
+- Fix title not appear in download list
+- Apply light material theme
+- Make icons darker
+- Check update when start the app
+- Update download dialog title after download finished
+- Fix some of minor bugs
+
+<b><#selectbg_g>[Gen3-v4.1]</#></b>
 == Kernel ==
 - Built with gcc 5.2.1 UBER toolchain
 - touchscreen: Introduce Screen Off Track Control
