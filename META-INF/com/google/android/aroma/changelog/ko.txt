@@ -3,7 +3,16 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v4.3]</#></b></@>
+<b><#selectbg_g>[Gen3-v5.0]</#></b></@>
+== 커널 ==
+- 새 jolla-kernel 로고 적용!
+- Linux 3.4.110
+- f2fs: linux-3.10 브랜치의 최신 f2fs 패치들 적용
+
+== 리커버리 ==
+- jolla-kernel_Gen3-v5.0 적용
+
+<b><#selectbg_g>[Gen3-v4.3]</#></b>
 == 커널 ==
 - 음악이 정지 되었을 때 scroff_volctr & scroff_trackctr 비활성화 (Bluetooth 용 아님).
 - init.gee-common.rc: 불필요한 명령 제거 chmod /system/bin/ip
