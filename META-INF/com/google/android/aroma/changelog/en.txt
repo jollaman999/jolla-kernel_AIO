@@ -3,7 +3,33 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v5.0]</#></b></@>
+<b><#selectbg_g>[Gen3-v5.1]</#></b></@>
+== Kernel ==
+- SELinux: Applied Goole's lastest patches
+- keys: Applied Goole's lastest patches
+- cpufreq: interactive: Applied patches from cm's kernel_msm sources
+- Perf: Applied Goole's lastest patches
+- cpu-boost: Added from cm's kernel_msm sources
+- smpboot: Added from cm's kernel_msm sources
+- stop_machine: Added from cm's kernel_msm sources
+- kthread: Applied patches from cm's kernel_msm sources
+- sched: Applied some patches from cm's kernel_msm sources
+- sched: Load-based CPU boosting
+- Disable MSM_SLEEPER
+- USB: gadget: midi: Applied Goole's lastest patches
+- mmc: Applied Goole's lastest patches
+- smartmax, smartass2: Increase DEFAULT_AWAKE_IDEAL_FREQ
+- mpdecision: Adjust default NwNs_Threshold values (Adjust Hotplugging)
+- fs/proc/task_mmu.c: add user-space support for resetting mm->hiwater_rss
+- net, ping, ipv4, ipv6: Applied Goole's lastest patches
+- ptrace: fix ptrace defect cause by a merge fail
+- msm_vidc: Applied Goole's lastest patches
+- msm: kgsl: Applied Goole's lastest patches
+
+== Recovery ==
+- jolla-kernel_Gen3-v5.1 applied
+
+<b><#selectbg_g>[Gen3-v5.0]</#></b>
 == Kernel ==
 - Applied new jolla-kernel logo!
 - Linux 3.4.110
