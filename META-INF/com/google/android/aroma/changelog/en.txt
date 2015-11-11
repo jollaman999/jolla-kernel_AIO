@@ -3,7 +3,15 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v5.1]</#></b></@>
+<b><#selectbg_g>[Gen3-v5.2]</#></b></@>
+== Kernel ==
+scroff_volctr: Merge with scroff_trackctr and fix some bugs
+wlan: prima: Get stock's 'send stop ap to supplicant' method
+
+== Recovery ==
+- jolla-kernel_Gen3-v5.2 applied
+
+<b><#selectbg_g>[Gen3-v5.1]</#></b>
 == Kernel ==
 - SELinux: Applied Goole's lastest patches
 - keys: Applied Goole's lastest patches
