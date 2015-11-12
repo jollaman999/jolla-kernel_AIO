@@ -103,6 +103,7 @@ on boot
     chown root system /proc/net/ip_conntrack
 
     ## jolla-kernel
+    # For A2DP Checker work properly without root permission
     chmod 666 /sys/android_touch/scroff_volctr_temp
     ##
 
