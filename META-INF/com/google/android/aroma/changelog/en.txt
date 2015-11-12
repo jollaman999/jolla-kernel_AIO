@@ -5,8 +5,12 @@
 
 <b><#selectbg_g>[Gen3-v5.2]</#></b></@>
 == Kernel ==
-scroff_volctr: Merge with scroff_trackctr and fix some bugs
-wlan: prima: Get stock's 'send stop ap to supplicant' method
+- scroff_volctr: Merge with scroff_trackctr and fix some bugs
+- wlan: prima: Get stock's 'send stop ap to supplicant' method
+- Revert Marshmallow's net changes
+
+== A2DP Checker ==
+- Sync with next jolla-kernel, Add delay function
 
 == Recovery ==
 - jolla-kernel_Gen3-v5.2 applied

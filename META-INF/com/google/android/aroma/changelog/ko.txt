@@ -5,8 +5,12 @@
 
 <b><#selectbg_g>[Gen3-v5.2]</#></b></@>
 == 커널 ==
-scroff_volctr: scroff_trackctr 과 통합 및 몇몇 버그들 수정
-wlan: prima: 스톡의 'send stop ap to supplicant' 방법 가져옴
+- scroff_volctr: scroff_trackctr 과 통합 및 몇몇 버그들 수정
+- wlan: prima: 스톡의 'send stop ap to supplicant' 방법 가져옴
+- 마쉬멜로우의 net 변경사항들 취소
+
+== A2DP Checker ==
+- 다음 버젼의 jolla-kernel 에 맞게 수정, 지연 기능 추가
 
 == 리커버리 ==
 - jolla-kernel_Gen3-v5.2 applied
