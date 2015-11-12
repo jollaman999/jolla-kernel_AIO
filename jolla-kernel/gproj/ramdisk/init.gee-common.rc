@@ -102,6 +102,10 @@ on boot
 
     chown root system /proc/net/ip_conntrack
 
+    ## jolla-kernel
+    chmod 666 /sys/android_touch/scroff_volctr_temp
+    ##
+
     # Enable DEBUG_SUSPEND, DEBUG_EXIT_SUSPEND, and DEBUG_WAKEUP
     write /sys/module/wakelock/parameters/debug_mask 7
 
