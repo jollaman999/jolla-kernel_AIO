@@ -248,10 +248,6 @@ on post-fs-data
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "performance"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "performance"
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor "performance"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1512000
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1512000
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1512000
-    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1512000
     write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_gpuclk 320000000
     write /sys/module/cpu_boost/parameters/boost_ms 20
     write /sys/module/cpu_boost/parameters/input_boost_freq 1134000
@@ -410,10 +406,6 @@ on property:dev.bootcomplete=1
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "smartmax"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "smartmax"
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor "smartmax"
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1350000
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1350000
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1350000
-    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1350000
 ##
     write /sys/devices/virtual/graphics/fb1/hdmi_boot_completed 1
 # LGE_CHANGE_E, 20120914, chaeuk.lee@lge.com
