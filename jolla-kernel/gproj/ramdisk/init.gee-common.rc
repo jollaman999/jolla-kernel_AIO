@@ -253,6 +253,11 @@ on post-fs-data
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1512000
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1512000
     write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_gpuclk 320000000
+    write /sys/module/cpu_boost/parameters/boost_ms 20
+    write /sys/module/cpu_boost/parameters/input_boost_freq 1134000
+    write /sys/module/cpu_boost/parameters/input_boost_ms 600
+    write /sys/module/cpu_boost/parameters/load_based_syncs 1
+    write /sys/module/cpu_boost/parameters/migration_load_threshold 20
 ##
 
     chown root system /sys/class/timed_output/vibrator/amp
