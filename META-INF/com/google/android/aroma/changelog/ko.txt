@@ -3,7 +3,28 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v5.2]</#></b></@>
+<b><#selectbg_g>[Gen3-v5.3]</#></b></@>
+== 커널 ==
+- mpdecision hotplugging threshold 변경 사항들 취소
+- lglock: Marshmallow 패치 적용
+- vfs: Marshmallow 패치 적용
+- proc: Marshmallow 패치 적용
+- tcp_cubic: better follow cubic curve after idle period
+- tcp_cubic: do not set epoch_start in the future
+- net: add length argument to skb_copy_and_csum_datagram_iovec
+- wlan: prima: 주소의 잘못 된 길이로 오버플로우가 나는 현상 방지
+- cpufreq: cpu-boost: 스크린 일시정지 상태에서 input boost 시도하지 않음
+- cpufreq: smartmax: input boost 기능 제거 (cpu-boost 에 이미 구현됨)
+
+== 램디스크 ==
+- init.gee-common.rc: 부팅시 거버너를 performance 로 설정. 부팅 완료 후 smartmax 로 설정.
+- init.gee-common.rc: A2DP Checker 가 루트 권한 없이도 정상적으로 작동해야 함
+- init.gee-common.rc: 파라미터들 추가
+
+== 리커버리 ==
+- jolla-kernel_Gen3-v5.3 적용
+
+<b><#selectbg_g>[Gen3-v5.2]</#></b>
 == 커널 ==
 - scroff_volctr: scroff_trackctr 과 통합 및 몇몇 버그들 수정
 - wlan: prima: 스톡의 'send stop ap to supplicant' 방법 가져옴
@@ -13,7 +34,7 @@
 - 다음 버젼의 jolla-kernel 에 맞게 수정, 지연 기능 추가
 
 == 리커버리 ==
-- jolla-kernel_Gen3-v5.2 applied
+- jolla-kernel_Gen3-v5.2 적용
 
 <b><#selectbg_g>[Gen3-v5.1]</#></b>
 == 커널 ==

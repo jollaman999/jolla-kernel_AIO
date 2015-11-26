@@ -3,7 +3,28 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[Gen3-v5.2]</#></b></@>
+<b><#selectbg_g>[Gen3-v5.3]</#></b></@>
+== Kernel ==
+- Revert mpdecision hotplugging threshold changes
+- lglock: Applied Marshmallow patches
+- vfs: Applied Marshmallow patches
+- proc: Applied Marshmallow patches
+- tcp_cubic: better follow cubic curve after idle period
+- tcp_cubic: do not set epoch_start in the future
+- net: add length argument to skb_copy_and_csum_datagram_iovec
+- wlan: prima: Prevent address buffer overflow due to invalid length
+- cpufreq: cpu-boost: Do not try input boost when screen suspended
+- cpufreq: smartmax: Remove input boost feature (Already implemented in cpu-boost)
+
+== Ramdisk ==
+- init.gee-common.rc: Set governor to performance on boot. Set to smartmax when boot completed.
+- init.gee-common.rc: A2DP Checker should work properly without root permission
+- init.gee-common.rc: Add cpu_boost parameters
+
+== Recovery ==
+- jolla-kernel_Gen3-v5.3 applied
+
+<b><#selectbg_g>[Gen3-v5.2]</#></b>
 == Kernel ==
 - scroff_volctr: Merge with scroff_trackctr and fix some bugs
 - wlan: prima: Get stock's 'send stop ap to supplicant' method
