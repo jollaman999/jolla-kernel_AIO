@@ -52,7 +52,7 @@ main.quit=Quit Install
 main.quitdesc=Quit jolla-kernel installation :(
 
 sysinfo.wait=Getting System Information...
-sysinfo.maintext=Optimus G System Information
+sysinfo.maintext=Nexus 5X System Information
 sysinfo.device=Device Name
 sysinfo.board=Board Name
 sysinfo.manufac=Manufacturer
@@ -60,7 +60,7 @@ sysinfo.system=System Size
 sysinfo.data=Data Size
 sysinfo.sdcard=SDCard Size
 sysinfo.title=System Information
-sysinfo.subtitle=Current system Information on your Optimus G
+sysinfo.subtitle=Current system Information on your Nexus 5X
 sysinfo.alert.title=Finished
 sysinfo.alert.text=You will be back to Menu
 
@@ -86,24 +86,19 @@ window1.option2=Uninstall multirom and reinstall Kernel
 window1.option2desc=If you installed multirom and want to uninstall, select this.\
 (Do this option only in main rom!!)
 window1.option3=jolla-TWRP Install Only
-window1.option3desc=Only install jolla-kernel based MultiROM TWRP.\
-If you want to move your main rom to second rom, select this.\
-\
-After intall recovery, go to Advanced->MultiROM->Swap ROMs\
-then select Move primary ROM to secandaries.\
-After you move your rom, install Multi ROM.
+window1.option3desc=Only install jolla-kernel based TWRP.\
+F2FS support included.
 
 window2.title=Version Selection
 window2.subtitle=Select your Android version.
 window2.option1=Rom type
-window2.option1-1=Lollipop (Android 5.x.x)
-window2.option1-1desc=If you want to install to CM/AOSP based Android 5.x.x roms, select this.
+window2.option1-1=Marshmallow (Android 6.0.x)
+window2.option1-1desc=If you want to install to CM/AOSP based Android 6.0.x roms, select this.
 
 fs.attention=F2FS information
-fs.attentiondesc=On current kernel, /system, /data and /cache partitions are able to use by EXT4 or F2FS.\
+fs.attentiondesc=On current kernel, /data and /cache partitions are able to use by EXT4 or F2FS.\
 You can use F2FS by change file system in Wipe option of TWRP recovery.\
-/system partition will be back to EXT4 in some of roms while updating, unless you changed to F2FS.\
-Also some of roms will not suppot f2fs by ifself.\
+Some of roms will not suppot f2fs by ifself.\
 So use with caution.
 
 checkbox1.title=Kernel Installatin Options
@@ -112,9 +107,6 @@ checkbox1.item1=Multi ROM Boot
 checkbox1.item1uninst=Uninstall Multi ROM is selected.
 checkbox1.item1-1=Install Multi ROM Boot
 checkbox1.item1-1desc=Install Multi ROM Boot that is possible to boot various roms with jolla-TWRP.
-checkbox1.item2=e970
-checkbox1.item2-1=e970 device support
-checkbox1.item2-1desc=Support e970's camera and SDcard.
 
 checkbox2.title=Multi ROM Delete Option
 checkbox2.subtitle=Select Multi ROM delete option.
@@ -124,8 +116,6 @@ checkbox2.item1-1desc=This will remove all of roms except main rom.
 
 multirom.attention=Multi ROM Warning
 multirom.attentiondesc=Do this option only in main rom!!
-geeb.attention=e970 device support Warning
-geeb.attentiondesc=If you select this option in e975/f180 device, camera will not work properly!!
 
 multidel.attention=Delete second roms Warning
 multidel.attentiondesc=This will remove all of roms except main rom!!\

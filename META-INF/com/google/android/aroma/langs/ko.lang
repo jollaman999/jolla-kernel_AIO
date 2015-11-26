@@ -52,7 +52,7 @@ main.quit=설치 종료
 main.quitdesc=jolla-kernel 의 설치를 종료합니다 :(
 
 sysinfo.wait=시스템 정보 조회중...
-sysinfo.maintext=Optimus G 시스템 정보
+sysinfo.maintext=Nexus 5X 시스템 정보
 sysinfo.device=장치명
 sysinfo.board=보드명
 sysinfo.manufac=제조업체
@@ -60,7 +60,7 @@ sysinfo.system=System 용량
 sysinfo.data=Data 용량
 sysinfo.sdcard=SDCard 용량
 sysinfo.title=시스템 정보
-sysinfo.subtitle=당신의 Optimus G 시스템 정보입니다.
+sysinfo.subtitle=당신의 Nexus 5X 시스템 정보입니다.
 sysinfo.alert.title=완료
 sysinfo.alert.text=메뉴로 돌아갑니다.
 
@@ -86,24 +86,19 @@ window1.option2=멀티롬 제거 및 커널 재설치
 window1.option2desc=멀티롬이 설치되어있고 제거하길 원하실 경우 이 옵션을 선택합니다.\
 (이 옵션은 메인롬에서만 진행해 주시기 바랍니다!!)
 window1.option3=jolla-TWRP 만 설치
-window1.option3desc=jolla-kernel 기반의 MultiROM TWRP 만 설치합니다.\
-메인롬을 세컨롬으로 이동하시고자 할 경우 이 옵션을 선택합니다.\
-\
-리커버리 설치후 Advanced->MultiROM->Swap ROMs\
-메뉴로 가셔서 Move primary ROM to secandaries 옵션을 통하여 롬을 이동해 줍니다.\
-롬을 이동하신 후 멀티롬을 설치해 주시기 바랍니다.
+window1.option3desc=jolla-kernel 기반의 TWRP 만 설치합니다.\
+F2FS 지원이 포함되어 있습니다.
 
 window2.title=버젼 선택
 window2.subtitle=해당 Android 버젼을 선택해 주세요.
 window2.option1=롬 종류
-window2.option1-1=Lollipop (Android 5.x.x)
-window2.option1-1desc=CM/AOSP 기반 Android 5.x.x 롬에 설치 하실 경우 선택합니다.
+window2.option1-1=Marshmallow (Android 6.0.x)
+window2.option1-1desc=CM/AOSP 기반 Android 6.0.x 롬에 설치 하실 경우 선택합니다.
 
 fs.attention=F2FS 사용안내
-fs.attentiondesc=현재 커널상에는 /system, /data, /cache 파티션을 EXT4, 또는 F2FS 파일 시스템으로 사용할 수 있도록 되어있습니다.\
+fs.attentiondesc=현재 커널상에는 /data, /cache 파티션을 EXT4, 또는 F2FS 파일 시스템으로 사용할 수 있도록 되어있습니다.\
 F2FS 파일시스템은 TWRP 리커버리에서 Wipe(와이프) 옵션에 들어가 Filesystem type(파일시스템 종류) 을 f2fs로 change(변경) 해주셔야 사용이 가능합니다.\
-/system 파티션은 일부 롬에 따라 f2fs로 변경해도 롬 업데이트 과정에서 EXT4로 되돌아 갈 수 있으며, 지원이 되지 않을 수 있습니다.\
-또한 일부 롬은 자체적으로 F2FS를 지원하지 않을 수 있습니다.\
+일부 롬은 자체적으로 F2FS를 지원하지 않을 수 있습니다.\
 따라서 사용에 주의해 주시기 바랍니다.
 
 checkbox1.title=커널 설치 옵션
@@ -112,9 +107,6 @@ checkbox1.item1=멀티롬 부팅
 checkbox1.item1uninst=멀티롬 제거가 선택되었습니다.
 checkbox1.item1-1=멀티롬 부팅 설치
 checkbox1.item1-1desc=jolla-TWRP 와 함께 여러 롬들을 부팅할 수 있게 해주는 멀티롬을 설치합니다.
-checkbox1.item2=e970
-checkbox1.item2-1=e970 기기 지원
-checkbox1.item2-1desc=e970 기기의 카메라와 SD카드를 지원합니다.
 
 checkbox2.title=멀티롬 제거 옵션
 checkbox2.subtitle=멀티롬 제거 옵션을 선택해 주세요.
@@ -124,8 +116,6 @@ checkbox2.item1-1desc=메인롬을 제외한 나머지 세컨롬들을 모두 �
 
 multirom.attention=멀티롬 경고
 multirom.attentiondesc=이 옵션은 메인롬에서만 진행해 주시기 바랍니다!!
-geeb.attention=e970 지원 경고
-geeb.attentiondesc=e975/f180 기기에서 이 옵션을 선택하면 카메라가 정상적으로 작동하지 않습니다!!
 
 multidel.attention=세컨롬들 제거 경고
 multidel.attentiondesc=이 작업을 수행하면 메인롬을 제외한 모든 롬들이 지워집니다!!\
