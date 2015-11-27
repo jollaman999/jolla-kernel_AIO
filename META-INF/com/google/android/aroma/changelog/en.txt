@@ -6,9 +6,17 @@
 <b><#selectbg_g>[bullhead-v1.0]</#></b></@>
 == Kernel ==
 - Fisrst release!
+- Fix bullhead's shit yellow screen!
+- Linux 3.10.93
+- Enable TCP_CONG_ADVANCED and set 'westwood' as default
+- NTFS suppport
+- f2fs support
+- Lastest f2fs-3.10 patches applied
+- Use Android device as USB keyboard/mouse
+- BFQ IO scheduler added and set as default
+- mdss KCAL control support
 
 == Recovery ==
-- f2fs Support
 - jolla-kernel_bullhead-v1.0 applied
 
 

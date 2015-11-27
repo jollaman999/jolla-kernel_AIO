@@ -6,9 +6,17 @@
 <b><#selectbg_g>[bullhead-v1.0]</#></b></@>
 == 커널 ==
 - 첫 릴리즈!
+- bullhead 노란색 스크린 수정!
+- Linux 3.10.93
+- TCP_CONG_ADVANCED 활성화 및 'westwood' 기본값으로 설정
+- NTFS 지원
+- f2fs 지원
+- 최신 f2fs-3.10 패치들 적용
+- 안드로이드 기기를 USB 키보드/마우스로 사용
+- BFQ IO 스케줄러 추가 및 기본값으로 설정
+- mdss KCAL control 지원
 
 == 리커버리 ==
-- f2fs 지원
 - jolla-kernel_bullhead-v1.0 적용
 
 
