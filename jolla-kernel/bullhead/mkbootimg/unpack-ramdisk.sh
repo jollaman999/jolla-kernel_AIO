@@ -37,4 +37,4 @@ if [ "$foundcount" -eq 0 ]; then
         echo "    group root" >> init.rc
 fi
 
-echo "item.2.1=0" > /tmp/aroma-data/checkbox1.prop
+echo "item.2.1=0" >> /tmp/aroma-data/checkbox1.prop

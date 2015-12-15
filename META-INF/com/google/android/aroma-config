@@ -13,10 +13,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "jolla-kernel");
-ini_set("rom_version",          "v1.0");
+ini_set("rom_version",          "v2.0");
 ini_set("rom_author",           "jollaman999");
 ini_set("rom_device",           "bullhead");
-ini_set("rom_date",             "Nov 27, 2015");
+ini_set("rom_date",             "Dec 15, 2015");
 
 
 ##
@@ -405,6 +405,38 @@ alert( "<~fs.attention>", "<~fs.attentiondesc>");
 ##
 # Sub Window with CheckBoxes - Kernel1 Options
 #
+if prop("window1.prop","selected.1")=="1" then
+
+		checkbox(
+		  # Title
+			"<~checkbox1.title>",
+
+		  # Sub Title
+			"<~checkbox1.subtitle>",
+
+		  # Icon
+			"@update",
+
+		  # Will be saved in /tmp/aroma/checkbox1.prop
+			"checkbox1.prop",
+
+		  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+		  # TITLE            |  SUBTITLE                                                 | Initial Value #
+		  #------------------+-----------------------------------------------------------+---------------#
+
+		  "<~sepolicy.title>",      "",                                                       2,      #-- group 1
+		    "<~sepolicy.item>",  "<~sepolicy.desc>",                               0       #-- item.1.1
+			  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+		);
+
+if prop("checkbox1.prop","item.1.1")=="1" then
+  alert( "<~sepolicy.attention>", "<~sepolicy.attentiondesc>");
+endif;
+## endif - checkbox1.prop
+
+endif;
+## endif - window1.prop
+
 #################################################
 #################################################
 #################################################

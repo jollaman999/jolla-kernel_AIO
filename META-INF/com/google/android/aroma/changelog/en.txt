@@ -3,7 +3,24 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v1.0]</#></b></@>
+<b><#selectbg_g>[bullhead-v2.0]</#></b></@>
+== Kernel ==
+- Built with UBERTC gcc 5.2.1
+- Screen Off Volume Controller added
+- Linux 3.10.94
+- Marshmallow 6.0.1 updates applied
+- Faux Sound control v3.6 added
+- fsync on/off support
+- exFAT support
+- Disable crc check in mmc for performance.
+- Add SIO and FIOPS i/o schedulers
+- Change default io-sched to FIOPS
+- Decrease notification vibration
+
+== Recovery ==
+- jolla-kernel_bullhead-v2.0 applied
+
+<b><#selectbg_g>[bullhead-v1.0]</#></b>
 == Kernel ==
 - Fisrst release!
 - Fix bullhead's shit yellow screen!

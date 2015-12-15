@@ -103,6 +103,12 @@ F2FS 파일시스템은 TWRP 리커버리에서 Wipe(와이프) 옵션에 들어
 
 checkbox1.title=커널 설치 옵션
 checkbox1.subtitle=원하시는 옵션에 체크해 주세요.
+sepolicy.title=sepolicy 패치
+sepolicy.item=CM SuperSU 지원
+sepolicy.desc=Cyanogenmod 롬에서 SuperSU 를 사용하길 원하실 경우 이 옵션을 선택하세요.
+sepolicy.attention=sepolicy 경고
+sepolicy.attentiondesc=이 옵션을 다른 롬에서 선택하실 경우 부트 루프가 발생 할 수 있습니다.
+
 checkbox1.item1=멀티롬 부팅
 checkbox1.item1uninst=멀티롬 제거가 선택되었습니다.
 checkbox1.item1-1=멀티롬 부팅 설치

@@ -103,6 +103,12 @@ So use with caution.
 
 checkbox1.title=Kernel Installatin Options
 checkbox1.subtitle=Select what you want.
+sepolicy.title=sepolicy Patch
+sepolicy.item=CM SuperSU support
+sepolicy.desc=Select this option if you want use SuperSU in Cyanogenmod rom.
+sepolicy.attention=sepolicy attention
+sepolicy.attentiondesc=If you select this option in another rom, it will cause boot loop.
+
 checkbox1.item1=Multi ROM Boot
 checkbox1.item1uninst=Uninstall Multi ROM is selected.
 checkbox1.item1-1=Install Multi ROM Boot
