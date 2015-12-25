@@ -5,7 +5,7 @@
 
 <b><#selectbg_g>[bullhead-v3.0]</#></b></@>
 == 커널 ==
-- hotplug: msm_hotplug 드라이버 추가 및 big, little 리틀에 맞게 수정
+- hotplug: msm_hotplug 드라이버 추가 및 big, little 에 맞게 수정
 - touchscreen: doubletap2wake, sweep2wake 추가
 - touchscreen: 음악이 재생되는 동안 dt2w 임시로 활성화
 - leds-qpnp: 부드럽게 깜박이는 충전 LED & 부드러운 알림 LED
