@@ -3,7 +3,41 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v2.0]</#></b></@>
+<b><#selectbg_g>[bullhead-v3.0]</#></b></@>
+== 커널 ==
+- hotplug: msm_hotplug 드라이버 추가 및 big, little 리틀에 맞게 수정
+- touchscreen: doubletap2wake, sweep2wake 추가
+- touchscreen: 음악이 재생되는 동안 dt2w 임시로 활성화
+- leds-qpnp: 부드럽게 깜박이는 충전 LED & 부드러운 알림 LED
+- power:qpnp-charger: 배터리가 완충에 가까워 졌을때 충전시간을 30초에서 100초로 늘림
+- hwrng: 직접적인 device_create_file() 호출들 회피
+- cpufreq: impulse elementalx, wheatley, impulse, conservative 거버너들 추가
+- cpufreq: interactive: 몇몇 패치들 적용
+- tcp: 소켓들이 MSG_FASTOPEN 을 기본으로 사용하도록 활성화
+- mdss_fb: backlight dimmer 옵션
+- power: lge crash handler 비활성화
+- f2fs: f2fs_follow_link 로 인한 시스템 패닉 수정
+- f2fs: 불필요한 new_valid_dev() 체크 제거
+- f2fs: f2fs-stable repository 로 부터 f2fs_kvfree 추가
+- random: /dev/frandom 지원 추가
+- random, random32: Linux upstream 패치들 적용
+- zram, zsmalloc, zpool: Upstream 패치들 적용
+- crypto: msm: 몇몇 패치들 적용
+- md: 몇몇 패치들 적용
+- dm verity: 몇몇 패치들 적용
+
+== 리커버리 ==
+- 최신 omni android-6.0 브랜치 TWRP 소스들로 빌드
+- 최신 cm-13.0 소스들을 베이스로 사용
+- f2fs-tools: v1.6.0 적용
+- jolla-kernel_bullhead-v3.0 적용
+
+== AIO ==
+- fstab.bullhead: f2fs 부팅 문제 수정
+- A2DPChecker: 음악이 재생되는 동안 dt2w 임시로 활성화
+- 변경사항 취소: "/system /vendor 디바이스 검증 비활성화"
+
+<b><#selectbg_g>[bullhead-v2.0]</#></b>
 == 커널 ==
 - UBERTC gcc 5.2.1 로 빌드
 - Screen Off Volume Controller 추가
