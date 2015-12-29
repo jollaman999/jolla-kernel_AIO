@@ -13,10 +13,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "jolla-kernel");
-ini_set("rom_version",          "v3.0");
+ini_set("rom_version",          "v3.1");
 ini_set("rom_author",           "jollaman999");
 ini_set("rom_device",           "bullhead");
-ini_set("rom_date",             "Dec 26, 2015");
+ini_set("rom_date",             "Dec 30, 2015");
 
 
 ##

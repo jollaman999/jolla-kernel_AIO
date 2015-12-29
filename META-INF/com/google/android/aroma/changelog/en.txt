@@ -3,7 +3,19 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v3.0]</#></b></@>
+<b><#selectbg_g>[bullhead-v3.1]</#></b></@>
+== Kernel ==
+>> Increase battery life <<
+- soc: qcom: msm_perf: prevent perfd to change max cpus and freqs
+- soc: qcom: msm_perf: prevent perfd to change workload
+- bullhead: Disable msm_performance's hotplugging
+
+- leds-qpnp: More smooth charging LED
+
+== Recovery ==
+- jolla-kernel_bullhead-v3.1 applied
+
+<b><#selectbg_g>[bullhead-v3.0]</#></b>
 == Kernel ==
 - hotplug: Add msm_hotplug driver and adaptive for big and little
 - touchscreen: Add doubletap2wake and sweep2wake
@@ -35,7 +47,6 @@
 == AIO ==
 - fstab.bullhead: Fix f2fs boot issue
 - A2DPChecker: Temporary enable dt2w when playing music
-- Revert "disable device verification of /system /vendor"
 
 <b><#selectbg_g>[bullhead-v2.0]</#></b>
 == Kernel ==

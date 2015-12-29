@@ -3,7 +3,19 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v3.0]</#></b></@>
+<b><#selectbg_g>[bullhead-v3.1]</#></b></@>
+== 커널 ==
+>> 배터리 시간 증가 <<
+- soc: qcom: msm_perf: perfd 가 최대 cpu 와 최대 클럭을 변경하는 것 방지
+- soc: qcom: msm_perf: perfd 가 작업량을 변경하는 것 방지
+- bullhead: msm_performance 의 핫플러깅 비활성화
+
+- leds-qpnp: 더 부드러운 충전 LED
+
+== 리커버리 ==
+- jolla-kernel_bullhead-v3.1 적용
+
+<b><#selectbg_g>[bullhead-v3.0]</#></b>
 == 커널 ==
 - hotplug: msm_hotplug 드라이버 추가 및 big, little 에 맞게 수정
 - touchscreen: doubletap2wake, sweep2wake 추가
@@ -35,7 +47,6 @@
 == AIO ==
 - fstab.bullhead: f2fs 부팅 문제 수정
 - A2DPChecker: 음악이 재생되는 동안 dt2w 임시로 활성화
-- 변경사항 취소: "/system /vendor 디바이스 검증 비활성화"
 
 <b><#selectbg_g>[bullhead-v2.0]</#></b>
 == 커널 ==
