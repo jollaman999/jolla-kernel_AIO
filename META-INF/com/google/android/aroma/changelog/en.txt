@@ -3,7 +3,19 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v3.1]</#></b></@>
+<b><#selectbg_g>[bullhead-v3.2]</#></b></@>
+== Kernel ==
+- touchscreen: Fix dt2w or sw2w not working without sovc enabled (Fix knock-on not working issue.)
+- fs: xattr simplifications
+- f2fs: Applied f2fs dev branch updates
+- md: Applied some of patches
+- fs/buffer.c: increase the buffer-head per-CPU LRU size
+- soc: qcom: smd: Applied some of patches
+
+== Recovery ==
+- jolla-kernel_bullhead-v3.2 applied
+
+<b><#selectbg_g>[bullhead-v3.1]</#></b>
 == Kernel ==
 >> Increase battery life <<
 - soc: qcom: msm_perf: prevent perfd to change max cpus and freqs

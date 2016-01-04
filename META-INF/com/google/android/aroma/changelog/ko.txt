@@ -3,7 +3,19 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v3.1]</#></b></@>
+<b><#selectbg_g>[bullhead-v3.2]</#></b></@>
+== 커널 ==
+- touchscreen: dt2w 나 sw2w 가 sovc 활성화 없이 작동되지 않는 현상 수정 (노크온 작동 불가현상 수정)
+- fs: xattr 단순화
+- f2fs: f2fs dev 브랜치 업데이트들 적용
+- md: 몇몇 패치들 적용
+- fs/buffer.c: CPU LRU 사이즈당 버퍼 헤드 증가
+- soc: qcom: smd: 몇몇 패치들 적용
+
+== 리커버리 ==
+- jolla-kernel_bullhead-v3.2 적용
+
+<b><#selectbg_g>[bullhead-v3.1]</#></b>
 == 커널 ==
 >> 배터리 시간 증가 <<
 - soc: qcom: msm_perf: perfd 가 최대 cpu 와 최대 클럭을 변경하는 것 방지
