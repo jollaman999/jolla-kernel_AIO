@@ -3,7 +3,64 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v3.2]</#></b></@>
+<b><#selectbg_g>[bullhead-v4.0]</#></b></@>
+== Kernel ==
+- Built with gcc-5.3.0
+- lowmemorykiller: skip dying or exiting task
+- f2fs: Applied lastest dev branch patches
+- ext4 crypto: Applied lastest patches
+- soc: qcom: msm_perf: Prevent perfd to change max cpu freq
+- wakeup: add toggle for bluedroid_timer wakelock
+- wakeup: add toggle for bluesleep wakelock
+- msm: qpnp-haptic: disable vibration when vmax_mv_strong is set to min
+- msm: camera: Applies some of patches
+- mmc: sd: Error out on bus speed switch failure
+- arm64: Applied relaxed power usage optimizing patches
+- arm64: lib: memory utilities optimization
+- workqueue: Applied some of patches
+- sched: Applied some of patches
+- mm: Applied some of patches
+- qcacld: fix uninitialized variable error
+- staging: qcacld-2.0: build with default options
+- Revert "qcacld: make non-interruptable wait for Tlshim Rx shutdown"
+- cpufreq: cpu-boost: don't boost big cluster on input touch unless it has at least 1 task running on any of its cores to save power
+- cpufreq: cpu-boost: export input_boost_enable to userspace
+- cpufreq: cpu-boost: don't boost over user set max freq
+- cpufreq: Fix timer/workqueue corruption by protecting reading governor_enabled
+- cpufreq: set policy with user_policy data
+- tick: don't update idle time if cpu offline
+- proc: stat: fix idle time jump
+- usb: gadget: storage: Support READ_TOC for MacOS
+- USB: android: Fix memory leak in mass_storage_function_init()
+- USB: f_fs: change wait as freezable
+- dts: mmc: remove wakeup on idle flag
+- mmc: core: Use mmc_flush_cache() during mmc suspend
+- tcp_cubic: Applied some of patches
+- fs: Applied some of patches
+- vfs: Applied some of patches
+- writeback: Applied some of patches
+- fs/proc: Applied some of patches
+- block: Applied some of patches
+- block: Make CFQ default to IOPS mode on SSDs
+- cfq-iosched: fix the setting of IOPS mode on SSDs
+- sched: LOAD_FREQ (4*HZ+61) avoids loadavg Moire
+- msm: Fix high load average from uninterruptible waits
+- soc: qcom: Applied some of patches
+- mpm: Fix clk_get API issue
+- rpm-smd: Applied some of patches
+- Makefile: build for Cortex A57
+- Makefile: use big.Little a53/a57 flag
+- mdss: use an interruptible thread on edp to reduce load_average
+- msm: Use interruptible wait to not affect load average
+- qcom: msm-core: uninterruptible wait - you can kiss my arse goodbye
+- msm: Use interruptible wait to not affect load average
+- msm: mdss: if the event is interrupted 'continue' earlier
+- bullhead: Fix Kconfig warnings
+
+== Recovery ==
+- jolla-kernel_bullhead-v4.0 applied
+
+<b><#selectbg_g>[bullhead-v3.2]</#></b>
 == Kernel ==
 - touchscreen: Fix dt2w or sw2w not working without sovc enabled (Fix knock-on not working issue.)
 - fs: xattr simplifications

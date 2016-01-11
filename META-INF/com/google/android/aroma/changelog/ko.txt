@@ -3,7 +3,64 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v3.2]</#></b></@>
+<b><#selectbg_g>[bullhead-v4.0]</#></b></@>
+== 커널 ==
+- gcc-5.3.0 으로 빌드
+- lowmemorykiller: 죽어가거나 종료중인 작업 스킵
+- f2fs: 최신 dev 브랜치 패치들 적용
+- ext4 crypto: 최신 패치들 적용
+- soc: qcom: msm_perf: perfd 가 최대 클럭을 변경 하는것 방지
+- wakeup: bluedroid_timer 웨이크락을 위한 토글 추가
+- wakeup: bluesleep 웨이크락을 위한 토글 추가
+- msm: qpnp-haptic: vmax_mv_strong 이 최소로 설정되었을때 진동 비활성화
+- msm: camera: 몇몇 패치들 적용
+- mmc: sd: bus speed switch 실패시 에러 리턴
+- arm64: relaxed 파워 소모량 최적화 패치 적용
+- arm64: lib: memory utilities 최적화
+- workqueue: 몇몇 패치들 적용
+- sched: 몇몇 패치들 적용
+- mm: 몇몇 패치들 적용
+- qcacld: 초기화 되지 않은 변수 수정
+- staging: qcacld-2.0: 기본값으로 빌드
+- 변경사항 취소 "qcacld: Tlshim Rx shutdown 이 non-interruptable wait 을 하도록 함"
+- cpufreq: cpu-boost: 어떤 코어든 적어도 1개의 작업이 있어도 파워 절약을 위해 빅코어를 부스트 하지 않음
+- cpufreq: cpu-boost: input_boost_enable 파라미터 추가
+- cpufreq: cpu-boost: 사용자가 설정한 최대 클럭값 이상으로 부스트 하지 않음
+- cpufreq: governor_enabled 가 읽히는 것을 방지하여 timer/workqueue 충돌 수정
+- cpufreq: user_policy 데이터로 policy 설정
+- tick: cpu 가 오프라인 상태일때 idle time 업데이트 하지 않음
+- proc: stat: idle time 점프 현상 수정
+- usb: gadget: storage: MacOS READ_TOC 지원
+- USB: android: mass_storage_function_init() 메모리 누수 수정
+- USB: f_fs: wait 을 freezable 로 변경
+- dts: mmc: idle flag 의 wakeup 제거
+- mmc: core: mmc 가 suspend 상태일 동안 mmc_flush_cache() 사용
+- tcp_cubic: 몇몇 패치들 적용
+- fs: 몇몇 패치들 적용
+- vfs: 몇몇 패치들 적용
+- writeback: 몇몇 패치들 적용
+- fs/proc: 몇몇 패치들 적용
+- block: 몇몇 패치들 적용
+- block: CFQ 가 SSD 에서 기본으로 IOPS 모드가 되도록 함
+- cfq-iosched: SSD 에서 IOPS 모드가 되는 설정 수정
+- sched: LOAD_FREQ (4*HZ+61) loadavg 물결 현상 방지
+- msm: uninterruptible wait 으로 부터의 high load average 수정
+- soc: qcom: 몇몇 패치들 적용
+- mpm: clk_get API 문제 수정
+- rpm-smd: 몇몇 패치들 적용
+- Makefile: Cortex A57 용으로 빌드
+- Makefile: big.Little a53/a57 플래그 사용
+- mdss: load_average 감소를 위해 edp 에 interruptible thread 사용
+- msm: load average 에 영향을 주지 않기 위해 interruptible wait 사용
+- qcom: msm-core: uninterruptible wait
+- msm: load average 에 영향을 주지 않기 위해 interruptible wait 사용
+- msm: mdss: event 가 interrupt 되었을 때 더 일찍 'continue' 함
+- bullhead: Kconfig 경고들 수정
+
+== 리커버리 ==
+- jolla-kernel_bullhead-v4.0 적용
+
+<b><#selectbg_g>[bullhead-v3.2]</#></b>
 == 커널 ==
 - touchscreen: dt2w 나 sw2w 가 sovc 활성화 없이 작동되지 않는 현상 수정 (노크온 작동 불가현상 수정)
 - fs: xattr 단순화
