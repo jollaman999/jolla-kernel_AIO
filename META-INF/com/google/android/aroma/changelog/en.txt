@@ -60,6 +60,9 @@
 == Recovery ==
 - jolla-kernel_bullhead-v4.0 applied
 
+== AIO ==
+- Add charging LED patch
+
 <b><#selectbg_g>[bullhead-v3.2]</#></b>
 == Kernel ==
 - touchscreen: Fix dt2w or sw2w not working without sovc enabled (Fix knock-on not working issue.)

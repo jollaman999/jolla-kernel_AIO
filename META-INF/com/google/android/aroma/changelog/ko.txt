@@ -60,6 +60,9 @@
 == 리커버리 ==
 - jolla-kernel_bullhead-v4.0 적용
 
+== AIO ==
+- 충전 LED 패치 추가
+
 <b><#selectbg_g>[bullhead-v3.2]</#></b>
 == 커널 ==
 - touchscreen: dt2w 나 sw2w 가 sovc 활성화 없이 작동되지 않는 현상 수정 (노크온 작동 불가현상 수정)
