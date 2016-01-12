@@ -3,7 +3,16 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v4.0]</#></b></@>
+<b><#selectbg_g>[bullhead-v4.0_Update1]</#></b></@>
+== Kernel ==
+- UBERTC gcc-5.3.0 로 재빌드
+
+== Recovery ==
+- UBERTC gcc-5.3.0 으로 빌드
+- cm-13.0 을 베이스로 하여 최신 omni android-6.0 TWRP 소스로 빌드
+- jolla-kernel_bullhead-v4.0_Update1 적용
+
+<b><#selectbg_g>[bullhead-v4.0]</#></b>
 == 커널 ==
 - gcc-5.3.0 으로 빌드
 - lowmemorykiller: 죽어가거나 종료중인 작업 스킵
