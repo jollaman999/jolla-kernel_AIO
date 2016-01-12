@@ -5,10 +5,10 @@
 
 <b><#selectbg_g>[bullhead-v4.0_Update1]</#></b></@>
 == Kernel ==
-- Re-built with UBERTC gcc-5.3.0
+- Re-built with UBERTC gcc-5.3.1
 
 == Recovery ==
-- Built with UBERTC gcc-5.3.0
+- Built with UBERTC gcc-5.3.1
 - Built with lastest omni android-6.0 TWRP sources with cm-13.0 as base.
 - jolla-kernel_bullhead-v4.0_Update1 applied
 

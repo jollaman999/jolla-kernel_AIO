@@ -5,10 +5,10 @@
 
 <b><#selectbg_g>[bullhead-v4.0_Update1]</#></b></@>
 == Kernel ==
-- UBERTC gcc-5.3.0 로 재빌드
+- UBERTC gcc-5.3.1 로 재빌드
 
 == Recovery ==
-- UBERTC gcc-5.3.0 으로 빌드
+- UBERTC gcc-5.3.1 으로 빌드
 - cm-13.0 을 베이스로 하여 최신 omni android-6.0 TWRP 소스로 빌드
 - jolla-kernel_bullhead-v4.0_Update1 적용
 
