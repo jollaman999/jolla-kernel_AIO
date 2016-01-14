@@ -9,11 +9,6 @@ run_program("/sbin/busybox", "umount", "/data");
 run_program("/sbin/busybox", "mount", "/system");
 run_program("/sbin/busybox", "mount", "/data");
 
-ui_print("-> Cleaning previous installations...");
-show_progress(0.1, 0.1);
-package_extract_file("cleaner.sh", "/tmp/cleaner.sh");
-set_perm(0, 0, 0777, "/tmp/cleaner.sh");
-run_program("/tmp/cleaner.sh");
 
 ############################ TWRP Only ################################
 if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="2" then
@@ -30,6 +25,12 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
 
   ############################ bullhead Kernel ###############################
   ui_print(">>>Installing bullhead Kernel<<<");
+
+  show_progress(0.1, 0.1);
+  ui_print("-> Cleaning previous installations...");
+  package_extract_file("cleaner.sh", "/tmp/cleaner.sh");
+  set_perm(0, 0, 0777, "/tmp/cleaner.sh");
+  run_program("/tmp/cleaner.sh");
 
   show_progress(0.2, 0.1);
   ui_print("-> Ready to install bullhead kernel...");
