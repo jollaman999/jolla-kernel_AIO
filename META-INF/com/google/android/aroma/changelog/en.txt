@@ -3,14 +3,31 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v4.0_Update1]</#></b></@>
+<b><#selectbg_g>[bullhead-v4.1]</#></b></@>
 == Kernel ==
-- Re-built with UBERTC gcc-5.3.1
+- Built with UBERTC gcc-5.3.1
+- dt2w: Disable 'dt2w_switch_tmp' when sovc is disabled
+- f2fs: Applied lastest updates (for-f2fs-4.5)
 
 == Recovery ==
 - Built with UBERTC gcc-5.3.1
 - Built with lastest omni android-6.0 TWRP sources with cm-13.0 as base.
-- jolla-kernel_bullhead-v4.0_Update1 applied
+- jolla-kernel_bullhead-v4.1 applied
+
+== AIO ==
+- Update AROMA Installer
+- Make LED patch as option.
+- Make user to choose applications.
+- Make applications copy to data partition.
+
+== jolla-kernel Updater ==
+- Change minSdk version to 23.
+- Request permission for external storage write.
+- Fix bug of download bar always saying "Downloading".
+- Remove deprecated codes. (Except main activity for navigation view.)
+- Fix Lint warnings.
+- Remove uneeded libraries.
+- Use cz.msebera.android httpclient v4.4.1.1 library.
 
 <b><#selectbg_g>[bullhead-v4.0]</#></b>
 == Kernel ==

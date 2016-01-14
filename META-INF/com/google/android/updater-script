@@ -4,26 +4,29 @@ ui_print("======jolla-kernel Installation======");
 ui_print("");
 
 ui_print("-> Mounting System & Data...");
+run_program("/sbin/busybox", "umount", "/system");
+run_program("/sbin/busybox", "umount", "/data");
 run_program("/sbin/busybox", "mount", "/system");
 run_program("/sbin/busybox", "mount", "/data");
 
+ui_print("-> Cleaning previous installations...");
+show_progress(0.1, 0.1);
+package_extract_file("cleaner.sh", "/tmp/cleaner.sh");
+set_perm(0, 0, 0777, "/tmp/cleaner.sh");
+run_program("/tmp/cleaner.sh");
 
 ############################ TWRP Only ################################
-if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="3" then
+if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="2" then
   ui_print(">>>>>TWRP Only<<<<<");
   ui_print("-> Installing TWRP");
   show_progress(0.5, 1);
   package_extract_file("jolla-recovery/twrp/recovery.img", "/dev/block/platform/soc.0/f9824900.sdhci/by-name/recovery");
-  # package_extract_file("jolla-recovery/twrp/mkdir_multirom.sh", "/tmp/mkdir_multirom.sh");
-  # package_extract_file("multirom/inst/multirom/trampoline", "/tmp/trampoline");
-  # set_perm(0, 0, 0777, "/tmp/mkdir_multirom.sh");
-  # run_program("/tmp/mkdir_multirom.sh");
 endif;
-## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="3"
+## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="2"
 
 
 
-if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
+if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
 
   ############################ bullhead Kernel ###############################
   ui_print(">>>Installing bullhead Kernel<<<");
@@ -63,11 +66,8 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
   ############ Replace Image.gz-dtb ############
   show_progress(0.7, 0.1);
-  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="0" then
-    ui_print("-> Replacing bullhead Image.gz-dtb...");
-    package_extract_file("jolla-kernel/bullhead/Image/Image.gz-dtb", "/tmp/zImage");
-  endif;
-  ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="0" then
+  ui_print("-> Replacing bullhead Image.gz-dtb...");
+  package_extract_file("jolla-kernel/bullhead/Image/Image.gz-dtb", "/tmp/zImage");
 
 
   ############ Repack boot.img ############
@@ -78,43 +78,37 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   run_program("/tmp/busybox", "dd", "if=/tmp/newboot.img", "of=/dev/block/platform/soc.0/f9824900.sdhci/by-name/boot");
 
 
-  ############ Copy Applications ############
+  ############ Patch Charging LED ############
   show_progress(0.8, 0.1);
-  ui_print("-> Patching charging LED...");
-  package_extract_dir("jolla-kernel/bullhead/led/system/", "/system/");
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1" then
+    ui_print("-> Patching charging LED...");
+    package_extract_dir("jolla-kernel/bullhead/led/system/", "/system/");
+  endif;
+  ## endif file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1" then
 
 
   ############ Copy Applications ############
-  show_progress(0.85, 0.1);
-  ui_print("-> Copying Applications...");
-  package_extract_dir("jolla-kernel/app/", "/system/app/");
-
-
-############################### Multi ROM ####################################
-
-
-
-############################ jolla-kernel Updater ############################
-show_progress(0.95, 1);
-ui_print("-> Installing jolla-kernel Updater...");
-
-run_program("rm", "-rf", "/data/jolla-kernel.info");
-run_program("rm", "-rf", "/data/data/com.otaupdater");
-run_program("rm", "-rf", "/data/user/0/com.otaupdater");
-run_program("rm", "-rf", "/data/dalvik-cache/arm/*OTA-Updater*");
-run_program("rm", "-rf", "/sdcard/OTA-Updater");
-run_program("rm", "-rf", "/system/app/OTA-Updater");
-run_program("rm", "-rf", "/system/bin/jolla-kernel_ota");
-run_program("rm", "-rf", "/system/etc/init.d/00jolla-kernel_ota");
-run_program("rm", "-rf", "/system/etc/permissions/com.otaudater.feature.xml");
-run_program("rm", "-rf", "/system/jolla-kernel.info");
-run_program("rm", "-rf", "/system/kernel.ota.prop");
-
-package_extract_dir("updater", "/system");
-
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="1" then
+    show_progress(0.9, 1);
+    ui_print("-> Copying jolla-kernel Updater...");
+    package_extract_dir("updater/", "/data/app/");
+    run_program("/sbin/busybox", "chown", "-R", "system.system", "/data/app/com.jollakernelupdater-1/");
+  endif;
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.2")=="1" then
+    show_progress(0.925, 1);
+    ui_print("-> Copying A2DPChecker...");
+    package_extract_dir("jolla-kernel/app/A2DPChecker/", "/data/app/");
+    run_program("/sbin/busybox", "chown", "-R", "system.system", "/data/app/com.jollaman999.bluetootha2dp-1/");
+  endif;
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.3")=="1" then
+    show_progress(0.95, 1);
+    ui_print("-> Copying USB-Keyboard...");
+    package_extract_dir("jolla-kernel/app/USB-Keyboard/", "/data/app/");
+    run_program("/sbin/busybox", "chown", "-R", "system.system", "/data/app/remote.hid.keyboard.client-1/");
+  endif;
 
 endif;
-## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3"
+## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1"
 
 show_progress(1.0, 0);
 ui_print("");

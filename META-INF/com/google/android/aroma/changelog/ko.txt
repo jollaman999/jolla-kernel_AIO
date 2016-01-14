@@ -3,14 +3,31 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v4.0_Update1]</#></b></@>
+<b><#selectbg_g>[bullhead-v4.1]</#></b></@>
 == Kernel ==
-- UBERTC gcc-5.3.1 로 재빌드
+- UBERTC gcc-5.3.1 로 빌드
+- dt2w: sovc 가 비활성화 되어있을 때 'dt2w_switch_tmp' 비활성화
+- f2fs: 최신 업데이트들 적용 (for-f2fs-4.5)
 
 == Recovery ==
-- UBERTC gcc-5.3.1 으로 빌드
+- UBERTC gcc-5.3.1 로 빌드
 - cm-13.0 을 베이스로 하여 최신 omni android-6.0 TWRP 소스로 빌드
-- jolla-kernel_bullhead-v4.0_Update1 적용
+- jolla-kernel_bullhead-v4.1 적용
+
+== AIO ==
+- AROMA Installer 업데이트
+- LED 패치를 옵션으로 함.
+- 사용자가 애플리케이션을 선택할 수 있도록 함.
+- 애플리케이션이 data 파티션에 복사되도록 함.
+
+== jolla-kernel Updater ==
+- minSdk 버젼을 23 으로 변경.
+- 외부 저장소 쓰기 권한 요청.
+- 다운로드 바가 항상 "다운로드 중" 이라 표시되는 버그 수정
+- Deprecated 코드들 제거. (네비게이션 뷰를 위해 메인 액티비티는 제외.)
+- Lint 경고들 수정.
+- 불필요한 라이브러리들 제거.
+- cz.msebera.android httpclient v4.4.1.1 라이브러리 사용.
 
 <b><#selectbg_g>[bullhead-v4.0]</#></b>
 == 커널 ==

@@ -13,10 +13,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "jolla-kernel");
-ini_set("rom_version",          "v4.0_Update1");
+ini_set("rom_version",          "v4.1");
 ini_set("rom_author",           "jollaman999");
 ini_set("rom_device",           "bullhead");
-ini_set("rom_date",             "Jan 12, 2016");
+ini_set("rom_date",             "Jan 15, 2016");
 
 
 ##
@@ -79,7 +79,7 @@ endif;
 # SET THEME
 #
 
-theme("xNXT");
+theme("touchwiz");
 
 ##
 #   SHOW ROM/Mod INFORMATION
@@ -322,7 +322,7 @@ if prop("menu.prop","selected")=="1" then
 
 
 ##
-# Sub Window 1 - Main (Install Kernel / Uninstall Multirom)
+# Sub Window 1 - Main (Install Kernel)
 #
 
 selectbox(
@@ -344,27 +344,16 @@ selectbox(
   
     "<~window1.subtitle>",         "",                                                 2,      #-- Group 1. key = "selected.1"
         "<~window1.option1>",         "<~window1.option1desc>",                              1,      #-- selected.1 = 1
-        "Multirom not yet supported", "Multirom not yet supported",                          0,      #-- selected.1 = 2
-        "<~window1.option3>",         "<~window1.option3desc>",                              0       #-- selected.1 = 3
+        "<~window1.option2>",         "<~window1.option2desc>",                              0       #-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
 );
 
-##
-# Alert Window - Warning about Multi ROM Selection
-#
-if prop("window1.prop","selected.1")=="2" then
-  alert( "Multirom not yet supported", "Multirom not yet supported");
-  back("1");
-endif;
-## endif - window1.prop
 
 
 
-
-if prop("window1.prop","selected.1")!="3" then
-
+if prop("window1.prop","selected.1")=="1" then
 
 
 
@@ -424,8 +413,14 @@ if prop("window1.prop","selected.1")=="1" then
 		  # TITLE            |  SUBTITLE                                                 | Initial Value #
 		  #------------------+-----------------------------------------------------------+---------------#
 
-		  "<~sepolicy.title>",      "",                                                       2,      #-- group 1
-		    "<~sepolicy.item>",  "<~sepolicy.desc>",                               0       #-- item.1.1
+		  "<~sepolicy.title>",      "",                                               2,      #-- group 1
+		    "<~sepolicy.item>",       "<~sepolicy.desc>",                               0,      #-- item.1.1
+		  "<~led.title>",           "",                                               2,      #-- group 1
+		    "<~led.item>",            "<~led.desc>",                                    0,      #-- item.2.1
+		  "<~app.title>",           "",                                               2,      #-- group 3
+		    "<~updater.item>",        "<~updater.desc>",                                0,      #-- item.3.1
+		    "<~a2dp.item>",           "<~a2dp.desc>",                                   0,      #-- item.3.2
+		    "<~usbkeyboard.item>",    "<~usbkeyboard.desc>",                            0       #-- item.3.3
 			  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 		);
 
@@ -433,21 +428,18 @@ if prop("checkbox1.prop","item.1.1")=="1" then
   alert( "<~sepolicy.attention>", "<~sepolicy.attentiondesc>");
 endif;
 ## endif - checkbox1.prop
+if prop("checkbox1.prop","item.2.1")=="1" then
+  alert( "<~led.attention>", "<~led.attentiondesc>");
+endif;
+## endif - checkbox1.prop
 
 endif;
 ## endif - window1.prop
 
-#################################################
-#################################################
-#################################################
-################### Multi ROM ###################
-#################################################
-#################################################
-#################################################
 
 
 endif;
-## endif prop("window1.prop","selected.1")!="3"
+## endif prop("window1.prop","selected.1")=="1"
 
 
 
@@ -518,4 +510,4 @@ checkviewbox(
 );
 endif;
 
-## Do not reboot to initialize multirom
+## Do not reboot to proceed remained actions from recovery.

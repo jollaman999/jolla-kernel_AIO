@@ -43,7 +43,7 @@ welcome.next=다음 버튼을 눌러 주세요.
 main.title=jolla-kernel 설치 메뉴
 main.subtutle=원하시는 작업을 선택해 주세요.
 main.inst=jolla-kernel 설치
-main.instdesc=멀티롬 및 다양한 옵션들과 함께 jolla-kernel 설치를 진행합니다.
+main.instdesc=다양한 옵션들과 함께 jolla-kernel 설치를 진행합니다.
 main.sysinfo=시스템 정보
 main.sysinfodesc=기기 및 파티션 정보를 보여줍니다.
 main.changelog=체인지로그
@@ -80,13 +80,10 @@ changelog.desc=jolla-kernel 변경 사항
 
 window1.title=설치 옵션 선택
 window1.subtitle=설치 옵션을 선택해 주세요
-window1.option1=커널 및 멀티롬 설치
-window1.option1desc=커널 또는 멀티롬 설치를 진행하시려면 이 옵션을 선택합니다.
-window1.option2=멀티롬 제거 및 커널 재설치
-window1.option2desc=멀티롬이 설치되어있고 제거하길 원하실 경우 이 옵션을 선택합니다.\
-(이 옵션은 메인롬에서만 진행해 주시기 바랍니다!!)
-window1.option3=jolla-TWRP 만 설치
-window1.option3desc=jolla-kernel 기반의 TWRP 만 설치합니다.\
+window1.option1=커널 설치
+window1.option1desc=커널 설치를 진행하시려면 이 옵션을 선택합니다.
+window1.option2=jolla-TWRP 만 설치
+window1.option2desc=jolla-kernel 기반의 TWRP 만 설치합니다.\
 F2FS 지원이 포함되어 있습니다.
 
 window2.title=버젼 선택
@@ -97,35 +94,28 @@ window2.option1-1desc=CM/AOSP 기반 Android 6.0.x 롬에 설치 하실 경우 �
 
 fs.attention=F2FS 사용안내
 fs.attentiondesc=현재 커널상에는 /data, /cache 파티션을 EXT4, 또는 F2FS 파일 시스템으로 사용할 수 있도록 되어있습니다.\
-F2FS 파일시스템은 TWRP 리커버리에서 Wipe(와이프) 옵션에 들어가 Filesystem type(파일시스템 종류) 을 f2fs로 change(변경) 해주셔야 사용이 가능합니다.\
-일부 롬은 자체적으로 F2FS를 지원하지 않을 수 있습니다.\
-따라서 사용에 주의해 주시기 바랍니다.
+F2FS 파일시스템은 TWRP 리커버리에서 Wipe(와이프) 옵션에 들어가 Filesystem type(파일시스템 종류) 을 f2fs로 change(변경) 해주셔야 사용이 가능합니다.
 
 checkbox1.title=커널 설치 옵션
 checkbox1.subtitle=원하시는 옵션에 체크해 주세요.
 sepolicy.title=sepolicy 패치
-sepolicy.item=CM SuperSU 지원
+sepolicy.item=CM SuperSU 지원 (Deprecated)
 sepolicy.desc=Cyanogenmod 롬에서 SuperSU 를 사용하길 원하실 경우 이 옵션을 선택하세요.
 sepolicy.attention=sepolicy 경고
 sepolicy.attentiondesc=이 옵션을 다른 롬에서 선택하실 경우 부트 루프가 발생 할 수 있습니다.
-
-checkbox1.item1=멀티롬 부팅
-checkbox1.item1uninst=멀티롬 제거가 선택되었습니다.
-checkbox1.item1-1=멀티롬 부팅 설치
-checkbox1.item1-1desc=jolla-TWRP 와 함께 여러 롬들을 부팅할 수 있게 해주는 멀티롬을 설치합니다.
-
-checkbox2.title=멀티롬 제거 옵션
-checkbox2.subtitle=멀티롬 제거 옵션을 선택해 주세요.
-checkbox2.item1=멀티롬 제거
-checkbox2.item1-1=세컨롬들 제거
-checkbox2.item1-1desc=메인롬을 제외한 나머지 세컨롬들을 모두 제거합니다.
-
-multirom.attention=멀티롬 경고
-multirom.attentiondesc=이 옵션은 메인롬에서만 진행해 주시기 바랍니다!!
-
-multidel.attention=세컨롬들 제거 경고
-multidel.attentiondesc=이 작업을 수행하면 메인롬을 제외한 모든 롬들이 지워집니다!!\
-세컨롬들을 제거하시기 전에 백업이 필요한지 다시 한번 확인해 주시기 바랍니다.
+led.title=LED 패치
+led.item=충전 LED 지원
+led.desc=충전 LED 사용을 원할 경우 이 옵션을 체크하세요.
+led.attention=LED 패치 경고
+led.attentiondesc=이 옵션은 라이브러리 파일들을 system 파티션에 복사합니다.\
+system 파티션 수정을 원치 않을 경우 체크를 해제하세요.
+app.title=애플리케이션 선택
+updater.item=jolla-kernel Updater
+updater.desc=이 앱은 jolla-kernel 의 업데이트를 지원합니다.
+a2dp.item=A2DP Checker
+a2dp.desc=이 앱은 블루투스 헤드셋에 대해 Screen Off Volume Control 을 지원합니다.
+usbkeyboard.item=USB-Keyboard
+usbkeyboard.desc=이 앱은 안드로이드 디바이스를 USB 키보드/마우스로 사용 하는 것을 지원합니다.
 
 ini_set.next=설치 진행
 ini_set.title=설치 진행

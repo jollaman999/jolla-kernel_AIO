@@ -43,7 +43,7 @@ welcome.next=Press Next.
 main.title=jolla-kernel Installation Menu
 main.subtutle=Select what you want.
 main.inst=jolla-kernel Installation
-main.instdesc=jolla-kernel Installation with multirom and various options
+main.instdesc=jolla-kernel Installation with various options
 main.sysinfo=System Info
 main.sysinfodesc=Get and show device/partition informations
 main.changelog=ChangeLog
@@ -80,13 +80,10 @@ changelog.desc=jolla-kernel Changelog
 
 window1.title=Kernel Installation Option
 window1.subtitle=Select kernel installation option.
-window1.option1=Install Kernel or Multi ROM
-window1.option1desc=If you want to install kernel or Multi ROM, select this.
-window1.option2=Uninstall multirom and reinstall Kernel
-window1.option2desc=If you installed multirom and want to uninstall, select this.\
-(Do this option only in main rom!!)
-window1.option3=jolla-TWRP Install Only
-window1.option3desc=Only install jolla-kernel based TWRP.\
+window1.option1=Install Kernel
+window1.option1desc=If you want to install kernel, select this.
+window1.option2=jolla-TWRP Install Only
+window1.option2desc=Only install jolla-kernel based TWRP.\
 F2FS support included.
 
 window2.title=Version Selection
@@ -97,35 +94,28 @@ window2.option1-1desc=If you want to install to CM/AOSP based Android 6.0.x roms
 
 fs.attention=F2FS information
 fs.attentiondesc=On current kernel, /data and /cache partitions are able to use by EXT4 or F2FS.\
-You can use F2FS by change file system in Wipe option of TWRP recovery.\
-Some of roms will not suppot f2fs by ifself.\
-So use with caution.
+You can use F2FS by change file system in Wipe option of TWRP recovery.
 
 checkbox1.title=Kernel Installatin Options
 checkbox1.subtitle=Select what you want.
 sepolicy.title=sepolicy Patch
-sepolicy.item=CM SuperSU support
+sepolicy.item=CM SuperSU support (Deprecated)
 sepolicy.desc=Select this option if you want use SuperSU in Cyanogenmod rom.
 sepolicy.attention=sepolicy attention
 sepolicy.attentiondesc=If you select this option in another rom, it will cause boot loop.
-
-checkbox1.item1=Multi ROM Boot
-checkbox1.item1uninst=Uninstall Multi ROM is selected.
-checkbox1.item1-1=Install Multi ROM Boot
-checkbox1.item1-1desc=Install Multi ROM Boot that is possible to boot various roms with jolla-TWRP.
-
-checkbox2.title=Multi ROM Delete Option
-checkbox2.subtitle=Select Multi ROM delete option.
-checkbox2.item1=Delete Multi ROM
-checkbox2.item1-1=Delete second roms
-checkbox2.item1-1desc=This will remove all of roms except main rom.
-
-multirom.attention=Multi ROM Warning
-multirom.attentiondesc=Do this option only in main rom!!
-
-multidel.attention=Delete second roms Warning
-multidel.attentiondesc=This will remove all of roms except main rom!!\
-Please check again if there are backup needed.
+led.title=LED Patch
+led.item=Charging LED support
+led.desc=Select this option if you want use charging LED.
+led.attention=LED Patch Warning
+led.attentiondesc=This option will copy library files to system partition.\
+Uncheck if you don't want to modify system partition.
+app.title=Application Selection
+updater.item=jolla-kernel Updater
+updater.desc=This app support updates for jolla-kernel.
+a2dp.item=A2DP Checker
+a2dp.desc=This app support Screen Off Volume Control for Bluetooth headsets.
+usbkeyboard.item=USB-Keyboard
+usbkeyboard.desc=This app support to use Android device as USB Keyboard/Mouse.
 
 ini_set.next=Begin Inst
 ini_set.title=Proceed Installation
