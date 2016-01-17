@@ -3,7 +3,15 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v4.1]</#></b></@>
+<b><#selectbg_g>[bullhead-v4.2]</#></b></@>
+== Kernel ==
+- msm_hotplug: Fix target_big calculation (Effective hotplugging and improve slow Wi-Fi.)
+- sovc: Turn off touch screen when mic detected (Fix touchscreen working while on a call.)
+
+== Recovery ==
+- jolla-kernel_bullhead-v4.2 applied
+
+<b><#selectbg_g>[bullhead-v4.1]</#></b>
 == Kernel ==
 - Built with UBERTC gcc-5.3.1
 - dt2w: Disable 'dt2w_switch_tmp' when sovc is disabled
