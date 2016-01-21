@@ -3,7 +3,43 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v4.2]</#></b></@>
+<b><#selectbg_g>[bullhead-v4.3]</#></b></@>
+== 커널 ==
+- UBERTC gcc-6.0.0 으로 빌드
+- GCC 6.0.0 을 위해 수정
+- 변경사항 취소 "msm_thermal: core control 비활성화"
+- thermal: thermal-engine 핫플러깅 비활성화
+- power: bcl: 핫플러그와 freq-control 제거
+- 변경사항 취소 "ksm: check and skip page, if it is already scanned"
+  (랜덤 리붓을 발생하는 요인으로 추정. KSM 에서 NULL pointer dereference 로 인하여 커널 패닉이 발생하였음.)
+- ksm: hlist_empty helper 메소드 사용
+- mm: ksm: 기본값 최적화
+- msm: thermal: 조용한 threshold 로그
+- sovc: 'mic detected' 로그 제거
+- proc: 몇몇 패치들 적용
+- seccomp: cap SECCOMP_RET_ERRNO data to MAX_ERRNO
+- proc: add a reschedule point in proc_readfd_common()
+- lowmemorykiller: 레드 블랙 트리 최적화와 함께 몇몇 패치들 적용
+- ion: 몇몇 패치들 적용
+- fs: 몇몇 패치들 적용
+- msm: camera: 8992: 8994: delete session if post event failed
+- msm: camera: Handling openCamera timeout
+- selinux: avc 로깅 개선
+- KEYS: 몇몇 패치들 적용
+- include/linux/poison.h: fix LIST_POISON{1,2} offset
+- qcacld-2.0: 에러 체크 빠진 부분 수정
+- qcacld-2.0: 항상 실패를 반환하는 현상 수정
+
+== 리커버리 ==
+- UBERTC gcc-6.0.0 으로 빌드
+- cm-13.0 을 베이스로 하여 최신 omni android-6.0 TWRP 소스로 빌드
+- jolla-kernel_bullhead-v4.3 적용
+- f2fs-tools: dev 브랜치 패치들 적용
+
+== AIO ==
+- sepolicy 바이너리 업데이트
+
+<b><#selectbg_g>[bullhead-v4.2]</#></b>
 == 커널 ==
 - msm_hotplug: target_big 계산 수정 (효율적인 핫플러깅 및 느린 Wi-Fi 개선)
 - sovc: 마이크가 감지 되었을때 터치스크린 Off (전화 중에 터치스크린이 작동되는 현상 수정)

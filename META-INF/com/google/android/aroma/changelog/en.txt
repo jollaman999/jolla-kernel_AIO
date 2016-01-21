@@ -3,7 +3,43 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v4.2]</#></b></@>
+<b><#selectbg_g>[bullhead-v4.3]</#></b></@>
+== Kernel ==
+- Built with UBERTC gcc-6.0.0
+- Fix for GCC 6.0.0
+- Revert "msm_thermal: Disable core control"
+- thermal: disable thermal-engine hotplug and poll instead
+- power: bcl: Remove hotplug and freq-control
+- Revert "ksm: check and skip page, if it is already scanned"
+  (It seems this makes random reboot. There was an kernel panic cause of NULL pointer dereference in KSM.)
+- ksm: use the helper method to do the hlist_empty check
+- mm: ksm: Optimize defaults
+- msm: thermal: Quiet the threshold logs
+- sovc: Remove 'mic detected' log
+- proc: Applied some patches
+- seccomp: cap SECCOMP_RET_ERRNO data to MAX_ERRNO
+- proc: add a reschedule point in proc_readfd_common()
+- lowmemorykiller: Applied some patches with rbtree optimization
+- ion: Applied some patches
+- fs: Applied some patches
+- msm: camera: 8992: 8994: delete session if post event failed
+- msm: camera: Handling openCamera timeout
+- selinux: Improve avc logging
+- KEYS: Applied some patches
+- include/linux/poison.h: fix LIST_POISON{1,2} offset
+- qcacld-2.0: Fix missed error check
+- qcacld-2.0: Fix always return failure
+
+== Recovery ==
+- Built with UBERTC gcc-6.0.0
+- Built with lastest omni android-6.0 TWRP sources with cm-13.0 as base.
+- jolla-kernel_bullhead-v4.3 applied
+- f2fs-tools: Applied dev branch patches
+
+== AIO ==
+- Update sepolicy binary
+
+<b><#selectbg_g>[bullhead-v4.2]</#></b>
 == Kernel ==
 - msm_hotplug: Fix target_big calculation (Effective hotplugging and improve slow Wi-Fi.)
 - sovc: Turn off touch screen when mic detected (Fix touchscreen working while on a call.)
