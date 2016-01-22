@@ -29,6 +29,7 @@
 - include/linux/poison.h: fix LIST_POISON{1,2} offset
 - qcacld-2.0: Fix missed error check
 - qcacld-2.0: Fix always return failure
+- cpufreq: impulse: update to latest from @neobuddy89
 
 == Recovery ==
 - Built with UBERTC gcc-6.0.0

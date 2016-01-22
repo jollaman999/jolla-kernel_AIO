@@ -29,6 +29,7 @@
 - include/linux/poison.h: fix LIST_POISON{1,2} offset
 - qcacld-2.0: 에러 체크 빠진 부분 수정
 - qcacld-2.0: 항상 실패를 반환하는 현상 수정
+- cpufreq: impulse: @neobuddy89 님의 최신 소스로 업데이트
 
 == 리커버리 ==
 - UBERTC gcc-6.0.0 으로 빌드
