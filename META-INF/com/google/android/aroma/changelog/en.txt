@@ -3,7 +3,34 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v4.3]</#></b></@>
+<b><#selectbg_g>[bullhead-v5.0]</#></b></@>
+== Kernel ==
+- Linux 3.10.95
+- mm: UKSM Support
+- devfreq: Adreno idler Support
+- qcacld-2.0: Disable a bunch of debugs
+- sovc: Fix vibration again after removing finger from the screen
+- msm_hotplug: Add new big_core_down_delay parameter
+- msm_hotplug: Do not hotplugging when disabled or suspended
+- msm_hotplug, cpu: Only block hotplugging for big cores when suspended
+- msm_hotplug, fingerprint: Do not hotplugging when disabled
+- msm_hotplug: Make it difficult to turn on big cores
+- msm_hotplug: Remove 'apply_down_lock(cpu)' from big cores
+- msm_hotplug: Increase DEFAULT_BIG_CORE_UP_DELAY
+- wakeup: try to deactivate a wakeup source when the user explicitly disables it from userspace
+- wakeup: Add the guard condition for len in pm_get_active_wakeup_sources
+- qcom: rpm-smd: Applied some of patches with workqueue warning fix
+- soc: qcom: common_log: Fix a memory leak in common_log driver
+- ASoC: Applied upstream patches from Cyanogenmod
+- hid: Add driver for FiiO USB DAC
+
+== Recovery ==
+- Built with lastest omni android-6.0 TWRP sources with cm-13.0 as base.
+- jolla-kernel_bullhead-v5.0 applied
+- f2fs-tools: Applied lastest dev branch patches
+- f2fs-tools: Applied Android patches from Cyanogenmod
+
+<b><#selectbg_g>[bullhead-v4.3]</#></b>
 == Kernel ==
 - Built with UBERTC gcc-6.0.0
 - Fix for GCC 6.0.0

@@ -3,7 +3,34 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v4.3]</#></b></@>
+<b><#selectbg_g>[bullhead-v5.0]</#></b></@>
+== 커널 ==
+- Linux 3.10.95
+- mm: UKSM 지원
+- devfreq: Adreno idler 지원
+- qcacld-2.0: 대량의 디버그들 비활성화
+- sovc: 스크린에서 손가락을 떼어낸 후 진동이 다시 울리는 현상 수정
+- msm_hotplug: big_core_down_delay 새 파라미터 추가
+- msm_hotplug: 비활성화 되었거나 suspend 상태일때 핫플러깅 하지 않음
+- msm_hotplug, cpu: suspend 상태일때 빅코어들에 대해서만 핫플러깅 방지
+- msm_hotplug, fingerprint: 비활성화 되었을때 핫플러깅 하지 않음
+- msm_hotplug: 빅코어들이 좀 더 어렵게 켜지도록 함
+- msm_hotplug: 빅코어의 'apply_down_lock(cpu)' 제거
+- msm_hotplug: DEFAULT_BIG_CORE_UP_DELAY 증가
+- wakeup: try to deactivate a wakeup source when the user explicitly disables it from userspace
+- wakeup: Add the guard condition for len in pm_get_active_wakeup_sources
+- qcom: rpm-smd: workqueue 경고 수정을 포함해 몇몇 패치들 적용
+- soc: qcom: common_log: common_log driver 의 메모리 누수 수정
+- ASoC: Cyanogenmod 로 부터 업스림 패치들 적용
+- hid: FiiO USB DAC 드라이버 추가
+
+== 리커버리 ==
+- cm-13.0 을 베이스로 하여 최신 omni android-6.0 TWRP 소스로 빌드
+- jolla-kernel_bullhead-v5.0 적용
+- f2fs-tools: 최신 dev 브랜치 패치들 적용
+- f2fs-tools: Cyanogenmod 로 부터 Android 패치들 적용
+
+<b><#selectbg_g>[bullhead-v4.3]</#></b>
 == 커널 ==
 - UBERTC gcc-6.0.0 으로 빌드
 - GCC 6.0.0 을 위해 수정
