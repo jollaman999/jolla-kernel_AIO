@@ -35,20 +35,16 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
   show_progress(0.2, 0.1);
   ui_print("-> Ready to install bullhead kernel...");
   package_extract_dir("jolla-kernel/bullhead/mkbootimg", "/tmp");
-  set_perm(0, 0, 0777, "/tmp/busybox");
-  set_perm(0, 0, 0777, "/tmp/unpack-ramdisk.sh");
-  set_perm(0, 0, 0777, "/tmp/mk-ramdisk.sh");
-  set_perm(0, 0, 0777, "/tmp/mkbootimg.sh");
-  set_perm(0, 0, 0777, "/tmp/mkbootimg");
-  set_perm(0, 0, 0777, "/tmp/unpackbootimg");
+  set_perm(0, 0, 0755, "/tmp/bin/busybox");
+  set_perm(0, 0, 0755, "/tmp/repackimg.sh");
+  set_perm(0, 0, 0755, "/tmp/unpackimg.sh");
 
 
   ############ Unpack boot.img ############
   show_progress(0.4, 1);
   ui_print("-> Unpacking boot.img...");
-  run_program("/tmp/busybox", "dd", "if=/dev/block/platform/soc.0/f9824900.sdhci/by-name/boot", "of=/tmp/boot.img");
-  run_program("/tmp/unpackbootimg", "-i", "/tmp/boot.img", "-o", "/tmp/");
-  run_program("/tmp/unpack-ramdisk.sh");
+  run_program("/tmp/bin/busybox", "dd", "if=/dev/block/platform/soc.0/f9824900.sdhci/by-name/boot", "of=/tmp/boot.img");
+  run_program("/tmp/unpackimg.sh");
 
 
   ############ Replace ramdisk ############
@@ -68,15 +64,14 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
   ############ Replace Image.gz-dtb ############
   show_progress(0.7, 0.1);
   ui_print("-> Replacing bullhead Image.gz-dtb...");
-  package_extract_file("jolla-kernel/bullhead/Image/Image.gz-dtb", "/tmp/zImage");
+  package_extract_file("jolla-kernel/bullhead/Image/Image.gz-dtb", "/tmp/split_img/boot.img-zImage");
 
 
   ############ Repack boot.img ############
   show_progress(0.75, 1);
   ui_print("-> Repacking boot.img...");
-  run_program("/tmp/mk-ramdisk.sh");
-  run_program("/tmp/mkbootimg.sh");
-  run_program("/tmp/busybox", "dd", "if=/tmp/newboot.img", "of=/dev/block/platform/soc.0/f9824900.sdhci/by-name/boot");
+  run_program("/tmp/repackimg.sh");
+  run_program("/tmp/bin/busybox", "dd", "if=/tmp/image-new.img", "of=/dev/block/platform/soc.0/f9824900.sdhci/by-name/boot");
 
 
   ############ Patch Charging LED ############
