@@ -69,7 +69,7 @@ kerneloff=`cat *-kerneloff`;        echo "kernel_offset = $kerneloff";
 ramdiskoff=`cat *-ramdiskoff`;      echo "ramdisk_offset = $ramdiskoff";
 tagsoff=`cat *-tagsoff`;            echo "tags_offset = $tagsoff";
 if [ -f *-second ]; then
-  second=`ls *-second`;             echo "second = $second";  
+  second=`ls *-second`;             echo "second = $second";
   second="--second split_img/$second";
   secondoff=`cat *-secondoff`;      echo "second_offset = $secondoff";
   secondoff="--second_offset $secondoff";

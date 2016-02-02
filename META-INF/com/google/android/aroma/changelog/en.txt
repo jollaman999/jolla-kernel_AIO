@@ -5,10 +5,10 @@
 
 <b><#selectbg_g>[bullhead-v5.0]</#></b></@>
 == Kernel ==
-- Linux 3.10.95
+- Linux 3.10.96
 - mm: UKSM Support
 - devfreq: Adreno idler Support
-- qcacld-2.0: Disable a bunch of debugs
+- wlan: qcacld-2.0: Get LA.BF64.1.2.9 from caf (No Wi-Fi issues/No slow Wi-Fi/No disconnection)
 - sovc: Fix vibration again after removing finger from the screen
 - msm_hotplug: Add new big_core_down_delay parameter
 - msm_hotplug: Do not hotplugging when disabled or suspended
@@ -17,18 +17,39 @@
 - msm_hotplug: Make it difficult to turn on big cores
 - msm_hotplug: Remove 'apply_down_lock(cpu)' from big cores
 - msm_hotplug: Increase DEFAULT_BIG_CORE_UP_DELAY
+- msm_hotplug: Remove 'online_little' variables
+- msm_hotplug: Skip if all of big cores turned on or off
 - wakeup: try to deactivate a wakeup source when the user explicitly disables it from userspace
 - wakeup: Add the guard condition for len in pm_get_active_wakeup_sources
 - qcom: rpm-smd: Applied some of patches with workqueue warning fix
 - soc: qcom: common_log: Fix a memory leak in common_log driver
 - ASoC: Applied upstream patches from Cyanogenmod
 - hid: Add driver for FiiO USB DAC
+- cpuidle: Applied some patches
+- msm: spm: Applied some patches
+- msm: lpm-levels: Applied some patches
+- lib: add support for LZ4-compressed kernel
+- lib/lz4: Applied upstream patches
+- lib/decompressors: Applied upstream patches
+- bullhead_defconfig: LZ4 ramdisk/decompress support
+- bullhead_defconfig: : Enable MODULES support
+- bullhead_defconfig: Enable FB_MSM_MDSS_HDMI_PANEL
+- PM / sleep: Applied some patches
+- cpufreq: interactive: Applied some patches
+- cpufreq: Applied some patches
+- cpufreq: add ZZMoove big.LITTLE Edition (bLE) development version as of 09.01.2016
+- cpufreq: Fallback to interactive governor
+- haptic: Vibration control support by kernel control apps
 
 == Recovery ==
 - Built with lastest omni android-6.0 TWRP sources with cm-13.0 as base.
 - jolla-kernel_bullhead-v5.0 applied
 - f2fs-tools: Applied lastest dev branch patches
 - f2fs-tools: Applied Android patches from Cyanogenmod
+- Use LZ4 compressed ramdisk image
+
+== AIO ==
+- AIO: Use modified AIK scripts for mkbootimg and make LZ4 compressed ramdisk by default
 
 <b><#selectbg_g>[bullhead-v4.3]</#></b>
 == Kernel ==
