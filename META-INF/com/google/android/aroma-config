@@ -420,18 +420,49 @@ if prop("window1.prop","selected.1")=="1" then
 		  "<~app.title>",           "",                                               2,      #-- group 3
 		    "<~updater.item>",        "<~updater.desc>",                                0,      #-- item.3.1
 		    "<~a2dp.item>",           "<~a2dp.desc>",                                   0,      #-- item.3.2
-		    "<~usbkeyboard.item>",    "<~usbkeyboard.desc>",                            0       #-- item.3.3
+		    "<~usbkeyboard.item>",    "<~usbkeyboard.desc>",                            0,      #-- item.3.3
+		  "<~initd.title>",         "",                                               2,      #-- group 4
+		    "<~initd.item>",          "<~initd.desc>",                                  0       #-- item.4.1
+
 			  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 		);
 
-if prop("checkbox1.prop","item.1.1")=="1" then
-  alert( "<~sepolicy.attention>", "<~sepolicy.attentiondesc>");
-endif;
-## endif - checkbox1.prop
-if prop("checkbox1.prop","item.2.1")=="1" then
-  alert( "<~led.attention>", "<~led.attentiondesc>");
-endif;
-## endif - checkbox1.prop
+		if prop("checkbox1.prop","item.1.1")=="1" then
+		  alert( "<~sepolicy.attention>", "<~sepolicy.attentiondesc>");
+		endif;
+		if prop("checkbox1.prop","item.2.1")=="1" then
+		  alert( "<~led.attention>", "<~led.attentiondesc>");
+		endif;
+		if prop("checkbox1.prop","item.4.1")=="1" then
+		  alert( "<~initd.attention>", "<~initd.attentiondesc>");
+		endif;
+
+		selectbox(
+		  # Title
+			"<~ramdisk.title>",
+
+		  # Sub Title
+			"<~ramdisk.subtitle>",
+
+		  # Icon
+			"@update",
+
+		  # Will be saved in /tmp/aroma/ramdisk.prop
+			"ramdisk.prop",
+
+		  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+		  # TITLE            |  SUBTITLE                                                 | Initial Value #
+		  #------------------+-----------------------------------------------------------+---------------#
+
+		  "<~compress.title>",      "",                                               2,      #-- Group 1. key = "selected.1"
+		    "<~gzip.item>",           "<~gzip.desc>",                                   1,      #-- selected.1 = 1
+		    "<~lz4.item>",            "<~lz4.desc>",                                    0       #-- selected.1 = 2
+			  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+		);
+
+		if prop("ramdisk.prop","selected.1")=="2" then
+		  alert( "<~lz4.attention>", "<~lz4.attentiondesc>");
+		endif;
 
 endif;
 ## endif - window1.prop

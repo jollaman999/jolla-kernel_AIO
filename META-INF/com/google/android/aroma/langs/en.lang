@@ -116,6 +116,25 @@ a2dp.item=A2DP Checker
 a2dp.desc=This app support Screen Off Volume Control for Bluetooth headsets.
 usbkeyboard.item=USB-Keyboard
 usbkeyboard.desc=This app support to use Android device as USB Keyboard/Mouse.
+initd.title=init.d Patch
+initd.item=init.d Support
+initd.desc=This option enable to use init.d scripts in /system/etc/init.d folder.
+initd.attention=init.d Patch warning
+initd.attentiondesc=If there is no busybox, this option will modify system partition.\
+Uncheck if you don't want to modify system partition.
+
+ramdisk.title=Ramdisk Options
+ramdisk.subtitle=Select compress type.
+compress.title=Compress options
+gzip.item=GZIP
+gzip.desc=Select this option if you want to use gzip compressed ramdisk image.\
+If you want to install SuperSU, select this option.\
+If you don't know what to choose select this option.
+lz4.item=LZ4
+lz4.desc=Select this option if you want to use lz4 compressed ramdisk image.\
+lz4 support fastest decompress speed.
+lz4.attention=LZ4 warning
+lz4.attentiondesc=If you want to install SuperSU later, you should re-install jolla-kernel with gzip compressed ramdisk.
 
 ini_set.next=Begin Inst
 ini_set.title=Proceed Installation

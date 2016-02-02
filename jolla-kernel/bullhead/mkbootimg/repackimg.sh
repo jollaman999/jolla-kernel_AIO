@@ -34,13 +34,19 @@ case $1 in
   --level|*)
     echo "Packing ramdisk...";
     echo " ";
+    ramdiskcomp=`cat split_img/*-ramdiskcomp`;
     if [ "$1" = "--level" -a "$2" ]; then
       level="-$2";
       lvltxt=" - Level: $2";
     fi;
-    echo "Using lz4 compression: $lvltxt";
-    compext=lz4;
-    repackcmd="$bin/lz4 $level -l stdin stdout 2> /dev/null";
+    echo "Using compression: $ramdiskcomp$lvltxt";
+    repackcmd="$ramdiskcomp $level";
+    compext=$ramdiskcomp;
+    case $ramdiskcomp in
+      gzip) compext=gz;;
+      lz4) repackcmd="$bin/lz4 $level -l stdin stdout 2> /dev/null";;
+      *) abort; exit 1;;
+    esac;
     cd ramdisk;
     find . | cpio -H newc -o 2> /dev/null | $repackcmd > ../ramdisk-new.cpio.$compext;
 

@@ -67,15 +67,38 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
   package_extract_file("jolla-kernel/bullhead/Image/Image.gz-dtb", "/tmp/split_img/boot.img-zImage");
 
 
+  ############ Ramdisk Compress Option ############
+  show_progress(0.75, 0.1);
+  if file_getprop("/tmp/aroma-data/ramdisk.prop","selected.1")=="1" then
+    ui_print("-> Using gzip compressed ramdisk image...");
+    set_perm(0, 0, 0755, "/tmp/gzip.sh");
+    run_program("/tmp/gzip.sh");
+  endif;
+  if file_getprop("/tmp/aroma-data/ramdisk.prop","selected.1")=="2" then
+    ui_print("-> Using lz4 compressed ramdisk image...");
+    set_perm(0, 0, 0755, "/tmp/lz4.sh");
+    run_program("/tmp/lz4.sh");
+  endif;
+
+
+  ############ init.d Patch ############
+  show_progress(0.8, 1);
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.4.1")=="1" then
+    ui_print("-> Patching init.d...");
+    set_perm(0, 0, 0755, "/tmp/init.d_support.sh");
+    run_program("/tmp/init.d_support.sh");
+  endif;
+
+
   ############ Repack boot.img ############
-  show_progress(0.75, 1);
+  show_progress(0.825, 1);
   ui_print("-> Repacking boot.img...");
   run_program("/tmp/repackimg.sh");
   run_program("/tmp/bin/busybox", "dd", "if=/tmp/image-new.img", "of=/dev/block/platform/soc.0/f9824900.sdhci/by-name/boot");
 
 
   ############ Patch Charging LED ############
-  show_progress(0.8, 0.1);
+  show_progress(0.85, 0.1);
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1" then
     ui_print("-> Patching charging LED...");
     package_extract_dir("jolla-kernel/bullhead/led/system/", "/system/");
