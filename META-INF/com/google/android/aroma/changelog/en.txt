@@ -3,7 +3,21 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v5.0]</#></b></@>
+<b><#selectbg_g>[bullhead-v5.1]</#></b></@>
+== Kernel ==
+- Applied EAS patches from Google
+  (About EAS: http://www.linaro.org/blog/core-dump/energy-aware-scheduling-eas-project/)
+- sovc: Turn off the touchscreen directly without turn on the display
+- usb: gadget: mass_storage: added sysfs entry for cdrom to LUNs (Using Android device as USB storage or CD-Rom/DriveDroid Support)
+  (About DriveDroid: https://play.google.com/store/apps/details?id=com.softwarebakery.drivedroid)
+
+== Recovery ==
+- jolla-kernel_bullhead-v5.1 applied
+
+== AIO ==
+- AIO: Add ramdisk compress type selection and init.d patch options (Already implemented in reuploaded v5.0)
+
+<b><#selectbg_g>[bullhead-v5.0]</#></b>
 == Kernel ==
 - Linux 3.10.96
 - mm: UKSM Support
