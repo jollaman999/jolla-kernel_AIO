@@ -24,6 +24,14 @@ function get-set-forall() {
 write /sys/devices/system/cpu/cpu4/online 0
 write /sys/devices/system/cpu/cpu5/online 0
 
+# disable msm hotplug to switch governor
+write /sys/module/msm_hotplug/msm_enabled 0
+
+# retore turned off A53 cores while disable msm hotplug
+write /sys/devices/system/cpu/cpu1/online 1
+write /sys/devices/system/cpu/cpu2/online 1
+write /sys/devices/system/cpu/cpu3/online 1
+
 # disable thermal bcl hotplug to switch governor
 write /sys/module/msm_thermal/core_control/enabled 0
 get-set-forall /sys/devices/soc.0/qcom,bcl.*/mode disable
@@ -124,6 +132,9 @@ get-set-forall /sys/devices/soc.0/qcom,bcl.*/mode disable
 get-set-forall /sys/devices/soc.0/qcom,bcl.*/hotplug_mask $bcl_hotplug_mask
 get-set-forall /sys/devices/soc.0/qcom,bcl.*/hotplug_soc_mask $bcl_hotplug_soc_mask
 get-set-forall /sys/devices/soc.0/qcom,bcl.*/mode enable
+
+# re-enable msm hotplug
+write /sys/module/msm_hotplug/msm_enabled 1
 
 # set GPU default power level to 5 (180MHz) instead of 4 (305MHz)
 write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 5
