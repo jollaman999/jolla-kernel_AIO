@@ -51,6 +51,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
   show_progress(0.6, 0.1);
   ui_print("-> Replacing ramdisk...");
   package_extract_file("jolla-kernel/bullhead/ramdisk/fstab.bullhead", "/tmp/ramdisk/fstab.bullhead");
+  package_extract_file("jolla-kernel/bullhead/ramdisk/init.bullhead.power.sh", "/tmp/ramdisk/init.bullhead.power.sh");
   package_extract_file("jolla-kernel/bullhead/ramdisk/jolla-kernel.prop", "/tmp/ramdisk/jolla-kernel.prop");
   set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.bullhead");
   set_perm(0, 0, 0644, "/tmp/ramdisk/jolla-kernel.prop");
