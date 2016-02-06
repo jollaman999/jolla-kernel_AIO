@@ -27,6 +27,11 @@ if [ ! -z "$(ls *-new.* 2> /dev/null)" ]; then
   echo " ";
 fi;
 
+# Change /system/bin/init.bullhead.power.sh to /init.bullhead.power.sh
+cd ramdisk;
+sed -i 's/\/system\/bin\/init.bullhead.power.sh/\/init.bullhead.power.sh/g' init.bullhead.rc;
+cd ..;
+
 rm -f ramdisk-new.cpio*;
 case $1 in
   --original)
