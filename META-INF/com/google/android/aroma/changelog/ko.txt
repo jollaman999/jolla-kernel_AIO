@@ -3,7 +3,25 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v5.1]</#></b></@>
+<b><#selectbg_g>[bullhead-v5.2]</#></b></@>
+== 커널 ==
+- fs: fsync on/off 를 다이나믹 fsync 로 변경
+- msm8992.dtsi: cpubw 기본 거버너를 bw_hwmon 으로 설정
+- power: IPA_WS 웨이크락 방지 on/off 지원
+- cpufreq_elementalx: lower sampling_down_factor for big cluster
+- sound_control: 코드 수정 및 클린업
+- GCC 6 misleading-indentation 경고들 수정
+
+== 리커버리 ==
+- TWRP v3.0.0 으로 버젼업
+- jolla-kernel_bullhead-v5.2 적용
+
+== AIO ==
+- ramdisk: init.bullhead.rc 추가
+- ramdisk: 수정된 init.bullhead.power.sh 스크립트를 init.bullhead.rc 에 포함시킴
+- 부팅 중에 빅 클러스터의 거버너가 performance 로 설정 되는 현상 수정
+
+<b><#selectbg_g>[bullhead-v5.1]</#></b>
 == 커널 ==
 - Google 로 부터 EAS 패치들 적용
   (EAS 정보: http://www.linaro.org/blog/core-dump/energy-aware-scheduling-eas-project/)
