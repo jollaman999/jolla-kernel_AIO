@@ -105,7 +105,7 @@ on boot
     # disable msm hotplug to switch governor
     write /sys/module/msm_hotplug/msm_enabled 0
 
-    # retore turned off A53 cores while disable msm hotplug
+    # restore turned off A53 cores while disable msm hotplug
     write /sys/devices/system/cpu/cpu1/online 1
     write /sys/devices/system/cpu/cpu2/online 1
     write /sys/devices/system/cpu/cpu3/online 1
