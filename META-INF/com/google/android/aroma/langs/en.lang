@@ -82,9 +82,18 @@ window1.title=Kernel Installation Option
 window1.subtitle=Select kernel installation option.
 window1.option1=Install Kernel
 window1.option1desc=If you want to install kernel, select this.
-window1.option2=jolla-TWRP Install Only
-window1.option2desc=Only install jolla-kernel based TWRP.\
-F2FS support included.
+window1.option2=Uninstall multirom and reinstall Kernel
+window1.option2desc=If you installed multirom and want to uninstall, select this.\
+(Do this option only in main rom!!)
+window1.option3=jolla-TWRP Install Only
+window1.option3desc=Only install jolla-kernel based MultiROM TWRP.\
+(F2FS support included.)\
+\
+If you want to move your main rom to second rom, select this.\
+\
+After intall recovery, go to Advanced->MultiROM->Swap ROMs\
+then select Move primary ROM to secandaries.\
+After you move your rom, install Multi ROM.
 
 window2.title=Version Selection
 window2.subtitle=Select your Android version.
@@ -122,6 +131,21 @@ initd.desc=This option enable to use init.d scripts in /system/etc/init.d folder
 initd.attention=init.d Patch warning
 initd.attentiondesc=If there is no busybox, this option will modify system partition.\
 Uncheck if you don't want to modify system partition.
+
+checkbox2.title=MultiROM Option
+checkbox2.subtitle=Select what you want.
+checkbox2.item1=MultiROM Boot
+checkbox2.item1uninst=Uninstall MultiROM is selected.
+checkbox2.item1-1=Install MultiROM Boot
+checkbox2.item1-1desc=Install MultiROM Boot that is possible to boot various roms with jolla-TWRP.
+multirom.attention=Multi ROM Warning
+multirom.attentiondesc=Do this option only in main rom!!
+
+checkbox3.title=Multi ROM Delete Option
+checkbox3.subtitle=Select Multi ROM delete option.
+checkbox3.item1=Delete Multi ROM
+checkbox3.item1-1=Delete second roms
+checkbox3.item1-1desc=This will remove all of roms except main rom.
 
 ramdisk.title=Ramdisk Options
 ramdisk.subtitle=Select compress type.

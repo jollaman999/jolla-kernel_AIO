@@ -11,17 +11,17 @@ run_program("/sbin/busybox", "mount", "/data");
 
 
 ############################ TWRP Only ################################
-if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="2" then
+if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="3" then
   ui_print(">>>>>TWRP Only<<<<<");
   ui_print("-> Installing TWRP");
   show_progress(0.5, 1);
   package_extract_file("jolla-recovery/twrp/recovery.img", "/dev/block/platform/soc.0/f9824900.sdhci/by-name/recovery");
 endif;
-## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="2"
+## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="3"
 
 
 
-if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
+if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
   ############################ bullhead Kernel ###############################
   ui_print(">>>Installing bullhead Kernel<<<");
@@ -45,6 +45,33 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
   ui_print("-> Unpacking boot.img...");
   run_program("/tmp/bin/busybox", "dd", "if=/dev/block/platform/soc.0/f9824900.sdhci/by-name/boot", "of=/tmp/boot.img");
   run_program("/tmp/unpackimg.sh");
+
+
+  ######## Multi ROM Uninstall ########
+  if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="2" then
+    show_progress(0.5, 1);
+    ui_print(">>>Uninstalling MultiROM<<<");
+
+    package_extract_dir("jolla-kernel/bullhead/multirom/uninst", "/tmp/");
+    set_perm(0, 0, 0755, "/tmp/clear_ramdisk.sh");
+    set_perm(0, 0, 0755, "/tmp/erase_multirom.sh");
+    set_perm(0, 0, 0755, "/tmp/erase_multirom_all.sh");
+
+    ui_print("-> Removing MultiROM from ramdisk...");
+    assert(run_program("/tmp/clear_ramdisk.sh") == 0);
+    if file_getprop("/tmp/aroma-data/checkbox3.prop","item.1.1")=="0" then
+      ui_print("-> Erasing Multi ROM");
+      assert(run_program("/tmp/erase_multirom.sh") == 0);
+    endif;
+    if file_getprop("/tmp/aroma-data/checkbox3.prop","item.1.1")=="1" then
+      ui_print("-> !!!Erasing Multi ROM with Second Roms!!!");
+      assert(run_program("/tmp/erase_multirom_all.sh") == 0);
+    endif;
+
+    ui_print("-> MultiROM was removed!");
+
+  endif;
+  ## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="2"
 
 
   ############ Replace ramdisk ############
@@ -128,8 +155,59 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1" then
     run_program("/sbin/busybox", "chown", "-R", "system.system", "/data/app/remote.hid.keyboard.client-1/");
   endif;
 
+
+  ######## Multi ROM Install ########
+  if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="2" then
+
+  if file_getprop("/tmp/aroma-data/checkbox2.prop","item.1.1")=="1" then
+    show_progress(0.96, 1);
+    ui_print(">>>Installing MultiROM<<<");
+
+    delete_recursive("/tmp/multirom");
+    run_program("/sbin/busybox", "mkdir", "/tmp/multirom");
+    package_extract_dir("jolla-kernel/bullhead/multirom/inst/multirom", "/tmp/multirom/");
+    package_extract_dir("jolla-kernel/bullhead/multirom/inst/scripts", "/tmp/");
+
+    set_perm(0, 0, 0777, "/tmp/multirom/busybox");
+    set_perm(0, 0, 0777, "/tmp/bbootimg");
+    set_perm(0, 0, 0777, "/tmp/extract_multirom.sh");
+    set_perm(0, 0, 0777, "/tmp/inject_boot.sh");
+
+    assert(run_program("/tmp/extract_multirom.sh") == 0);
+    ui_print("-> Injecting boot image...");
+    assert(run_program("/tmp/inject_boot.sh") == 0);
+
+    ui_print("-> Cleaning up...");
+    delete_recursive("/tmp/boot");
+    delete_recursive("/tmp/multirom");
+    delete("/tmp/bbootimg");
+    delete("/tmp/bootimg.cfg");
+    delete("/tmp/initrd.img");
+    delete("/tmp/zImage");
+    delete("/tmp/boot.img");
+    delete("/tmp/dtb.img");
+    delete("/tmp/second.img");
+    delete("/tmp/newboot.img");
+    delete("/tmp/extract_multirom.sh");
+    delete("/tmp/inject_boot.sh");
+    delete("/tmp/bootdev");
+    delete("/tmp/rd_addr");
+    delete("/tmp/use_mrom_fstab");
+
+    ui_print("-> Installing Muti ROM TWRP");
+    package_extract_file("jolla-recovery/twrp/recovery.img", "/dev/block/platform/soc.0/f9824900.sdhci/by-name/recovery");
+
+    ui_print("-> MultiROM was Installed!!");
+
+  endif;
+  ## endif file_getprop("/tmp/aroma-data/checkbox2.prop","item.1.1")=="1"
+
+  endif;
+  ## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="2"
+
+
 endif;
-## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="1"
+## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3"
 
 show_progress(1.0, 0);
 ui_print("");
