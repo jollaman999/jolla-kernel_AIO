@@ -146,6 +146,9 @@ checkbox3.subtitle=멀티롬 제거 옵션을 선택해 주세요.
 checkbox3.item1=멀티롬 제거
 checkbox3.item1-1=세컨롬들 제거
 checkbox3.item1-1desc=메인롬을 제외한 나머지 세컨롬들을 모두 제거합니다.
+multidel.attention=세컨롬들 제거 경고
+multidel.attentiondesc=이 작업을 수행하면 메인롬을 제외한 모든 롬들이 지워집니다!!\
+세컨롬들을 제거하시기 전에 백업이 필요한지 다시 한번 확인해 주시기 바랍니다.
 
 ramdisk.title=램디스크 옵션
 ramdisk.subtitle=압축 옵션을 선택하세요.

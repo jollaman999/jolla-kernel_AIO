@@ -146,6 +146,9 @@ checkbox3.subtitle=Select Multi ROM delete option.
 checkbox3.item1=Delete Multi ROM
 checkbox3.item1-1=Delete second roms
 checkbox3.item1-1desc=This will remove all of roms except main rom.
+multidel.attention=Delete second roms Warning
+multidel.attentiondesc=This will remove all of roms except main rom!!\
+Please check again if there are backup needed.
 
 ramdisk.title=Ramdisk Options
 ramdisk.subtitle=Select compress type.

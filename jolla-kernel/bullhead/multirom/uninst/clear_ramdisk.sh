@@ -10,7 +10,7 @@ if [ -e main_init ] ; then
     rm init;
     mv main_init init;
 fi;
-chmod 750 init;
+chmod 0755 init;
 
 # Remove mrom.fstab
 if [ -e mrom.fstab ] ; then
