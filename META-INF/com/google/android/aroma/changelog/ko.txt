@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v5.2]</#></b></@>
+<b><#selectbg_g>[bullhead-v6.0_beta]</#></b></@>
+== 커널 ==
+- kexec hardboot 지원
+
+== AIO ==
+- MultiROM 지원!! (Experimental)
+
+== 리커버리 ==
+- MultiROM TWRP v3.0.0-0
+- jolla-kernel_bullhead-v6.0_beta 적용
+
+<b><#selectbg_g>[bullhead-v5.2]</#></b>
 == 커널 ==
 - fs: fsync on/off 를 다이나믹 fsync 로 변경
 - msm8992.dtsi: cpubw 기본 거버너를 bw_hwmon 으로 설정
