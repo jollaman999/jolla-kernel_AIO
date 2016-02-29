@@ -3,7 +3,25 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v6.0_beta]</#></b></@>
+<b><#selectbg_g>[bullhead-v6.0]</#></b></@>
+== 커널 ==
+- Linux 3.10.98
+- 변경사항 취소 "bullhead_defconfig: FB_MSM_MDSS_HDMI_PANEL 활성화"
+- 변경사항 취소 "bullhead_defconfig: 모듈 지원 활성화"
+- msm_hotplug, cpu, fingerprint: 지문인식이 작동하는 중에 모든 cpu 켜도록 함
+  (가끔 지문인식이 작동하지 않는 문제 수정.)
+- msm8992 오버클럭 지원
+
+== AIO ==
+- MultiROM: kexec 의 잘못된 주소들 수정 (이제 세컨 롬들이 각 롬들의 커널과 정삭적으로 부팅됩니다.)
+- MultiROM: adbd closed 문제 수정
+- MultiROM: 최신 cm-13.0 소스들로 재빌드
+
+== 리커버리 ==
+- adbd closed 문제 수정
+- jolla-kernel_bullhead-v6.0 적용
+
+<b><#selectbg_g>[bullhead-v6.0_beta]</#></b>
 == 커널 ==
 - kexec hardboot 지원
 

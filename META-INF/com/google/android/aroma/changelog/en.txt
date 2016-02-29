@@ -3,7 +3,25 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v6.0_beta]</#></b></@>
+<b><#selectbg_g>[bullhead-v6.0]</#></b></@>
+== Kernel ==
+- Linux 3.10.98
+- Revert "bullhead_defconfig: Enable FB_MSM_MDSS_HDMI_PANEL"
+- Revert "bullhead_defconfig: Enable MODULES support"
+- msm_hotplug, cpu, fingerprint: Turn on all of cpus when fingerprint working
+  (Fix fingerprint not working sometimes.)
+- msm8992 initial overclocking
+
+== AIO ==
+- MultiROM: Fix kexec's wrong addresses (Now secondary roms are booting normally with their kernels.)
+- MultiROM: Fix adbd closed issue
+- MultiROM: Rebuild with recent cm-13.0 sources
+
+== Recovery ==
+- Fix adbd closed issue
+- jolla-kernel_bullhead-v6.0 applied
+
+<b><#selectbg_g>[bullhead-v6.0_beta]</#></b>
 == Kernel ==
 - kexec hardboot support
 
