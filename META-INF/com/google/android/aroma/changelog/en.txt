@@ -3,7 +3,29 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v6.0]</#></b></@>
+<b><#selectbg_g>[bullhead-v6.1]</#></b></@>
+== Kernel ==
+- Linux 3.10.99
+- Revert "msm8992 initial overclocking" (It needs more fix for frequency tables and it makes kernel panic sometimes.)
+- f2fs: Applied recent f2fs-stable patches
+- f2fs: recovery missing dot dentries in root directory
+- kexec: Applied upstream patches
+- msm: Applies some patches for ipa, sps, camera
+- dm-crypt: run in a WQ_HIGHPRI workqueue
+- dm-verity: run in a WQ_HIGHPRI workqueue
+- mmc: move to a SCHED_FIFO thread
+- net: tcp: fix rtable leak in tcp_is_local[6]
+- dm: Add android verity target
+- dm: boot time specification of dm=
+
+== AIO ==
+- MultiROM: Fix fingerprints problem after booting into secondary ROMs
+
+== Recovery ==
+- Get images from z31s1g's Play theme
+- jolla-kernel_bullhead-v6.1 applied
+
+<b><#selectbg_g>[bullhead-v6.0]</#></b>
 == Kernel ==
 - Linux 3.10.98
 - Revert "bullhead_defconfig: Enable FB_MSM_MDSS_HDMI_PANEL"
