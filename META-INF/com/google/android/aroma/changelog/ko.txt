@@ -3,7 +3,14 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v6.1]</#></b></@>
+<b><#selectbg_g>[bullhead-v6.2]</#></b></@>
+== Kernel ==
+- Google 로 부터 최신 EAS 패치들 적용
+
+== Recovery ==
+- jolla-kernel_bullhead-v6.2 적용
+
+<b><#selectbg_g>[bullhead-v6.1]</#></b>
 == 커널 ==
 - Linux 3.10.99
 - 변경사항 취소 "msm8992 initial overclocking" (클럭 테이블을 위한 추가적인 수정이 필요하고 가끔 커널 패닉을 일으킴.)

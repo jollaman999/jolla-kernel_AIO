@@ -3,7 +3,14 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v6.1]</#></b></@>
+<b><#selectbg_g>[bullhead-v6.2]</#></b></@>
+== Kernel ==
+- Applied recent EAS patches from Google
+
+== Recovery ==
+- jolla-kernel_bullhead-v6.2 applied
+
+<b><#selectbg_g>[bullhead-v6.1]</#></b>
 == Kernel ==
 - Linux 3.10.99
 - Revert "msm8992 initial overclocking" (It needs more fix for frequency tables and it makes kernel panic sometimes.)
