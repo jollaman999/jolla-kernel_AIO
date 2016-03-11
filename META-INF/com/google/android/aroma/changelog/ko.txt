@@ -3,14 +3,24 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v6.2]</#></b></@>
-== Kernel ==
-- Google 로 부터 최신 EAS 패치들 적용
+<b><#selectbg_g>[bullhead-v7.0]</#></b></@>
+== 커널 ==
+- Linux 3.10.100
+- 구글로 부터 Android M, Android N 최신 패치들 적용
+- msm_hotplug, fingerprint: 지문 인식 관련 수정
+- block: SIOPLUS I/O 스케줄러 추가
+- sovc, wcd9330: 터치 끄기 지연시간 증가
+- sovc: 볼륨 컨트롤 터치 거리 감소
+- sovc: 트랙 컨트롤 재실행 지연 시간 증가
 
-== Recovery ==
-- jolla-kernel_bullhead-v6.2 적용
+== AIO ==
+- Android N 지원 (jolla-kernel_bullhead-v7.0N)
+- A2DPChecker: 재생중 체크 지연시간 증가
 
-<b><#selectbg_g>[bullhead-v6.1]</#></b>
+== 리커버리 ==
+- jolla-kernel_bullhead-v7.0 적용
+
+<b><#selectbg_g>[bullhead-v6.2]</#></b>
 == 커널 ==
 - Linux 3.10.99
 - 변경사항 취소 "msm8992 initial overclocking" (클럭 테이블을 위한 추가적인 수정이 필요하고 가끔 커널 패닉을 일으킴.)

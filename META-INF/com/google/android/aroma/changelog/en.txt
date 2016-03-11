@@ -3,7 +3,24 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v6.2]</#></b></@>
+<b><#selectbg_g>[bullhead-v7.0]</#></b></@>
+== Kernel ==
+- Linux 3.10.100
+- Applied Android M and Android N recent patches from Google
+- msm_hotplug, fingerprint: Fix related with fingerprint
+- block: add SIOPLUS I/O scheduler
+- sovc, wcd9330: Increase touch off delay time
+- sovc: Decrease touch degree for volume control
+- sovc: Increase re-exec delay for track control
+
+== AIO ==
+- Android N support (jolla-kernel_bullhead-v7.0N)
+- A2DPChecker: Increase PLAYING_CHECK_DELAY
+
+== Recovery ==
+- jolla-kernel_bullhead-v7.0 applied
+
+<b><#selectbg_g>[bullhead-v6.2]</#></b>
 == Kernel ==
 - Applied recent EAS patches from Google
 

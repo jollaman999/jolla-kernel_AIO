@@ -99,8 +99,14 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
   ############ Replace Image.gz-dtb ############
   show_progress(0.7, 0.1);
-  ui_print("-> Replacing bullhead Image.gz-dtb...");
-  package_extract_file("jolla-kernel/bullhead/Image/Image.gz-dtb", "/tmp/split_img/boot.img-zImage");
+  if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
+    ui_print("-> Replacing M's bullhead Image.gz-dtb...");
+    package_extract_file("jolla-kernel/bullhead/Image/m/Image.gz-dtb", "/tmp/split_img/boot.img-zImage");
+  endif;
+  if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="2" then
+    ui_print("-> Replacing N's bullhead Image.gz-dtb...");
+    package_extract_file("jolla-kernel/bullhead/Image/n/Image.gz-dtb", "/tmp/split_img/boot.img-zImage");
+  endif;
 
 
   ############ Ramdisk Compress Option ############
