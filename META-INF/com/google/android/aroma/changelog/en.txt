@@ -15,9 +15,11 @@
 
 == AIO ==
 - Android N support (jolla-kernel_bullhead-v7.0N)
+- multirom: MHC19J support
 - A2DPChecker: Increase PLAYING_CHECK_DELAY
 
 == Recovery ==
+- MHC19J support
 - jolla-kernel_bullhead-v7.0 applied
 
 <b><#selectbg_g>[bullhead-v6.2]</#></b>
