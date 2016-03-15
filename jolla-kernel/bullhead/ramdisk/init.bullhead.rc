@@ -18,7 +18,6 @@ import init.bullhead.usb.rc
 import init.bullhead.diag.rc
 import init.bullhead.fp.rc
 import init.bullhead.sensorhub.rc
-import init.bullhead.ramdump.rc
 import init.bullhead.misc.rc
 
 on early-init
@@ -53,9 +52,6 @@ on property:sys.boot_completed=1
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
 on init
-    # Load persistent dm-verity state
-    verity_load_state
-
     # Set permissions for persist partition
     mkdir /persist 0771 system system
     mkdir /firmware 0771 system system
@@ -87,12 +83,6 @@ on early-boot
     write /sys/module/pil_msa/parameters/pbl_mba_boot_timeout_ms ${persist.sys.mba_boot_timeout}
     write /sys/module/pil_msa/parameters/modem_auth_timeout_ms ${persist.sys.modem_auth_timeout}
     write /sys/module/peripheral_loader/parameters/proxy_timeout_ms ${persist.sys.pil_proxy_timeout}
-
-    # Adjust parameters for dm-verity device
-    write /sys/block/dm-0/queue/read_ahead_kb 2048
-
-    # Update dm-verity state and set partition.*.verified properties
-    verity_update_state
 
 on boot
     symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
@@ -245,7 +235,7 @@ on boot
     write /sys/bus/msm_subsys/devices/subsys3/restart_level "related"
 
     # Subsytem Ramdump collection
-    write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
+    write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
     write /sys/module/msm_poweroff/parameters/download_mode 0
 
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth
@@ -406,14 +396,6 @@ on property:ro.boot.hardware.sku=LGH791F
 on property:ro.boot.hardware.sku=LGH798
     setprop ro.boot.wificountrycode 00
 
-service thermal-engine /system/bin/thermal-engine
-    class main
-    user root
-    socket thermal-send-client stream 0666 system system
-    socket thermal-recv-client stream 0660 system system
-    socket thermal-recv-passive-client stream 0666 system system
-    group root
-
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
 
@@ -520,15 +502,6 @@ service atfwd /system/bin/ATFWD-daemon
     user system
     group system radio
 
-on property:ro.debuggable=1
-    start ss_ramdump
-
-service ss_ramdump /system/bin/subsystem_ramdump
-    class main
-    user root
-    group root system
-    disabled
-
 service cnd /system/bin/cnd
     class late_start
     socket cnd stream 660 root inet
@@ -559,14 +532,6 @@ service bullhead-sh /system/bin/init.bullhead.sh
     user radio
     group system
     oneshot
-
-# bugreport is triggered by holding down volume down, volume up and power
-service bugreport /system/bin/dumpstate -d -p -B \
-        -o /data/data/com.android.shell/files/bugreports/bugreport
-    class main
-    disabled
-    oneshot
-    keycodes 114 115 116
 
 service fingerprintd /system/bin/fingerprintd
     class late_start
