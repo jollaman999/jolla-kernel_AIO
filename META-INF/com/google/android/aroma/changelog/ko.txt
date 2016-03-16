@@ -3,7 +3,30 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v7.0]</#></b></@>
+<b><#selectbg_g>[bullhead-v7.1]</#></b></@>
+== 커널 ==
+- ASoC: Dirty Unicorns 같은 일부 롬에서 mp3 파일들이 재생되지 않는 현상 수정
+- camera: MHC19J 와 N 에서 손전등 타일이 작동하지 않는 문제 수정
+
+- ASoC: wcd9330: Update speaker driver OCP current register
+- drivers: mfd: Add support to configure OCP current limit
+- ASoC: msm: qdsp6v2: Fix invalid num_codecs
+- ASoC: pcm: Use the power efficient workqueue for delayed powerdown
+- ASoC: jack: Use power efficient workqueue
+- ASoC: compress: Use power efficient workqueue
+- workqueues: Introduce new flag WQ_POWER_EFFICIENT for power oriented workqueues
+- workqueue: Add system wide power_efficient workqueues
+- workqueue: Fix permission for power_efficient workqueue
+- PHYLIB: queue work on system_power_efficient_wq
+- block: queue work on power efficient wq
+- fbcon: queue work on power efficient wq
+- regulator: core: Use the power efficient workqueue for delayed powerdown
+
+== 리커버리 ==
+- omni android-6.0 최신 TWRP 패치들 적용
+- jolla-kernel_bullhead-v7.1 적용
+
+<b><#selectbg_g>[bullhead-v7.0]</#></b>
 == 커널 ==
 - Linux 3.10.100
 - 구글로 부터 Android M, Android N 최신 패치들 적용

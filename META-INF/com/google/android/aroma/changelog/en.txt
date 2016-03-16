@@ -3,7 +3,30 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v7.0]</#></b></@>
+<b><#selectbg_g>[bullhead-v7.1]</#></b></@>
+== Kernel ==
+- ASoC: Fix can't play mp3 files in some of roms like Dirty Unicorns
+- camera: Fix torch tile not working in MHC19J and N
+
+- ASoC: wcd9330: Update speaker driver OCP current register
+- drivers: mfd: Add support to configure OCP current limit
+- ASoC: msm: qdsp6v2: Fix invalid num_codecs
+- ASoC: pcm: Use the power efficient workqueue for delayed powerdown
+- ASoC: jack: Use power efficient workqueue
+- ASoC: compress: Use power efficient workqueue
+- workqueues: Introduce new flag WQ_POWER_EFFICIENT for power oriented workqueues
+- workqueue: Add system wide power_efficient workqueues
+- workqueue: Fix permission for power_efficient workqueue
+- PHYLIB: queue work on system_power_efficient_wq
+- block: queue work on power efficient wq
+- fbcon: queue work on power efficient wq
+- regulator: core: Use the power efficient workqueue for delayed powerdown
+
+== Recovery ==
+- Applied lastest TWRP patches from omni android-6.0
+- jolla-kernel_bullhead-v7.1 applied
+
+<b><#selectbg_g>[bullhead-v7.0]</#></b>
 == Kernel ==
 - Linux 3.10.100
 - Applied Android M and Android N recent patches from Google
