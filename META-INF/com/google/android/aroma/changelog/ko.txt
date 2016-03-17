@@ -3,7 +3,17 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v7.1]</#></b></@>
+<b><#selectbg_g>[bullhead-v7.2]</#></b></@>
+== 커널 ==
+- Linux 3.10.101
+
+== AIO ==
+- SOVC On/Off 지원
+
+== 리커버리 ==
+- jolla-kernel_bullhead-v7.2 적용
+
+<b><#selectbg_g>[bullhead-v7.1]</#></b>
 == 커널 ==
 - ASoC: Dirty Unicorns 같은 일부 롬에서 mp3 파일들이 재생되지 않는 현상 수정
 - camera: MHC19J 와 N 에서 손전등 타일이 작동하지 않는 문제 수정

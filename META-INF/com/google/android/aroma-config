@@ -13,10 +13,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "jolla-kernel");
-ini_set("rom_version",          "v7.1");
+ini_set("rom_version",          "v7.2");
 ini_set("rom_author",           "jollaman999");
 ini_set("rom_device",           "bullhead");
-ini_set("rom_date",             "Mar 16, 2016");
+ini_set("rom_date",             "Mar 18, 2016");
 
 
 ##
@@ -442,6 +442,34 @@ if prop("checkbox1.prop","item.2.1")=="1" then
 endif;
 if prop("checkbox1.prop","item.4.1")=="1" then
   alert( "<~initd.attention>", "<~initd.attentiondesc>");
+endif;
+
+
+selectbox(
+  # Title
+	"<~sovc.title>",
+
+  # Sub Title
+	"<~sovc.subtitle>",
+
+  # Icon
+	"@update",
+
+  # Will be saved in /tmp/aroma/sovc.prop
+	"sovc.prop",
+
+  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+  # TITLE            |  SUBTITLE                                                 | Initial Value #
+  #------------------+-----------------------------------------------------------+---------------#
+
+  "<~sovc_onoff.title>",      "",                                               2,      #-- Group 1. key = "selected.1"
+    "<~sovc_on.item>",        "<~sovc_on.desc>",                                   1,      #-- selected.1 = 1
+    "<~sovc_off.item>",       "<~sovc_off.desc>",                                  0       #-- selected.1 = 2
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+);
+
+if prop("sovc.prop","selected.1")=="2" then
+  alert( "<~sovc.attention>", "<~sovc.attentiondesc>");
 endif;
 
 

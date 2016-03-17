@@ -152,6 +152,16 @@ multidel.attention=Delete second roms Warning
 multidel.attentiondesc=This will remove all of roms except main rom!!\
 Please check again if there are backup needed.
 
+sovc.title=SOVC
+sovc.subtitle=Screen Off Volume Control
+sovc_onoff.title=On or Off?
+sovc_on.item=Turn on SOVC
+sovc_on.desc=You can control volume or track with touchscreen while screen turned off.
+sovc_off.item=Turn off SOVC
+sovc_off.desc=Did you try it..? :(
+sovc.attention=SOVC Off Attention
+sovc.attentiondesc=This action will modify your system partition!
+
 ramdisk.title=Ramdisk Options
 ramdisk.subtitle=Select compress type.
 compress.title=Compress options
