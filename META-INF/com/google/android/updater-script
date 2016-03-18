@@ -36,6 +36,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   ui_print("-> Ready to install bullhead kernel...");
   package_extract_dir("jolla-kernel/bullhead/mkbootimg", "/tmp");
   set_perm(0, 0, 0755, "/tmp/bin/busybox");
+  set_perm(0, 0, 0755, "/tmp/multirom_hack.sh");
   set_perm(0, 0, 0755, "/tmp/repackimg.sh");
   set_perm(0, 0, 0755, "/tmp/unpackimg.sh");
 
@@ -235,6 +236,9 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   endif;
   ## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="2"
 
+  ######## Multi ROM Hack ########
+  ui_print("-> Checking Multi ROM state...");
+  run_program("/tmp/multirom_hack.sh");
 
 endif;
 ## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3"
