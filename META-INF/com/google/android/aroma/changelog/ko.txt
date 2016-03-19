@@ -3,7 +3,20 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v7.2]</#></b></@>
+<b><#selectbg_g>[bullhead-v7.3]</#></b></@>
+== 커널 ==
+- cpufreq: despair 거버너 추가
+- cpufreq: bioshock 거버너 추가
+- cpufreq: despair: 사용되지 않는 cpufreq_notify_utilization 제거
+
+== AIO ==
+- multirom_hack.sh 추가 (2nd 롬들에서 설치가 되지 않는 현상 수정)
+
+== 리커버리 ==
+- omni android-6.0 최신 TWRP 패치들 적용
+- jolla-kernel_bullhead-v7.3 적용
+
+<b><#selectbg_g>[bullhead-v7.2]</#></b>
 == 커널 ==
 - Linux 3.10.101
 
