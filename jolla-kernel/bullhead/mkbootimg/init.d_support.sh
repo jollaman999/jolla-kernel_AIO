@@ -35,6 +35,10 @@ if [ "$foundcount" -eq 0 ]; then
         echo "    group root" >> init.rc
 fi
 
+if [ ! -d "/system/etc/init.d" ]; then
+	mkdir -p /system/etc/init.d;
+fi
+
 echo " ";
 echo "Done!";
 exit 0;
