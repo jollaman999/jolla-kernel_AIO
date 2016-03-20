@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v7.3]</#></b></@>
+<b><#selectbg_g>[bullhead-v7.4]</#></b></@>
+== 커널 ==
+- msm_thermal, msm8992.dts: 온도 제어 개선
+
+== AIO ==
+- updater-script: 빠진 'init.superuser.rc' 파일 압축풀도록 함
+- mkbootimg: 일부 롬에서의 init.d 와 SOVC off 문제 수정
+
+== 리커버리 ==
+- jolla-kernel_bullhead-v7.4 적용
+
+<b><#selectbg_g>[bullhead-v7.3]</#></b>
 == 커널 ==
 - cpufreq: despair 거버너 추가
 - cpufreq: bioshock 거버너 추가

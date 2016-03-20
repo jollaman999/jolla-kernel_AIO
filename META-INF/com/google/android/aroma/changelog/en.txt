@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v7.3]</#></b></@>
+<b><#selectbg_g>[bullhead-v7.4]</#></b></@>
+== Kernel ==
+- msm_thermal, msm8992.dts: Improve thermal control
+
+== AIO ==
+- updater-script: Extract missed 'init.superuser.rc'
+- mkbootimg: Fix init.d and SOVC off issue with some of roms
+
+== Recovery ==
+- jolla-kernel_bullhead-v7.4 applied
+
+<b><#selectbg_g>[bullhead-v7.3]</#></b>
 == Kernel ==
 - cpufreq: add despair governor
 - cpufreq: add bioshock governor
