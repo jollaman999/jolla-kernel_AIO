@@ -12,5 +12,9 @@ if [ "$foundcount" != 0 ]; then
   echo "mrom_path=""$mrom_path"
 
   cp /tmp/image-new.img "$mrom_path""/boot.img"
+
+  echo "multirom=1" > /tmp/aroma-data/multirom.prop
+else
+  echo "multirom=0" > /tmp/aroma-data/multirom.prop
 fi
 
