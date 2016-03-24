@@ -1,0 +1,3 @@
+#!/system/bin/sh
+
+echo "jolla-kernel Init Script Working!";

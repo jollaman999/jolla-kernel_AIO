@@ -132,6 +132,8 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
     ui_print("-> Patching init.d...");
     set_perm(0, 0, 0755, "/tmp/init.d_support.sh");
     run_program("/tmp/init.d_support.sh");
+    package_extract_dir("jolla-kernel/bullhead/etc/", "/system/etc/");
+    set_perm(0, 2000, 0755, "/system/etc/init.d/77jolla-kernel");
   endif;
 
 
@@ -143,12 +145,14 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
   if file_getprop("/tmp/aroma-data/sovc.prop","selected.1")=="2" then
     ui_print("-> Turning Off SOVC...");
-    package_extract_file("jolla-kernel/bullhead/sovc/77sovc_off", "/system/etc/init.d/77sovc_off");
-    set_perm(0, 2000, 0755, "/system/etc/init.d/77sovc_off");
     if file_getprop("/tmp/aroma-data/checkbox1.prop","item.4.1")!="1" then
       set_perm(0, 0, 0755, "/tmp/init.d_support.sh");
       run_program("/tmp/init.d_support.sh");
+      package_extract_dir("jolla-kernel/bullhead/etc/", "/system/etc/");
+      set_perm(0, 2000, 0755, "/system/etc/init.d/77jolla-kernel");
     endif;
+    package_extract_file("jolla-kernel/bullhead/sovc/77sovc_off", "/system/etc/init.d/77sovc_off");
+    set_perm(0, 2000, 0755, "/system/etc/init.d/77sovc_off");
   endif;
 
 
