@@ -3,7 +3,33 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v7.4]</#></b></@>
+<b><#selectbg_g>[bullhead-v8.0]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- bcl, msm8992.dtsi: cpu 와 관련된 모든 코드들 제거 (cpufreq, cpumask)
+- sovc, synaptics, mdss: suspend 상태에서 음악이 정지된 후 패널 끄기
+- msm_thermal: 모든 기능들이 올바르게 작동하도록 수정
+- wlan: qcacld-2.0: 일부 코드 n-preview 와 맞춤
+- crypto: crc32 - ARM64 CRC32 하드웨어 가속화 모듈 추가
+- crypto: arm64: Linux 4.5 일부 패치들 적용
+- f2fs: 최신 f2fs-stable linux-4.1.y 브랜치 패치들 적용
+- 닥X cpu cacpcity!! (다량의 kernel 로그들)
+
+>> M <<
+- camera: 비디오 레코딩 문제 수정
+
+== AIO ==
+- SOVC off 시 설치 문제 수정
+- Multi ROM Manager 추가
+- sepolicy: 바이너리 업데이트
+- sepolicy: NFC selinux 거부 문제 수정
+- multirom: 최신 cm-13.0 소스들과 재빌드
+
+== 리커버리 ==
+- 최신 cm-13.0 소스들과 재빌드
+- jolla-kernel_bullhead-v8.0 적용
+
+<b><#selectbg_g>[bullhead-v7.4]</#></b>
 == 커널 ==
 - msm_thermal, msm8992.dts: 온도 제어 개선
 
