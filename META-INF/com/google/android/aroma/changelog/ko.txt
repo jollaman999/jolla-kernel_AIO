@@ -27,7 +27,6 @@
 
 == 리커버리 ==
 - 최신 cm-13.0 소스들과 재빌드
-- jolla-kernel_bullhead-v8.0 적용
 
 <b><#selectbg_g>[bullhead-v7.4]</#></b>
 == 커널 ==
