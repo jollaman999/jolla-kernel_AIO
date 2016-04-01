@@ -3,7 +3,34 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v8.0]</#></b></@>
+<b><#selectbg_g>[bullhead-v8.1]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- wlan: qcacld-2.0: CAF 로 부터 LA.BF64.1.2.2_rb4.30 가져옴
+- msm_hotplug: big core down delay 파라미터 제거
+- msm_hotplug: big core 들에 대해 apply_down_lock 수행
+- msm_hotplug: big core 들의 cpu down 수정
+- msm_hotplug: input handler 제거
+- msm_hotplug: 2 개의 little core 들이 항상 켜져 있도록 함
+- msm_hotplug: max_cpus_online_susp 가 1 보다 클 경우에 대해 msm_hotplug_suspend() 수정
+- msm_thermal: 디바이스가 일시정지 상태일 때 비활성화
+- msm8992.dtsi: 온도 제한 조절
+- f2fs: 최신 f2fs-stable 과 dev-test 패치들 적용
+- 변경 사항 취소 "sovc, synaptics, mdss: suspend 상태에서 음악이 정지된 후 패널 끄기"
+  (효과가 없을 뿐더러 리커버리나 충전 모드로 부팅 불가.)
+- spi_qsd: Vote for PNOC clock before spi clock
+- spi_qsd: Exit gracefully if the system is suspended
+- spi: spi_qsd: Fix unmasked write to IO control register
+
+== AIO ==
+- sepolicy: 바이너리 업데이트
+
+== 리커버리 ==
+- TWRP v3.0.1-0 로 버젼업
+- f2fs-tools: dev 브랜치 패치들 적용
+- jolla-kernel_bullhead-v8.1 적용
+
+<b><#selectbg_g>[bullhead-v8.0]</#></b>
 == 커널 ==
 >> 공통 <<
 - bcl, msm8992.dtsi: cpu 와 관련된 모든 코드들 제거 (cpufreq, cpumask)

@@ -3,7 +3,34 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v8.0]</#></b></@>
+<b><#selectbg_g>[bullhead-v8.1]</#></b></@>
+== Kernel ==
+>> Common <<
+- wlan: qcacld-2.0: Get LA.BF64.1.2.2_rb4.30 from CAF
+- msm_hotplug: Remove big core down delay parameter
+- msm_hotplug: Do apply_down_lock for big cores
+- msm_hotplug: Fix cpu down of big cores
+- msm_hotplug: Remove input handler
+- msm_hotplug: Make 2 of little cores always on
+- msm_hotplug: Fix msm_hotplug_suspend() when max_cpus_online_susp is lager than 1
+- msm_thermal: Go to disable mode when device suspended
+- msm8992.dtsi: Adjust temp limit
+- f2fs: Applies lastes f2fs-stable and dev-test patches
+- Revert "sovc, synaptics, mdss: Turn off panel after music stopped when suspended"
+  (This has no effect and can't boot to recovery or charging mode.)
+- spi_qsd: Vote for PNOC clock before spi clock
+- spi_qsd: Exit gracefully if the system is suspended
+- spi: spi_qsd: Fix unmasked write to IO control register
+
+== AIO ==
+- sepolicy: Update binary
+
+== Recovery ==
+- TWRP version up to v3.0.1-0
+- f2fs-tools: Applied dev branch patches
+- jolla-kernel_bullhead-v8.1 applied
+
+<b><#selectbg_g>[bullhead-v8.0]</#></b>
 == Kernel ==
 >> Common <<
 - bcl, msm8992.dtsi: Remove all of cpu related codes (cpufreq, cpumask)
