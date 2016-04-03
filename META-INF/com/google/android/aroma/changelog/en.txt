@@ -3,7 +3,27 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v8.1]</#></b></@>
+<b><#selectbg_g>[bullhead-v8.2]</#></b></@>
+== Kernel ==
+>> Common <<
+- Built with UBERTC gcc 6.0.0 20160401
+- Revert "bcl, msm8992.dtsi: Remove all of cpu related codes (cpufreq, cpumask)"
+- Revert "power: bcl: Remove hotplug and freq-control"
+- power: bcl: Re-evaluate hotplug for unexpected cpu online
+
+== AIO ==
+- Built with UBERTC gcc 6.0.0 20160401
+- multirom: Lockscreen Settings on 2nd roms are now available
+- sepolicy: Update binary
+
+== Recovery ==
+- Built with UBERTC gcc 6.0.0 20160401
+- Fix duplicated main screen after decrypted
+- themes_multirom: Add Reboot Option
+- Applied lastest TWRP patches from omni android-6.0
+- jolla-kernel_bullhead-v8.2 applied
+
+<b><#selectbg_g>[bullhead-v8.1]</#></b>
 == Kernel ==
 >> Common <<
 - wlan: qcacld-2.0: Get LA.BF64.1.2.2_rb4.30 from CAF
