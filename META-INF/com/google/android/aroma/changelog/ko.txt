@@ -3,9 +3,39 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v8.2]</#></b></@>
-== Kernel ==
->> Common <<
+<b><#selectbg_g>[bullhead-v8.4]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- wlan: qcacld-2.0: 스캔이 완료된 후 Runtime PM 허용
+- ARM64 CRC32 하드웨어 가속 모듈을 제외하고 crypto 변경사항들 취소
+  (배터리 드레인 현상 수정.)
+- sdcardfs 파일시스템 추가
+- PM 업스트림 변경사항들 취소
+- msm: camera: actuator 메모리 누수 수정
+- bullhead_defconfig: 기본 io 스케줄러 CFQ 로 변경
+- msm8992.dtsi: 온도 제한 조절
+- pipe: Fix buffer offset after partially failed read
+- cpufreq: use memcpy() to copy policy
+- cpufreq: update user_policy.* on success
+- cpufreq: Clean up after a failing light-weight initialization
+- cpufreq: preserve user_policy across suspend/resume
+- Revert "cpufreq: Don't create empty /sys/devices/system/cpu/cpufreq directory"
+- cpufreq: fix uevent broken issue
+- cpufreq: don't send frozen uevent
+- cpufreq: Fix up sysfs api usage
+- cpufreq: impulse: Remove global object usage
+
+== AIO ==
+- multirom: 바이너리들 업데이트
+- sepolicy: 바이너리 업데이트
+
+== 리커버리 ==
+- TWRP v3.0.2-0 로 버젼업
+- jolla-kernel_bullhead-v8.4 적용
+
+<b><#selectbg_g>[bullhead-v8.2]</#></b>
+== 커널 ==
+>> 공통 <<
 - UBERTC gcc 6.0.0 20160401 로 빌드
 - 변경 사항 취소 "cpu 와 관련된 모든 코드들 제거 (cpufreq, cpumask)"
 - 변경 사항 취소 "power: bcl: 핫플러그와 freq-control 제거"
@@ -16,7 +46,7 @@
 - multirom: 이제 2nd 롬들에서 잠금화면 설정이 가능합니다
 - sepolicy: 바이너리 업데이트
 
-== Recovery ==
+== 리커버리 ==
 - UBERTC gcc 6.0.0 20160401 로 빌드
 - 복호화 후 메인화면이 중복되는 문제 해결
 - themes_multirom: 재부팅 옵션 추가

@@ -3,7 +3,37 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v8.2]</#></b></@>
+<b><#selectbg_g>[bullhead-v8.4]</#></b></@>
+== Kernel ==
+>> Common <<
+- wlan: qcacld-2.0: Allow Runtime PM after Scan Completion
+- Revert crypto changes except ARM64 CRC32 hw accelerated module
+  (Fix battery drain.)
+- Add sdcardfs filesystem
+- Revert PM upstream changes
+- msm: camera: Fix for Memory leak in actuator
+- bullhead_defconfig: Change default io-sched to CFQ
+- msm8992.dtsi: Adjust thermal limit
+- pipe: Fix buffer offset after partially failed read
+- cpufreq: use memcpy() to copy policy
+- cpufreq: update user_policy.* on success
+- cpufreq: Clean up after a failing light-weight initialization
+- cpufreq: preserve user_policy across suspend/resume
+- Revert "cpufreq: Don't create empty /sys/devices/system/cpu/cpufreq directory"
+- cpufreq: fix uevent broken issue
+- cpufreq: don't send frozen uevent
+- cpufreq: Fix up sysfs api usage
+- cpufreq: impulse: Remove global object usage
+
+== AIO ==
+- multirom: Update binaries
+- sepolicy: Update binary
+
+== Recovery ==
+- TWRP version up to v3.0.2-0
+- jolla-kernel_bullhead-v8.4 applied
+
+<b><#selectbg_g>[bullhead-v8.2]</#></b>
 == Kernel ==
 >> Common <<
 - Built with UBERTC gcc 6.0.0 20160401
