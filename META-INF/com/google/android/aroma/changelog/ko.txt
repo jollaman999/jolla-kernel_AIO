@@ -31,7 +31,7 @@
 - compiler-gcc: disable -ftracer for __noclone functions
 
 >> N <<
-- nonohub: Google n-preview-2 변경 사항들 적용
+- nanohub: Google n-preview-2 변경 사항들 적용
 
 == AIO ==
 - sepolicy: 바이너리 업데이트

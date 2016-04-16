@@ -31,7 +31,7 @@
 - compiler-gcc: disable -ftracer for __noclone functions
 
 >> N <<
-- nonohub: Applied Google n-preview-2 changes
+- nanohub: Applied Google n-preview-2 changes
 
 == AIO ==
 - sepolicy: Update binary
