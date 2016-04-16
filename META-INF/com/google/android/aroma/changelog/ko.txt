@@ -3,7 +3,45 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v8.4]</#></b></@>
+<b><#selectbg_g>[bullhead-v9.0]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- smpboot: use kmemleak_not_leak for smpboot_thread_data
+- sched, smp: Correctly deal with nested sleeps
+- touchscreen: dt2w, s2w, sovc: queue_work_on 를 queue_work 로 변경
+- touchscreen: s2w, dt2w, sovc: input 핸들러가 필요치 않을때 등록 해제
+- touchscreen: s2w, dt2w, sovc: 매번 터치 인터럽트 발생할 때마다 is_touch_on() 호출하지 않음
+- touchscreen: synaptics: 빠른 화면 on/off 를 위해 suspend/resume 에 대해 작업 구조체 만듬
+- synaptics, wcd9330: 음악이 정지된 후 일부 항목이 등록해제가 안되는 점 수정
+- synaptics, sovc, dt2w: 빠진 dt2w 등록 추가
+- f2fs: dev-test 브랜치 패치들 적용
+- f2fs: f2fs: 맵핑 확인에 빠진 put_page() 추가 (커널 패닉 수정)
+- ext4 crypto: tytso 로 부터 crypto-3.14 브랜치 최신 패치들 적용
+- ext4 crypto: Google n-preview-2 최신 패치들 적용
+- wlan: qcacld-2.0: LA.BF64.1.2.2_rb4.33 from caf
+- qcacld-2.0 와 cnss 를 제외하고 Google n-preview-2 변경 사항들 적용
+- vmpressure: change vmpressure::sr_lock to spinlock
+- vmpressure: do not check for pending work to prevent from new work
+- vmpressure: make sure there are no events queued after memcg is offlined
+- mm/vmpressure.c: fix race in vmpressure_work_fn()
+- msm_hotplug: HZ 를 본래 값으로 변경
+- compiler.h: add support for function attribute assume_aligned
+- include/linux/compiler-gcc.h: hide assume_aligned attribute from sparse
+- include/linux/compiler-gcc.h: improve __visible documentation
+- compiler-gcc: disable -ftracer for __noclone functions
+
+>> N <<
+- nonohub: Google n-preview-2 변경 사항들 적용
+
+== AIO ==
+- sepolicy: 바이너리 업데이트
+- F2FS 바이너리 패치 추가
+- 진행바 수정
+
+== 리커버리 ==
+- jolla-kernel_bullhead-v9.0 적용
+
+<b><#selectbg_g>[bullhead-v8.4]</#></b>
 == 커널 ==
 >> 공통 <<
 - wlan: qcacld-2.0: 스캔이 완료된 후 Runtime PM 허용

@@ -152,6 +152,14 @@ multidel.attention=세컨롬들 제거 경고
 multidel.attentiondesc=이 작업을 수행하면 메인롬을 제외한 모든 롬들이 지워집니다!!\
 세컨롬들을 제거하시기 전에 백업이 필요한지 다시 한번 확인해 주시기 바랍니다.
 
+f2fs.title=F2FS
+f2fs.subtitle=F2FS 바이너리
+f2fs.itemtitle=F2FS 바이너리 업데이트
+f2fs.item=바이너리 패치
+f2fs.desc=F2FS 사용을 원하신다면, 안정성을 위해 바이너리를 업데이트를 해주세요.
+f2fs.attention=F2FS 바이너리 경고
+f2fs.attentiondesc=이 작업은 시스템 파티션을 수정합니다!
+
 sovc.title=SOVC
 sovc.subtitle=Screen Off Volume Control
 sovc_onoff.title=켜시겠습니까 끄시겠습니까?

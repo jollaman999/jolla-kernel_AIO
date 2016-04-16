@@ -3,7 +3,45 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v8.4]</#></b></@>
+<b><#selectbg_g>[bullhead-v9.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- smpboot: use kmemleak_not_leak for smpboot_thread_data
+- sched, smp: Correctly deal with nested sleeps
+- touchscreen: dt2w, s2w, sovc: Change queue_work_on to queue_work
+- touchscreen: s2w, dt2w, sovc: Unregister input handler when not needed
+- touchscreen: s2w, dt2w, sovc: Do not call is_touch_on() every touch interrupts
+- touchscreen: synaptics: Make work structure for suspend/resume for fast screen on/off
+- synaptics, wcd9330: Fix some of not unregistered after music stopped
+- synaptics, sovc, dt2w: Add missed register of dt2w
+- f2fs: Applied dev-test branch patches
+- f2fs: f2fs: Add missed put_page() in mapping checking (Fix kernel panic)
+- ext4 crypto: Applied lastest crypto-3.14 branch patches from tytso
+- ext4 crypto: Applied lastest patches from Google n-preview-2
+- wlan: qcacld-2.0: LA.BF64.1.2.2_rb4.33 from caf
+- Applied Google n-preview-2 changes except qcacld-2.0 and cnss changes
+- vmpressure: change vmpressure::sr_lock to spinlock
+- vmpressure: do not check for pending work to prevent from new work
+- vmpressure: make sure there are no events queued after memcg is offlined
+- mm/vmpressure.c: fix race in vmpressure_work_fn()
+- msm_hotplug: Change HZ to original value
+- compiler.h: add support for function attribute assume_aligned
+- include/linux/compiler-gcc.h: hide assume_aligned attribute from sparse
+- include/linux/compiler-gcc.h: improve __visible documentation
+- compiler-gcc: disable -ftracer for __noclone functions
+
+>> N <<
+- nonohub: Applied Google n-preview-2 changes
+
+== AIO ==
+- sepolicy: Update binary
+- Added F2FS binaries patch
+- Fix progress bar
+
+== Recovery ==
+- jolla-kernel_bullhead-v9.0 applied
+
+<b><#selectbg_g>[bullhead-v8.4]</#></b>
 == Kernel ==
 >> Common <<
 - wlan: qcacld-2.0: Allow Runtime PM after Scan Completion
