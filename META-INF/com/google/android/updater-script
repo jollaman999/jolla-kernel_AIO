@@ -142,6 +142,8 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   if file_getprop("/tmp/aroma-data/f2fs.prop","item.1.1")=="1" then
     ui_print("-> Patching F2FS binaries...");
     package_extract_dir("jolla-kernel/bullhead/f2fs/system/", "/system/");
+    set_perm(0, 0, 0755, "/system/bin/fsck.f2fs");
+    set_perm(0, 0, 0755, "/system/bin/mkfs.f2fs");
   endif;
   ## endif file_getprop("/tmp/aroma-data/f2fs.prop","item.1.1")=="1" then
 
