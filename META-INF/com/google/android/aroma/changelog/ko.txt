@@ -3,7 +3,65 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v9.0]</#></b></@>
+<b><#selectbg_g>[bullhead-v9.1]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- UBERTC gcc 7.0.0 20160416 으로 빌드
+- msm_hotplug: up/down work 구조체를 지우고 big core up/down 향상
+- msm_hotplug: DEFAULT_BIG_CORE_UP_DELAY 감소
+- msm_hotplug: 중복된 target_big 계산 병합
+- msm_hotplug: 저작권 업데이트
+- 변경사항 취소 "msm_hotplug: HZ 를 본래 값으로 변경"
+- lowmemorykiller: vmpressure 에 적합하게 함
+- lowmemorykiller: false adaptive LMK triggers 회피
+- lowmemorykiller: adaptive lmk 기본으로 활성화
+- lowmemorykiller: 튜닝
+- block: Zen I/O 스케쥴러 추가
+- block: V(R) I/O 스케쥴러 추가
+- block: bfq: IOPS 모드를 기본값으로 설정 하고 slice_idle 을 0 으로 설정
+- bullhead_defconfig: 기본 I/O 스케쥴러를 bfq 로 변경
+- mm: ksm, uksm: 기본으로 비활성화
+- f2fs: page 를 얻은 후 매핑 확인 (수정됨) (커널 패닉 올바르게 수정됨.)
+- f2fs: 최신 dev-test 브랜치 패치들 적용
+- touchscreen: s2w, dt2w, sovc: 등록/해제 정보를 디버그 코드로 변경
+- touchscreen: s2w, dt2w, sovc: 저작권, URL, 버젼 업데이트
+- power_efficient workqueue 변경사항들 취소
+- lib: lz4: 빅에디안 장치들에서 lz4 와의 zram 수정
+- lib: lz4: unaligned access efficiency 탐지 클린업
+- lib/xz: add comments for the intentionally missing break statements
+- lib/xz: enable all filters by default in Kconfig
+- 변경사항 취소 "net: sched: watchdog 시간을 HZ 에서 1000 으로 변경"
+- net: sched: watchdog_timeo 에 대해 "* 1000 / HZ" 수행
+- bullhead_defconfig: 기본 TCP Congestion 제어를 CUBIC 으로 변경
+- bullhead_defconfig: Google 과 wlan 설정 맞춤
+- qcacld-2.0: caf wlan 드라이버 변경사항 취소
+- qcacld-2.0: N Preview 2 의 wlan 드라이버 적용
+- qcacld-2.0: __queue_delayed_work 경고 메세지 수정
+- qcacld-2.0: 디버그 버젼 빌드 비활성화
+- qcacld-2.0: 조용히 해라 'first packet after WOW wakeup'
+- qcacld-2.0: 조용히 해라 PM runtime 메세지들아
+- qcacld-2.0: 조용히 해라 resume 메세지들아
+- power: quickwakeup: 드라이버 도입
+- msm: lpm-levels: suspend_again 핸들러 추가
+- power: catch wake-up requests in suspend_again
+- security: selinux: 중복된 코드들 제거
+- 변경사항 취소 "sched, smp: Correctly deal with nested sleeps"
+- 변경사항 취소 "smpboot: use kmemleak_not_leak for smpboot_thread_data"
+
+== AIO ==
+- UBERTC gcc 7.0.0 20160416 으로 빌드
+- f2fs: f2fs-tools 업데이트 (최신 dev 브랜치 패치들 적용)
+  (여러 툴들 사용가능: mkfs.f2fs, fsck.f2fs, dump.f2fs, defrag.f2fs, resize.f2fs, sload.f2fs)
+- ramdisk: sepolicy 바이너리 업데이트
+- multirom: 새 cm-13.0 소스들과 빌드
+
+== 리커버리 ==
+- UBERTC gcc 7.0.0 20160416 으로 빌드
+- 새 cm-13.0 소스들과 빌드
+- omni android-6.0 최신 TWRP 패치들 적용
+- jolla-kernel_bullhead-v9.1 적용
+
+<b><#selectbg_g>[bullhead-v9.0]</#></b>
 == 커널 ==
 >> 공통 <<
 - smpboot: use kmemleak_not_leak for smpboot_thread_data
@@ -18,6 +76,7 @@
 - f2fs: f2fs: 맵핑 확인에 빠진 put_page() 추가 (커널 패닉 수정)
 - ext4 crypto: tytso 로 부터 crypto-3.14 브랜치 최신 패치들 적용
 - ext4 crypto: Google n-preview-2 최신 패치들 적용
+- net: sched: watchdog 시간을 HZ 에서 1000 으로 변경
 - wlan: qcacld-2.0: LA.BF64.1.2.2_rb4.33 from caf
 - qcacld-2.0 와 cnss 를 제외하고 Google n-preview-2 변경 사항들 적용
 - vmpressure: change vmpressure::sr_lock to spinlock

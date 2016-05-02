@@ -3,7 +3,65 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v9.0]</#></b></@>
+<b><#selectbg_g>[bullhead-v9.1]</#></b></@>
+== Kernel ==
+>> Common <<
+- Built with UBERTC gcc 7.0.0 20160416
+- msm_hotplug: Remove up/down work structure and improve big core up/down
+- msm_hotplug: Reduce DEFAULT_BIG_CORE_UP_DELAY
+- msm_hotplug: Merge duplicated target_big calculation
+- msm_hotplug: Update copyright
+- Revert "msm_hotplug: Change HZ to original value"
+- lowmemorykiller: adapt to vmpressure
+- lowmemorykiller: avoid false adaptive LMK triggers
+- lowmemorykiller: Enable adaptive lmk by default
+- lowmemorykiller: Tunning
+- block: Add Zen I/O scheduler
+- block: Add V(R) I/O scheduler
+- block: bfq: set IOPS mode by default with slice_idle set to 0
+- bullhead_defconfig: Change default io-sched to bfq
+- mm: ksm, uksm: Disable by default
+- f2fs: check its mapping after get page (Fixed) (Fixed kernel panic correctly.)
+- f2fs: Applied lastest dev-test branch patches
+- touchscreen: s2w, dt2w, sovc: Change register/unregister informations to debug codes
+- touchscreen: s2w, dt2w, sovc: Update copyrights, URL and versions
+- Revert power_efficient workqueue changes
+- lib: lz4: fixed zram with lz4 on big endian machines
+- lib: lz4: cleanup unaligned access efficiency detection
+- lib/xz: add comments for the intentionally missing break statements
+- lib/xz: enable all filters by default in Kconfig
+- Revert "net: sched: Change HZ to 1000 of watchdog time"
+- net: sched: Do "* 1000 / HZ" for watchdog_timeo
+- bullhead_defconfig: Change default TCP Congestion control to CUBIC
+- bullhead_defconfig: Sync wlan configs with Google
+- qcacld-2.0: Revert caf wlan driver changes
+- qcacld-2.0: Applied N Preview 2's wlan driver
+- qcacld-2.0: Fix __queue_delayed_work warning messages
+- qcacld-2.0: Disable build debug version
+- qcacld-2.0: Be quiet 'first packet after WOW wakeup'
+- qcacld-2.0: Be quiet PM runtime messages
+- qcacld-2.0: Be quiet resume messages
+- power: quickwakeup: initial driver
+- msm: lpm-levels: add suspend_again handler
+- power: catch wake-up requests in suspend_again
+- security: selinux: Remove duplicated codes
+- Revert "sched, smp: Correctly deal with nested sleeps"
+- Revert "smpboot: use kmemleak_not_leak for smpboot_thread_data"
+
+== AIO ==
+- Built with UBERTC gcc 7.0.0 20160416
+- f2fs: Update f2fs-tools (Applied lastest dev branch changes)
+  (Various tools are available: mkfs.f2fs, fsck.f2fs, dump.f2fs, defrag.f2fs, resize.f2fs, sload.f2fs)
+- ramdisk: Update sepolicy binary
+- multirom: Built with new cm-13.0 sources
+
+== Recovery ==
+- Built with UBERTC gcc 7.0.0 20160416
+- Built with new cm-13.0 sources
+- Applied lastest TWRP patches from omni android-6.0
+- jolla-kernel_bullhead-v9.1 applied
+
+<b><#selectbg_g>[bullhead-v9.0]</#></b>
 == Kernel ==
 >> Common <<
 - smpboot: use kmemleak_not_leak for smpboot_thread_data
@@ -18,6 +76,7 @@
 - f2fs: f2fs: Add missed put_page() in mapping checking (Fix kernel panic)
 - ext4 crypto: Applied lastest crypto-3.14 branch patches from tytso
 - ext4 crypto: Applied lastest patches from Google n-preview-2
+- net: sched: Change HZ to 1000 of watchdog time
 - wlan: qcacld-2.0: LA.BF64.1.2.2_rb4.33 from caf
 - Applied Google n-preview-2 changes except qcacld-2.0 and cnss changes
 - vmpressure: change vmpressure::sr_lock to spinlock
