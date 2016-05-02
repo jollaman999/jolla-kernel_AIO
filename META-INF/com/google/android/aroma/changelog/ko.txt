@@ -26,7 +26,7 @@
 - touchscreen: s2w, dt2w, sovc: 등록/해제 정보를 디버그 코드로 변경
 - touchscreen: s2w, dt2w, sovc: 저작권, URL, 버젼 업데이트
 - power_efficient workqueue 변경사항들 취소
-- lib: lz4: 빅에디안 장치들에서 lz4 와의 zram 수정
+- lib: lz4: 빅엔디안 장치들에서 lz4 와의 zram 수정
 - lib: lz4: unaligned access efficiency 탐지 클린업
 - lib/xz: add comments for the intentionally missing break statements
 - lib/xz: enable all filters by default in Kconfig
