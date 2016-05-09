@@ -499,6 +499,39 @@ if prop("sovc.prop","selected.1")=="2" then
   alert( "<~sovc.attention>", "<~sovc.attentiondesc>");
 endif;
 
+if prop("sovc.prop","selected.1")=="1" then
+selectbox(
+  # Title
+	"<~sovc.auto_off.title>",
+
+  # Sub Title
+	"<~sovc.auto_off.subtitle>",
+
+  # Icon
+	"@update",
+
+  # Will be saved in /tmp/aroma/sovc_auto_off.prop
+	"sovc_auto_off.prop",
+
+  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+  # TITLE            |  SUBTITLE                                                 | Initial Value #
+  #------------------+-----------------------------------------------------------+---------------#
+
+  "<~sovc.auto_off.time.title>",      "",                                               2,      #-- Group 1. key = "selected.1"
+    "<~sovc.auto_off.time.default>", "",                                           1,      #-- selected.1 = 1
+    "<~sovc.auto_off.time.5>",       "",                                           0,      #-- selected.1 = 2
+    "<~sovc.auto_off.time.6>",       "",                                           0,      #-- selected.1 = 3
+    "<~sovc.auto_off.time.7>",       "",                                           0,      #-- selected.1 = 4
+    "<~sovc.auto_off.time.8>",       "",                                           0,      #-- selected.1 = 5
+    "<~sovc.auto_off.time.10>",      "",                                           0       #-- selected.1 = 6
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+);
+
+if prop("sovc_auto_off.prop","selected.1")!="1" then
+  alert( "<~sovc.auto_off.attention>", "<~sovc.auto_off.attentiondesc>");
+endif;
+endif;
+## endif prop("sovc.prop","selected.1")=="1"
 
 ########################################### MultiROM ###########################################
 ## multirom enabled

@@ -166,9 +166,22 @@ sovc_onoff.title=켜시겠습니까 끄시겠습니까?
 sovc_on.item=SOVC 를 켭니다.
 sovc_on.desc=화면이 꺼져있는 동안 터치스크린으로 볼륨이나 트랙을 조절 할 수 있습니다.
 sovc_off.item=SOVC 를 끕니다.
-sovc_off.desc=시도해 보셨나요..? :(
+sovc_off.desc=시도해 보셨나요..? :(\
+이제, SOVC 자동 끄기를 사용하실 수 있습니다.
 sovc.attention=SOVC 끄기 경고
 sovc.attentiondesc=이 작업은 시스템 파티션을 수정합니다!
+
+sovc.auto_off.title=SOVC 자동 끄기
+sovc.auto_off.subtitle=사용자가 화면을 오랫 동안 누르고 있을 경우 터치스크린이 자동으로 꺼집니다.
+sovc.auto_off.time.title=시간 초과 값을 선택하세요
+sovc.auto_off.time.default=기본값 사용 (4 초)
+sovc.auto_off.time.5=5 초
+sovc.auto_off.time.6=6 초
+sovc.auto_off.time.7=7 초
+sovc.auto_off.time.8=8 초
+sovc.auto_off.time.10=10 초
+sovc.auto_off.attention=SOVC 자동 끄기 경고
+sovc.auto_off.attentiondesc=기본값을 변경할 경우 시스템 파티션을 수정합니다!
 
 ramdisk.title=램디스크 옵션
 ramdisk.subtitle=압축 옵션을 선택하세요.

@@ -153,8 +153,32 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
   ############ Turn Off SOVC ############
   show_progress(0.825, 1);
+  ui_print("-> Setting SOVC...");
+  delete("/system/etc/init.d/77sovc_auto_off");
+
   if file_getprop("/tmp/aroma-data/sovc.prop","selected.1")=="1" then
     delete("/system/etc/init.d/77sovc_off");
+    if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")!="1" then
+      package_extract_file("jolla-kernel/bullhead/sovc/77sovc_auto_off", "/system/etc/init.d/77sovc_auto_off");
+      set_perm(0, 2000, 0755, "/system/etc/init.d/77sovc_auto_off");
+      package_extract_file("jolla-kernel/bullhead/sovc/sovc_auto_off_set.sh", "/tmp/sovc_auto_off_set.sh");
+      set_perm(0, 0, 0755, "/tmp/sovc_auto_off_set.sh");
+      if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="2" then
+        run_program("/tmp/sovc_auto_off_set.sh", "5000");
+      endif;
+      if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="3" then
+        run_program("/tmp/sovc_auto_off_set.sh", "6000");
+      endif;
+      if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="4" then
+        run_program("/tmp/sovc_auto_off_set.sh", "7000");
+      endif;
+      if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="5" then
+        run_program("/tmp/sovc_auto_off_set.sh", "8000");
+      endif;
+      if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="6" then
+        run_program("/tmp/sovc_auto_off_set.sh", "10000");
+      endif;
+    endif;
   endif;
 
   if file_getprop("/tmp/aroma-data/sovc.prop","selected.1")=="2" then
