@@ -93,7 +93,8 @@ on boot
     write /sys/devices/system/cpu/cpu4/online 0
     write /sys/devices/system/cpu/cpu5/online 0
 
-    # disable msm hotplug to switch governor
+    # disable msm_thermal and msm hotplug to switch governor
+    write /sys/module/msm_thermal/core_control/enabled 0
     write /sys/module/msm_hotplug/msm_enabled 0
 
     # restore turned off A53 cores while disable msm hotplug
@@ -173,7 +174,8 @@ on boot
     # enable rps static configuration
     write /sys/class/net/rmnet_ipa0/queues/rx-0/rps_cpus 8
 
-    # re-enable msm hotplug
+    # re-enable msm_thermal and msm hotplug
+    write /sys/module/msm_thermal/core_control/enabled 1
     write /sys/module/msm_hotplug/msm_enabled 1
 
     # set GPU default power level to 5 (180MHz) instead of 4 (305MHz)
