@@ -3,7 +3,56 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead-v9.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v1.0]</#></b></@>
+== 커널 ==
+>> 공통 <<
+~~~~~ 새 jolla-kernel_bullhead_II 를 소개 합니다 !! ~~~~~
+- 최신 Google msm 소스들로 다시 제작.
+- 소스 클린업.
+- 매우 개선된 배터리 시간, 배터리 드레인 현상들 수정.
+- Linux 3.10.y 업스트림 패치들 적용하지 않음.
+  (우리에게 필요한 패치들만 적용하는 것이 좋아보임.)
+- UKSM 에서 KSM 으로 변경.
+- 몇몇 KSM 업스트림 패치들 적용.
+- 배터리 시간을 위해 KSM 기본 값들을 조정
+- 올바르게 재가동/일시정지 되는 KSM
+  (KSM 은 기본으로 활성화 되어있습니다. 화면이 꺼졌을때 멈추고 화면이 켜지면 다시 작동합니다.
+   이것은 장치가 suspend 되었을시 배터리를 절약합니다.)
+- EAS 패치들을 적용하지 않고 일부 패치들이 적용된 기본 sched 사용.
+  (이 패치 없이 장치가 더 부드럽고 더 좋은 성능을 보여줍니다.
+   대신에 프랑코 커널로 부터 sched 와 mm 패치들을 적용하였습니다.)
+- f2fs의 소스를 stable 브랜치로 변경.
+  (제가 이전에 dev-test 브랜치를 사용하였는데 에러들과 베터리 드레인 현상을 보여주었습니다.
+   stable 로 변경 후 아무런 문제들이 없었습니다.)
+- SOVC 를 사용중일때 음악이 정지된 후 터치스크린과 디스플레이 패널이 올바르게 꺼집니다.
+  (Before: 디스플레이 패널이 resume 상태로 남아있고, 터치스크린이 몇몇 상황에서 제대로 꺼지지 않았습니다.
+   After: 이제 제가 이러한 문제들을 해결했고 더이상 배터리 드레인 현상이 없습니다!!)
+- SOVC 를 위한 터치스크린 자동 끄기 구현.
+  (터치스크린을 오랜 시간 동안 누르고 있으면 터치스크린이 꺼집니다.
+   잘못된 터치스크린 작동으로 부터 보호하고 걷는 동안 장치를 쥐고 있을 수 있게 합니다.
+   기본값은 4초 이고 아로마 인스톨러에서 이 값을 변경 할 수 있습니다.)
+- 이제, msm_hotplug 가 작동중일 때 빅코어들의 거버너 설정을 변경 할 수 있습니다!!
+  (마침내, 제가 이 짜증나는 문제를 해결했습니다! Kernel Adiutor 에서 잘 작동합니다.
+   Kernel Adiutor 의 CPU/거버너 설정에 들어가면 첫번째 빅코어를 켭니다.
+   CPU/거버너 설정을 나가고 5초가 지나면 다시 정상적으로 작동합니다.)
+- 터치스크린 드라이버에 있는 suspend/resume 작업들을 제거하고 각각의 드라이버마다 FB notifier 사용.
+  (터치스크린 드라이버에 엄청난 suspend/resume 작업들이 있었습니다.
+   이제 suspend/resume 작업들의 각각의 드라이버 마다 개별적으로 작동합니다.)
+- Screen Off Volume Control, DoubleTap2Wake, Sweep2Wake suspend/resume 작업들 개선.
+- cpu_up 작업의 race condition 수정.
+
+== AIO ==
+- ramdisk: sepolicy 바이너리 업데이트
+- sovc_auto_off_delay 설정 옵션 추가
+- A2DPChecker: SOVC 를 올바르게 비활성화 하기 위해 연결 끊김 상태 체크
+- ramdisk: init.bullhead.rc: big 코어들에 대해 최소 클럭값 사용
+- ramdisk: init.bullhead.rc: 거버너 설정을 변경하는 동안 msm_thermal 끄기
+
+== Recovery ==
+- mni android-6.0 최신 TWRP 패치들 적용
+- jolla-kernel_bullhead_II-v1.0 적용
+
+<b><#selectbg_g>[bullhead-v9.1]</#></b>
 == 커널 ==
 >> 공통 <<
 - UBERTC gcc 7.0.0 20160416 으로 빌드
