@@ -49,7 +49,7 @@
 - ramdisk: init.bullhead.rc: 거버너 설정을 변경하는 동안 msm_thermal 끄기
 
 == Recovery ==
-- mni android-6.0 최신 TWRP 패치들 적용
+- omni android-6.0 최신 TWRP 패치들 적용
 - jolla-kernel_bullhead_II-v1.0 적용
 
 <b><#selectbg_g>[bullhead-v9.1]</#></b>
