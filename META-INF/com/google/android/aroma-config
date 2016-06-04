@@ -533,6 +533,33 @@ endif;
 endif;
 ## endif prop("sovc.prop","selected.1")=="1"
 
+selectbox(
+  # Title
+	"<~kcal.title>",
+
+  # Sub Title
+	"<~kcal.subtitle>",
+
+  # Icon
+	"@update",
+
+  # Will be saved in /tmp/aroma/kcal.prop
+	"kcal.prop",
+
+  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+  # TITLE            |  SUBTITLE                                                 | Initial Value #
+  #------------------+-----------------------------------------------------------+---------------#
+
+  "<~kcal_fix_yellow_onoff.title>", "",                                           2,      #-- Group 1. key = "selected.1"
+    "<~kcal_fix_yellow_on.item>",    "<~kcal_fix_yellow_on.desc>",           1,      #-- selected.1 = 1
+    "<~kcal_fix_yellow_off.item>",   "<~kcal_fix_yellow_off.desc>",          0       #-- selected.1 = 2
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+);
+
+if prop("kcal.prop","selected.1")=="2" then
+  alert( "<~kcal.attention>", "<~kcal.attentiondesc>");
+endif;
+
 ########################################### MultiROM ###########################################
 ## multirom enabled
 if prop("window1.prop","selected.1")!="2" then

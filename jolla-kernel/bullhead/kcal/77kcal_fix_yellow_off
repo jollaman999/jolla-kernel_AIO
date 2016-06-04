@@ -1,0 +1,2 @@
+#!/system/bin/sh
+echo 0 > /sys/devices/platform/kcal_ctrl.0/kcal_fix_yellow

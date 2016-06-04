@@ -200,6 +200,21 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   endif;
 
 
+  ############ kcal_fix_yellow ############
+  delete("/system/etc/init.d/77kcal_fix_yellow_off");
+  if file_getprop("/tmp/aroma-data/kcal.prop","selected.1")=="2" then
+    ui_print("-> Setting KCAL...");
+    if file_getprop("/tmp/aroma-data/checkbox1.prop","item.4.1")!="1" then
+      set_perm(0, 0, 0755, "/tmp/init.d_support.sh");
+      run_program("/tmp/init.d_support.sh");
+      package_extract_dir("jolla-kernel/bullhead/etc/", "/system/etc/");
+      set_perm(0, 2000, 0755, "/system/etc/init.d/77jolla-kernel");
+    endif;
+    package_extract_file("jolla-kernel/bullhead/kcal/77kcal_fix_yellow_off", "/system/etc/init.d/77kcal_fix_yellow_off");
+    set_perm(0, 2000, 0755, "/system/etc/init.d/77kcal_fix_yellow_off");
+  endif;
+
+
   ############ Repack boot.img ############
   show_progress(0.85, 1);
   ui_print("-> Repacking boot.img...");
