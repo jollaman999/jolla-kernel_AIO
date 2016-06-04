@@ -177,6 +177,41 @@ on boot
 
     # set GPU default power level to 5 (180MHz) instead of 4 (305MHz)
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 5
+
+    # Setting B.L scheduler parameters
+    write /proc/sys/kernel/sched_migration_fixup 1
+    write /proc/sys/kernel/sched_small_task 30
+    write /sys/devices/system/cpu/cpu0/sched_mostly_idle_load 20
+    write /sys/devices/system/cpu/cpu1/sched_mostly_idle_load 20
+    write /sys/devices/system/cpu/cpu2/sched_mostly_idle_load 20
+    write /sys/devices/system/cpu/cpu3/sched_mostly_idle_load 20
+    write /sys/devices/system/cpu/cpu4/sched_mostly_idle_load 20
+    write /sys/devices/system/cpu/cpu5/sched_mostly_idle_load 20
+    write /sys/devices/system/cpu/cpu0/sched_mostly_idle_nr_run 3
+    write /sys/devices/system/cpu/cpu1/sched_mostly_idle_nr_run 3
+    write /sys/devices/system/cpu/cpu2/sched_mostly_idle_nr_run 3
+    write /sys/devices/system/cpu/cpu3/sched_mostly_idle_nr_run 3
+    write /sys/devices/system/cpu/cpu4/sched_mostly_idle_nr_run 3
+    write /sys/devices/system/cpu/cpu5/sched_mostly_idle_nr_run 3
+    write /proc/sys/kernel/sched_upmigrate 95
+    write /proc/sys/kernel/sched_downmigrate 85
+    write /proc/sys/kernel/sched_freq_inc_notify 400000
+    write /proc/sys/kernel/sched_freq_dec_notify 400000
+
+    # devfreq
+    write /sys/class/devfreq/qcom,cpubw.27/governor bw_hwmon
+    restorecon_recursive /sys/class/devfreq/qcom,cpubw.27
+    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/sample_ms 4
+    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/io_percent 34
+    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/hist_memory 20
+    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/hyst_length 10
+    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/low_power_ceil_mbps 0
+    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/low_power_io_percent 34
+    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/low_power_delay 20
+    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/guard_band_mbps 0
+    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/up_scale 250
+    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/idle_mbps 1600
+    write /sys/class/devfreq/qcom,mincpubw.28/governor cpufreq
     ######################################################################
 
     # update foreground cpuset now that processors are up
