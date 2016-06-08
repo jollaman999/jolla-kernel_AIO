@@ -3,7 +3,50 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v1.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v2.0]</#></b></@>
+== Kernel ==
+- Faster and smooth performance, Increase battery life time
+
+>> Common <<
+- Linux 3.10.101
+- msm_hotplug: Fix some bugs and disable by default
+(In several test, we don't need hotplugging for our bullhead and recent devices.
+It shows faster and smooth performance with long battery's life time without hotplugging.)
+- arp: Applied lastest Linux Kernel master's branch changes
+- arp_project applied (ARP Spoofing Attack Protecting Project. Will update continuously.)
+- arp_project: Ignore reply when request not proceeded or sip is differ with requested tip
+- kcal: Add yellow screen fix option
+- f2fs: Applied lastest stable branch's changes
+- sched: Applied default values in kernel side
+- bullhead_defconfig: Add missed conservative governor
+- sound: Use franco's sound control driver
+- mdss: fb: enable backlight dimmer
+- fingerprint: Do sched boost when fingerprint sensor touched
+- PM / devfreq: Applied some msm-3.10 changes
+- others: Applied some msm-3.10 changes
+- Applied some fixes from CyanogenMod/android_kernel_nextbit_msm8992
+
+>> M <<
+- Applied marshmallow-mr2 changes
+- wlan: Applied N Preview 3's wlan driver
+- sdcardfs support
+- Applied some changes from N Preview 3
+
+>> N <<
+- Applied N Preview 3's changes
+
+== AIO ==
+- updater-script: Add missing init.d support when sovc_auto_off_delay value changed
+- bullhead: Fix max_comp_streams not get applied
+- ramdisk: init.bullhead.rc: Do not turn off/on msm_hotplug (Disabled by default)
+- Add kcal_fix_yellow on/off option
+- f2fs: Update f2fs-tools
+- ramdisk: Add devfreq tweaks from franco
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v2.0 applied
+
+<b><#selectbg_g>[bullhead_II-v1.0]</#></b>
 == Kernel ==
 >> Common <<
 ~~~~~ Intoroduce new jolla-kernel_bullhead_II !! ~~~~~

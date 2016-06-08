@@ -3,7 +3,50 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v1.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v2.0]</#></b></@>
+== 커널 ==
+- 빠릿하고 부드러운 성능, 배터리 사용시간 향상
+
+>> 공통 <<
+- Linux 3.10.101
+- msm_hotplug: 몇몇 버그들을 수정하고 기본으로 비활성화
+(여러번의 테스트를 통해, 저희 기기인 bullhead 와 최신 기기들에게 핫플러깅이 필요 없습니다.
+핫플러깅 없이 더 빠르고 부드러우며 긴 배터리 시간을 보여줍니다.)
+- arp:Linux Kernel master 브랜치의 최신 변경 사항들 적용
+- arp_project applied (ARP 스푸핑 공격 방어 프로젝트. 지속적으로 업데이트 될 예정입니다.)
+- arp_project: Request 가 수행되지 않았거나 소스 IP가 Request 했던 타겟 IP 와 다를때 Reply 무시
+- kcal: 노란 액정 수정 옵션 추가
+- f2fs: stable 브랜치의 최신 변경 사항들 적용
+- sched: 기본 값들을 커널 단에서 적용
+- bullhead_defconfig: 빠뜨린 conservative 거버너 추가
+- sound: franco 의 사운드 제어 드라이버 사용
+- mdss: fb: backlight dimmer(백라이트 단계를 부드럽게 하는 옵션) 옵션 활성화
+- fingerprint: 지문 센서가 터치되었을 때 sched 부스트 수행
+- PM / devfreq: 일부 msm-3.10 변경 사항들 적용
+- others: 일부 msm-3.10 변경 사항들 적용
+- CyanogenMod/android_kernel_nextbit_msm8992 로 부터 몇몇 수정 사항들 적용
+
+>> M <<
+- marshmallow-mr2 변경사항들 적용
+- wlan: N Preview 3 wlan 드라이버 적용
+- sdcardfs 지원
+- N Preview 3 로 부터 몇몇 변경 사항들 적용
+
+>> N <<
+- Applied N Preview 3 변경 사항들 적용
+
+== AIO ==
+- updater-script: sovc_auto_off_delay 값이 변경 되었을 때 빠진 init.d 지원 추가
+- bullhead: max_comp_streams 가 적용되지 않는 문제 수정
+- ramdisk: init.bullhead.rc: msm_hotplug 를 끄고/켜지 않음 (기본으로 비활성화 됨)
+- kcal_fix_yellow on/off 옵션 추가
+- f2fs: f2fs-tools 업데이트
+- ramdisk: franco 로 부터 devfreq 트윅들 적용
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v2.0 적용
+
+<b><#selectbg_g>[bullhead_II-v1.0]</#></b>
 == 커널 ==
 >> 공통 <<
 ~~~~~ 새 jolla-kernel_bullhead_II 를 소개 합니다 !! ~~~~~
@@ -48,7 +91,7 @@
 - ramdisk: init.bullhead.rc: big 코어들에 대해 최소 클럭값 사용
 - ramdisk: init.bullhead.rc: 거버너 설정을 변경하는 동안 msm_thermal 끄기
 
-== Recovery ==
+== 리커버리 ==
 - omni android-6.0 최신 TWRP 패치들 적용
 - jolla-kernel_bullhead_II-v1.0 적용
 
