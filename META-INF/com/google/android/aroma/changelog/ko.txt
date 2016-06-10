@@ -3,7 +3,19 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v2.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v2.1]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- mdss: 잘못된 EXPORT_SYMBOL 수정
+
+>> M <<
+- 변경 사항 취소 "msm: mdss: trigger frame timeout when recovery is in progress"
+(화면을 키는 중에 가끔 타임아웃 에러가 발생함.)
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v2.1 적용
+
+<b><#selectbg_g>[bullhead_II-v2.0]</#></b>
 == 커널 ==
 - 빠릿하고 부드러운 성능, 배터리 사용시간 향상
 
@@ -27,7 +39,7 @@
 - CyanogenMod/android_kernel_nextbit_msm8992 로 부터 몇몇 수정 사항들 적용
 
 >> M <<
-- marshmallow-mr2 변경사항들 적용
+- marshmallow-dr1.6 변경사항들 적용
 - wlan: N Preview 3 wlan 드라이버 적용
 - sdcardfs 지원
 - N Preview 3 로 부터 몇몇 변경 사항들 적용

@@ -3,7 +3,19 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v2.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v2.1]</#></b></@>
+== Kernel ==
+>> Common <<
+- mdss: Fix wrong EXPORT_SYMBOL
+
+>> M <<
+- Revert "msm: mdss: trigger frame timeout when recovery is in progress"
+(This makes timeout error sometimes when turning on the screen.)
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v2.1 applied
+
+<b><#selectbg_g>[bullhead_II-v2.0]</#></b>
 == Kernel ==
 - Faster and smooth performance, Increase battery life time
 
@@ -27,7 +39,7 @@ It shows faster and smooth performance with long battery's life time without hot
 - Applied some fixes from CyanogenMod/android_kernel_nextbit_msm8992
 
 >> M <<
-- Applied marshmallow-mr2 changes
+- Applied marshmallow-dr1.6 changes
 - wlan: Applied N Preview 3's wlan driver
 - sdcardfs support
 - Applied some changes from N Preview 3
