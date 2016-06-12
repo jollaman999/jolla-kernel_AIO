@@ -3,7 +3,23 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v2.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v2.2]</#></b></@>
+== Kernel ==
+>> Common <<
+- wlan: qcacld-2.0: Use caf driver (LA.BF64.1.2.2-05240-8x94.0)
+  and applied patches from CyanogenMod/android_kernel_nextbit_msm8992
+  (No more disconnection issue.)
+- bullhead_defconfig: Disable SCHED_FREQ_INPUT
+  (It seems this makes fingerprint recognizing time extremly slow. So disable it.)
+- Revert "bullhead_defconfig: disable NF_TARGET_REJECT_SKERR"
+
+>> M <<
+- netfilter: IDLETIMER: fix lockdep warning (from N)
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v2.2 applied
+
+<b><#selectbg_g>[bullhead_II-v2.1]</#></b>
 == Kernel ==
 >> Common <<
 - mdss: Fix wrong EXPORT_SYMBOL

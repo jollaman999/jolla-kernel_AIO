@@ -3,7 +3,23 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v2.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v2.2]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- wlan: qcacld-2.0: caf 드라이버 (LA.BF64.1.2.2-05240-8x94.0) 를 사용하고
+  CyanogenMod/android_kernel_nextbit_msm8992 로 부터 패치들 적용
+  (끊김 현상 없어짐.)
+- bullhead_defconfig: SCHED_FREQ_INPUT 비활성화
+  (이 옵션이 지문 인식 시간을 엄청 느리게 하는 것으로 보임. 따라서 비활성화.)
+- 변경 사항 취소 "bullhead_defconfig: NF_TARGET_REJECT_SKERR 비활성화"
+
+>> M <<
+- netfilter: IDLETIMER: lockdep 경고 수정 (N 에서 가져옴)
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v2.2 적용
+
+<b><#selectbg_g>[bullhead_II-v2.1]</#></b>
 == 커널 ==
 >> 공통 <<
 - mdss: 잘못된 EXPORT_SYMBOL 수정
