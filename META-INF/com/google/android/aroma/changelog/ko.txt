@@ -3,7 +3,51 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v2.2]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v2.3]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- Linaro GCC 5.3.1 로 빌드
+- Linux 3.10.102
+- touchscreen: dt2w: dt2w_doubletap2wake_tmp_dump 에서 잘못된 unregister 수정
+  (블루투스를 사용하면서 dt2w 와 sovc 가 활성화된 사용자에게 발생하는 문제점 수정.)
+- touchscreen, wcd9330: dt2w 와 s2w 에 대해서도 마이크 상태 확인
+  (dtw 나 s2w 가 활성화 되었을 때 전화를 하는 도중 예상치 못한 터치 작업이 발생하는 문제점 수정.)
+- touchscreen: synaptics: 화면이 켜졌을때 지연된 touch off 작업 취소
+  (화면이 켜진 후 가끔 터치스크린이 작동하지 않는 문제점 수정.)
+- arp: 다른 하드웨어 주소로 부터 게이트웨이 업데이트를 시도하려는 요청 무시
+  (변조된 ARP 요청 패킷으로 부터 ARP Spoofing 막음.)
+- sched: sched_upmigrate_min_nice 를 9로 설정
+- sched: avoid unnecessary HMP scheduler stat re-accounting
+- sched: fix incorrect wait time and wait count statistics
+- sched: Provide a wake up API without sending freq notifications
+- cpufreq: interactive: Use wake_up_process_no_notif to wake up tasks
+- memset 경고들 수정
+- compiler.h: add support for malloc attribute
+- soc: qcom: rpm: Change driver memory allocation to use GFP_NOFS
+- ARM: dts: msm: Enable POPP for MSM8992
+- arm/dts: Fix GPU bwmon on msm8992
+- msm: kgsl: CyanogenMod/android_kernel_nextbit_msm8992 로 부터 일부 패치들 적용
+- arm64: CyanogenMod/android_kernel_nextbit_msm8992 로 부터 일부 패치들 적용
+- lpm, cpuidle, spm: CyanogenMod/android_kernel_nextbit_msm8992 로 부터 일부 패치들 적용
+- qos: Disable irq notifier when qos request is removed
+- net: Send only BIND and LISTEN events
+- 변경사항 취소 "timer: Queue timers on least power cpu"
+- CPU hotplug, smp: flush any pending IPI callbacks before CPU offline
+- irq_work: Remove BUG_ON in irq_work_run()
+
+>> N <<
+- wlan: qcacld-2.0: N 의 기본 드라이버로 되돌림
+
+== AIO ==
+- multirom: Linaro GCC 5.3.1  로 재빌드
+- f2fs-tools: 최신 dev 브랜치 패치들을 적용하고 Linaro GCC 5.3.1  로 빌드
+- ramdisk: init.bullhead.rc: Enable retention idle state
+
+== 리커버리 ==
+- Linaro GCC 5.3.1 와 cm-13.0 최신 소스들로 재빌드
+- jolla-kernel_bullhead_II-v2.3 적용
+
+<b><#selectbg_g>[bullhead_II-v2.2]</#></b>
 == 커널 ==
 >> 공통 <<
 - wlan: qcacld-2.0: caf 드라이버 (LA.BF64.1.2.2-05240-8x94.0) 를 사용하고
