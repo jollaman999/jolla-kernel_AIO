@@ -3,7 +3,35 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v2.3]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v3.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- cpuidle: Back to original driver (It makes battery drain.)
+- Revert "gpiolib: add IRQF_ONESHOT flag for shared IRQ"
+  (It makes touchscreen driver not working properly sometimes when sovc is enabled.)
+- arm64: Revert unneeded some changes
+- arm64: Applied jump label changes
+- wlan: Applied some patches from CyanogenMod/android_kernel_nextbit_msm8992
+- cpufreq: impulse: Use wake_up_process_no_notif to wake up tasks
+- sync: Permit out-of order sync users
+- qos: Register irq notify after adding the qos request
+- qos: wake up cores based on the qos updated cpu mask
+
+>> M <<
+- wlan: qcacld-2.0: Applied some changes from CyanogenMod/android_kernel_nextbit_msm8992
+
+>> N <<
+- Applied N Preview 4 changes
+
+== AIO ==
+- init.bullhead.rc: Properly set max_comp_streams of zram
+- Revert "ramdisk: init.bullhead.rc: Enable retention idle state"
+
+== Recovery ==
+- Applied lastest TWRP patches from omni android-6.0
+- jolla-kernel_bullhead_II-v3.0 applied
+
+<b><#selectbg_g>[bullhead_II-v2.3]</#></b>
 == Kernel ==
 >> Common <<
 - Built with Linaro GCC 5.3.1
