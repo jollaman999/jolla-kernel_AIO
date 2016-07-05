@@ -3,7 +3,29 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v3.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v3.1]</#></b></@>
+== Kernel ==
+>> Common <<
+- arm64: Revert jump label patches and disable it
+  (USB tethering not working correctly after applied jump label patches and enabled it.)
+- Revert "fpc1020_tee: Do sched boost when fingerprint sensor touched"
+  (Slow recognizing time is already fixed.)
+- net: core: Send ARP probe and trigger RTM_NEWNEIGH
+- net: core: To send ARP probe when neighbor state is NUD_STALE
+- net: core: Release neigh lock when neigh_probe is enabled
+- net: add a per-cpu counter for the number of frames coalesced in GRO
+
+>> M <<
+- bullhead: Include wlan firmware files to the kernel
+- qcacld-2.0: allow rps cpu map to be read from ini
+- qcacld-2.0: Use CyanogenMod/android_device_nextbit_ether's config ini
+- qcacld-2.0: Fix the issue of rpsRxQueueCpuMapList
+- qcacld-2.0: WCNSS_qcom_cfg.ini: Correctly set rpsRxQueueCpuMapList
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v3.1 applied
+
+<b><#selectbg_g>[bullhead_II-v3.0]</#></b>
 == Kernel ==
 >> Common <<
 - cpuidle: Back to original driver (It makes battery drain.)

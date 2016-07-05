@@ -3,7 +3,29 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v3.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v3.1]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- arm64: Revert jump label patches and disable it
+  (jump label 패치들을 적용및 활성화 하고 난 후 USB 테더링이 정상적으로 동작하지 않음.)
+- 변경 사항 취소 "fpc1020_tee: 지문 센서가 터치되었을 때 sched 부스트 수행"
+  (느린 인식 속도가 이미 수정됨.)
+- net: core: Send ARP probe and trigger RTM_NEWNEIGH
+- net: core: To send ARP probe when neighbor state is NUD_STALE
+- net: core: Release neigh lock when neigh_probe is enabled
+- net: add a per-cpu counter for the number of frames coalesced in GRO
+
+>> M <<
+- bullhead: wlan 펌웨어 파일들을 커널에 포함시킴
+- qcacld-2.0: rps cpu map 을 ini 설정 파일로 부터 읽어 들이도록 함
+- qcacld-2.0: CyanogenMod/android_device_nextbit_ether 의 ini 설정 파일 사용
+- qcacld-2.0: rpsRxQueueCpuMapList 문제점 수정
+- qcacld-2.0: WCNSS_qcom_cfg.ini: rpsRxQueueCpuMapList 올바르게 설정
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v3.1 적용
+
+<b><#selectbg_g>[bullhead_II-v3.0]</#></b>
 == 커널 ==
 >> 공통 <<
 - cpuidle: 본래 드라이버로 되돌림 (배터리 드레인 현상 발생.)
