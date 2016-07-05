@@ -3,7 +3,36 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v3.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v4.0]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- touchscreen: synaptics: resume 이나 suspend 시 lock 수행 및 suspend 된 상태 체크
+  (사운드가 켜진 상태에서 화면을 킬때 발생하는 터치스크린 문제 완벽하게 수정.)
+- lib: bitmap: Linux 업스트림 패치들 적용
+- lib: string: Linux 업스트림 패치들 적용
+- strnicmp 를 strncasecmp 로 교체
+- lib: rbtree: Linux 업스트림 패치들 적용
+- lib: sort: Linux 업스트림 패치들 적용
+- lib: strncpy_from_user: Linux 업스트림 패치들 적용
+- ARM: 8187/1: add CONFIG_HAVE_ARCH_BITREVERSE to support rbit instruction
+- ARM: 8189/1: arm64:add bitrev.h file to support rbit instruction
+- bullhead_defconfig: CONFIG_HAVE_ARCH_BITREVERSE 활성화
+- ALSA: 6fire: Convert byte_rev_table uses to bitrev8
+- msm: mdss: fb 켜기에 실패했을때 수행되지 않는 unlock 수정
+- lib: crc32: Linux 업스트림 패치들 적용
+- lib: decompress_inflate: Linux 업스트림 패치들 적용
+- lib: decompress_unlzma: Linux 업스트림 패치들 적용
+- 변경사항 취소의 취소 "gpiolib: add IRQF_ONESHOT flag for shared IRQ"
+  (터치스크린 문제가 수정됨.)
+
+>> M <<
+- 변경사항 취소의 취소 "msm: mdss: trigger frame timeout when recovery is in progress"
+  (터치스크린 문제가 수정됨.)
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v4.0 적용
+
+<b><#selectbg_g>[bullhead_II-v3.1]</#></b>
 == 커널 ==
 >> 공통 <<
 - arm64: Revert jump label patches and disable it

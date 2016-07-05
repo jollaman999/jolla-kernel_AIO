@@ -3,7 +3,36 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v3.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v4.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- touchscreen: synaptics: Lock when resume or suspend is triggered and check suspended state
+  (Perfectly fixed touchscreen issue when turning on the screen with sound on.)
+- lib: bitmap: Applied Linux upstream patches
+- lib: string: Applied Linux upstream patches
+- Replace strnicmp with strncasecmp
+- lib: rbtree: Applied Linux upstream patches
+- lib: sort: Applied Linux upstream patches
+- lib: strncpy_from_user: Applied Linux upstream patches
+- ARM: 8187/1: add CONFIG_HAVE_ARCH_BITREVERSE to support rbit instruction
+- ARM: 8189/1: arm64:add bitrev.h file to support rbit instruction
+- bullhead_defconfig: Enable CONFIG_HAVE_ARCH_BITREVERSE
+- ALSA: 6fire: Convert byte_rev_table uses to bitrev8
+- msm: mdss: Fix unhandled unlock when failed to turn on fb
+- lib: crc32: Applied Linux upstream patches
+- lib: decompress_inflate: Applied Linux upstream patches
+- lib: decompress_unlzma: Applied Linux upstream patches
+- Revert "Revert "gpiolib: add IRQF_ONESHOT flag for shared IRQ""
+  (touchscreen issue has been fixed.)
+
+>> M <<
+- Revert "Revert "msm: mdss: trigger frame timeout when recovery is in progress
+  (touchscreen issue has been fixed.)
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v4.0 applied
+
+<b><#selectbg_g>[bullhead_II-v3.1]</#></b>
 == Kernel ==
 >> Common <<
 - arm64: Revert jump label patches and disable it
