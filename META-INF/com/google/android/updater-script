@@ -310,6 +310,9 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   run_program("/tmp/multirom_hack.sh");
   if file_getprop("/tmp/aroma-data/multirom.prop","multirom")=="1" then
     ui_print(">>> THIS IS MULTIROM <<<");
+    if file_getprop("/tmp/aroma-data/otg.prop","otg")=="1" then
+      ui_print(">>> THIS ROM IS LOCATED IN OTG <<<");
+    endif;
     ui_print("-> Copying Multi ROM Manager...");
     package_extract_dir("jolla-kernel/bullhead/multirom/app/", "/data/app/");
     run_program("/sbin/busybox", "chown", "-R", "system.system", "/data/app/com.tassadar.multirommgr-1/");
