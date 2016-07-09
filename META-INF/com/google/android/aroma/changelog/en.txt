@@ -3,7 +3,22 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v4.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v4.1]</#></b></@>
+== Kernel ==
+>> Common <<
+- Applied android-msm-bullhead-3.10-marshmallow-dr1.6 changes
+
+== AIO ==
+- Multirom with OTG is now working!!
+- multirom: Fix OTG path + Rebuilt with updated sources
+- Fix installation with OTG
+- ramdisk: Update sepolicy
+- A2DPChecker: Exec SU when open the main activity
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v4.1 applied
+
+<b><#selectbg_g>[bullhead_II-v4.0]</#></b>
 == Kernel ==
 >> Common <<
 - touchscreen: synaptics: Lock when resume or suspend is triggered and check suspended state

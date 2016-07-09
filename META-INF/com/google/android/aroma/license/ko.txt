@@ -1,5 +1,5 @@
 ﻿<@center><b><#selectbg_g>jolla-kernel 라이선스</#></b>
-버젼 1.0, 2014년 10월
+버젼 2.0, 2016년 07월
 
 <b><#selectbg_g>사용권 동의서</#></b></@>
 
@@ -9,7 +9,7 @@
   본인에게 책임이 있음을 알려드립니다.</q></@>
 
 <b><#selectbg_g>2. 재배포.</#></b>
-<@fill><q>  제 커널은 국내 포럼과 xda를 통해서만 배포되고 있습니다. 재배포는 가능하나 링크를 직접 걸어 주시길 당부드립니다. 재배포시 제 커널 정보에 대하여 어떠한 수정도 있어서는 안됩니다.</q></@>
+<@fill><q>  제 커널은 구레포, 디벨로이드, xda를 통해서만 배포되고 있습니다. 재배포는 가능하나 링크를 직접 걸어 주시길 당부드립니다. 재배포시 제 커널 정보에 대하여 어떠한 수정도 있어서는 안됩니다.</q></@>
 
 <b><#selectbg_g>3. 질문 및 버그 리포팅.</#></b>
 <@fill><q>  질문 및 버그 리포팅은 언제나 환영합니다. 포럼내에 댓글을 남겨주시거나 쪽지 혹은 admin@jollaman999.com 로 메일을 주시기 바랍니다. 단, 원문에 써있는 내용에 대해서 질문 하시는 일은 없어야 합니다.</q></@>
@@ -18,6 +18,7 @@
 <@fill><q>  jolla-kernel 소스는 누구나 사용 하실 수 있으며, 수정을 통한 재배포가 가능합니다. 제 커널 소스는 https://github.com/jollaman999 에서 확인 하실 수 있습니다.</q></@>
 
 <b><#selectbg_g>6. 트레이드마크.</#></b>
-<@fill><q>  jolla-kernel, jollaman999 및 jolla-kernel 로고는 jollaman999 의 소유입니다.</q></@>
+<@fill><q>  jolla-kernel, jollaman999 및 jolla-kernel 로고는 jollaman999 의 소유입니다.
+  MultiROM 및 MultiROM 로고는 Tasssadar 님의 소유입니다.</q></@>
 
 <@center><b><#selectbg_g>사용권 동의서 끝</#></b></@>
