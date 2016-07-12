@@ -3,7 +3,39 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v4.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v5.0]</#></b></@>
+== 커널 ==
+>> 공통 <<
+/* lazytime 마운트 옵션 지원 */
+- vfs: lazytime 마운트 옵션 지원 추가
+- f2fs: lazytime 마운트 옵션 지원
+- f2fs: dev 브랜치 최신 패치들 적용
+- ext4: lazytime 마운트 옵션을 위한 최적화 추가
+- ext4: mount 에 의해 MS_LAZYTIME 이 설정 되었을때 리마운트시 lazytime 설정
+
+/* 일부 android-msm-bullhead-3.10-marshmallow-dr1.6 변경 사항들 취소 */
+- 변경사항 취소 "mdss: mdp3: Validate input from userspace" (배터리 드레인 발생.)
+- 변경사항 취소 "ASoC: msm: audio-effects: misc fixes in h/w effects (update)" (스피커 사운드를 작게함.)
+- 변경사항 취소 "ASoC: msm: audio-effects: misc fixes in h/w accelerated effect"
+
+/* sovc 와 dt2w 를 위한 일부 수정 사항들 */
+- touchscreen: sovc: 터치스크린을 끌때 진동을 두번 울림
+- touchscreen: sovc: work 구조체를 큐에 넣기 전에 터치 상태를 확인
+- touchscreen: sovc, synaptics: touch off 작업의 레이스 컨디션 방지
+- touchscreen: dt2w: 불필요한 scr_suspended 체크 제거
+
+== AIO ==
+/* ext4 와 f2fs 파티션들에 대해 lazytime 마운트 옵션 활성화 */
+- ramdisk: fstab.bullhead: ext4 파티션들에 대해 discard 옵션 활성화
+- ramdisk: fstab.bullhead: noatime,nodiratime 옵션들을 lazytime 으로 변경
+- ramdisk: fstab.bullhead: persist 파티션에 대해 lazytime 옵션 활성화
+- ramdisk: fstab.bullhead: system 과 vendor 에 대해 lazytime 옵션 활성화
+- ramdisk: fstab.bullhead: vendor 에 대해 barrier 비활성화
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v5.0 적용
+
+<b><#selectbg_g>[bullhead_II-v4.1]</#></b>
 == 커널 ==
 >> 공통 <<
 - android-msm-bullhead-3.10-marshmallow-dr1.6 변경 사항들 적용

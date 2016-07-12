@@ -3,7 +3,39 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v4.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v5.0]</#></b></@>
+== Kernel ==
+>> Common <<
+/* lazytime mount option support */
+- vfs: Add lazytime mount option support
+- f2fs: lazytime mount option support
+- f2fs: Applied lastest dev branch patches
+- ext4: add optimization for the lazytime mount option
+- ext4: set lazytime on remount if MS_LAZYTIME is set by mount
+
+/* Revert some of android-msm-bullhead-3.10-marshmallow-dr1.6 changes */
+- Revert "mdss: mdp3: Validate input from userspace" (It makes battery drain.)
+- Revert "ASoC: msm: audio-effects: misc fixes in h/w effects (update)" (It makes speaker sound lower.)
+- Revert "ASoC: msm: audio-effects: misc fixes in h/w accelerated effect"
+
+/* Some of fixes for sovc and dt2w */
+- touchscreen: sovc: Vibrate twice when turning off the touchscreen
+- touchscreen: sovc: Check touching state before queueing the work structure
+- touchscreen: sovc, synaptics: Prevent race condition of touch off work
+- touchscreen: dt2w: Remove uneeded check of scr_suspended
+
+== AIO ==
+/* Enable lazytime mount option for ext4 and f2fs partitions */
+- ramdisk: fstab.bullhead: Enable discard option for ext4 partitions
+- ramdisk: fstab.bullhead: Change noatime,nodiratime options to lazytime
+- ramdisk: fstab.bullhead: Enable lazytime option for persist partition
+- ramdisk: fstab.bullhead: Enable lazytime option for system and vendor
+- ramdisk: fstab.bullhead: Disable barrier for vendor
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v5.0 applied
+
+<b><#selectbg_g>[bullhead_II-v4.1]</#></b>
 == Kernel ==
 >> Common <<
 - Applied android-msm-bullhead-3.10-marshmallow-dr1.6 changes
@@ -16,6 +48,7 @@
 - A2DPChecker: Exec SU when open the main activity
 
 == Recovery ==
+- Re-built with updated sources
 - jolla-kernel_bullhead_II-v4.1 applied
 
 <b><#selectbg_g>[bullhead_II-v4.0]</#></b>
