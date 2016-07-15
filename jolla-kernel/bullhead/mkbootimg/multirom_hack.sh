@@ -13,6 +13,7 @@ if [ "$foundcount" != 0 ]; then
     awk '{ print $1 }' /etc/fstab | grep -ihE '/mnt/multirom-bullhead' | grep -ihE '/data.img' | head -n1 > /tmp/mrom_path
     sed -i 's/\/data.img//' /tmp/mrom_path
   else
+    echo "otg=0" > /tmp/aroma-data/otg.prop
     awk '{ print $1 }' /etc/fstab | grep -ihE '/realdata' | grep -ihE '/data' | head -n1 > /tmp/mrom_path
     sed -i 's/\/data//' /tmp/mrom_path
   fi
