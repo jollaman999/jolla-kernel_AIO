@@ -3,7 +3,29 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v5.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v5.1]</#></b></@>
+== 커널 ==
+>> 공통 <<
+/* lazytime 관련 하여 몇몇 패치들 적용 */
+- fs: lazytime inode 들의 타임스태프가 제대로 쓰여지게 함
+- fs: dirtytime_expire_seconds sysctl 추가
+- ext4: lazytime 최적화 수정
+
+- vfs: get_next_ino 에서 0 인 inode 를 생성하지 못하게 함
+- ext4: ext2 마운트 들에 대헤 저널 옵션 무시
+- mdss: 4K 비디오들의 플레이 문제를 방생하는 일부 변경사항들 취소
+- 몇몇 업스트림 패치들 적용
+- cpufreq: interactive: franco 로 부터 일부 변경 사항들 적용
+
+== AIO ==
+- ramdisk: init.superuser.rc: su_daemon 의 selinux 권한 수정
+- multirom_hack.sh: otg.prop not found 에러 수정
+- updater-script: 세컨롬들에서 MultiROM 설치시 무시하도록 함
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v5.1 적용
+
+<b><#selectbg_g>[bullhead_II-v5.0]</#></b>
 == 커널 ==
 >> 공통 <<
 /* lazytime 마운트 옵션 지원 */

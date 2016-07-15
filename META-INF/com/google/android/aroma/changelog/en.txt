@@ -3,7 +3,29 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v5.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v5.1]</#></b></@>
+== Kernel ==
+>> Common <<
+/* Applied some patches related with lazytime */
+- fs: make sure the timestamps for lazytime inodes eventually get written
+- fs: add dirtytime_expire_seconds sysctl
+- ext4: fix lazytime optimization
+
+- vfs: avoid creation of inode number 0 in get_next_ino
+- ext4: reject journal options for ext2 mounts
+- mdss: Revert some changes that breaks to play 4K videos
+- Applied some upstream patches
+- cpufreq: interactive: Applied some changes from franco
+
+== AIO ==
+- ramdisk: init.superuser.rc: Fix selinux permission of su_daemon
+- multirom_hack.sh: Fix otg.prop not found error
+- updater-script: Ignore to install MultiROM in second roms
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v5.1 applied
+
+<b><#selectbg_g>[bullhead_II-v5.0]</#></b>
 == Kernel ==
 >> Common <<
 /* lazytime mount option support */
