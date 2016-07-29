@@ -3,7 +3,32 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v5.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v6.0]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- UPSTREAM: KEYS: Fix ASN.1 indefinite length object parsing
+- f2fs: dev 브랜치 최신 패치들 적용
+- 잘가요 msm_hotplug
+- zram: lz4 를 기본 compressor 로 사용
+- ksm: prepare to new THP semantics
+- qcacld-2.0: HIFTargetSleepStateAdjust 의 trace 비활성화
+- radix-tree: fix radix_tree_iter_retry() for tagged iterators.
+- sdcardfs: 구글 업데이트 적용
+- Appiled CyanogenMod/android_kernel_oneplus_msm8996 로 부터 crypto 패치들 적용
+
+>> M <<
+- sdcardfs: CyanogenMod/android_kernel_oneplus_msm8996 로 부터 패치와 수정 사항들 적용
+
+== AIO ==
+- ramdisk: init.bullhead.rc: LZ4 가 이제 기본이다.
+- ramdisk: sepolicy 업데이트
+- cm-13.0 를 위한 sdcardfs 지원
+
+== 리커버리 ==
+- 새 cm-13.0 소스들로 재빌드
+- jolla-kernel_bullhead_II-v6.0 적용
+
+<b><#selectbg_g>[bullhead_II-v5.1]</#></b>
 == 커널 ==
 >> 공통 <<
 /* lazytime 관련 하여 몇몇 패치들 적용 */

@@ -108,7 +108,7 @@ fs.attentiondesc=On current kernel, /data and /cache partitions are able to use 
 You can use F2FS by change file system in Wipe option of TWRP recovery.
 
 checkbox1.title=Kernel Installatin Options
-checkbox1.subtitle=Select what you want.
+checkbox1.subtitle=Check what you want.
 sepolicy.title=sepolicy Patch
 sepolicy.item=CM SuperSU support (Deprecated)
 sepolicy.desc=Select this option if you want use SuperSU in Cyanogenmod rom.
@@ -135,7 +135,7 @@ initd.attentiondesc=If there is no busybox, this option will modify system parti
 Uncheck if you don't want to modify system partition.
 
 checkbox2.title=MultiROM Option
-checkbox2.subtitle=Select what you want.
+checkbox2.subtitle=Check what you want.
 checkbox2.item1=MultiROM Boot
 checkbox2.item1uninst=Uninstall MultiROM is selected.
 checkbox2.item1-1=Install MultiROM Boot
@@ -152,13 +152,20 @@ multidel.attention=Delete second roms Warning
 multidel.attentiondesc=This will remove all of roms except main rom!!\
 Please check again if there are backup needed.
 
-f2fs.title=F2FS
-f2fs.subtitle=F2FS binaries
+additional.title=Additional Options
+additional.subtitle=Check what you want.
 f2fs.itemtitle=Update F2FS binaries
 f2fs.item=Patch binaries
 f2fs.desc=If you want to use F2FS, update binaries for stability.
 f2fs.attention=F2FS binaries Attention
 f2fs.attentiondesc=This action will modify your system partition!
+sdcardfs.itemtitle=sdcardfs support
+sdcardfs.item=Enable sdcardfs of cm-13.0
+sdcardfs.desc=Change Google's fuse to samsung's sdcardfs.\
+It gives better performance and power consumption.\
+Only available now on recent cm-13.0.
+sdcardfs.attention=sdcardfs Attention
+sdcardfs.attentiondesc=This action will modify your system partition!
 
 sovc.title=SOVC
 sovc.subtitle=Screen Off Volume Control

@@ -3,7 +3,32 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v5.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v6.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- UPSTREAM: KEYS: Fix ASN.1 indefinite length object parsing
+- f2fs: Applied lastest dev branch patches
+- Bye bye msm_hotplug
+- zram: Use lz4 as default compressor
+- ksm: prepare to new THP semantics
+- qcacld-2.0: Disable trace of HIFTargetSleepStateAdjust
+- radix-tree: fix radix_tree_iter_retry() for tagged iterators.
+- sdcardfs: Applied Google updates
+- Appiled crypto patches from CyanogenMod/android_kernel_oneplus_msm8996
+
+>> M <<
+- sdcardfs: Applied patches and fix from CyanogenMod/android_kernel_oneplus_msm8996
+
+== AIO ==
+- ramdisk: init.bullhead.rc: Now, LZ4 is the default
+- ramdisk: Update sepolicy
+- sdcardfs support for cm-13.0
+
+== Recovery ==
+- Re-built with new cm-13.0 sources
+- jolla-kernel_bullhead_II-v6.0 applied
+
+<b><#selectbg_g>[bullhead_II-v5.1]</#></b>
 == Kernel ==
 >> Common <<
 /* Applied some patches related with lazytime */

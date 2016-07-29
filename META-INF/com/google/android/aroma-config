@@ -13,10 +13,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "jolla-kernel_II");
-ini_set("rom_version",          "v5.1");
+ini_set("rom_version",          "v6.0");
 ini_set("rom_author",           "jollaman999");
 ini_set("rom_device",           "bullhead");
-ini_set("rom_date",             "July 15, 2016");
+ini_set("rom_date",             "July 30, 2016");
 
 
 ##
@@ -447,28 +447,33 @@ endif;
 
 checkbox(
   # Title
-	"<~f2fs.title>",
+	"<~additional.title>",
 
   # Sub Title
-	"<~f2fs.subtitle>",
+	"<~additional.subtitle>",
 
   # Icon
 	"@update",
 
-  # Will be saved in /tmp/aroma/f2fs.prop
-	"f2fs.prop",
+  # Will be saved in /tmp/aroma/additional.prop
+	"additional.prop",
 
   #----------------------------------[ Selectbox With Groups ]-----------------------------------#
   # TITLE            |  SUBTITLE                                                 | Initial Value #
   #------------------+-----------------------------------------------------------+---------------#
 
   "<~f2fs.itemtitle>",      "",                                               2,      #-- group 1
-    "<~f2fs.item>",           "<~f2fs.desc>",                                   0      #-- item.1.1
+    "<~f2fs.item>",           "<~f2fs.desc>",                                   0,     #-- item.1.1
+  "<~sdcardfs.itemtitle>",      "",                                           2,      #-- group 2
+    "<~sdcardfs.item>",       "<~sdcardfs.desc>",                               0      #-- item.2.1
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
 
-if prop("f2fs.prop","item.1.1")=="1" then
+if prop("additional.prop","item.1.1")=="1" then
   alert( "<~f2fs.attention>", "<~f2fs.attentiondesc>");
+endif;
+if prop("additional.prop","item.2.1")=="1" then
+  alert( "<~sdcardfs.attention>", "<~sdcardfs.attentiondesc>");
 endif;
 
 
