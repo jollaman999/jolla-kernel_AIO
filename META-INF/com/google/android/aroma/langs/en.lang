@@ -165,7 +165,9 @@ sdcardfs.desc=Change Google's fuse to samsung's sdcardfs.\
 It gives better performance and power consumption.\
 Only available now on recent cm-13.0.
 sdcardfs.attention=sdcardfs Attention
-sdcardfs.attentiondesc=This action will modify your system partition!
+sdcardfs.attentiondesc=Turn off this option if your rom is not cm-13.0!\
+It will cause boot loop!\
+Also this action will modify your system partition.
 
 sovc.title=SOVC
 sovc.subtitle=Screen Off Volume Control

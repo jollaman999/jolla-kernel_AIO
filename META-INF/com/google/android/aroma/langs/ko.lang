@@ -165,7 +165,9 @@ sdcardfs.desc=Google 의 fuse 를 samsung 의 sdcardfs 로 변경합니다.\
 더 나은 성능과 전원 소비량을 제공합니다.\
 현재 최신 cm-13.0 에서만 사용가능합니다.
 sdcardfs.attention=sdcardfs 경고
-sdcardfs.attentiondesc=이 작업은 시스템 파티션을 수정합니다!
+sdcardfs.attentiondesc=사용하시는 롬이 cm-13.0 이 아니라면 이 옵션을 꺼주세요!\
+무한 부팅을 일으킵니다!\
+또한 이 작업은 시스템 파티션을 수정합니다.
 
 sovc.title=SOVC
 sovc.subtitle=Screen Off Volume Control
