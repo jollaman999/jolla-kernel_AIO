@@ -160,10 +160,11 @@ f2fs.desc=If you want to use F2FS, update binaries for stability.
 f2fs.attention=F2FS binaries Attention
 f2fs.attentiondesc=This action will modify your system partition!
 sdcardfs.itemtitle=sdcardfs support
-sdcardfs.item=Enable sdcardfs of cm-13.0
+sdcardfs.item=Enable sdcardfs
 sdcardfs.desc=Change Google's fuse to samsung's sdcardfs.\
 It gives better performance and power consumption.\
-Only available now on recent cm-13.0.
+Some of roms will not support sdcardfs.\
+But there is no problems to enable this.
 sdcardfs.attention=sdcardfs Attention
 sdcardfs.attentiondesc=This action will modify your system partition!
 
