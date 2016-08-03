@@ -3,7 +3,20 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v6.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v6.1]</#></b></@>
+== Kernel ==
+>> Common <<
+- Appiled Google's sucurity updates
+
+== AIO ==
+- ramdisk: Update sepolicy
+- Support sdcardfs for various roms
+
+== Recovery ==
+- Applied lastest TWRP patches from omni android-6.0
+- jolla-kernel_bullhead_II-v6.1 applied
+
+<b><#selectbg_g>[bullhead_II-v6.0]</#></b>
 == Kernel ==
 >> Common <<
 - UPSTREAM: KEYS: Fix ASN.1 indefinite length object parsing
