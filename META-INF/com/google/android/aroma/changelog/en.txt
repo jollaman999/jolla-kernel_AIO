@@ -3,7 +3,45 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v6.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v6.2]</#></b></@>
+== Kernel ==
+>> Common <<
+- Built with Linaro gcc 6.1.1
+- faster zram
+- Applied Linux kexec upstream changes
+- netfilter: x_tables: make sure e->next_offset covers remaining blob size
+- CHROMIUM: android: binder: Fix potential scheduling-while-atomic
+- UPSTREAM: netfilter: x_tables: validate e->target_offset early
+- qseecom: added small sleep between busy-wait calls to TZ
+- cpufreq: interactive: Honor changed minimum frequency
+- cpufreq: interactive: Consider changed min limit a frequency boost
+- msm: mdss: revert to stock wait_event behaviour on display threads. Was causing some weird lockups in some games
+- xpad: latest upstream version
+- ashmem: fix CVE-2016-5340
+- arm64: dma-mapping: always clear allocated buffers
+- arp: Fix spaces of 'for' loops
+- arp: Fix wrong return in arp_find_gw
+- power:qpnp-charger: extended charge time from 30s to 100s when battery status is near to full
+- qcacld-2.0: Fix misleading-indentation warnings
+
+>> N <<
+- bullhead-hardboot: Fix rotation issue when booted to M from N
+- bullhead-nanohub: Correctly matching table
+
+== AIO ==
+- init.bullhead.rc: Remove uneeded lines
+- Fix N's performance issue
+- updater: jolla-kernel Updater v1.4 (Fix force close issue in N.)
+- aroma: Optimize and reduce size of PNG files
+- f2fs-tools: release 1.7.0
+- multirom: Rebuild binaries and update libraries (Linaro gcc 6.1.1)
+
+== Recovery ==
+- Applied lastest TWRP patches from omni android-6.0
+- Revert adb backup support and Restore_Partition changes (Break multirom restoration.)
+- jolla-kernel_bullhead_II-v6.2 applied
+
+<b><#selectbg_g>[bullhead_II-v6.1]</#></b>
 == Kernel ==
 >> Common <<
 - Appiled Google's sucurity updates

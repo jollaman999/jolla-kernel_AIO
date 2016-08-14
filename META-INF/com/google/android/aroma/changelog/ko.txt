@@ -3,7 +3,45 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v6.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v6.2]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- Linaro gcc 6.1.1 로 빌드
+- 빠른 zram
+- Linux kexec 업스트립 변경사항들 적용
+- netfilter: x_tables: make sure e->next_offset covers remaining blob size
+- CHROMIUM: android: binder: Fix potential scheduling-while-atomic
+- UPSTREAM: netfilter: x_tables: validate e->target_offset early
+- qseecom: added small sleep between busy-wait calls to TZ
+- cpufreq: interactive: Honor changed minimum frequency
+- cpufreq: interactive: Consider changed min limit a frequency boost
+- msm: mdss: revert to stock wait_event behaviour on display threads. Was causing some weird lockups in some games
+- xpad: 최신 업스트림 버젼
+- ashmem: fix CVE-2016-5340
+- arm64: dma-mapping: always clear allocated buffers
+- arp: 'for' 구문들의 스페이스들 수정
+- arp: arp_find_gw 에서 잘못된 return 수정
+- power:qpnp-charger: extended charge time from 30s to 100s when battery status is near to full
+- qcacld-2.0: misleading-indentation 경고들 수정
+
+>> N <<
+- bullhead-hardboot: N 에서 M 으로 부팅했을시 회전 문제 수정
+- bullhead-nanohub: 올바르게 테이블 매칭
+
+== AIO ==
+- init.bullhead.rc: 불필요한 라인들 제거
+- N 의 퍼포먼스 문제 수정
+- updater: jolla-kernel Updater v1.4 (N 에서의 강제 종료 문제 수정.)
+- aroma: PNG 파일들 최척화 및 사이즈 줄임
+- f2fs-tools: 릴리즈 1.7.0
+- multirom: 바이너리들 재빌드 및 라이브러리들 업데이트 (Linaro gcc 6.1.1)
+
+== 리커버리 ==
+- omni android-6.0 최신 TWRP 패치들 적용
+- adb backup 지원 및 Restore_Partition 변경사항들의 변경사항들 취소 (multirom 복원 망가뜨림.)
+- jolla-kernel_bullhead_II-v6.2 적용
+
+<b><#selectbg_g>[bullhead_II-v6.1]</#></b>
 == 커널 ==
 >> 공통 <<
 - Google 의 보안 업데이트들 적용
