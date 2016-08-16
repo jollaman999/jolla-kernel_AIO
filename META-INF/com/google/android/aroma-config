@@ -524,11 +524,13 @@ selectbox(
 
   "<~sovc.auto_off.time.title>",      "",                                               2,      #-- Group 1. key = "selected.1"
     "<~sovc.auto_off.time.default>", "",                                           1,      #-- selected.1 = 1
-    "<~sovc.auto_off.time.5>",       "",                                           0,      #-- selected.1 = 2
-    "<~sovc.auto_off.time.6>",       "",                                           0,      #-- selected.1 = 3
-    "<~sovc.auto_off.time.7>",       "",                                           0,      #-- selected.1 = 4
-    "<~sovc.auto_off.time.8>",       "",                                           0,      #-- selected.1 = 5
-    "<~sovc.auto_off.time.10>",      "",                                           0       #-- selected.1 = 6
+    "<~sovc.auto_off.time.3>",       "",                                           0,      #-- selected.1 = 2
+    "<~sovc.auto_off.time.3.5>",     "",                                           0,      #-- selected.1 = 3
+    "<~sovc.auto_off.time.4>",       "",                                           0,      #-- selected.1 = 4
+    "<~sovc.auto_off.time.4.5>",     "",                                           0,      #-- selected.1 = 5
+    "<~sovc.auto_off.time.5>",       "",                                           0,      #-- selected.1 = 6
+    "<~sovc.auto_off.time.6>",       "",                                           0,      #-- selected.1 = 7
+    "<~sovc.auto_off.time.7>",       "",                                           0       #-- selected.1 = 8
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
 

@@ -190,19 +190,25 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
       set_perm(0, 0, 0755, "/tmp/sovc_auto_off_set.sh");
 
       if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="2" then
-        run_program("/tmp/sovc_auto_off_set.sh", "5000");
+        run_program("/tmp/sovc_auto_off_set.sh", "3000");
       endif;
       if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="3" then
-        run_program("/tmp/sovc_auto_off_set.sh", "6000");
+        run_program("/tmp/sovc_auto_off_set.sh", "3500");
       endif;
       if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="4" then
-        run_program("/tmp/sovc_auto_off_set.sh", "7000");
+        run_program("/tmp/sovc_auto_off_set.sh", "4000");
       endif;
       if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="5" then
-        run_program("/tmp/sovc_auto_off_set.sh", "8000");
+        run_program("/tmp/sovc_auto_off_set.sh", "4500");
       endif;
       if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="6" then
-        run_program("/tmp/sovc_auto_off_set.sh", "10000");
+        run_program("/tmp/sovc_auto_off_set.sh", "5000");
+      endif;
+      if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="7" then
+        run_program("/tmp/sovc_auto_off_set.sh", "6000");
+      endif;
+      if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="8" then
+        run_program("/tmp/sovc_auto_off_set.sh", "7000");
       endif;
     endif;
   endif;

@@ -182,12 +182,14 @@ sovc.attentiondesc=This action will modify your system partition!
 sovc.auto_off.title=SOVC Auto Off
 sovc.auto_off.subtitle=Touchscreen will turned off automatically when user pressing the screen for a long time.
 sovc.auto_off.time.title=Select Timeout Value
-sovc.auto_off.time.default=Use Default (4 sec)
+sovc.auto_off.time.default=Use Default (2.5 sec)
+sovc.auto_off.time.3=3 sec
+sovc.auto_off.time.3.5=3.5 sec
+sovc.auto_off.time.4=4 sec
+sovc.auto_off.time.4.5=4.5 sec
 sovc.auto_off.time.5=5 sec
 sovc.auto_off.time.6=6 sec
 sovc.auto_off.time.7=7 sec
-sovc.auto_off.time.8=8 sec
-sovc.auto_off.time.10=10 sec
 sovc.auto_off.attention=SOVC Auto Off Attention
 sovc.auto_off.attentiondesc=Changing the default value will modify your system partition!
 
