@@ -3,7 +3,30 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v6.2]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v6.3]</#></b></@>
+== Kernel ==
+>> Common <<
+- sovc: Fix long auto off delay
+- sovc: Reduce default auto off delay to 2.5sec
+- tcp: make challenge acks less predictable (CVE-2016-5696)
+
+>> N <<
+- Revert "bullhead-nanohub: Correctly matching table"
+- Revert "bullhead-hardboot: Fix rotation issue when booted to M from N"
+(Previous method makes huge battery drain.)
+- bullhead-sensorhub: Add compatibility for M when hardboot proceeded
+
+>> M <<
+- bullhead-sensorhub: Rename labels for working when hardboot proceeded
+
+== AIO ==
+- sovc: Adjust configurable auto off delay values
+- multirom: Update kexec-tools to 2.0.13
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v6.3 applied
+
+<b><#selectbg_g>[bullhead_II-v6.2]</#></b>
 == Kernel ==
 >> Common <<
 - Built with Linaro gcc 6.1.1
