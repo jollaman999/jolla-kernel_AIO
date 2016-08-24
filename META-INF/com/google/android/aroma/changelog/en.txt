@@ -3,7 +3,40 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v6.3]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v7.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- Revert "msm: mdss: support parallel execution of MDSS_EVENT handlers"
+- workqueues: Introduce new flag WQ_POWER_EFFICIENT for power oriented workqueues
+- Use power efficient workqueue - firmware, net/wireless, rcu, net/ipv4,
+      PHYLIB, ASoC, net/neighbour, timekeeping, net/rfkill, usb, regulator/core
+- BACKPORT: Bluetooth: Fix potential NULL dereference in RFCOMM bind callback
+- net: ipv6: Fix ping to link-local addresses
+- ipv6: fix endianness error in icmpv6_err
+- Revert upstream's (CVE-2016-5696)
+- [PATCH v3 3.10.y] tcp: make challenge acks less predictable (CVE-2016-5696)
+- arp: queue work on power efficient wq
+- touchscreen: synaptics: queue work on power efficient wq
+- touchscreen: sovc: Use power efficient wq and high priority wq
+- touchscreen: dt2w: Use power efficient wq and high priority wq
+- touchscreen: s2w: Use power efficient wq and high priority wq
+- net: cnss: queue work on power efficient wq
+- net: wcnss: queue work on power efficient wq
+- qcacld-2.0: queue work on power efficient wq
+- touchscreen: sovc: Cancel sovc_auto_off_check_work when screen turned on
+- f2fs: Applied lastest dev branch patches
+
+>> N <<
+- mdss: mdp3: Validate input from userspace
+
+== Recovery ==
+- Applied lastest TWRP patches from omni android-6.0
+- Fix decryption in encrypted Android N devices
+- bionic: add fortified implementations of write/pwrite{,64}
+  (Fix multirom installation problem after fixed decryption in N)
+- jolla-kernel_bullhead_II-v7.0 applied
+
+<b><#selectbg_g>[bullhead_II-v6.3]</#></b>
 == Kernel ==
 >> Common <<
 - sovc: Fix long auto off delay
