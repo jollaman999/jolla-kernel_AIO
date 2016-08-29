@@ -10,6 +10,16 @@ cd ramdisk;
 # Also only add init.d support if not already added.
 find . -iname '*.rc' -maxdepth 1 -type f -exec sed -i '/start.*sysinit/d' '{}' \;
 find . -iname '*.rc' -maxdepth 1 -type f -exec sed -i '/start.*userinit/d' '{}' \;
+
+#### Remove old lines from init.rc ####
+#
+#service userinit /system/xbin/busybox run-parts /system/etc/init.d
+#    oneshot
+#    class late_start
+#    user root
+#    group root
+sed -i ':a;N;$!ba;s/\nservice userinit \/system\/xbin\/busybox run-parts \/system\/etc\/init.d\n \ \ \ oneshot\n \ \ \ class late_start\n \ \ \ user root\n \ \ \ group root//g' init.rc
+
 foundcount="$(find . -iname 'init.rc' -maxdepth 1 -type f -exec grep -ihE 'run\-parts /system/etc/init\.d' '{}' \; | wc -l)";
 if [ "$foundcount" -eq 0 ]; then
         #find busybox in /system
@@ -26,13 +36,15 @@ if [ "$foundcount" -eq 0 ]; then
                 chmod 755 /system/xbin/busybox
                 bblocation="/system/xbin/busybox";
         fi
-		#append the new lines for this option at the bottom
+
+        #append the new lines for this option at the bottom
         echo "" >> init.rc
         echo "service userinit $bblocation run-parts /system/etc/init.d" >> init.rc
-        echo "    oneshot" >> init.rc
         echo "    class late_start" >> init.rc
         echo "    user root" >> init.rc
         echo "    group root" >> init.rc
+        echo "    seclabel u:r:init:s0" >> init.rc
+        echo "    oneshot" >> init.rc
 fi
 
 echo " ";
