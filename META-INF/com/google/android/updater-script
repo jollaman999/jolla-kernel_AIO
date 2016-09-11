@@ -95,18 +95,18 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
     ui_print("-> Replacing M's init.bullhead.rc...");
     package_extract_file("jolla-kernel/bullhead/ramdisk/init.bullhead_m.rc", "/tmp/ramdisk/init.bullhead.rc");
+
+    if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.1")=="1" then
+      ui_print("-> Patching sepolicy...");
+      package_extract_file("jolla-kernel/bullhead/ramdisk/sepolicy", "/tmp/ramdisk/sepolicy");
+      set_perm(0, 0, 0644, "/tmp/ramdisk/sepolicy");
+    endif;
   endif;
   if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="2" then
     ui_print("-> Replacing N's init.bullhead.rc...");
     package_extract_file("jolla-kernel/bullhead/ramdisk/init.bullhead_n.rc", "/tmp/ramdisk/init.bullhead.rc");
   endif;
   set_perm(0, 0, 0750, "/tmp/ramdisk/init.bullhead.rc");
-
-  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.1")=="1" then
-      ui_print("-> Patching sepolicy...");
-      package_extract_file("jolla-kernel/bullhead/ramdisk/sepolicy", "/tmp/ramdisk/sepolicy");
-      set_perm(0, 0, 0644, "/tmp/ramdisk/sepolicy");
-  endif;
 
 
   ############ Replace Image.gz-dtb ############
