@@ -1,2 +1,11 @@
 #!/sbin/sh
-sed -i 's/AUTO_OFF_VALUE/'$1'/' /system/etc/init.d/77sovc_auto_off
+
+tmp="/tmp/";
+bin="$tmp/bin";
+
+cd "$tmp";
+cd ramdisk;
+
+sed -i 's/sovc_auto_off_delay 2500/sovc_auto_off_delay '$1'/' init.bullhead.rc;
+
+exit 0;

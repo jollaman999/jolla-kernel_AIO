@@ -1,2 +1,0 @@
-#!/system/bin/sh
-echo AUTO_OFF_VALUE > /sys/android_touch/sovc_auto_off_delay

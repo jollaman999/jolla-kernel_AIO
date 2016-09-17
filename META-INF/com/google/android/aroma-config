@@ -427,9 +427,7 @@ checkbox(
   "<~app.title>",           "",                                               2,      #-- group 3
     "<~updater.item>",        "<~updater.desc>",                                0,      #-- item.3.1
     "<~a2dp.item>",           "<~a2dp.desc>",                                   0,      #-- item.3.2
-    "<~usbkeyboard.item>",    "<~usbkeyboard.desc>",                            0,      #-- item.3.3
-  "<~initd.title>",         "",                                               2,      #-- group 4
-    "<~initd.item>",          "<~initd.desc>",                                  0       #-- item.4.1
+    "<~usbkeyboard.item>",    "<~usbkeyboard.desc>",                            0       #-- item.3.3
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
@@ -439,9 +437,6 @@ if prop("checkbox1.prop","item.1.1")=="1" then
 endif;
 if prop("checkbox1.prop","item.2.1")=="1" then
   alert( "<~led.attention>", "<~led.attentiondesc>");
-endif;
-if prop("checkbox1.prop","item.4.1")=="1" then
-  alert( "<~initd.attention>", "<~initd.attentiondesc>");
 endif;
 
 
@@ -500,10 +495,6 @@ selectbox(
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
 
-if prop("sovc.prop","selected.1")=="2" then
-  alert( "<~sovc.attention>", "<~sovc.attentiondesc>");
-endif;
-
 if prop("sovc.prop","selected.1")=="1" then
 selectbox(
   # Title
@@ -533,10 +524,6 @@ selectbox(
     "<~sovc.auto_off.time.7>",       "",                                           0       #-- selected.1 = 8
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
-
-if prop("sovc_auto_off.prop","selected.1")!="1" then
-  alert( "<~sovc.auto_off.attention>", "<~sovc.auto_off.attentiondesc>");
-endif;
 endif;
 ## endif prop("sovc.prop","selected.1")=="1"
 
@@ -562,10 +549,6 @@ selectbox(
     "<~kcal_fix_yellow_off.item>",   "<~kcal_fix_yellow_off.desc>",          0       #-- selected.1 = 2
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
-
-if prop("kcal.prop","selected.1")=="2" then
-  alert( "<~kcal.attention>", "<~kcal.attentiondesc>");
-endif;
 
 ########################################### MultiROM ###########################################
 ## multirom enabled

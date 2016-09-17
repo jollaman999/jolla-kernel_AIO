@@ -127,12 +127,6 @@ a2dp.item=A2DP Checker
 a2dp.desc=This app support Screen Off Volume Control for Bluetooth headsets.
 usbkeyboard.item=USB-Keyboard
 usbkeyboard.desc=This app support to use Android device as USB Keyboard/Mouse.
-initd.title=init.d Patch
-initd.item=init.d Support
-initd.desc=This option enable to use init.d scripts in /system/etc/init.d folder.
-initd.attention=init.d Patch warning
-initd.attentiondesc=If there is no busybox, this option will modify system partition.\
-Uncheck if you don't want to modify system partition.
 
 checkbox2.title=MultiROM Option
 checkbox2.subtitle=Check what you want.
@@ -176,8 +170,6 @@ sovc_on.desc=You can control volume or track with touchscreen while screen turne
 sovc_off.item=Turn off SOVC
 sovc_off.desc=Did you try it..? :(\
 Now, you can use SOVC auto off!
-sovc.attention=SOVC Off Attention
-sovc.attentiondesc=This action will modify your system partition!
 
 sovc.auto_off.title=SOVC Auto Off
 sovc.auto_off.subtitle=Touchscreen will turned off automatically when user pressing the screen for a long time.
@@ -190,8 +182,6 @@ sovc.auto_off.time.4.5=4.5 sec
 sovc.auto_off.time.5=5 sec
 sovc.auto_off.time.6=6 sec
 sovc.auto_off.time.7=7 sec
-sovc.auto_off.attention=SOVC Auto Off Attention
-sovc.auto_off.attentiondesc=Changing the default value will modify your system partition!
 
 kcal.title=KCAL Fix Yellow
 kcal.subtitle=Adjust KCAL values to fix yellow screen.
@@ -200,8 +190,6 @@ kcal_fix_yellow_on.item=Turn on kcal_fix_yellow
 kcal_fix_yellow_on.desc=If you have yellow screen, select this.
 kcal_fix_yellow_off.item=Turn off kcal_fix_yellow
 kcal_fix_yellow_off.desc=If you have normal screen or not want to change KCAL values, select this.
-kcal.attention=KCAL Attention
-kcal.attentiondesc=Turning off this option will modify your system partition!
 
 ramdisk.title=Ramdisk Options
 ramdisk.subtitle=Select compress type.

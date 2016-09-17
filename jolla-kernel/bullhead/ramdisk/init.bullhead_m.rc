@@ -89,8 +89,7 @@ on early-boot
 on boot
     symlink /dev/block/platform/soc.0/f9824900.sdhci /dev/block/bootdevice
 
-    ###################### init.bullhead.power.sh ########################
-    # execute script to set initial CPU settings
+    ###################### jolla-kernel Settings ########################
     # take the A57s offline when thermal hotplug is disabled
     write /sys/devices/system/cpu/cpu4/online 0
     write /sys/devices/system/cpu/cpu5/online 0
@@ -190,7 +189,11 @@ on boot
     write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/up_scale 250
     write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/idle_mbps 1600
     write /sys/class/devfreq/qcom,mincpubw.28/governor cpufreq
-    ######################################################################
+
+    write /sys/devices/platform/kcal_ctrl.0/kcal_fix_yellow 1
+    write /sys/android_touch/scroff_volctr 1
+    write /sys/android_touch/sovc_auto_off_delay 2500
+    #####################################################################
 
     # update foreground cpuset now that processors are up
     write /dev/cpuset/foreground/cpus 0-5
