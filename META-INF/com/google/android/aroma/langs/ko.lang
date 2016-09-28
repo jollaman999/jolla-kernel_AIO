@@ -127,6 +127,12 @@ a2dp.item=A2DP Checker
 a2dp.desc=이 앱은 블루투스 헤드셋에 대해 Screen Off Volume Control 을 지원합니다.
 usbkeyboard.item=USB-Keyboard
 usbkeyboard.desc=이 앱은 안드로이드 디바이스를 USB 키보드/마우스로 사용 하는 것을 지원합니다.
+initd.title=init.d 패치
+initd.item=init.d 지원
+initd.desc=이 옵션은 /system/etc/init.d 폴더안에 있는 init.d 스크립트 들을 사용할 수 있게 합니다.
+initd.attention=init.d 패치 경고
+initd.attentiondesc=busybox 가 설치되어 있지 않은 경우, 이 옵션은 system 파티션을 수정합니다.\
+system 파티션 수정을 원치 않을 경우 체크를 해제하세요.
 
 checkbox2.title=멀티롬 옵션
 checkbox2.subtitle=원하시는 옵션에 체크해 주세요.

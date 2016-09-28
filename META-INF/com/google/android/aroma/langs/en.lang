@@ -127,6 +127,12 @@ a2dp.item=A2DP Checker
 a2dp.desc=This app support Screen Off Volume Control for Bluetooth headsets.
 usbkeyboard.item=USB-Keyboard
 usbkeyboard.desc=This app support to use Android device as USB Keyboard/Mouse.
+initd.title=init.d Patch
+initd.item=init.d Support
+initd.desc=This option enable to use init.d scripts in /system/etc/init.d folder.
+initd.attention=init.d Patch warning
+initd.attentiondesc=If there is no busybox, this option will modify system partition.\
+Uncheck if you don't want to modify system partition.
 
 checkbox2.title=MultiROM Option
 checkbox2.subtitle=Check what you want.

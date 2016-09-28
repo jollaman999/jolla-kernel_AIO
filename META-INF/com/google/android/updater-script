@@ -132,8 +132,19 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   delete("/system/etc/init.d/77sovc_auto_off");
 
 
+  ############ init.d Patch ############
+  show_progress(0.625, 1);
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.4.1")=="1" then
+    ui_print("-> Patching init.d...");
+    set_perm(0, 0, 0755, "/tmp/init.d_support.sh");
+    run_program("/tmp/init.d_support.sh");
+    package_extract_dir("jolla-kernel/bullhead/etc/", "/system/etc/");
+    set_perm(0, 2000, 0755, "/system/etc/init.d/77jolla-kernel");
+  endif;
+
+
   ############ Turn Off SOVC ############
-  show_progress(0.7, 0.1);
+  show_progress(0.65, 0.1);
   ui_print("-> Setting SOVC...");
 
   if file_getprop("/tmp/aroma-data/sovc.prop","selected.1")=="1" then
@@ -174,7 +185,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
 
   ############ kcal_fix_yellow ############
-  show_progress(0.725, 0.1);
+  show_progress(0.7, 0.1);
   if file_getprop("/tmp/aroma-data/kcal.prop","selected.1")=="2" then
     ui_print("-> Setting KCAL...");
     package_extract_file("jolla-kernel/bullhead/kcal/kcal_fix_off_set.sh", "/tmp/kcal_fix_off_set.sh");
@@ -184,7 +195,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
 
   ############ Ramdisk Compress Option ############
-  show_progress(0.75, 0.1);
+  show_progress(0.725, 0.1);
   if file_getprop("/tmp/aroma-data/ramdisk.prop","selected.1")=="1" then
     ui_print("-> Using gzip compressed ramdisk image...");
     set_perm(0, 0, 0755, "/tmp/gzip.sh");
@@ -198,14 +209,14 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
 
   ############ Repack boot.img ############
-  show_progress(0.775, 1);
+  show_progress(0.75, 1);
   ui_print("-> Repacking boot.img...");
   run_program("/tmp/repackimg.sh");
   run_program("/tmp/bin/busybox", "dd", "if=/tmp/image-new.img", "of=/dev/block/platform/soc.0/f9824900.sdhci/by-name/boot");
 
 
   ############ Patch Charging LED ############
-  show_progress(0.8, 0.1);
+  show_progress(0.775, 0.1);
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1" then
     ui_print("-> Patching charging LED...");
     package_extract_dir("jolla-kernel/bullhead/led/system/", "/system/");
@@ -214,7 +225,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
 
   ############ Patch F2FS binaries ############
-  show_progress(0.825, 0.2);
+  show_progress(0.8, 0.2);
   if file_getprop("/tmp/aroma-data/additional.prop","item.1.1")=="1" then
     ui_print("-> Patching F2FS binaries...");
     package_extract_dir("jolla-kernel/bullhead/f2fs/system/", "/system/");
@@ -228,7 +239,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
 
   ############ Enable sdcardfs ############
-  show_progress(0.85, 0.1);
+  show_progress(0.825, 0.1);
   if file_getprop("/tmp/aroma-data/additional.prop","item.2.1")=="1" then
     ui_print("-> Enabling sdcardfs...");
     package_extract_file("jolla-kernel/bullhead/sdcardfs/sdcardfs_enable.sh", "/tmp/sdcardfs_enable.sh");
@@ -240,26 +251,27 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
   ############ Copy Applications ############
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="1" then
-    show_progress(0.875, 0.2);
+    show_progress(0.85, 0.2);
     ui_print("-> Copying jolla-kernel Updater...");
     package_extract_dir("updater/", "/data/app/");
     run_program("/sbin/busybox", "chown", "-R", "system.system", "/data/app/com.jollakernelupdater-1/");
   endif;
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.2")=="1" then
-    show_progress(0.9, 0.2);
+    show_progress(0.875, 0.2);
     ui_print("-> Copying A2DPChecker...");
     package_extract_dir("jolla-kernel/app/A2DPChecker/", "/data/app/");
     run_program("/sbin/busybox", "chown", "-R", "system.system", "/data/app/com.jollaman999.bluetootha2dp-1/");
   endif;
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.3")=="1" then
-    show_progress(0.925, 0.2);
+    show_progress(0.9, 0.2);
     ui_print("-> Copying USB-Keyboard...");
     package_extract_dir("jolla-kernel/app/USB-Keyboard/", "/data/app/");
     run_program("/sbin/busybox", "chown", "-R", "system.system", "/data/app/remote.hid.keyboard.client-1/");
   endif;
 
+
   ######## Multi ROM Hack ########
-  show_progress(0.95, 0.1);
+  show_progress(0.925, 0.1);
   ui_print("-> Checking Multi ROM state...");
   run_program("/tmp/multirom_hack.sh");
   if file_getprop("/tmp/aroma-data/multirom.prop","multirom")=="1" then
@@ -274,7 +286,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   ## endif file_getprop("/tmp/aroma-data/multirom.prop","multirom")=="1"
 
   ######## Multi ROM Install ########
-  show_progress(0.975, 5);
+  show_progress(0.95, 5);
   if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="2" then
 
   if file_getprop("/tmp/aroma-data/checkbox2.prop","item.1.1")=="1" then
