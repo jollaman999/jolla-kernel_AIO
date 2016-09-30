@@ -87,10 +87,8 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   ui_print("-> Replacing ramdisk...");
   package_extract_file("jolla-kernel/bullhead/ramdisk/fstab.bullhead", "/tmp/ramdisk/fstab.bullhead");
   package_extract_file("jolla-kernel/bullhead/ramdisk/init.superuser.rc", "/tmp/ramdisk/init.superuser.rc");
-  package_extract_file("jolla-kernel/bullhead/ramdisk/jolla-kernel.prop", "/tmp/ramdisk/jolla-kernel.prop");
   set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.bullhead");
   set_perm(0, 0, 0750, "/tmp/ramdisk/init.superuser.rc");
-  set_perm(0, 0, 0644, "/tmp/ramdisk/jolla-kernel.prop");
 
   if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
     ui_print("-> Replacing M's init.bullhead.rc...");
