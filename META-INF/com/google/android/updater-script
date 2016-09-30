@@ -121,6 +121,9 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   endif;
 
 
+  ############ Old jolla-kernel.prop Cleanup ############
+  delete("/tmp/ramdisk/jolla-kernel.prop");
+
   ############ Old init.d Cleanup ############
   show_progress(0.6, 0.1);
   ui_print("-> Cleaning old init.d support...");
