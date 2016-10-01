@@ -1,4 +1,4 @@
-﻿<@center><b><#selectbg_g>jolla-kernel 라이선스</#></b>
+<@center><b><#selectbg_g>jolla-kernel 라이선스</#></b>
 버젼 2.0, 2016년 07월
 
 <b><#selectbg_g>사용권 동의서</#></b></@>
