@@ -109,11 +109,6 @@ You can use F2FS by change file system in Wipe option of TWRP recovery.
 
 checkbox1.title=Kernel Installatin Options
 checkbox1.subtitle=Check what you want.
-sepolicy.title=sepolicy Patch
-sepolicy.item=CM SuperSU support (Deprecated)
-sepolicy.desc=Select this option if you want use SuperSU in Cyanogenmod rom.
-sepolicy.attention=sepolicy attention
-sepolicy.attentiondesc=If you select this option in another rom, it will cause boot loop.
 led.title=LED Patch
 led.item=Charging LED support
 led.desc=Select this option if you want use charging LED.
