@@ -578,6 +578,53 @@ checkbox(
 
 if prop("checkbox2.prop","item.1.1")=="1" then
   alert( "<~multirom.attention>", "<~multirom.attentiondesc>");
+
+  if prop("lang.prop","selected.0")=="1" then
+  agreebox(
+    #-- Title
+      "<~terms.title>",
+
+    #-- Subtitle / Description
+      "<~terms.desc>",
+
+    #-- Icon:
+      "@license",
+
+    #-- Text Content
+    resread("license_multirom/ko.txt"),
+
+    #-- Checkbox Text
+      "<~terms.check>",
+
+    #-- Unchecked Alert Message
+      "<~terms.confirm>"
+  );
+  endif;
+  ## endif prop("lang.prop","selected.0")=="1"
+
+  if prop("lang.prop","selected.0")=="2" then
+  agreebox(
+    #-- Title
+      "<~terms.title>",
+
+    #-- Subtitle / Description
+      "<~terms.desc>",
+
+    #-- Icon:
+      "@license",
+
+    #-- Text Content
+    resread("license_multirom/en.txt"),
+
+    #-- Checkbox Text
+      "<~terms.check>",
+
+    #-- Unchecked Alert Message
+      "<~terms.confirm>"
+  );
+  endif;
+  ## endif prop("lang.prop","selected.0")=="2"
+
 endif;
 ## endif - checkbox2.prop
 
