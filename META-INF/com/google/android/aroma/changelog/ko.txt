@@ -3,6 +3,68 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
+<b><#selectbg_g>[bullhead_II-v8.0]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- 더 나아진 성능과 더 좋아진 배터리
+- 소스 클린업
+- Linux 3.10.103
+- 9월 패치들 적용
+- Linaro gcc 6.1.1-2016.08-rc2 로 빌드
+- mmc: crc 체크 비활성화
+- block: add_random 비활성화
+- block: scheduler: ZEN v2 추
+- block: zen: eMMC 와 CPU 의 부하를 줄이기 위해 fifo batch 를 16으로 설정
+- arp: arp_project의 sysfs 노드들과 arp_print_info export
+- arp: 이미 includ 된 라인 제거
+- arp, net/core: Export 들 수정
+- 변경 사항 취소 "arp: Request 가 수행되지 않았거나 소스 IP가 Request 했던 타겟 IP 와 다를때 Reply 무시"
+- arp: 시간 정보 제거
+- arp: 'print_arp_info' 를 더 일찍 체크
+- arp: 게이트웨이 탐지 수정
+- arp: ignore_gw_update_by_reply 옵션 추가
+- arp: memcpy 클린업, 'arp_print_info' 에 있는 필요없는 않는 변수들 제거
+- Power efficient workqueue 제거
+- f2fs: stable branch 로 되돌아가고 lazytime 패치 적용
+- sovc: 재생중 상태 notifier 추가와 *~tmp 포인터들 클린업 + 몇몇 버그들 수정
+- tcp_cubic: Hystart 가 얼마나 효과적인지 추적하기 위해 SNMP 카운터들 추가
+- tcp_cubic: Hystart delay threshold 수정
+- inet_diag: tcp cc 정보 액세스 수정
+- tcp: CDG 혼잡 제어 추가
+- tcp: cdg: div_u64() 사용
+- tcp: tcp_in_slow_start helper 추가
+- tcp: cwnd 가 ssthresh 와 같을 때 천천히 시작하지 않음
+- tcp: tcp_enter_cwr 와 tcp_init_cwnd_reduction 의 불필요한 인수들 제거
+- proc: jolla-kernel 의 버젼 정보 추가
+- msm_thermal: 일부 잘못된 로직들 수정
+- msm_thermal: 발열 감소와 기기 성능 증가
+- msm_thermal: 'freq_step' 파라미터 추가
+- msm_thermal: core_control 와 freq_control 디버그 옵션 추가
+
+== AIO ==
+- init.d: 오래된 라인들 제거 및 seclabel 추가
+- aroma: N의 이름을 Nougat 로 수정 후 기본값으로 설정
+- kcal 과 sovc 비활성화가 작동하지 않는 문제 수정.
+- updater-script: 'jolla-kernel.prop' 설치 라인들 제거
+- sepolicy 패치 제거
+- aroma: MultiROM 라이센스 추가
+- aroma: license: ko: '<U+FEFF>' 제거.
+- multirom: Linaro gcc 6.1.1-2016.08-rc2 로 빌드
+
+== jolla-kernel Updater ==
+- 라이브러리들 업데이트
+- 강제 종료 문제들 수정
+- v1.5 로 버젼업
+
+== 리커버리 ==
+- Linaro gcc 6.1.1-2016.08-rc2 로 빌드
+- 3.0.2-2
+- init.recovery.bullhead.rc: 파워 설정들 추가
+(리커버리를 사용할 때 기본 거버너가 'performance' 로 되어있어서 기기가 매우 뜨거워 집니다.
+또한 리커버리 모드에서 장시간 켜놓았을때 제 보드가 나갔습니다.
+따라서 안전을 위해 거버너를 'interactive' 로 바꾸고 파워 설정들을 추가했습니다.)
+- jolla-kernel_bullhead_II-v8.0 적용
+
 <b><#selectbg_g>[bullhead_II-v7.0]</#></b></@>
 == 커널 ==
 >> 공통 <<
