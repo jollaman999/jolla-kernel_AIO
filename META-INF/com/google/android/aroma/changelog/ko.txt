@@ -3,7 +3,27 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v8.2]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v9.0]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- 변경사항 취소 "sched: Force sleep on consecutive sched_yields"
+- net: sch_generic: Allow devices to opt-out net watchdog
+- [backport] sched, nohz: Change rq->nr_running to always use wrappers
+- 변경사항 취소 "lib: do_strncpy_from_user: Fix return error code for get_user failures"
+- 변경사항 취소 "lib: align source before using optimized implementation"
+
+== AIO ==
+- fstab.bullhead: 누가 변경 사항들 적용
+
+== 리커버리 ==
+- AROMA 인스톨러로 설치중에 화면 잠금 해제가 안되는 문제 수정
+- Android 7.0 업데이트 스크립트 실패 문제 해결
+- Support symlinked init in ramdisk
+- Fix missing variables
+- omnirom/android_bootable_recovery 로 부터 android-7.0 변경 사항들 적용
+- jolla-kernel_bullhead_II-v9.0 적용
+
+<b><#selectbg_g>[bullhead_II-v8.2]</#></b>
 == 커널 ==
 >> 공통 <<
 - msm_thermal: big 의 주파수에 좀 더 제한을 줌

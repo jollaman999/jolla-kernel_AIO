@@ -3,7 +3,27 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v8.2]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v9.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- Revert "sched: Force sleep on consecutive sched_yields"
+- net: sch_generic: Allow devices to opt-out net watchdog
+- [backport] sched, nohz: Change rq->nr_running to always use wrappers
+- Revert "lib: do_strncpy_from_user: Fix return error code for get_user failures"
+- Revert "lib: align source before using optimized implementation"
+
+== AIO ==
+- fstab.bullhead: Apply nougat changes
+
+== Recovery ==
+- Fix can't unlock while installing with AROMA installer
+- Fix Android 7.0 update scripts fail issue
+- Support symlinked init in ramdisk
+- Fix missing variables
+- Apply android-7.0 changes from omnirom/android_bootable_recovery
+- jolla-kernel_bullhead_II-v9.0 applied
+
+<b><#selectbg_g>[bullhead_II-v8.2]</#></b>
 == Kernel ==
 >> Common <<
 - msm_thermal: More limit frequency for big
