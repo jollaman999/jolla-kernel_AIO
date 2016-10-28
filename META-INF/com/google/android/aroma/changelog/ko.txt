@@ -3,7 +3,36 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v9.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v9.1]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- Linaro gcc 6.2.1-2016.11-rc1 로 빌드
+- Linux 3.10.104
+- ksm: 업스트림 변경 사항들 적용
+- f2fs: f2fs-stable 브랜치 패치들 적용
+- nanohub: marlin 으로 부터 Android 7.1 변경사항 적용
+- lowmemorykiller: marlin 으로 부터 Android 7.1 변경사항 적용
+- arm, kbuild: "make install" 이 vmlinux 에 의존하지 않도록 함
+- arm64: kbuild: "make install" 이 vmlinux 에 의존하지 않도록 함
+- arm64: libgcc 의존성 없앰
+- kbuild: arm: "comma" 를 두번 정의 하지 않음
+- kgsl: 일부 workqueue 들이 kthread 를 사용하도록 함 (from marlin)
+- mdss: vsync_retire_work_handler 에 대해 kthread 를 사용하도록 함 (from marlin)
+- proc: 더 빠른 /proc/vmstat
+- 변경 사항 취소 "sched/fair: Fix fairness issue on migration"
+- proc: verifiedbootstate 플래그를 /proc/cmdline 로 부터 제거함
+
+** Dirtycow patch 는 이미 이전에 Linux 3.10.x 변경 사항들에서 적용되었습니다. **
+
+== AIO ==
+- ramdisk: fstab.bullhead: /data 에 대해 readahead 감소
+- N 에서의 sdcardfs 지원 수정
+- langs: 7.0.x 를 7.x.x 로 변경
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v9.1 적용
+
+<b><#selectbg_g>[bullhead_II-v9.0]</#></b>
 == 커널 ==
 >> 공통 <<
 - 변경사항 취소 "sched: Force sleep on consecutive sched_yields"

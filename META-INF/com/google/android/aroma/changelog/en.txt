@@ -3,7 +3,36 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v9.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v9.1]</#></b></@>
+== Kernel ==
+>> Common <<
+- Built with with Linaro gcc 6.2.1-2016.11-rc1
+- Linux 3.10.104
+- ksm: Applied upstream changes
+- f2fs: Applied f2fs-stable branch patches
+- nanohub: Applied Android 7.1 changes from marlin
+- lowmemorykiller: Applied Android 7.1 changes from marlin
+- arm, kbuild: make "make install" not depend on vmlinux
+- arm64: kbuild: make "make install" not depend on vmlinux
+- arm64: kill off the libgcc dependency
+- kbuild: arm: Do not define "comma" twice
+- kgsl: convert some workqueues to use kthreads (from marlin)
+- mdss: move to a kthread for vsync_retire_work_handler (from marlin)
+- proc: much faster /proc/vmstat
+- Revert "sched/fair: Fix fairness issue on migration"
+- proc: Remove verifiedbootstate flag from /proc/cmdline
+
+** Dirtycow patch already applied before in Linux 3.10.x changes **
+
+== AIO ==
+- ramdisk: fstab.bullhead: Reduce readahead for /data
+- Fix sdcardfs support in N
+- langs: Change 7.0.x to 7.x.x
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v9.1 applied
+
+<b><#selectbg_g>[bullhead_II-v9.0]</#></b>
 == Kernel ==
 >> Common <<
 - Revert "sched: Force sleep on consecutive sched_yields"
