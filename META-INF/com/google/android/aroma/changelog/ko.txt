@@ -8,7 +8,7 @@
 >> 공통 <<
 - Android 7.1.x 지원
 - Google 11월 패치들 적용
-- sovc: dt2w 나 s2w 가 활성화 되었을 때 sovc 가에 끄기가 작동하지 않는 문제 수정
+- sovc: dt2w 나 s2w 가 활성화 되었을 때 sovc 강제 끄기가 작동하지 않는 문제 수정
 - sovc: 가끔 A2DP 가 정지되었거나 블루투스가 꺼졌을 때 SOVC 가 비활성화 되지 않는 문제 수정
 - sovc: 통화 종료후 SOVC 가 비활성화 되지 않는 문제 수정
 - sovc: s2w 가 활성화 되어있고 'sovc_force_off=true' 상태일 때 DT2W 가 작동하는 문제 수정
