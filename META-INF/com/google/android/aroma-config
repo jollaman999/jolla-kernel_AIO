@@ -13,10 +13,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "jolla-kernel_II");
-ini_set("rom_version",          "v9.1");
+ini_set("rom_version",          "v10.0");
 ini_set("rom_author",           "jollaman999");
 ini_set("rom_device",           "bullhead");
-ini_set("rom_date",             "Oct 28, 2016");
+ini_set("rom_date",             "Nov 08, 2016");
 
 
 ##
@@ -388,7 +388,8 @@ selectbox(
   
     "<~window2.option1>",         "",                                                 2,      #-- Group 1. key = "selected.1"
         "<~window2.option1-1>",         "<~window2.option1-1desc>",                              0,     #-- selected.1 = 1
-        "<~window2.option1-2>",         "<~window2.option1-2desc>",                              1      #-- selected.1 = 2
+        "<~window2.option1-2>",         "<~window2.option1-2desc>",                              1,     #-- selected.1 = 2
+        "<~window2.option1-3>",         "<~window2.option1-3desc>",                              0      #-- selected.1 = 3
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 

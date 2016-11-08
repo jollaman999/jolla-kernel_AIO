@@ -92,18 +92,26 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
     ui_print("-> Replacing N's init.bullhead.rc...");
     package_extract_file("jolla-kernel/bullhead/ramdisk/init.bullhead_n.rc", "/tmp/ramdisk/init.bullhead.rc");
   endif;
+  if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="3" then
+    ui_print("-> Replacing N's init.bullhead.rc...");
+    package_extract_file("jolla-kernel/bullhead/ramdisk/init.bullhead_n.rc", "/tmp/ramdisk/init.bullhead.rc");
+  endif;
   set_perm(0, 0, 0750, "/tmp/ramdisk/init.bullhead.rc");
 
 
   ############ Replace Image.gz-dtb ############
   show_progress(0.5, 0.1);
   if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
-    ui_print("-> Replacing M's bullhead Image.gz-dtb...");
-    package_extract_file("jolla-kernel/bullhead/Image/m/Image.gz-dtb", "/tmp/split_img/boot.img-zImage");
+    ui_print("-> Replacing 23 bullhead Image.gz-dtb...");
+    package_extract_file("jolla-kernel/bullhead/Image/23/Image.gz-dtb", "/tmp/split_img/boot.img-zImage");
   endif;
   if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="2" then
-    ui_print("-> Replacing N's bullhead Image.gz-dtb...");
-    package_extract_file("jolla-kernel/bullhead/Image/n/Image.gz-dtb", "/tmp/split_img/boot.img-zImage");
+    ui_print("-> Replacing 24 bullhead Image.gz-dtb...");
+    package_extract_file("jolla-kernel/bullhead/Image/24/Image.gz-dtb", "/tmp/split_img/boot.img-zImage");
+  endif;
+  if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="3" then
+    ui_print("-> Replacing 25 bullhead Image.gz-dtb...");
+    package_extract_file("jolla-kernel/bullhead/Image/25/Image.gz-dtb", "/tmp/split_img/boot.img-zImage");
   endif;
 
 
@@ -229,6 +237,9 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
   ############ Enable sdcardfs ############
   show_progress(0.825, 0.1);
+  package_extract_file("jolla-kernel/bullhead/sdcardfs/sdcardfs_cleanup.sh", "/tmp/sdcardfs_cleanup.sh");
+  set_perm(0, 0, 0755, "/tmp/sdcardfs_cleanup.sh");
+  run_program("/tmp/sdcardfs_cleanup.sh");
   if file_getprop("/tmp/aroma-data/additional.prop","item.2.1")=="1" then
     if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
       ui_print("-> Enabling sdcardfs for M...");

@@ -3,7 +3,39 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v9.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v10.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- Android 7.1.x support
+- Appiled Google November patches
+- sovc: Fix sovc force off not working when dt2w or s2w is enabled
+- sovc: Fix SOVC not disabled sometimes when A2DP stopped or bluetooth is turned off
+- sovc: Fix SOVC not disabled after end the phone call
+- sovc: Fix DT2W is working when s2w is enabled with 'sovc_force_off=true'
+- sovc: Ignore to change track when S2W is enabled
+- sovc: Skip if userspace value is same with previous value
+- sovc: Keep touchscreen on when track changed while using bluetooth device
+- sovc: Register sovc when need it
+- s2w: Only register when screen suspended
+- msm_thermal: Export poll_ms parameter
+- msm_thermal: msm8992.dtsi: Increase poll-ms
+- msm_thermal: msm8992.dtsi: Decrease thermal limit
+- msm_thermal: Seperate big cluster's operation
+(This makes device cool and smooth. We can get smooth performance in low temperature.)
+- i2c: core: fix NULL pointer dereference under race condition
+- arm64/configs: bullhead: disable extra SCSI configs
+
+== AIO ==
+- Add Android 7.1.x support
+
+== Recovery ==
+- MultiROM: Fix installation of zip files missing updater-script
+- multiromedify: check for run_program umount command
+- MultiROM: fix compile warnings
+- Change version string to 3.0.2-3
+- jolla-kernel_bullhead_II-v10.0 applied
+
+<b><#selectbg_g>[bullhead_II-v9.1]</#></b>
 == Kernel ==
 >> Common <<
 - Built with with Linaro gcc 6.2.1-2016.11-rc1

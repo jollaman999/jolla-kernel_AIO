@@ -3,7 +3,38 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v9.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v10.0]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- Android 7.1.x 지원
+- Google 11월 패치들 적용
+- sovc: dt2w 나 s2w 가 활성화 되었을 때 sovc 가에 끄기가 작동하지 않는 문제 수정
+- sovc: 가끔 A2DP 가 정지되었거나 블루투스가 꺼졌을 때 SOVC 가 비활성화 되지 않는 문제 수정
+- sovc: 통화 종료후 SOVC 가 비활성화 되지 않는 문제 수정
+- sovc: s2w 가 활성화 되어있고 'sovc_force_off=true' 상태일 때 DT2W 가 작동하는 문제 수정
+- sovc: S2W 가 활성화 되었을 때 트랙 변경 무시
+- sovc: 사용자 공간의 값이 이전값과 일치할 때 스킵
+- sovc: 블루투스 기기 사용중에 트랙 전환시 터치스크린이 켜져 있도록 함
+- sovc: sovc 가 필요할 때 등록함
+- s2w: 화면이 일시정지 상태일때만 등록
+- msm_thermal: poll_ms 파라미터 추가
+- msm_thermal: msm8992.dtsi: poll-ms 증가
+- msm_thermal: msm8992.dtsi: 온도 제한 감소
+- msm_thermal: 빅 클러스터의 작동 분리
+(장치를 시원하고 부드럽게 함. 낮은 온도에서 부드러운 성능을 얻을 수 있음.)
+- i2c: core: 레이스 컨디션에 의한 NULL 포인터 dereference 수정
+
+== AIO ==
+- Android 7.1.x 지원 추가
+
+== 리커버리 ==
+- MultiROM: Fix installation of zip files missing updater-script
+- multiromedify: check for run_program umount command
+- MultiROM: 컴파일 경고들 수정
+- 버젼 스트링을 3.0.2-3 으로 변경
+- jolla-kernel_bullhead_II-v10.0 적용
+
+<b><#selectbg_g>[bullhead_II-v9.1]</#></b>
 == 커널 ==
 >> 공통 <<
 - Linaro gcc 6.2.1-2016.11-rc1 로 빌드

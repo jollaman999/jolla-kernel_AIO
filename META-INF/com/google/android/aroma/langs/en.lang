@@ -100,8 +100,10 @@ window2.subtitle=Select your Android version.
 window2.option1=Rom type
 window2.option1-1=Marshmallow (Android 6.0.x)
 window2.option1-1desc=If you want to install to CM/AOSP based Android 6.0.x roms, select this.
-window2.option1-2=Nougat (Android 7.x.x)
-window2.option1-2desc=If you want to install to CM/AOSP based Android 7.x.x roms, select this.
+window2.option1-2=Nougat (Android 7.0.x)
+window2.option1-2desc=If you want to install to CM/AOSP based Android 7.0.x roms, select this.
+window2.option1-3=Nougat (Android 7.1.x)
+window2.option1-3desc=If you want to install to CM/AOSP based Android 7.1.x roms, select this.
 
 fs.attention=F2FS information
 fs.attentiondesc=On current kernel, /data and /cache partitions are able to use by EXT4 or F2FS.\
