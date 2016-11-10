@@ -18,6 +18,7 @@ import init.bullhead.usb.rc
 import init.bullhead.diag.rc
 import init.bullhead.fp.rc
 import init.bullhead.sensorhub.rc
+import init.bullhead.ramdump.rc
 import init.bullhead.misc.rc
 
 on early-init
@@ -250,7 +251,7 @@ on boot
     write /sys/bus/msm_subsys/devices/subsys3/restart_level "related"
 
     # Subsytem Ramdump collection
-    write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
+    write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
     write /sys/module/msm_poweroff/parameters/download_mode 0
 
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth
@@ -517,6 +518,15 @@ service atfwd /system/bin/ATFWD-daemon
     user system
     group system radio
 
+on property:ro.debuggable=1
+    start ss_ramdump
+
+service ss_ramdump /system/bin/subsystem_ramdump
+    class main
+    user root
+    group root system
+    disabled
+
 service cnd /system/bin/cnd
     class late_start
     socket cnd stream 660 root inet
@@ -547,6 +557,14 @@ service bullhead-sh /system/bin/init.bullhead.sh
     user radio
     group system
     oneshot
+
+# bugreport is triggered by holding down volume down, volume up and power
+service bugreport /system/bin/dumpstate -d -p -B \
+        -o /data/data/com.android.shell/files/bugreports/bugreport
+    class main
+    disabled
+    oneshot
+    keycodes 114 115 116
 
 service fingerprintd /system/bin/fingerprintd
     class late_start
