@@ -3,7 +3,25 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v10.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v10.1]</#></b></@>
+== 커널 ==
+>> Android 6.0.1 <<
+- 10.0 에서 빠진 2 커밋들 적용 (온도 수정, NULL 포인터 dereference 수정)
+
+>> 공통 <<
+- sdcardfs: 파일들을 non-mappable 로 표시함
+- touchscreen, mdss: Sweep2Sleep 구현
+- power: wakeup: wakeup 소스가 활성화 상태일때만 비활성화 하도록 시도
+- power: wakeup: ipa_ws 옵션 추가
+
+== AIO ==
+- Android 버젼 스트링들 수정
+- ramdisk: ramdump 와 bugreport 복원
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v10.1 적용
+
+<b><#selectbg_g>[bullhead_II-v10.0]</#></b>
 == 커널 ==
 >> 공통 <<
 - Android 7.1.x 지원
