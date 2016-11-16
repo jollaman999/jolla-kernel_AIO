@@ -461,7 +461,7 @@ checkbox(
   "<~f2fs.itemtitle>",      "",                                               2,      #-- group 1
     "<~f2fs.item>",           "<~f2fs.desc>",                                   0,     #-- item.1.1
   "<~sdcardfs.itemtitle>",      "",                                           2,      #-- group 2
-    "<~sdcardfs.item>",       "<~sdcardfs.desc>",                               0      #-- item.2.1
+    "<~sdcardfs.item>",       "<~sdcardfs.desc>",                               1      #-- item.2.1
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
 
