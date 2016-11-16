@@ -174,7 +174,7 @@ sovc_on.item=SOVC 를 켭니다.
 sovc_on.desc=화면이 꺼져있는 동안 터치스크린으로 볼륨이나 트랙을 조절 할 수 있습니다.
 sovc_off.item=SOVC 를 끕니다.
 sovc_off.desc=시도해 보셨나요..? :(\
-이제, SOVC 자동 끄기를 사용하실 수 있습니다.
+터치스크린을 눌러 SOVC 를 일시적으로 끌수 있습니다!
 
 sovc.auto_off.title=SOVC 자동 끄기
 sovc.auto_off.subtitle=사용자가 화면을 오랫 동안 누르고 있을 경우 터치스크린이 자동으로 꺼집니다.

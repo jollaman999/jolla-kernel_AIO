@@ -174,7 +174,7 @@ sovc_on.item=Turn on SOVC
 sovc_on.desc=You can control volume or track with touchscreen while screen turned off.
 sovc_off.item=Turn off SOVC
 sovc_off.desc=Did you try it..? :(\
-Now, you can use SOVC auto off!
+You can turn off SOVC temporary by pressing the screen!
 
 sovc.auto_off.title=SOVC Auto Off
 sovc.auto_off.subtitle=Touchscreen will turned off automatically when user pressing the screen for a long time.
