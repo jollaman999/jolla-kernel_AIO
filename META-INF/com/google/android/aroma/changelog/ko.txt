@@ -3,7 +3,37 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v10.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v10.2]</#></b></@>
+== 커널 ==
+>> Android 7.0.0 & Android 7.1.1 <<
+- sdcardfs: CyanogenMod/android_kernel_oneplus_msm8996 로 부터 패치들 적용
+- sdcardfs: 외부 저장소가 잘못된 uid 를 내보내는 것을 수정  (포토 앱과 같은 권한 거부 문제 수정.)
+
+>> 공통 <<
+- Linaro gcc 6.2.1-2016.11-rc2 로 빌드
+- mdss: 화면이 꺼진 상태에서 마이크 이용중 mdss 를 끔
+
+== AIO ==
+- sdcardfs: 비활성화 되었을때만 클린업
+- sdcardfs: 불필요한 라인들 제거 및 sdcardfs 가 이미 활성화 되어있을때 빈 라인들이 추가되는 현상 수정
+- sdcardfs: sdcardfs 를 기본으로 활성화
+- lang: sdcardfs 에 대해 일부 스트링들 수정
+- lang: SOVC 에 대해 일부 스트링들 수정
+- 맞지 않는 서명들 제거
+- 저의 self signature 로 사인함
+
+== 리커버리 ==
+- Linaro gcc 6.2.1-2016.11-rc2 로 빌드
+- 빌드 플랫폼을 cm-14.1 로 변경
+- recovery: Add support to brick a device.
+- recovery: Track the name change for wipe_ab.
+- Verify wipe package when wiping A/B device in recovery.
+- bootloader_message 정적 라이브러리 생성. (Squashed)
+- cm-14.1 에서의 빌드 에러들 수정
+- multirom: ext4 이미지 생성시 'file_contexts.bin' 사용
+- jolla-kernel_bullhead_II-v10.2 적용
+
+<b><#selectbg_g>[bullhead_II-v10.1]</#></b>
 == 커널 ==
 >> Android 6.0.1 <<
 - 10.0 에서 빠진 2 커밋들 적용 (온도 수정, NULL 포인터 dereference 수정)
