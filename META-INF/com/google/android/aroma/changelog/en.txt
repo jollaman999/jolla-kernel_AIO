@@ -12,6 +12,7 @@
 >> Common <<
 - Built with with Linaro gcc 6.2.1-2016.11-rc2
 - mdss: Turn off mdss when using the mic with screen turned off
+- kexec: Seperate hardboot region and fix some macros
 
 == AIO ==
 - sdcardfs: Only cleanup when disabled
@@ -31,6 +32,7 @@
 - Create bootloader_message static library. (Squashed)
 - Fix build errors in cm-14.1
 - multirom: Use 'file_contexts.bin' for make ext4 images
+- Use file_contexts.bin first then use file_contexts if it not exist
 - jolla-kernel_bullhead_II-v10.2 applied
 
 <b><#selectbg_g>[bullhead_II-v10.1]</#></b>
