@@ -3,6 +3,30 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
+<b><#selectbg_g>[bullhead_II-v10.3]</#></b></@>
+== Kernel ==
+>> Android 6.0.1 <<
+- sdcardfs: fix external storage exporting incorrect uid (Fix permission denial issues like photo apps.)
+(It was missed in Android 6.0.1..)
+- power: qpnp-smbcharger: Applied patches of Nougat
+
+>> Common <<
+- selinux: Remove duplicated codes
+- cpufreq: Add ironactive governor
+- workqueues: Power efficient workqueue support
+- power: smbcharger: queue work on system_power_efficient_wq
+- power: bcl: queue work on system_power_efficient_wq
+- power: qpnp-fg: queue work on system_power_efficient_wq
+- f2fs: Squashed dev branch patches
+
+== AIO ==
+- updater-script: Add missed sdcardfs enable of Android 7.1.1
+- f2fs-tools: Squashed dev branch patches
+
+== Recovery ==
+- Rebuilt with recent cm-14.1 sources and new f2fs-tools
+- jolla-kernel_bullhead_II-v10.3 applied
+
 <b><#selectbg_g>[bullhead_II-v10.2]</#></b></@>
 == Kernel ==
 >> Android 7.0.0 & Android 7.1.1 <<
