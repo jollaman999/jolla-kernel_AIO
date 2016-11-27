@@ -3,7 +3,39 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v10.3]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v11.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- leds-qpnp, mdss: Adjust charging LED brightness based on mdss backlight value
+(If you adjust backlight brightness, LED's brightness will be change after replugged the cable.)
+- cpufreq: Remove ironactive governor
+(It's 99% same with current interactive governor.)
+- sched/loadavg: Fix loadavg artifacts on fully idle and on fully loaded systems
+- sg: Fix double-free when drives detach during SG_IO
+- af_unix: Applied some upstream changes
+- msm_thermal: queue work on system_power_efficient_wq
+
+== AIO ==
+- f2fs-tools: Rebase with cm-14.1 sources
+- multirom: Change build platform to cm-14.1
+- multirom: Auto boot primary rom on password UI
+- multirom: Reverse themes order and use black theme for default
+- multirom: Change dots and lines color of pattern
+- multirom: Show message when skip the auto boot on password UI
+- multirom: Fix possible boot.img truncation
+- multirom: Fix potential segmentation fault
+- multirom: Fix partition info for 'force autoboot'
+- multirom: Add support for binary file_contexts[.bin]
+- multirom: multirom: core: Support Android 7.1 /cache symlink
+- multirom: Fix: Android 7.x needs a /data entry in fstab (Fix development options crash issue!)
+- multirom: Do not auto-boot on pw_ui when booting secondary roms
+- multirom: multirom: Set default brightness to 149
+
+== Recovery ==
+- Rebuilt with recent cm-14.1 sources and new f2fs-tools
+- jolla-kernel_bullhead_II-v11.0 applied
+
+<b><#selectbg_g>[bullhead_II-v10.3]</#></b>
 == Kernel ==
 >> Android 6.0.1 <<
 - sdcardfs: fix external storage exporting incorrect uid (Fix permission denial issues like photo apps.)

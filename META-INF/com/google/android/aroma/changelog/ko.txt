@@ -3,7 +3,39 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v10.3]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v11.0]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- leds-qpnp, mdss: mdss 백라이트 값에 기반하여 충전 LED 밝기 조정
+(백라이트 밝기를 조정하였을 경우, 케이블을 재연결한 후 LED 밝기가 바뀝니다.)
+- cpufreq: ironactive 거버너 제거
+(현재 interactive 거버너와 99% 일치함.)
+- sched/loadavg: Fix loadavg artifacts on fully idle and on fully loaded systems
+- sg: Fix double-free when drives detach during SG_IO
+- af_unix: 일부 업스트림 패치들 적용
+- msm_thermal: system_power_efficient_wq 에 큐 할당
+
+== AIO ==
+- f2fs-tools: cm-14.1 소스로 리베이스
+- multirom: 빌드 플랫폼을 cm-14.1 로 변경
+- multirom: Password UI 에서 메인롬 자동 부팅
+- multirom: 테마들 순서를 거꾸로 하고 블랙 테마를 기본 값으로 설정
+- multirom: 패턴의 점들과 라인들의 색상 변경
+- multirom: Password UI 애서 자동 부팅 스킵시 메세지 표시
+- multirom: 가능성 있는 boot.img truncation 수정
+- multirom: 잠재적인 세그멘테이션 오류 수정
+- multirom: 'force autoboot' 에 대하여 파티션 정보 수정
+- multirom: file_contexts[.bin] 바이너리 파일 지원
+- multirom: multirom: core: Android 7.1 /cache symlink 지원
+- multirom: Fix: Android 7.x 에서 fstab 에 /data 요소가 필요 (개발자 옵션 충돌 문제 해결!)
+- multirom: 세컨 롬들 부팅시 pw_ui 에서 자동 부팅 하지 않음
+- multirom: multirom: 기본 밝기를 149 로 설정
+
+== 리커버리 ==
+- 최신 cm-14.1 소스들과 새로운 f2fs-tools 로 재빌드함
+- jolla-kernel_bullhead_II-v11.0 적용
+
+<b><#selectbg_g>[bullhead_II-v10.3]</#></b>
 == 커널 ==
 >> Android 6.0.1 <<
 - sdcardfs: 외부 저장소가 잘못된 uid 를 내보내는 것을 수정  (포토 앱과 같은 권한 거부 문제 수정.)
