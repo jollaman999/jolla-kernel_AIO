@@ -23,7 +23,7 @@ sed -i ':a;N;$!ba;s/\nservice userinit \/system\/xbin\/busybox run-parts \/syste
 #    group root
 #    seclabel u:r:init:s0
 #    oneshot
-sed -i ':a;N;$!ba;s/\nservice userinit \/system\/xbin\/busybox run-parts \/system\/etc\/init.d\n \ \ \ class late_start\n \ \ \ user root\n \ \ \ group root\n \ \ \ seclabel u:r:init:s0\n \ \ \ oneshot//' init.rc
+# sed -i ':a;N;$!ba;s/\nservice userinit \/system\/xbin\/busybox run-parts \/system\/etc\/init.d\n \ \ \ class late_start\n \ \ \ user root\n \ \ \ group root\n \ \ \ seclabel u:r:init:s0\n \ \ \ oneshot//' init.rc
 
 echo "Done!";
 exit 0;
