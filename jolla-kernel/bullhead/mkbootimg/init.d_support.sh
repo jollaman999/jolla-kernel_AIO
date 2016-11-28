@@ -16,7 +16,7 @@ if [ "$foundcount" -eq 0 ]; then
         # find busybox in /system/
         bblocation=$(find /system/ -name 'busybox')
 
-        # Use /su/busybox if exist
+        # Use busybox in /su/ directory if exist
         if [ -e /data/su.img ] ; then
                 mkdir /su/
                 mount -t ext4 -o loop,noatime /data/su.img /su/
