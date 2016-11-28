@@ -119,11 +119,11 @@ led.attentiondesc=This option will copy library files to system partition.\
 Uncheck if you don't want to modify system partition.
 app.title=Application Selection
 updater.item=jolla-kernel Updater
-updater.desc=This app support updates for jolla-kernel.
+updater.desc=This app supports updates for jolla-kernel.
 a2dp.item=A2DP Checker
-a2dp.desc=This app support Screen Off Volume Control for Bluetooth headsets.
+a2dp.desc=This app supports Screen Off Volume Control for Bluetooth headsets.
 usbkeyboard.item=USB-Keyboard
-usbkeyboard.desc=This app support to use Android device as USB Keyboard/Mouse.
+usbkeyboard.desc=This app supports to use Android device as USB Keyboard/Mouse.
 initd.title=init.d Patch
 initd.item=init.d Support
 initd.desc=This option enable to use init.d scripts in /system/etc/init.d folder.
@@ -167,6 +167,37 @@ sdcardfs.attention=sdcardfs Attention
 sdcardfs.attentiondesc=If sdcardfs is not enabled by default,\
 this action will modify your system partition!
 
+wake.title=Wake options
+wake.subtitle=Wake gestures to turn on the screen.
+s2w_s2s.title=Sweep2Wake & Sweep2Sleep
+s2w.title=Enable Sweep2Wake
+s2w.subtitle=Turn on the screen by swiping the screen.\
+This option will turn on the touchscreen while screen turned off.\
+It will increase battery drain.
+s2s.title=Enable Sweep2Sleep
+s2s.subtitle=Turn off the screen by swiping the screen.\
+This option only work while screen turned on.\
+But it will increase touch work queues while touching the screen.
+d2w.main.title=DoubleTap2Wake
+d2w.title=Enable DoubleTap2Wake
+d2w.subtitle=Turn on the screen by tapping the screen.\
+This option will turn on the touchscreen while screen turned off.\
+It will increase battery drain.
+
+d2w_count.title=DoubleTap2Wake Tab Counts
+d2w_count.subtitle=Select tap counts for DoubleTap2Wake.
+d2w_count.tap.title=Select tap counts. ~ms/~sec is timeout value.
+d2w_count.tap.default=2 taps / 200 ms (Default)
+d2w_count.tap.3=3 taps / 300 ms
+d2w_count.tap.4=4 taps / 400 ms
+d2w_count.tap.5=5 taps / 500 ms
+d2w_count.tap.6=6 taps / 600 ms
+d2w_count.tap.7=7 taps / 700 ms
+d2w_count.tap.8=8 taps / 800 ms
+d2w_count.tap.9=9 taps / 900 ms
+d2w_count.tap.10=10 taps / 1 sec\
+(Let me show your finger speed! :p)
+
 sovc.title=SOVC
 sovc.subtitle=Screen Off Volume Control
 sovc_onoff.title=On or Off?
@@ -179,7 +210,7 @@ You can turn off SOVC temporary by pressing the screen!
 sovc.auto_off.title=SOVC Auto Off
 sovc.auto_off.subtitle=Touchscreen will turned off automatically when user pressing the screen for a long time.
 sovc.auto_off.time.title=Select Timeout Value
-sovc.auto_off.time.default=Use Default (2.5 sec)
+sovc.auto_off.time.default=2.5 sec (Default)
 sovc.auto_off.time.3=3 sec
 sovc.auto_off.time.3.5=3.5 sec
 sovc.auto_off.time.4=4 sec
@@ -202,10 +233,10 @@ compress.title=Compress options
 gzip.item=GZIP
 gzip.desc=Select this option if you want to use gzip compressed ramdisk image.\
 If you want to install SuperSU, select this option.\
-If you don't know what to choose select this option.
+If you don't know what to choose, select this option.
 lz4.item=LZ4
 lz4.desc=Select this option if you want to use lz4 compressed ramdisk image.\
-lz4 support fastest decompress speed.
+lz4 supports fastest decompress speed.
 lz4.attention=LZ4 warning
 lz4.attentiondesc=If you want to install SuperSU later, you should re-install jolla-kernel with gzip compressed ramdisk.
 

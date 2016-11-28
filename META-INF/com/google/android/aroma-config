@@ -441,6 +441,9 @@ if prop("checkbox1.prop","item.3.1")=="1" then
 endif;
 
 
+##
+# Sub Window with CheckBoxes - Additional Options
+#
 checkbox(
   # Title
 	"<~additional.title>",
@@ -473,6 +476,75 @@ if prop("additional.prop","item.2.1")=="1" then
 endif;
 
 
+##
+# Sub Window with CheckBoxes - Wake Options
+#
+checkbox(
+  # Title
+	"<~wake.title>",
+
+  # Sub Title
+	"<~wake.subtitle>",
+
+  # Icon
+	"@update",
+
+  # Will be saved in /tmp/aroma/wake.prop
+	"wake.prop",
+
+  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+  # TITLE            |  SUBTITLE                                                 | Initial Value #
+  #------------------+-----------------------------------------------------------+---------------#
+
+  "<~s2w_s2s.title>",       "",                                               2,      #-- group 1
+    "<~s2w.title>",          "<~s2w.subtitle>",                                0,     #-- item.1.1
+    "<~s2s.title>",           "<~s2s.subtitle>",                                0,     #-- item.1.2
+  "<~d2w.main.title>",      "",                                               2,      #-- group 2
+    "<~d2w.title>",           "<~d2w.subtitle>",                                0      #-- item.2.1
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+);
+
+
+##
+# Sub Window with SelectBox - DoubleTap2Wake Tab Counts Options
+#
+if prop("wake.prop","item.2.1")=="1" then
+selectbox(
+  # Title
+	"<~d2w_count.title>",
+
+  # Sub Title
+	"<~d2w_count.subtitle>",
+
+  # Icon
+	"@update",
+
+  # Will be saved in /tmp/aroma/dt2w_count.prop
+	"dt2w_count.prop",
+
+  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+  # TITLE            |  SUBTITLE                                                 | Initial Value #
+  #------------------+-----------------------------------------------------------+---------------#
+
+  "<~d2w_count.tap.title>","",                                                2,      #-- Group 1. key = "selected.1"
+    "<~d2w_count.tap.default>","",                                              1,     #-- selected.1 = 1
+    "<~d2w_count.tap.3>",     "",                                               0,     #-- selected.1 = 2
+    "<~d2w_count.tap.4>",     "",                                               0,     #-- selected.1 = 3
+    "<~d2w_count.tap.5>",     "",                                               0,     #-- selected.1 = 4
+    "<~d2w_count.tap.6>",     "",                                               0,     #-- selected.1 = 5
+    "<~d2w_count.tap.7>",     "",                                               0,     #-- selected.1 = 6
+    "<~d2w_count.tap.8>",     "",                                               0,     #-- selected.1 = 7
+    "<~d2w_count.tap.9>",     "",                                               0,     #-- selected.1 = 8
+    "<~d2w_count.tap.10>",    "",                                               0      #-- selected.1 = 9
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+);
+endif;
+## endif prop("wake.prop","item.2.1")=="1"
+
+
+##
+# Sub Window with SelectBox - SOVC
+#
 selectbox(
   # Title
 	"<~sovc.title>",
@@ -490,12 +562,15 @@ selectbox(
   # TITLE            |  SUBTITLE                                                 | Initial Value #
   #------------------+-----------------------------------------------------------+---------------#
 
-  "<~sovc_onoff.title>",      "",                                               2,      #-- Group 1. key = "selected.1"
+  "<~sovc_onoff.title>",    "",                                               2,      #-- Group 1. key = "selected.1"
     "<~sovc_on.item>",        "<~sovc_on.desc>",                                   1,      #-- selected.1 = 1
     "<~sovc_off.item>",       "<~sovc_off.desc>",                                  0       #-- selected.1 = 2
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
 
+##
+# Sub Window with SelectBox - SOVC Timeout Options
+#
 if prop("sovc.prop","selected.1")=="1" then
 selectbox(
   # Title
@@ -528,6 +603,10 @@ selectbox(
 endif;
 ## endif prop("sovc.prop","selected.1")=="1"
 
+
+##
+# Sub Window with SelectBox - KCAL Options
+#
 selectbox(
   # Title
 	"<~kcal.title>",

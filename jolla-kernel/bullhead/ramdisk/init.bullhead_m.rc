@@ -192,6 +192,9 @@ on boot
     write /sys/class/devfreq/qcom,mincpubw.28/governor cpufreq
 
     write /sys/devices/platform/kcal_ctrl.0/kcal_fix_yellow 1
+    write /sys/android_touch/sweep2wake 0
+    write /sys/android_touch/sweep2sleep 0
+    write /sys/android_touch/doubletap2wake 0
     write /sys/android_touch/scroff_volctr 1
     write /sys/android_touch/sovc_auto_off_delay 2500
     #####################################################################

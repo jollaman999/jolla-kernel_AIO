@@ -176,10 +176,43 @@ sovc_off.item=SOVC 를 끕니다.
 sovc_off.desc=시도해 보셨나요..? :(\
 터치스크린을 눌러 SOVC 를 일시적으로 끌수 있습니다!
 
+
+wake.title=화면 켜기 옵션
+wake.subtitle=화면을 켜기위한 제스쳐들.
+s2w_s2s.title=Sweep2Wake & Sweep2Sleep
+s2w.title=Sweep2Wake 활성화
+s2w.subtitle=밀어서 화면을 켭니다.\
+이 옵션은 화면이 꺼져있는 동안 터치스크린을 켭니다.\
+이는 배터리 드레인을 증가시킵니다.
+s2s.title=Sweep2Sleep 활성화
+s2s.subtitle=밀어서 화면을 끕니다.\
+이 옵셥은 화면이 켜져있는 동안에만 작동합니다.\
+그러나 화면을 터치하는 동안 터치 작업 큐가 증가하게 됩니다.
+d2w.main.title=DoubleTap2Wake
+d2w.title=DoubleTap2Wake 활성화
+d2w.subtitle=화면을 탭하여 켭니다.\
+이 옵션은 화면이 꺼져있는 동안 터치스크린을 켭니다.\
+이는 배터리 드레인을 증가시킵니다.
+
+d2w_count.title=더블탭 깨우기 탭 횟수
+d2w_count.subtitle=더블탭 깨우기의 탭 횟수를 선택하세요.
+d2w_count.tap.title=탭 횟수를 선택하세요. ~밀리초/~초 는 시간 초과 값입니다.
+d2w_count.tap.default=2 번탭 / 200 ms (기본값)
+d2w_count.tap.3=3 번탭 / 300 밀리초
+d2w_count.tap.4=4 번탭 / 400 밀리초
+d2w_count.tap.5=5 번탭 / 500 밀리초
+d2w_count.tap.6=6 번탭 / 600 밀리초
+d2w_count.tap.7=7 번탭 / 700 밀리초
+d2w_count.tap.8=8 번탭 / 800 밀리초
+d2w_count.tap.9=9 번탭 / 900 밀리초
+d2w_count.tap.10=10 번탭 / 1 초\
+(당신의 손가락 속도를 보여주세요! :p)
+
+
 sovc.auto_off.title=SOVC 자동 끄기
 sovc.auto_off.subtitle=사용자가 화면을 오랫 동안 누르고 있을 경우 터치스크린이 자동으로 꺼집니다.
 sovc.auto_off.time.title=시간 초과 값을 선택하세요
-sovc.auto_off.time.default=기본값 사용 (2.5 초)
+sovc.auto_off.time.default=2.5 초 (기본값)
 sovc.auto_off.time.3=3 초
 sovc.auto_off.time.3.5=3.5 초
 sovc.auto_off.time.4=4 초
@@ -202,7 +235,7 @@ compress.title=압축 옵션
 gzip.item=GZIP
 gzip.desc=gzip 으로 압축된 램디스크 이미지 사용을 원하실 경우 이 옵션을 선택하세요.\
 SuperSU 설치를 원하실 경우, 이 옵션을 선택하세요.\
-어떤 것을 선택해야 할지 모르실 경우 이 옵션을 선택하세요.
+어떤 것을 선택해야 할지 모르실 경우, 이 옵션을 선택하세요.
 lz4.item=LZ4
 lz4.desc=lz4 로 압축된 램디스크 이미지 사용을 원하실 경우 이 옵션을 선택하세요.\
 lz4 는 가장 빠른 압축해제를 지원합니다.

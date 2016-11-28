@@ -140,8 +140,61 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   endif;
 
 
-  ############ Turn Off SOVC ############
+  ############ S2W ############
   show_progress(0.65, 0.1);
+  if file_getprop("/tmp/aroma-data/wake.prop","item.1.1")=="1" then
+    ui_print("-> Setting S2W...");
+    package_extract_file("jolla-kernel/bullhead/wake/s2w_on_set.sh", "/tmp/s2w_on_set.sh");
+    set_perm(0, 0, 0755, "/tmp/s2w_on_set.sh");
+    run_program("/tmp/s2w_on_set.sh");
+  endif;
+
+
+  ############ S2S ############
+  if file_getprop("/tmp/aroma-data/wake.prop","item.1.2")=="1" then
+    ui_print("-> Setting S2S...");
+    package_extract_file("jolla-kernel/bullhead/wake/s2s_on_set.sh", "/tmp/s2s_on_set.sh");
+    set_perm(0, 0, 0755, "/tmp/s2s_on_set.sh");
+    run_program("/tmp/s2s_on_set.sh");
+  endif;
+
+  ############ DT2W ############
+  if file_getprop("/tmp/aroma-data/wake.prop","item.2.1")=="1" then
+    ui_print("-> Setting DT2W...");
+    package_extract_file("jolla-kernel/bullhead/wake/dt2w_on_set.sh", "/tmp/dt2w_on_set.sh");
+    set_perm(0, 0, 0755, "/tmp/dt2w_on_set.sh");
+
+    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="1" then
+      run_program("/tmp/dt2w_on_set.sh", "1");
+    endif;
+    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="2" then
+      run_program("/tmp/dt2w_on_set.sh", "2");
+    endif;
+    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="3" then
+      run_program("/tmp/dt2w_on_set.sh", "3");
+    endif;
+    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="4" then
+      run_program("/tmp/dt2w_on_set.sh", "4");
+    endif;
+    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="5" then
+      run_program("/tmp/dt2w_on_set.sh", "5");
+    endif;
+    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="6" then
+      run_program("/tmp/dt2w_on_set.sh", "6");
+    endif;
+    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="7" then
+      run_program("/tmp/dt2w_on_set.sh", "7");
+    endif;
+    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="8" then
+      run_program("/tmp/dt2w_on_set.sh", "8");
+    endif;
+    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="9" then
+      run_program("/tmp/dt2w_on_set.sh", "9");
+    endif;
+  endif;
+
+
+  ############ SOVC ############
   ui_print("-> Setting SOVC...");
 
   if file_getprop("/tmp/aroma-data/sovc.prop","selected.1")=="1" then
