@@ -213,7 +213,7 @@ sovc.title=SOVC
 sovc.subtitle=Screen Off Volume Control
 sovc_onoff.title=On or Off?
 sovc_on.item=Turn on SOVC
-sovc_on.desc=You can control volume or track with touchscreen while screen turned off.
+sovc_on.desc=You can control volume or track with touchscreen while screen turned off.\
 It only works while playing the music.\
 \
 <Swipe direction / Action>\
@@ -222,7 +222,7 @@ It only works while playing the music.\
 ↑ / Volume Up\
 ↓ / Volume Down\
 \
-DoubletTap2Wake works temporarily while playing the music.\
+DoubletTap2Wake works temporarily while playing the music.
 sovc_off.item=Turn off SOVC
 sovc_off.desc=Did you try it..? :(\
 You can turn off SOVC temporary by pressing the screen!
