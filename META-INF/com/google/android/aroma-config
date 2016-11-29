@@ -499,7 +499,7 @@ checkbox(
   "<~s2w_s2s.title>",       "",                                               2,      #-- group 1
     "<~s2w.title>",           "<~s2w.subtitle>",                                0,     #-- item.1.1
     "<~s2s.title>",           "<~s2s.subtitle>",                                0,     #-- item.1.2
-  "<~d2w.main.title>",      "",                                               2,      #-- group 2
+  "<~d2w_d2s.title>",       "",                                               2,      #-- group 2
     "<~d2w.title>",           "<~d2w.subtitle>",                                0,     #-- item.2.1
     "<~d2s.title>",           "<~d2s.subtitle>",                                0      #-- item.2.2
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#

@@ -172,21 +172,26 @@ wake.subtitle=화면을 켜기위한 제스쳐들.
 s2w_s2s.title=Sweep2Wake & Sweep2Sleep
 s2w.title=Sweep2Wake 활성화
 s2w.subtitle=밀어서 화면을 켭니다.\
+\
 이 옵션은 화면이 꺼져있는 동안 터치스크린을 켭니다.\
 이는 배터리 드레인을 증가시킵니다.
 s2s.title=Sweep2Sleep 활성화
 s2s.subtitle=네비게이션 바 영역을 밀어서 화면을 끕니다. (화면의 하단.)\
+\
 이 옵셥은 화면이 켜져있는 동안에만 작동합니다. (배터리 드레인 없음.)\
 그러나 화면을 터치하는 동안 터치 작업 큐가 증가하게 됩니다.
-d2w.main.title=DoubleTap2Wake
+d2w_d2s.title=DoubleTap2Wake & DoubleTap2Sleep
 d2w.title=DoubleTap2Wake 활성화
 d2w.subtitle=화면을 탭하여 켭니다.\
+또한, 기기를 깨우기 위한 탭 횟수를 설정할 수 있습니다.\
+\
 이 옵션은 화면이 꺼져있는 동안 터치스크린을 켭니다.\
 이는 배터리 드레인을 증가시킵니다.
 d2s.title=DoubleTap2Sleep 활성화
 d2s.subtitle=상태바를 더블탭 하여 화면을 끕니다. (화면의 상단.)\
 커스텀 되지 않은 롬들에 유용합니다.\
 사용중인 커스텀 롬에 이 기능이 있을 경우, 필요치 않습니다.\
+\
 이 옵셥은 화면이 켜져있는 동안에만 작동합니다. (배터리 드레인 없음.)\
 그러나 화면을 터치하는 동안 터치 작업 큐가 증가하게 됩니다.
 
