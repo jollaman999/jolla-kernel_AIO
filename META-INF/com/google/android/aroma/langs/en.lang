@@ -175,7 +175,7 @@ s2w.subtitle=Turn on the screen by swiping the screen.\
 This option will turn on the touchscreen while screen turned off.\
 It will increase battery drain.
 s2s.title=Enable Sweep2Sleep
-s2s.subtitle=Turn off the screen by swiping the screen.\
+s2s.subtitle=Turn off the screen by swiping the navigation bar location. (Bottom of the screen.)\
 This option only work while screen turned on.\
 But it will increase touch work queues while touching the screen.
 d2w.main.title=DoubleTap2Wake
@@ -203,6 +203,15 @@ sovc.subtitle=Screen Off Volume Control
 sovc_onoff.title=On or Off?
 sovc_on.item=Turn on SOVC
 sovc_on.desc=You can control volume or track with touchscreen while screen turned off.
+It only works while playing the music.\
+\
+<Swipe direction / Action>\
+← / Next Track\
+→ / Previous Track\
+↑ / Volume Up\
+↓ / Volume Down\
+\
+DoubletTap2Wake works temporarily while playing the music.\
 sovc_off.item=Turn off SOVC
 sovc_off.desc=Did you try it..? :(\
 You can turn off SOVC temporary by pressing the screen!

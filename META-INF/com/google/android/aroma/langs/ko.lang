@@ -167,16 +167,6 @@ sdcardfs.attention=sdcardfs 경고
 sdcardfs.attentiondesc=sdcardfs 가 기본으로 활성화 되어있지 않은 경우,\
 이 작업은 시스템 파티션을 수정합니다!
 
-sovc.title=SOVC
-sovc.subtitle=Screen Off Volume Control
-sovc_onoff.title=켜시겠습니까 끄시겠습니까?
-sovc_on.item=SOVC 를 켭니다.
-sovc_on.desc=화면이 꺼져있는 동안 터치스크린으로 볼륨이나 트랙을 조절 할 수 있습니다.
-sovc_off.item=SOVC 를 끕니다.
-sovc_off.desc=시도해 보셨나요..? :(\
-터치스크린을 눌러 SOVC 를 일시적으로 끌수 있습니다!
-
-
 wake.title=화면 켜기 옵션
 wake.subtitle=화면을 켜기위한 제스쳐들.
 s2w_s2s.title=Sweep2Wake & Sweep2Sleep
@@ -185,7 +175,7 @@ s2w.subtitle=밀어서 화면을 켭니다.\
 이 옵션은 화면이 꺼져있는 동안 터치스크린을 켭니다.\
 이는 배터리 드레인을 증가시킵니다.
 s2s.title=Sweep2Sleep 활성화
-s2s.subtitle=밀어서 화면을 끕니다.\
+s2s.subtitle=네비게이션 바 영역을 밀어서 화면을 끕니다. (화면의 하단.)\
 이 옵셥은 화면이 켜져있는 동안에만 작동합니다.\
 그러나 화면을 터치하는 동안 터치 작업 큐가 증가하게 됩니다.
 d2w.main.title=DoubleTap2Wake
@@ -208,6 +198,23 @@ d2w_count.tap.9=9 번탭 / 900 밀리초
 d2w_count.tap.10=10 번탭 / 1 초\
 (당신의 손가락 속도를 보여주세요! :p)
 
+sovc.title=SOVC
+sovc.subtitle=Screen Off Volume Control
+sovc_onoff.title=켜시겠습니까 끄시겠습니까?
+sovc_on.item=SOVC 를 켭니다.
+sovc_on.desc=화면이 꺼져있는 동안 터치스크린으로 볼륨이나 트랙을 조절 할 수 있습니다.\
+음악을 재생하는 중에만 동작합니다.\
+\
+<스와이프 방향 / 동작>\
+← / 다음 트랙\
+→ / 이전 트랙\
+↑ / 볼륨 증가\
+↓ / 볼륨 감소\
+\
+음악을 재생하는 동안 DoubletTap2Wake가 일시적으로 동작합니다.\
+sovc_off.item=SOVC 를 끕니다.
+sovc_off.desc=시도해 보셨나요..? :(\
+터치스크린을 눌러 SOVC 를 일시적으로 끌수 있습니다!
 
 sovc.auto_off.title=SOVC 자동 끄기
 sovc.auto_off.subtitle=사용자가 화면을 오랫 동안 누르고 있을 경우 터치스크린이 자동으로 꺼집니다.

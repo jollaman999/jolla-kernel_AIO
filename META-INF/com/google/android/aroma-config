@@ -55,7 +55,7 @@ selectbox(
   #-- Will be saved in /tmp/aroma/lang.prop
     "lang.prop",
   
-    "한국어",        "jolla-kernel 설치를 환영합니다.",                                 1,     #-- selected.0 = 1
+    "한국어",       "jolla-kernel 설치를 환영합니다.",                           1,     #-- selected.0 = 1
     "English",     "Welcome to jolla-kernel Installation",                     0      #-- selected.0 = 2
 );
 
@@ -497,7 +497,7 @@ checkbox(
   #------------------+-----------------------------------------------------------+---------------#
 
   "<~s2w_s2s.title>",       "",                                               2,      #-- group 1
-    "<~s2w.title>",          "<~s2w.subtitle>",                                0,     #-- item.1.1
+    "<~s2w.title>",           "<~s2w.subtitle>",                                0,     #-- item.1.1
     "<~s2s.title>",           "<~s2s.subtitle>",                                0,     #-- item.1.2
   "<~d2w.main.title>",      "",                                               2,      #-- group 2
     "<~d2w.title>",           "<~d2w.subtitle>",                                0      #-- item.2.1
