@@ -71,8 +71,8 @@ endif;
 
 if prop("lang.prop","selected.0")=="2" then
   loadlang("langs/en.lang");
-  fontresload( "0", "ttf/Roboto-Regular.ttf", "12" ); #-- "0" = Small Font ( Look at Fonts & UNICODE Demo Below )
-  fontresload( "1", "ttf/Roboto-Regular.ttf", "18" ); #-- "1" = Big Font
+  fontresload( "0", "ttf/Roboto-Regular.ttf;ttf/DroidSansFallback.ttf", "12" ); #-- "0" = Small Font ( Look at Fonts & UNICODE Demo Below )
+  fontresload( "1", "ttf/Roboto-Regular.ttf;ttf/DroidSansFallback.ttf", "18" ); #-- "1" = Big Font
 endif;
 
 ##
