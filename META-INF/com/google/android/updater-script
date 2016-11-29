@@ -38,9 +38,9 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   ############ Unpack boot.img ############
   show_progress(0.2, 1);
   if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="2" then
-  ui_print("-> Unpacking boot.img...");
-  run_program("/tmp/bin/busybox", "dd", "if=/dev/block/platform/soc.0/f9824900.sdhci/by-name/boot", "of=/tmp/boot.img");
-  run_program("/tmp/unpackimg.sh");
+    ui_print("-> Unpacking boot.img...");
+    run_program("/tmp/bin/busybox", "dd", "if=/dev/block/platform/soc.0/f9824900.sdhci/by-name/boot", "of=/tmp/boot.img");
+    run_program("/tmp/unpackimg.sh");
   endif;
   ## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="2"
 
@@ -118,6 +118,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   ############ Old jolla-kernel.prop Cleanup ############
   delete("/tmp/ramdisk/jolla-kernel.prop");
 
+
   ############ Old init.d Cleanup ############
   show_progress(0.6, 0.1);
   ui_print("-> Cleaning old init.d support...");
@@ -194,9 +195,17 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   endif;
 
 
+  ############ DT2S ############
+  if file_getprop("/tmp/aroma-data/wake.prop","item.2.2")=="1" then
+    ui_print("-> Setting DT2S...");
+    package_extract_file("jolla-kernel/bullhead/wake/dt2s_on_set.sh", "/tmp/dt2s_on_set.sh");
+    set_perm(0, 0, 0755, "/tmp/dt2s_on_set.sh");
+    run_program("/tmp/dt2s_on_set.sh");
+  endif;
+
+
   ############ SOVC ############
   ui_print("-> Setting SOVC...");
-
   if file_getprop("/tmp/aroma-data/sovc.prop","selected.1")=="1" then
     if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")!="1" then
       package_extract_file("jolla-kernel/bullhead/sovc/sovc_auto_off_set.sh", "/tmp/sovc_auto_off_set.sh");

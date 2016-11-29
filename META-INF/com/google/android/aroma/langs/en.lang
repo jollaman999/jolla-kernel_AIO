@@ -176,13 +176,19 @@ This option will turn on the touchscreen while screen turned off.\
 It will increase battery drain.
 s2s.title=Enable Sweep2Sleep
 s2s.subtitle=Turn off the screen by swiping the navigation bar location. (Bottom of the screen.)\
-This option only work while screen turned on.\
+This option only work while screen turned on. (No battery drain.)\
 But it will increase touch work queues while touching the screen.
 d2w.main.title=DoubleTap2Wake
 d2w.title=Enable DoubleTap2Wake
 d2w.subtitle=Turn on the screen by tapping the screen.\
 This option will turn on the touchscreen while screen turned off.\
 It will increase battery drain.
+d2s.title=Enable DoubleTap2Sleep
+d2s.subtitle=Turn off the screen by double tapping the status bar location. (Top of the screen.)\
+It is useful for non-customized roms.\
+If your custom rom has this feature, you don't need this.\
+This option only work while screen turned on. (No battery drain.)\
+But it will increase touch work queues while touching the screen.
 
 d2w_count.title=DoubleTap2Wake Tab Counts
 d2w_count.subtitle=Select tap counts for DoubleTap2Wake.
