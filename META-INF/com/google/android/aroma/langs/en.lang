@@ -258,13 +258,19 @@ ramdisk.subtitle=Select compress type.
 compress.title=Compress options
 gzip.item=GZIP
 gzip.desc=Select this option if you want to use gzip compressed ramdisk image.\
-If you want to install SuperSU, select this option.\
+\
 If you don't know what to choose, select this option.
 lz4.item=LZ4
 lz4.desc=Select this option if you want to use lz4 compressed ramdisk image.\
+\
 lz4 supports fastest decompress speed.
-lz4.attention=LZ4 warning
-lz4.attentiondesc=If you want to install SuperSU later, you should re-install jolla-kernel with gzip compressed ramdisk.
+lz4.attention=How To Use LZ4 with SuperSU
+lz4.attentiondesc=1. Flash original boot.img that comes with your rom.\
+2. Flash SuperSU zip file.\
+3. Install jolla-kernel with LZ4 option.\
+4. It will reboot the device once at first boot.\
+\
+If the SuperSU is already installed in the jolla-kernel, the above tasks are not necessary.
 
 ini_set.next=Begin Inst
 ini_set.title=Proceed Installation

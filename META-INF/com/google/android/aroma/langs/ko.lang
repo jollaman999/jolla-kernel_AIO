@@ -258,13 +258,19 @@ ramdisk.subtitle=압축 옵션을 선택하세요.
 compress.title=압축 옵션
 gzip.item=GZIP
 gzip.desc=gzip 으로 압축된 램디스크 이미지 사용을 원하실 경우 이 옵션을 선택하세요.\
-SuperSU 설치를 원하실 경우, 이 옵션을 선택하세요.\
+\
 어떤 것을 선택해야 할지 모르실 경우, 이 옵션을 선택하세요.
 lz4.item=LZ4
 lz4.desc=lz4 로 압축된 램디스크 이미지 사용을 원하실 경우 이 옵션을 선택하세요.\
+\
 lz4 는 가장 빠른 압축해제를 지원합니다.
-lz4.attention=LZ4 경고
-lz4.attentiondesc=나중에 SuperSU 설치를 원하실 경우, jolla-kernel 을 gzip 으로 압축된 램디스크로 재설치 하셔야 합니다.
+lz4.attention=LZ4 를 SuperSU 와 사용하는 방법
+lz4.attentiondesc=1. 롬과 함께 제공되는 원본 boot.img 를 플래싱 합니다.\
+2. SuperSU zip 파일을 플래싱 합니다.\
+3. jolla-kernel 을 LZ4 옵션과 함께 설치합니다.\
+4. 첫 부팅시 재부팅이 한번 진행됩니다.\
+\
+이미 SuperSU 가 jolla-kernel 에 설치된 상태라면 위 작업들이 필요하지 않습니다.
 
 ini_set.next=설치 진행
 ini_set.title=설치 진행
