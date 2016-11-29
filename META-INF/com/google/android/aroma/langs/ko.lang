@@ -216,7 +216,8 @@ sovc.subtitle=Screen Off Volume Control
 sovc_onoff.title=켜시겠습니까 끄시겠습니까?
 sovc_on.item=SOVC 를 켭니다.
 sovc_on.desc=화면이 꺼져있는 동안 터치스크린으로 볼륨이나 트랙을 조절 할 수 있습니다.\
-음악을 재생하는 중에만 동작합니다.\
+\
+음악을 재생하는 중에만 동작하기 때문에 배터리 드레인이 없습니다.\
 \
 <스와이프 방향 / 동작>\
 ← / 다음 트랙\
@@ -224,10 +225,13 @@ sovc_on.desc=화면이 꺼져있는 동안 터치스크린으로 볼륨이나 �
 ↑ / 볼륨 증가\
 ↓ / 볼륨 감소\
 \
-음악을 재생하는 동안 DoubletTap2Wake가 일시적으로 동작합니다.
+음악을 재생하는 동안 DoubletTap2Wake가 일시적으로 동작합니다.\
+\
+이동 중 비정상적인 동작 방지를 위해 화면을 길게 터치하여 일시적으로 비활성화 할 수 있습니다.
 sovc_off.item=SOVC 를 끕니다.
 sovc_off.desc=시도해 보셨나요..? :(\
-터치스크린을 눌러 SOVC 를 일시적으로 끌수 있습니다!
+\
+음악을 즐기시는 분들에게는 매우 유용한 기능입니다!
 
 sovc.auto_off.title=SOVC 자동 끄기
 sovc.auto_off.subtitle=사용자가 화면을 오랫 동안 누르고 있을 경우 터치스크린이 자동으로 꺼집니다.
