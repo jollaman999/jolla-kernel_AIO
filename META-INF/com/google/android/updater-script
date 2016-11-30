@@ -243,6 +243,69 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   endif;
 
 
+  ############ IO scheduler ############
+  ui_print("-> Setting IO scheduler...");
+  if file_getprop("/tmp/aroma-data/block.prop","selected.1")!="1" then
+    package_extract_file("jolla-kernel/bullhead/block/block_io_sched_set.sh", "/tmp/block_io_sched_set.sh");
+    set_perm(0, 0, 0755, "/tmp/block_io_sched_set.sh");
+
+    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="2" then
+      run_program("/tmp/block_io_sched_set.sh", "noop");
+    endif;
+    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="3" then
+      run_program("/tmp/block_io_sched_set.sh", "deadline");
+    endif;
+    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="4" then
+      run_program("/tmp/block_io_sched_set.sh", "row");
+    endif;
+    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="5" then
+      run_program("/tmp/block_io_sched_set.sh", "cfq");
+    endif;
+    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="6" then
+      run_program("/tmp/block_io_sched_set.sh", "fiops");
+    endif;
+    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="7" then
+      run_program("/tmp/block_io_sched_set.sh", "sio");
+    endif;
+    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="8" then
+      run_program("/tmp/block_io_sched_set.sh", "sioplus");
+    endif;
+    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="9" then
+      run_program("/tmp/block_io_sched_set.sh", "zen");
+    endif;
+    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="10" then
+      run_program("/tmp/block_io_sched_set.sh", "vr");
+    endif;
+  endif;
+
+
+  ############ Read ahead ############
+  ui_print("-> Setting read ahead...");
+  if file_getprop("/tmp/aroma-data/block.prop","selected.2")!="1" then
+    package_extract_file("jolla-kernel/bullhead/block/block_read_ahead_set.sh", "/tmp/block_read_ahead_set.sh");
+    set_perm(0, 0, 0755, "/tmp/block_read_ahead_set.sh");
+
+    if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="2" then
+      run_program("/tmp/block_read_ahead_set.sh", "256");
+    endif;
+    if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="3" then
+      run_program("/tmp/block_read_ahead_set.sh", "512");
+    endif;
+    if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="4" then
+      run_program("/tmp/block_read_ahead_set.sh", "1024");
+    endif;
+    if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="5" then
+      run_program("/tmp/block_read_ahead_set.sh", "2048");
+    endif;
+    if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="6" then
+      run_program("/tmp/block_read_ahead_set.sh", "4096");
+    endif;
+    if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="7" then
+      run_program("/tmp/block_read_ahead_set.sh", "8192");
+    endif;
+  endif;
+
+
   ############ kcal_fix_yellow ############
   show_progress(0.7, 0.1);
   if file_getprop("/tmp/aroma-data/kcal.prop","selected.1")=="2" then

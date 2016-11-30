@@ -245,6 +245,13 @@ sovc.auto_off.time.5=5 초
 sovc.auto_off.time.6=6 초
 sovc.auto_off.time.7=7 초
 
+block.title=블럭 설정
+block.sched.title=IO 스케줄러
+block.sched.bfq=BFQ (기본값)
+block.read.title=미리 읽기 크기
+block.read.128=128 KB (기본값)
+block.read.desc=높은 미리 읽기 크기는 읽기 속도를 증가시킵니다. 그러나 메모리 사용량 또한 증가합니다.
+
 kcal.title=KCAL Fix Yellow
 kcal.subtitle=노란 액정을 수정 하기 위해 KCAL 값들을 조정합니다.
 kcal_fix_yellow_onoff.title=켜시겠습니까 끄시겠습니까?

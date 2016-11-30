@@ -245,6 +245,14 @@ sovc.auto_off.time.5=5 sec
 sovc.auto_off.time.6=6 sec
 sovc.auto_off.time.7=7 sec
 
+block.title=Block Options
+block.subtitle=Select what you want.
+block.sched.title=IO Scheduler
+block.sched.bfq=BFQ (Default)
+block.read.title=Read ahead size
+block.read.128=128 KB (Default)
+block.read.desc=Higher read ahead size will increase read speed. But it will also increase memory usage.
+
 kcal.title=KCAL Fix Yellow
 kcal.subtitle=Adjust KCAL values to fix yellow screen.
 kcal_fix_yellow_onoff.title=On or Off?
