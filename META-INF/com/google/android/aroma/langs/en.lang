@@ -225,7 +225,7 @@ There is no battery drain because it only works while playing music.\
 ↑ / Volume Up\
 ↓ / Volume Down\
 \
-DoubletTap2Wake works temporarily while playing music.\
+DoubleTap2Wake works temporarily while playing music.\
 \
 You can temporarily disable it by touching and holding the screen to prevent abnormal actions while you are moving.
 sovc_off.item=Turn off SOVC

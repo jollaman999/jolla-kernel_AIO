@@ -3,7 +3,34 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v11.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v11.1]</#></b></@>
+== Kernel ==
+>> Common <<
+- s2w: Add sweep2sleep parameter
+- s2w: Prevent to sweep2wake working when screen turned on
+- s2w: Detect sweep2sleep range faster
+- touchscreen: s2w: dt2w: sovc: Reset when register called
+- dt2w: Implement DoubleTap2Sleep
+(Users can turn off the screen by double tapping the status bar location. (Top of the screen.)
+It is useful for non-customized roms.
+If your custom rom has this feature, you don't need this.)
+- msm: Applied caf's race condition fix patches and memory related patches
+- UPSTREAM: arm64: vdso: Mark vDSO code as read-only
+- soc: qcom: watchdog_v2: add support to enable watchdog feature (caf)
+- msm8992.dtsi: Enable non secure watchdog
+
+== AIO ==
+- init.d: Also find busybox in /su directory
+- aroma: Add wake/sleep options
+- aroma: Add DoubleTap2Sleep option
+- aroma: Modified strings to look good.
+- aroma: Add more descriptions
+- aroma: Add block options
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v11.1 applied
+
+<b><#selectbg_g>[bullhead_II-v11.0]</#></b>
 == Kernel ==
 >> Common <<
 - leds-qpnp, mdss: Adjust charging LED brightness based on mdss backlight value

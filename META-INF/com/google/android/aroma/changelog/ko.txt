@@ -3,7 +3,34 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v11.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v11.1]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- s2w: sweep2sleep 파라미터 추가
+- s2w: sweep2wake 가 화면이 켜졌을때 동작하는 것 방지
+- s2w: sweep2sleep 범위 빠르게 감지
+- touchscreen: s2w: dt2w: sovc: 등록 호출시 초기화 함
+- dt2w: DoubleTap2Sleep 구현
+(상태바를 더블탭 하여 화면을 끕니다. (화면의 상단.)
+커스텀 되지 않은 롬들에 유용합니다.
+사용중인 커스텀 롬에 이 기능이 있을 경우, 필요치 않습니다.)
+- msm: caf 의 race condition 수정 패치들과 메모리 관련 패치들 적용
+- 업스트림: arm64: vdso: vDSO 코드를 읽기 전용으로 표시
+- soc: qcom: watchdog_v2: watchdog 기능 활성화 지원 (caf)
+- msm8992.dtsi: non secure watchdog 활성화
+
+== AIO ==
+- init.d: busybox 를 /su 디렉토리 에서도 찾음
+- aroma: 화면 켜기/끄기 옵션들 추가
+- aroma: DoubleTap2Sleep 옵션 추가
+- aroma: 문자열들을 보기 좋게 수정함.
+- aroma: 설명 더욱 추가
+- aroma: 블럭 옵션 추가
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v11.1 적용
+
+<b><#selectbg_g>[bullhead_II-v11.0]</#></b>
 == 커널 ==
 >> 공통 <<
 - leds-qpnp, mdss: mdss 백라이트 값에 기반하여 충전 LED 밝기 조정
