@@ -1,7 +1,6 @@
 #!/sbin/sh
 
 tmp="/tmp/";
-bin="$tmp/bin";
 
 cd "$tmp";
 cd ramdisk;
@@ -23,7 +22,7 @@ if [ "$foundcount" -eq 0 ]; then
                 echo "NO BUSYBOX NOT FOUND! copy busybox from bin directory.";
                 echo "Setting busybox location to /system/xbin/busybox";
                 # set default location since we couldn't find busybox
-                cp "$bin/busybox" /system/xbin/busybox
+                cp "$tmp/busybox" /system/xbin/busybox
                 chmod 755 /system/xbin/busybox
                 bblocation="/system/xbin/busybox";
         fi
