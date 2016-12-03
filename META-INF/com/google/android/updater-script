@@ -505,4 +505,3 @@ ui_print("== Thank you for choosing jolla-kernel!! ==");
 ui_print("====================Done===================");
 
 run_program("/tmp/busybox", "umount", "/system");
-run_program("/tmp/busybox", "umount", "/data");
