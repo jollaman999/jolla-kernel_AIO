@@ -128,7 +128,8 @@ initd.title=init.d 패치
 initd.item=init.d 지원
 initd.desc=이 옵션은 /system/etc/init.d 폴더안에 있는 init.d 스크립트 들을 사용할 수 있게 합니다.
 initd.attention=init.d 패치 경고
-initd.attentiondesc=busybox 가 설치되어 있지 않은 경우, 이 옵션은 system 파티션을 수정합니다.\
+initd.attentiondesc=busybox 가 system 파티션에 설치되어 있지 않은 경우, 이 옵션은 system 파티션을 수정합니다.\
+또한, 스크립트 파일들을 /system/etc/init.d 에 복사하면 system 파티션이 수정됩니다.\
 system 파티션 수정을 원치 않을 경우 체크를 해제하세요.
 
 checkbox2.title=멀티롬 옵션

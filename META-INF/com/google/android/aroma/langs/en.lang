@@ -128,7 +128,8 @@ initd.title=init.d Patch
 initd.item=init.d Support
 initd.desc=This option enable to use init.d scripts in /system/etc/init.d folder.
 initd.attention=init.d Patch warning
-initd.attentiondesc=If there is no busybox, this option will modify system partition.\
+initd.attentiondesc=If there is no busybox in system partition, this option will modify system partition.\
+Also, if you copy script files to /system/etc/init.d, it will modify system partition.\
 Uncheck if you don't want to modify system partition.
 
 checkbox2.title=MultiROM Option
