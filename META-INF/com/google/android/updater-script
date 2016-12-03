@@ -3,11 +3,14 @@
 ui_print("======jolla-kernel Installation======");
 ui_print("");
 
+package_extract_file("busybox", "/tmp/busybox");
+set_perm(0, 0, 0755, "/tmp/busybox");
+
 ui_print("-> Mounting System & Data...");
-run_program("/sbin/busybox", "umount", "/system");
-run_program("/sbin/busybox", "umount", "/data");
-run_program("/sbin/busybox", "mount", "/system");
-run_program("/sbin/busybox", "mount", "/data");
+run_program("/tmp/busybox", "umount", "/system");
+run_program("/tmp/busybox", "umount", "/data");
+run_program("/tmp/busybox", "mount", "/system");
+run_program("/tmp/busybox", "mount", "/data");
 
 
 ############################ TWRP Only ################################
@@ -29,7 +32,6 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   show_progress(0.1, 0.1);
   ui_print("-> Ready to install bullhead kernel...");
   package_extract_dir("jolla-kernel/bullhead/mkbootimg", "/tmp");
-  set_perm(0, 0, 0755, "/tmp/bin/busybox");
   set_perm(0, 0, 0755, "/tmp/multirom_hack.sh");
   set_perm(0, 0, 0755, "/tmp/repackimg.sh");
   set_perm(0, 0, 0755, "/tmp/unpackimg.sh");
@@ -39,7 +41,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   show_progress(0.2, 1);
   if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="2" then
     ui_print("-> Unpacking boot.img...");
-    run_program("/tmp/bin/busybox", "dd", "if=/dev/block/platform/soc.0/f9824900.sdhci/by-name/boot", "of=/tmp/boot.img");
+    run_program("/tmp/busybox", "dd", "if=/dev/block/platform/soc.0/f9824900.sdhci/by-name/boot", "of=/tmp/boot.img");
     run_program("/tmp/unpackimg.sh");
   endif;
   ## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="2"
@@ -51,7 +53,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
     ui_print(">>>Uninstalling MultiROM<<<");
 
     ui_print("-> Unpacking /sdcard/boot.img_bak...");
-    run_program("/tmp/bin/busybox", "cp", "/sdcard/boot.img_bak", "/tmp/boot.img");
+    run_program("/tmp/busybox", "cp", "/sdcard/boot.img_bak", "/tmp/boot.img");
     run_program("/tmp/unpackimg.sh");
 
     package_extract_dir("jolla-kernel/bullhead/multirom/uninst", "/tmp/");
@@ -334,7 +336,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   show_progress(0.75, 1);
   ui_print("-> Repacking boot.img...");
   run_program("/tmp/repackimg.sh");
-  run_program("/tmp/bin/busybox", "dd", "if=/tmp/image-new.img", "of=/dev/block/platform/soc.0/f9824900.sdhci/by-name/boot");
+  run_program("/tmp/busybox", "dd", "if=/tmp/image-new.img", "of=/dev/block/platform/soc.0/f9824900.sdhci/by-name/boot");
 
 
   ############ Patch Charging LED ############
@@ -401,19 +403,19 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
     show_progress(0.85, 0.2);
     ui_print("-> Copying jolla-kernel Updater...");
     package_extract_dir("updater/", "/data/app/");
-    run_program("/sbin/busybox", "chown", "-R", "system.system", "/data/app/com.jollakernelupdater-1/");
+    run_program("/tmp/busybox", "chown", "-R", "system.system", "/data/app/com.jollakernelupdater-1/");
   endif;
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.2")=="1" then
     show_progress(0.875, 0.2);
     ui_print("-> Copying A2DPChecker...");
     package_extract_dir("jolla-kernel/app/A2DPChecker/", "/data/app/");
-    run_program("/sbin/busybox", "chown", "-R", "system.system", "/data/app/com.jollaman999.bluetootha2dp-1/");
+    run_program("/tmp/busybox", "chown", "-R", "system.system", "/data/app/com.jollaman999.bluetootha2dp-1/");
   endif;
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.3")=="1" then
     show_progress(0.9, 0.2);
     ui_print("-> Copying USB-Keyboard...");
     package_extract_dir("jolla-kernel/app/USB-Keyboard/", "/data/app/");
-    run_program("/sbin/busybox", "chown", "-R", "system.system", "/data/app/remote.hid.keyboard.client-1/");
+    run_program("/tmp/busybox", "chown", "-R", "system.system", "/data/app/remote.hid.keyboard.client-1/");
   endif;
 
 
@@ -428,7 +430,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
     endif;
     ui_print("-> Copying Multi ROM Manager...");
     package_extract_dir("jolla-kernel/bullhead/multirom/app/", "/data/app/");
-    run_program("/sbin/busybox", "chown", "-R", "system.system", "/data/app/com.tassadar.multirommgr-1/");
+    run_program("/tmp/busybox", "chown", "-R", "system.system", "/data/app/com.tassadar.multirommgr-1/");
   endif;
   ## endif file_getprop("/tmp/aroma-data/multirom.prop","multirom")=="1"
 
@@ -444,7 +446,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
       ui_print(">>> Installing MultiROM <<<");
 
       delete_recursive("/tmp/multirom");
-      run_program("/sbin/busybox", "mkdir", "/tmp/multirom");
+      run_program("/tmp/busybox", "mkdir", "/tmp/multirom");
       package_extract_dir("jolla-kernel/bullhead/multirom/inst/multirom", "/tmp/multirom/");
       package_extract_dir("jolla-kernel/bullhead/multirom/inst/scripts", "/tmp/");
 
@@ -479,7 +481,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
       ui_print("-> Copying Multi ROM Manager...");
       package_extract_dir("jolla-kernel/bullhead/multirom/app/", "/data/app/");
-      run_program("/sbin/busybox", "chown", "-R", "system.system", "/data/app/com.tassadar.multirommgr-1/");
+      run_program("/tmp/busybox", "chown", "-R", "system.system", "/data/app/com.tassadar.multirommgr-1/");
 
       ui_print("-> MultiROM was Installed!!");
 
@@ -502,5 +504,5 @@ ui_print("==     Kernel Installation Finished!!    ==");
 ui_print("== Thank you for choosing jolla-kernel!! ==");
 ui_print("====================Done===================");
 
-run_program("/sbin/busybox", "umount", "/system");
-run_program("/sbin/busybox", "umount", "/data");
+run_program("/tmp/busybox", "umount", "/system");
+run_program("/tmp/busybox", "umount", "/data");
