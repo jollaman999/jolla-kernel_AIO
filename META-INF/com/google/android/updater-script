@@ -353,11 +353,17 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   if file_getprop("/tmp/aroma-data/additional.prop","item.1.1")=="1" then
     ui_print("-> Patching F2FS binaries...");
     package_extract_dir("jolla-kernel/bullhead/f2fs/system/", "/system/");
-    set_perm(0, 0, 0755, "/system/bin/fsck.f2fs");
-    set_perm(0, 0, 0755, "/system/bin/mkfs.f2fs");
+
     package_extract_file("jolla-kernel/bullhead/f2fs/make_symlinks.sh", "/tmp/make_symlinks.sh");
     set_perm(0, 0, 0755, "/tmp/make_symlinks.sh");
     run_program("/tmp/make_symlinks.sh");
+
+    set_perm(0, 2000, 0755, "/system/bin/fsck.f2fs");
+    set_perm(0, 2000, 0755, "/system/bin/mkfs.f2fs");
+    set_perm(0, 2000, 0755, "/system/bin/dump.f2fs");
+    set_perm(0, 2000, 0755, "/system/bin/defrag.f2fs");
+    set_perm(0, 2000, 0755, "/system/bin/resize.f2fs");
+    set_perm(0, 2000, 0755, "/system/bin/sload.f2fs");
   endif;
   ## endif file_getprop("/tmp/aroma-data/additional.prop","item.1.1")=="1" then
 
