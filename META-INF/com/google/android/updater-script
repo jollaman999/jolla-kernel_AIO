@@ -121,6 +121,13 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   delete("/tmp/ramdisk/jolla-kernel.prop");
 
 
+  ############ Old init.d Cleanup ############
+  show_progress(0.6, 0.1);
+  ui_print("-> Cleaning old init.d support...");
+  set_perm(0, 0, 0755, "/tmp/init.d_cleanup.sh");
+  run_program("/tmp/init.d_cleanup.sh");
+
+
   ############ S2W ############
   show_progress(0.65, 0.1);
   if file_getprop("/tmp/aroma-data/wake.prop","item.1.1")=="1" then
