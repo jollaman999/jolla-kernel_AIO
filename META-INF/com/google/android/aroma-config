@@ -426,18 +426,13 @@ checkbox(
   "<~app.title>",           "",                                               2,      #-- group 2
     "<~updater.item>",        "<~updater.desc>",                                0,      #-- item.2.1
     "<~a2dp.item>",           "<~a2dp.desc>",                                   0,      #-- item.2.2
-    "<~usbkeyboard.item>",    "<~usbkeyboard.desc>",                            0,      #-- item.2.3
-  "<~initd.title>",         "",                                               2,      #-- group 3
-    "<~initd.item>",          "<~initd.desc>",                                  0       #-- item.3.1
+    "<~usbkeyboard.item>",    "<~usbkeyboard.desc>",                            0       #-- item.2.3
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
 
 if prop("checkbox1.prop","item.1.1")=="1" then
   alert( "<~led.attention>", "<~led.attentiondesc>");
-endif;
-if prop("checkbox1.prop","item.3.1")=="1" then
-  alert( "<~initd.attention>", "<~initd.attentiondesc>");
 endif;
 
 
