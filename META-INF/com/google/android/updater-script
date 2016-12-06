@@ -131,7 +131,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   ############ S2W ############
   show_progress(0.65, 0.1);
   if file_getprop("/tmp/aroma-data/wake.prop","item.1.1")=="0" then
-    run_program("/tmp/busybox", "sed", "-i", "'/sweep2wake/d'", "init.bullhead.rc");
+    run_program("/sbin/sh", "-c", "sed -i '/sweep2wake/d' /tmp/ramdisk/init.bullhead.rc");
   endif;
   if file_getprop("/tmp/aroma-data/wake.prop","item.1.1")=="1" then
     ui_print("-> Setting S2W...");
@@ -143,7 +143,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
   ############ S2S ############
   if file_getprop("/tmp/aroma-data/wake.prop","item.1.2")=="0" then
-    run_program("/tmp/busybox", "sed", "-i", "'/sweep2sleep/d'", "init.bullhead.rc");
+    run_program("/sbin/sh", "-c", "sed -i '/sweep2sleep/d' /tmp/ramdisk/init.bullhead.rc");
   endif;
   if file_getprop("/tmp/aroma-data/wake.prop","item.1.2")=="1" then
     ui_print("-> Setting S2S...");
@@ -154,7 +154,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
   ############ DT2W ############
   if file_getprop("/tmp/aroma-data/wake.prop","item.2.1")=="0" then
-    run_program("/tmp/busybox", "sed", "-i", "'/doubletap2wake/d'", "init.bullhead.rc");
+    run_program("/sbin/sh", "-c", "sed -i '/doubletap2wake/d' /tmp/ramdisk/init.bullhead.rc");
   endif;
   if file_getprop("/tmp/aroma-data/wake.prop","item.2.1")=="1" then
     ui_print("-> Setting DT2W...");
@@ -193,7 +193,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
   ############ DT2S ############
   if file_getprop("/tmp/aroma-data/wake.prop","item.2.2")=="0" then
-    run_program("/tmp/busybox", "sed", "-i", "'/doubletap2sleep/d'", "init.bullhead.rc");
+    run_program("/sbin/sh", "-c", "sed -i '/doubletap2sleep/d' /tmp/ramdisk/init.bullhead.rc");
   endif;
   if file_getprop("/tmp/aroma-data/wake.prop","item.2.2")=="1" then
     ui_print("-> Setting DT2S...");
@@ -206,10 +206,10 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   ############ SOVC ############
   ui_print("-> Setting SOVC...");
   if file_getprop("/tmp/aroma-data/sovc.prop","selected.1")=="1" then
-    run_program("/tmp/busybox", "sed", "-i", "'/scroff_volctr/d'", "init.bullhead.rc");
+    run_program("/sbin/sh", "-c", "sed -i '/scroff_volctr/d' /tmp/ramdisk/init.bullhead.rc");
 
     if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="1" then
-      run_program("/tmp/busybox", "sed", "-i", "'/sovc_auto_off_delay/d'", "init.bullhead.rc");
+      run_program("/sbin/sh", "-c", "sed -i '/sovc_auto_off_delay/d' /tmp/ramdisk/init.bullhead.rc");
     endif;
     if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")!="1" then
       package_extract_file("jolla-kernel/bullhead/sovc/sovc_auto_off_set.sh", "/tmp/sovc_auto_off_set.sh");
@@ -313,7 +313,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   ############ kcal_fix_yellow ############
   show_progress(0.7, 0.1);
   if file_getprop("/tmp/aroma-data/kcal.prop","selected.1")=="1" then
-    run_program("/tmp/busybox", "sed", "-i", "'/kcal_fix_yellow/d'", "init.bullhead.rc");
+    run_program("/sbin/sh", "-c", "sed -i '/kcal_fix_yellow/d' /tmp/ramdisk/init.bullhead.rc");
   endif;
   if file_getprop("/tmp/aroma-data/kcal.prop","selected.1")=="2" then
     ui_print("-> Setting KCAL...");
