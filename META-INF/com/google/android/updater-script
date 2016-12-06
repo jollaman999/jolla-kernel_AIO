@@ -312,6 +312,9 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
   ############ kcal_fix_yellow ############
   show_progress(0.7, 0.1);
+  if file_getprop("/tmp/aroma-data/kcal.prop","selected.1")=="1" then
+    run_program("/tmp/busybox", "sed", "-i", "'/kcal_fix_yellow/d'", "init.bullhead.rc");
+  endif;
   if file_getprop("/tmp/aroma-data/kcal.prop","selected.1")=="2" then
     ui_print("-> Setting KCAL...");
     package_extract_file("jolla-kernel/bullhead/kcal/kcal_fix_off_set.sh", "/tmp/kcal_fix_off_set.sh");
