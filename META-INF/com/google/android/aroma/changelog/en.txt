@@ -3,7 +3,39 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v11.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v11.2]</#></b></@>
+== Kernel ==
+>> Common <<
+- f2fs: Applied lastest f2fs dev branch patches
+- fs/sync.c: make sync_file_range(2) use WB_SYNC_NONE writeback
+- sched/core: Fix a race between try_to_wake_up() and a woken up task
+- qcom: msm-core: queue work on system_power_efficient_wq
+- power: smb135x-charger: queue work on system_power_efficient_wq
+- net: avoid signed overflows for SO_{SND|RCV}BUFFORCE
+- packet: fix race condition in packet_set_ring
+- sdcardfs: Remove 'obbpath is found' message
+- arm64: psci: move psci firmware calls out of line
+- dt2w: Fix incorrect unregister when using bluetooth headset
+(BUG Fixed: DoubleTap2Sleep not working after music stopped.)
+
+== AIO ==
+- Use busybox that included in this archive (There will be no busybox in some recoveries.)
+- updater-script: Do not unmount /data after finished (MTP will not work after /data unmounted.)
+- updater-script: Properly set permissions of f2fs binaries
+- Remove init.d support
+(init.d no more working cause of selinux permissions.
+I have already tried so much methods. But nothing works.
+Instead, we can use init.d emulation that supported by apps.)
+- updater-script: Remove android_touch lines that are not needed
+- updater-script: Remove kcal line when disabled
+- Use dark colored logo
+
+== Recovery ==
+- Applied Android 7.1.1 changes
+- Built with lastest cm-14.1 sources (Android 7.1.1_r4)
+- jolla-kernel_bullhead_II-v11.2 applied
+
+<b><#selectbg_g>[bullhead_II-v11.1]</#></b>
 == Kernel ==
 >> Common <<
 - s2w: Add sweep2sleep parameter

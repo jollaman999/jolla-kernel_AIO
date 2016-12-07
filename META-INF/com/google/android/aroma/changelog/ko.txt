@@ -3,7 +3,39 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v11.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v11.2]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- f2fs: 최신 f2fs dev 브랜치 패치들 적용
+- fs/sync.c: sync_file_range(2) 가 WB_SYNC_NONE writeback 을 사용하도록 함
+- sched/core: try_to_wake_up() 와 깨어난 작업 사이의 race 수정
+- qcom: msm-core: system_power_efficient_wq 에 작업 할당
+- power: smb135x-charger: system_power_efficient_wq 에 작업 할당
+- net: SO_{SND|RCV}BUFFORCE 에 대한 signed 오버플로 회피
+- packet: packet_set_ring 에 있는 race condition 수정
+- sdcardfs: 'obbpath is found' 메세지 제거
+- arm64: psci: psci firmware 호출을 다른 곳으로 옮김
+- dt2w: 블루투스 헤드셋 사용시 올바르지 않은 등록 해제 수정
+(버그 수정: 음악이 정지된 후에 DoubleTap2Sleep 이 작동안함.)
+
+== AIO ==
+- 이 압축파일에 포함되어 있는 busybox 사용 (몇몇 리커버리들에는 busybox 가 없을것.)
+- updater-script: 완료 후 /data 언마운트 하지 않음 (/data 가 언마운트 된 후에 MTP 가 작동하지 않을 것.)
+- updater-script: f2fs 바이너리들의 권한 올바르게 설정
+- init.d 지원 제거
+(init.d 가 selinux 권한들로 인해 더이상 작동하지 않습니다.
+이미 수많은 시도를 해보았지만 하나도 작동되는게 없습니다.
+대신에, 앱들에서 지원하는 init.d emulation 을 사용할 수 있습니다.)
+- updater-script: 필요하지 않은 android_touch 라인들 제거
+- updater-script: kcal 이 비활성화 되었을시 kcal 라인 제거
+- 어두운 색상의 로고 사용
+
+== 리커버리 ==
+- Android 7.1.1 변경사항들 적용
+- 최신 cm-14.1 소스들과 빌드 (Android 7.1.1_r4)
+- jolla-kernel_bullhead_II-v11.2 적용
+
+<b><#selectbg_g>[bullhead_II-v11.1]</#></b>
 == 커널 ==
 >> 공통 <<
 - s2w: sweep2sleep 파라미터 추가
