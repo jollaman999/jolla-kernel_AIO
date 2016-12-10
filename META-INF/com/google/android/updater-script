@@ -244,6 +244,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
     package_extract_file("jolla-kernel/bullhead/sovc/sovc_off_set.sh", "/tmp/sovc_off_set.sh");
     set_perm(0, 0, 0755, "/tmp/sovc_off_set.sh");
     run_program("/tmp/sovc_off_set.sh");
+    run_program("/sbin/sh", "-c", "sed -i '/sovc_auto_off_delay/d' /tmp/ramdisk/init.bullhead.rc");
   endif;
 
 
