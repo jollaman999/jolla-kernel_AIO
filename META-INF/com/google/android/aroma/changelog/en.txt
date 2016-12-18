@@ -3,7 +3,45 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v11.2]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v12.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- cpufreq: Added blu_active governor
+- sdcardfs: Fix NULL pointer dereference
+- Revert system_power_efficient_wq changes (It makes battery drain in idle state.)
+- leds-qpnp: Multi-color smooth LED support
+- leds-qpnp, mdss: Decrease led brightness when mdss backlight is less than 35%
+- leds-qpnp, mdss: Add led adjustment when mdss backlight is 35~49%
+- mdss, sovc: Prevent race condition when turning off the screen
+- dt2w: Fix wrong touch range detection (Fix dt2w or dt2s is working when x or y is same with previous value.)
+- dt2w: Fix wrong ignoration check in fb notifier (Fix screen off issue by double tap.)
+- dt2w, sovc: Unregister dt2w when dt2w, dt2s and sovc are disabled
+- mdss: CyanogenMod LiveDisplay support with kcal
+- mdss: kcal: Fix conflict between LiveDisplay and kcal_fix_yellow
+- cpuidle: don't disable cpuidle when entering suspend (Lower idle power consumption.)
+- drivers: wakeup: add qcom_rx_wakelock wakeup bypass option
+- f2fs: Applied dev branch patches
+- kexec: Appiled linux-master upstream patches
+- arm64/crypto: remove redundant update of data
+- arm64: crypto: assure that ECB modes don't require an IV
+- crypto: arm64/aes-ctr - fix NULL dereference in tail processing
+- crypto: xts - consolidate sanity check for keys
+
+== AIO ==
+- ramdisk: disable subsystem ramdump on userdebug builds
+- ramdisk: disable modem ramdumps
+- ramdisk: Restore big cluster's min freq to 633Mhz
+- updater-script: Remove sovc_auto_off_delay line when sovc is disabled
+- led: Update led binaries
+
+== Recovery ==
+- Built with lastest cm-14.1 sources (Android 7.1.1_r6)
+- Merged TWRP 3.0.3 changes
+- Change MultiROM TWRP base to nkk71's source
+(It also changed the theme to dark one that similar with official theme. MultiROM menu button is located on top right.)
+- Revert "Fix adb shell in 7.0 tree" (It doesn't show current directory.)
+
+<b><#selectbg_g>[bullhead_II-v11.2]</#></b>
 == Kernel ==
 >> Common <<
 - f2fs: Applied lastest f2fs dev branch patches

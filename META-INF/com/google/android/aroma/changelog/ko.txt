@@ -3,7 +3,45 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v11.2]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v12.0]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- cpufreq: blu_active 거버너 추가
+- sdcardfs: NULL 포인터 dereference 수정
+- system_power_efficient_wq 변경 사항들 취소 (대기 상태에서 배터리 드레인을 발생시킴.)
+- leds-qpnp: 부드러운 멀티 컬러 LED 지원
+- leds-qpnp, mdss: mdss 백라이트가 35% 미만일때의 led 밝기 줄임
+- leds-qpnp, mdss: mdss 백라이트가 35~49% 일때의 led 조정 추가
+- mdss, sovc: 화면을 끌때 발생하는 race condition 방지
+- dt2w: 잘못된 터치 범위 감지 수정 (dt2w 나 dt2s 가 x 또는 y 값이 이전 값과 같은 경우 작동하는 문제 수정.)
+- dt2w: fb notifier 에서의 잘못된 무시 체크 수정 (더블탭으로 화면이 꺼지는 문제 수정.)
+- dt2w, sovc: dt2w, dt2s 그리고 sovc 가 비활성화 되었을때 dt2w 등록 해제
+- mdss: kcal 과의 CyanogenMod LiveDisplay 지원
+- mdss: kcal: LiveDisplay 와 kcal_fix_yellow 간의 충돌 수정
+- cpuidle: 대기 상태시 cpuidle 비활성화 하지 않음 (낮은 대기 상태 전력 소모.)
+- drivers: wakeup: qcom_rx_wakelock 옵션 추가
+- f2fs: dev 브랜치 패치들 적용
+- kexec: linux-master 업스트림 패치들 적용
+- arm64/crypto: 중복된 데이터 업데이트 제거
+- arm64: crypto: ECB 모드는 IV 를 필요로 하지 않음을 보장.
+- crypto: arm64/aes-ctr - tail processing 에서의 NULL 포인터 dereference 수정
+- crypto: xts - 키들에 대한 온전성 검사 통합
+
+== AIO ==
+- ramdisk: userdebug 빌드에서 ramdump 비활성화
+- ramdisk: modem ramdump 들 비활성화
+- ramdisk: 빅 클러스터의 최소 주파수를 633Mhz 로 되돌림
+- updater-script: sovc 가 비활성화 되었을때 sovc_auto_off_delay 라인 지움
+- led: led 바이너리들 업데이트
+
+== 리커버리 ==
+- 최신 cm-14.1 소스들과 빌드 (Android 7.1.1_r6)
+- TWRP 3.0.3 변경사항들 적용
+- MultiROM TWRP 베이스를 nkk71 의 소스로 변경
+(테마 또한 공식 테마와 비슷한 어두운 것으로 변경. MultiROM 메뉴는 우상단에 위치해 있습니다.)
+- 변경사항 취소 "7.0 트리의 adb 쉘 수정" (현재 디렉터리를 보여주지 않음.)
+
+<b><#selectbg_g>[bullhead_II-v11.2]</#></b>
 == 커널 ==
 >> 공통 <<
 - f2fs: 최신 f2fs dev 브랜치 패치들 적용
