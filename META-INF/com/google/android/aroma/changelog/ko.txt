@@ -3,7 +3,21 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v12.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v12.1]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- mdss, sovc: 모든 체크 완료 후 container_of() 호출
+- mdss, sovc: 화면이 꺼졌을 때 mdss 를 끄려고 시도하지 않음.
+- mdss: mdss 를 끄기전에 mdss_off_work 작업 취소
+- mdss: LiveDisplay 지원 추가 후 발생하는 커널 패닉 수정
+
+== AIO ==
+- liblight: 정적 liblog 와 빌드 (일부 롬들에서의 라이브러리 충돌 방지.)
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v12.1 적용
+
+<b><#selectbg_g>[bullhead_II-v12.0]</#></b>
 == 커널 ==
 >> 공통 <<
 - cpufreq: blu_active 거버너 추가
@@ -40,6 +54,7 @@
 - MultiROM TWRP 베이스를 nkk71 의 소스로 변경
 (테마 또한 공식 테마와 비슷한 어두운 것으로 변경. MultiROM 메뉴는 우상단에 위치해 있습니다.)
 - 변경사항 취소 "7.0 트리의 adb 쉘 수정" (현재 디렉터리를 보여주지 않음.)
+- jolla-kernel_bullhead_II-v12.0 적용
 
 <b><#selectbg_g>[bullhead_II-v11.2]</#></b>
 == 커널 ==

@@ -3,7 +3,21 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v12.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v12.1]</#></b></@>
+== Kernel ==
+>> Common <<
+- mdss, sovc: Call container_of() after all of checks finished
+- mdss, sovc: Do not try turn off mdss when screen turned on
+- mdss: Cancel mdss_off_work work before turning off mdss
+- mdss: Fix kernel panic after added LiveDisplay support
+
+== AIO ==
+- liblight: Build with static liblog (Prevent library conflicts in some of roms.)
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v12.1 applied
+
+<b><#selectbg_g>[bullhead_II-v12.0]</#></b>
 == Kernel ==
 >> Common <<
 - cpufreq: Added blu_active governor
@@ -40,6 +54,7 @@
 - Change MultiROM TWRP base to nkk71's source
 (It also changed the theme to dark one that similar with official theme. MultiROM menu button is located on top right.)
 - Revert "Fix adb shell in 7.0 tree" (It doesn't show current directory.)
+- jolla-kernel_bullhead_II-v12.0 applied
 
 <b><#selectbg_g>[bullhead_II-v11.2]</#></b>
 == Kernel ==
