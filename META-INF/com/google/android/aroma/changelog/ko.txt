@@ -3,7 +3,20 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v12.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v12.2]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- tcp: NULL 포인터 dereference 수정
+- mdss: kcal: kcal 값들을 변경할때 발생하는 race condition 방지
+
+== AIO ==
+- led: 이전 바이너리로 되돌림
+(소스는 같으나 새 빌드가 의존성들로 인해 마쉬멜로우에서 문제가 발생함.)
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v12.2 적용
+
+<b><#selectbg_g>[bullhead_II-v12.1]</#></b>
 == 커널 ==
 >> 공통 <<
 - mdss, sovc: 모든 체크 완료 후 container_of() 호출

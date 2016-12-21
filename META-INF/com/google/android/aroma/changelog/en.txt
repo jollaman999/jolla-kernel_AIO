@@ -3,7 +3,20 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v12.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v12.2]</#></b></@>
+== Kernel ==
+>> Common <<
+- tcp: fix more NULL deref after prequeue changes
+- mdss: kcal: Prevent race condition when changing kcal values
+
+== AIO ==
+- led: Back to old binaries
+(Source is same. But new build brick the marshmallow cause of depedencies.)
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v12.2 applied
+
+<b><#selectbg_g>[bullhead_II-v12.1]</#></b>
 == Kernel ==
 >> Common <<
 - mdss, sovc: Call container_of() after all of checks finished
