@@ -3,7 +3,24 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v12.2]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v12.3]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- drivers: power: 2% 배터리 레벨 드롭 수정
+- f2fs: stable 브랜치 변경사항들을 적용을 위해 dev 브랜치 변경사항들 취소
+- f2fs: stable 브랜치 변경사항들 적용
+
+== AIO ==
+- f2fs-tools: block zone 지원 변경 사항들 적용 (아직 커널에 의해 지원되지 않음.)
+- f2fs-tools: 바이너리들 정적으로 빌드 (링크 에러 수정.)
+- 메리크리스마스! 새해 복 많이 받으세요! :)
+
+== 리커버리 ==
+- 최신 cm-14.1 소스들과 재빌드
+- f2fs-tools: 바이너리들 정적으로 빌드
+- jolla-kernel_bullhead_II-v12.3 적용
+
+<b><#selectbg_g>[bullhead_II-v12.2]</#></b>
 == 커널 ==
 >> 공통 <<
 - tcp: NULL 포인터 dereference 수정

@@ -3,7 +3,24 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v12.2]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v12.3]</#></b></@>
+== Kernel ==
+>> Common <<
+- drivers: power: Fix 2% battery level drop
+- f2fs: Revert dev branch changes to merge stable branch
+- f2fs: Merge stable branch changes
+
+== AIO ==
+- f2fs-tools: Merge block zone support changes (Not yet supported by kernel.)
+- f2fs-tools: Make binaries statically (Fix link error.)
+- Merry Christmas! Happy new year! :)
+
+== Recovery ==
+- Re-built with lastest cm-14.1 sources
+- f2fs-tools: Make binaries statically
+- jolla-kernel_bullhead_II-v12.3 applied
+
+<b><#selectbg_g>[bullhead_II-v12.2]</#></b>
 == Kernel ==
 >> Common <<
 - tcp: fix more NULL deref after prequeue changes
