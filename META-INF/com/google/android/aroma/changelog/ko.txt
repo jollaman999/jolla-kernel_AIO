@@ -3,7 +3,25 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v12.3]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v12.4]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- touchscreen: synaptics: 잘못된 endif 수정 (커널 상의 변화는 없음.)
+- mdss, touchscreen: 잘못된 매크로 수정 (커널 상의 변화는 없음.)
+- bullhead_defconfig: IP_NF_MATCH_RPFILTER 활성화 (테더링 호환성을 위해 활성화.)
+
+== AIO ==
+- Dynamic fsync 옵션 추가
+
+== 리커버리 ==
+- v11.2 에서 사용된 리커버리 소스로 되돌림
+(이전의 리커버리는 가끔 플래싱 완료 후 아무 변화가 없는 이상한 문제가 존재함.)
+- 최신 cm-14.1 소스들과 빌드
+- 파일 기반 암호화 지원
+- MultiROM: boot.img 의 호환성 증가
+- 진짜로 dynamic fsync 기본으로 활성화 (실수가 있었습니다. :( )
+
+<b><#selectbg_g>[bullhead_II-v12.3]</#></b>
 == 커널 ==
 >> 공통 <<
 - drivers: power: 2% 배터리 레벨 드롭 수정

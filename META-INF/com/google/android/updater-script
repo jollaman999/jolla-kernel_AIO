@@ -248,6 +248,18 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   endif;
 
 
+  ############ Dynamic fsync ############
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="1" then
+    run_program("/sbin/sh", "-c", "sed -i '/Dyn_fsync_active/d' /tmp/ramdisk/init.bullhead.rc");
+  endif;
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.3.1")=="0" then
+    ui_print("-> Setting Dynamic fsync...");
+    package_extract_file("jolla-kernel/bullhead/dynamic_fsync/dyn_fsync_off_set.sh", "/tmp/dyn_fsync_off_set.sh");
+    set_perm(0, 0, 0755, "/tmp/dyn_fsync_off_set.sh");
+    run_program("/tmp/dyn_fsync_off_set.sh");
+  endif;
+
+
   ############ IO scheduler ############
   ui_print("-> Setting IO scheduler...");
   if file_getprop("/tmp/aroma-data/block.prop","selected.1")!="1" then

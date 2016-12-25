@@ -124,6 +124,10 @@ a2dp.item=A2DP Checker
 a2dp.desc=This app supports Screen Off Volume Control for Bluetooth headsets.
 usbkeyboard.item=USB-Keyboard
 usbkeyboard.desc=This app supports to use Android device as USB Keyboard/Mouse.
+dynfsync.item=Dynamic fsync
+dynfsync.desc=If enabled, fsync will work when the screen is on and it will not work when the screen is off.\
+If disabled, fsync will work whether the screen is on or off.
+
 
 checkbox2.title=MultiROM Option
 checkbox2.subtitle=Check what you want.

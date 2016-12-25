@@ -194,6 +194,7 @@ on boot
     write /sys/android_touch/doubletap2sleep 0
     write /sys/android_touch/scroff_volctr 1
     write /sys/android_touch/sovc_auto_off_delay 2500
+    write /sys/kernel/dyn_fsync/Dyn_fsync_active 1
     #####################################################################
 
     # update foreground cpuset now that processors are up
