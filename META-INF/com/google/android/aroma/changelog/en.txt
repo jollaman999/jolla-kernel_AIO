@@ -20,6 +20,7 @@
 - Built with lastest cm-14.1 sources
 - Support File Based Encryption
 - MultiROM: Increase compatibility of boot.img
+- jolla-kernel_bullhead_II-v12.4 applied
 
 <b><#selectbg_g>[bullhead_II-v12.3]</#></b>
 == Kernel ==
