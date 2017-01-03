@@ -3,7 +3,36 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v12.4]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v12.5]</#></b></@>
+== Kernel ==
+>> Android 6.0.1 <<
+- msm: vidc: Merge some error check and memory related commits from Nougat
+
+>> Common <<
+- Built with with Linaro gcc 6.2.1-2016.11 (release)
+- ksm: Save 'ksm_run' value changed by user
+- Merge some error check and memory related commits of CAF from LineageOS/android_kernel_nextbit_msm8992
+- random: Backport driver from 4.1.31
+- arm64: Fix some error checks
+* ARCH_POWER not enabled - See https://github.com/jollaman999/jolla-kernel_bullhead/commit/091aa72394f9da9401a1bb6de57cd1ee4c1afd05
+
+== AIO ==
+- Remove MultiROM encryption directory before repacking the ramdisk
+- MultiROM: Change build base to LineageOS/cm-14.1
+- MultiROM: Support 4x4, 5x5 and 6x6 patterns
+- MultiROM: Reboot to recovery when failed to mount data
+- MultiROM: Add 'Reboot to Recovery' button on 2nd boot
+- MultiROM: Merge vold's cryptfs to trampoline_encmnt (Faster decryption)
+
+== Recovery ==
+- Change build base to LineageOS/cm-14.1
+- MultiROM: 1080x1920: Adjust size of pattern and dots
+(We can't handle 5x5 and 6x6 patterns.
+Because pattern size is too small and dots are too big!
+Increase pattern size and decrease dots size.)
+- jolla-kernel_bullhead_II-v12.5 applied
+
+<b><#selectbg_g>[bullhead_II-v12.4]</#></b>
 == Kernel ==
 >> Common <<
 - touchscreen: synaptics: Fix wrong endif (No real changes in kernel.)

@@ -350,6 +350,12 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   endif;
 
 
+  ############ Clean MultiROM enc folder ############
+  show_progress(0.73, 1);
+  ui_print("-> Cleaning MultiROM enc folder...");
+  delete_recursive("/tmp/ramdisk/mrom_enc");
+
+
   ############ Repack boot.img ############
   show_progress(0.75, 1);
   ui_print("-> Repacking boot.img...");

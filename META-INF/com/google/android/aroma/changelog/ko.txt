@@ -3,7 +3,36 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v12.4]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v12.5]</#></b></@>
+== 커널 ==
+>> Android 6.0.1 <<
+- msm: vidc: 누가로 부터 에러 체크와 메모리와 관련된 일부 커밋들 적용
+
+>> 공통 <<
+- Linaro gcc 6.2.1-2016.11 (release) 로 빌드
+- ksm: 사용자에 의해 변경된 'ksm_run' 값 저장
+- LineageOS/android_kernel_nextbit_msm8992 로 부터 CAF 의 에러체크와 메모리와 관련된 일부 커밋들 적용
+- random: 4.1.31 의 백포트 드라이버
+- arm64: 일부 에러 체크들 수정
+* ARCH_POWER 활성화 되지 않음 (XDA 요청사항) - 참고 https://github.com/jollaman999/jolla-kernel_bullhead/commit/091aa72394f9da9401a1bb6de57cd1ee4c1afd05
+
+== AIO ==
+- 램디스크를 리팩킹 하기 전에 MultiROM 암호화 폴더 제거
+- MultiROM: 빌드 베이스를 LineageOS/cm-14.1 로 변경
+- MultiROM: 4x4, 5x5, 6x6 패턴 지원
+- MultiROM: data 마운트 실패시 리커버리로 재부팅
+- MultiROM: 2번째 부팅시 'Reboot to Recovery' 버튼 추가
+- MultiROM: vold 의 cryptfs 를 trampoline_encmnt 에 병합 (빠른 복호화)
+
+== 리커버리 ==
+- 빌드 베이스를 LineageOS/cm-14.1 로 변경
+- MultiROM: 1080x1920: 패턴과 점들의 사이즈 조정
+(패턴 사이즈가 너무 작고 점들이 너무 커서
+5x5 와 6x6 패턴을 제어할 수 없습니다!
+패턴 사이즈를 늘리고 점들의 사이즈를 줄였습니다.)
+- jolla-kernel_bullhead_II-v12.5 적용
+
+<b><#selectbg_g>[bullhead_II-v12.4]</#></b>
 == 커널 ==
 >> 공통 <<
 - touchscreen: synaptics: 잘못된 endif 수정 (커널 상의 변화는 없음.)
