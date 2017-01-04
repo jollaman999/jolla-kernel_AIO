@@ -3,7 +3,14 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v12.5]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v12.6]</#></b></@>
+== 커널 ==
+- Google 1월 보안 패치 적용
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v12.6 적용
+
+<b><#selectbg_g>[bullhead_II-v12.5]</#></b>
 == 커널 ==
 >> Android 6.0.1 <<
 - msm: vidc: 누가로 부터 에러 체크와 메모리와 관련된 일부 커밋들 적용
