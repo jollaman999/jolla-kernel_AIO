@@ -3,7 +3,15 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v12.6]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v12.7]</#></b></@>
+== 커널 ==
+- 4.1.31 랜덤 패치들 취소
+
+== 리커버리 ==
+- cm-14.1 vold 로 부터 cryptfs 가져옴 (빠른 복호화)
+- jolla-kernel_bullhead_II-v12.7 적용
+
+<b><#selectbg_g>[bullhead_II-v12.6]</#></b>
 == 커널 ==
 - Google 1월 보안 패치 적용
 

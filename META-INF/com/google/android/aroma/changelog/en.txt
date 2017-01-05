@@ -3,7 +3,15 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v12.6]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v12.7]</#></b></@>
+== Kernel ==
+- Revert 4.1.31 random patches
+
+== Recovery ==
+- Get cryptfs from cm-14.1 vold (Faster decryption)
+- jolla-kernel_bullhead_II-v12.7 applied
+
+<b><#selectbg_g>[bullhead_II-v12.6]</#></b>
 == Kernel ==
 - Applied Google January security patches
 
