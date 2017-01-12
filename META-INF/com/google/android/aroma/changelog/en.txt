@@ -3,8 +3,50 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v12.7]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v49514648]</#></b></@>
 == Kernel ==
+>> Common <<
+- msm_thermal: Adjust thermal limit (Jan, 2017)
+(When the big cluster is turned off, the device is getting very slower.
+So, limit the big cluster further and only turn off the big cluster when the deivce is very hot.
+It can also reduce the big cluster's on/off cycles and increase performance.)
+- Add Adreno idler and enabled by default.
+- adreno_idler: Add display state awareness
+- msm_adreno_tz: Add display state awareness
+- PM: devfreq: Applied some patches
+- Speed up console framebuffer imageblit function
+- sched: Some optimization of loop and cpu choice
+- Revert "mdss: LiveDisplay to kcal interface"
+(It makes race condition. And LiveDisplay working well without this.)
+- mdss: Change some functions to static
+- mdss, sovc: Prevent race condition when turning on or off the screen after sound played
+- slimbus: initial overclocking of slimbus
+(It will give best audio quality for the hardware.)
+- sdcardfs: Applied Google's android-3.10 changes.
+- mm: Per-Process Reclaim
+(It will reduce process killing and get more free memory.
+Details: https://lwn.net/Articles/548072/)
+- mm: process reclaim: vmpressure based process reclaim
+- block: Add Maple I/O Scheduler
+- block: maple: Check display state when needed
+
+== AIO ==
+- ramdisk: Set per-process reclaim parameters
+- updater-script: Set selinux contexts when installing apps
+
+== Recovery ==
+- Built with lastest LineageOS/cm-14.1 sources (Android 7.1.1_r9)
+- Applied lastest omni TWRP changes
+- jolla-kernel_bullhead_II-v49514648 applied
+
+== 49514648 ==
+* 2.
+* ABC.
+* Do you like skiing?
+
+<b><#selectbg_g>[bullhead_II-v12.7]</#></b>
+== Kernel ==
+>> Common <<
 - Revert 4.1.31 random patches
 
 == Recovery ==
@@ -13,6 +55,7 @@
 
 <b><#selectbg_g>[bullhead_II-v12.6]</#></b>
 == Kernel ==
+>> Common <<
 - Applied Google January security patches
 
 == Recovery ==

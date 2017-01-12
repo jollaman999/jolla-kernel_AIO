@@ -3,8 +3,50 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v12.7]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v49514648]</#></b></@>
 == 커널 ==
+>> 공통 <<
+- msm_thermal: 온도 제한 조절 (2017년 1월)
+(빅 클러터가 꺼지면, 디바이스가 매우 느려집니다.
+따라서, 빅 클러스터를 더욱 제한하고 디바이스가 매우 뜨거울 대만 빅클러스터를 끄도록 하였습니다.
+이로써 빅클러스터의 켜지고 꺼지는 사이클을 줄이고 성능을 증가시킬 수 있습니다.)
+- Adreno idler 추가 및 기본으로 활성화.
+- adreno_idler: 디스플레이 상태 감지 추가
+- msm_adreno_tz: 디스플레이 상태 감지 추가
+- PM: devfreq: 일부 패치들 적용
+- 콘설 버퍼 imageblit function 속도 증가
+- sched: 루프와 cpu 선택에 대한 일부 최적화
+- 변경사항 취소 "mdss: LiveDisplay to kcal 인터페이스"
+(레이스 컨디션을 발생 시키며, LiveDisplay 는 이가 없어도 잘 작동함.)
+- mdss: 일부 함수들 static 으로 변경
+- mdss, sovc: 사운드가 재생되고 난 후 화면을 키거나 끄는중에 발생하는 레이스 컨디션 방지
+- slimbus: slimbus 오버클럭
+(하드웨어에 대해 최상의 오디오 품질을 제공.)
+- sdcardfs: Google 의 android-3.10 변경사항들 적용.
+- mm: Per-Process Reclaim
+(프로세스의 종료를 줄이고 더 많은 메모리 여유 제공.
+상세 정보: https://lwn.net/Articles/548072/)
+- mm: process reclaim: vmpressure 기반 process reclaim
+- block: Maple I/O 스케줄러 추가
+- block: maple: 디스플레이 상태를 필요할 때 체크
+
+== AIO ==
+- ramdisk: per-process reclaim 파라미터들 설정
+- updater-script: 앱들을 설치하는 동안 selinux context 설정
+
+== 리커버리 ==
+- 최신 LineageOS/cm-14.1 소스들로 빌드 (Android 7.1.1_r9)
+- 최신 omni TWRP 변경사항들 적용
+- jolla-kernel_bullhead_II-v49514648 적용
+
+== 49514648 ==
+* 2.
+* ABC.
+* 스키 타는 것 좋아하시나요?
+
+<b><#selectbg_g>[bullhead_II-v12.7]</#></b>
+== 커널 ==
+>> 공통 <<
 - 4.1.31 랜덤 패치들 취소
 
 == 리커버리 ==
@@ -13,6 +55,7 @@
 
 <b><#selectbg_g>[bullhead_II-v12.6]</#></b>
 == 커널 ==
+>> 공통 <<
 - Google 1월 보안 패치 적용
 
 == 리커버리 ==
