@@ -189,7 +189,7 @@ Name: jolla-kernel/bullhead/multirom/inst/multirom/icons/romic_viperon
 SHA-256-Digest: yQUYy2nOCGSA9Dv/+vppfoumoMx/Uo7rEUE+81LwHzU=
 
 Name: META-INF/com/google/android/updater-script
-SHA-256-Digest: xZS2xJUhnnuH/nFh7skWuEU/LLd/1okUgomV6iZxxys=
+SHA-256-Digest: R5pLSOFRBlZxt6xn8A9TnV44+Wwo5KUx+FnVJAA2cpo=
 
 Name: jolla-kernel/bullhead/mkbootimg/bin/lz4
 SHA-256-Digest: 6i58D/I8pYlyeuL3QXbs7TNYuEJ88tnEMVHAecj0sVw=
@@ -451,7 +451,7 @@ Name: jolla-kernel/bullhead/multirom/inst/multirom/exfat-fuse
 SHA-256-Digest: 4x30g4zGFAn8goNmuR474QjNJQdG03/tY0XGLG9IHR4=
 
 Name: META-INF/com/google/android/aroma-config
-SHA-256-Digest: WUD3qZ4RmBGGh0KczxVfLA2Jgn1FlaQuqv5lrIxXySM=
+SHA-256-Digest: jSfru8bLWqVWJLXYXPVcV2gJGU72Mvys4DiohxvUrZ8=
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.modem.png
 SHA-256-Digest: OSHxlY5eug4k9uap2nCkzMmexNjdJoytpGNwFPmHSV0=

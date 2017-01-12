@@ -1,5 +1,5 @@
 Signature-Version: 1.0
-SHA-256-Digest-Manifest: 1gv9DBK4LNRDFv+0rOPEL6EiqSDMO+SsdmH/DMIMUG0=
+SHA-256-Digest-Manifest: H9C4qSv32ja9qZagLmUN+YUA3NcH67PgpbGFW/lb3ok=
 Created-By: 1.0 (Android SignApk)
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.reboot.pn
@@ -190,7 +190,7 @@ Name: jolla-kernel/bullhead/multirom/inst/multirom/icons/romic_viperon
 SHA-256-Digest: Ovrd8RuMaMKQQkmzK608rf8RIOjRNS9m+G7t75F3zvM=
 
 Name: META-INF/com/google/android/updater-script
-SHA-256-Digest: O3Ht9YZLsEn1U0D/VsNUKXscrJOjC/90h2ko5cQqi38=
+SHA-256-Digest: qT4Ldh+o3gH4aYfB2rKhx4YXA3Z1KuqGyhoNjaJD5xY=
 
 Name: jolla-kernel/bullhead/mkbootimg/bin/lz4
 SHA-256-Digest: VZ9ydBEMuAh/fmkCesaXtX2GfkyZKDTLerk1NxFacK0=
@@ -452,7 +452,7 @@ Name: jolla-kernel/bullhead/multirom/inst/multirom/exfat-fuse
 SHA-256-Digest: Ks9a8E/dladXNCKPfmL1f9cOenMbd6w+YQ1oNV98Pm4=
 
 Name: META-INF/com/google/android/aroma-config
-SHA-256-Digest: jqbcId+I71DgRKyD1/0GwHQO3nwKt4zxpmkRr69cbsw=
+SHA-256-Digest: B4W9cnZvYNcfAdSWeofd7Kza06va5hJsiTwyZWWrqO4=
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.modem.png
 SHA-256-Digest: sGg6p/OBa+5WBCwgJZ4S54WlXjn+a4u1ITEkcZB7PKY=
