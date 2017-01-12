@@ -293,6 +293,9 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
     if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="10" then
       run_program("/tmp/block_io_sched_set.sh", "vr");
     endif;
+    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="11" then
+      run_program("/tmp/block_io_sched_set.sh", "maple");
+    endif;
   endif;
 
 

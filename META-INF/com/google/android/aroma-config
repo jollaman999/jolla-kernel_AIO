@@ -633,6 +633,7 @@ selectbox(
     "SIOPLUS",                "",                                                  0,      #-- selected.1 = 8
     "ZEN",                    "",                                                  0,      #-- selected.1 = 9
     "VR",                     "",                                                  0,      #-- selected.1 = 10
+    "MAPLE",                  "",                                                  0,      #-- selected.1 = 11
   "<~block.read.title>",    "",                                               2,      #-- Group 2. key = "selected.2"
     "<~block.read.128>",      "",                                                  1,      #-- selected.2 = 1
     "256 KB",                 "",                                                  0,      #-- selected.2 = 2
