@@ -3,7 +3,40 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v49514648]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v14.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- mdss, sovc: Fix unbalanced mdss off
+(The real problem was unbalanced mdss vreg(power) state.
+It will try to turn off again after sound stopped.
+So it will cause unbalanced state and device can't turn on the screen again.
+Do not turn off mdss vreg when already turned off.)
+- mdss, sovc: Do not turn off the mdss when it entered low power state
+(There is a low power state in the mdss.
+This mode is used when the device get an alarm and turn on the screen with black and white.
+So it must be not turn off the mdss when it entered low power state.
+Otherwise, it makes timeout error messages.)
+- Revert "block: maple: Check display state when needed"
+(This is useless commit.)
+- Applied a sdcardfs related Android mnt change from Google android-3.10
+- android: binder: Applied Google's hwbinder branch changes
+- net: Applied Google's hwbinder branch changes
+- sound: msm, soc: optimize for size
+- lib/vsprintf.c: Applied upstream changes
+- Input: xpad: Applied upstream changes
+- ksm, msm_thermal, dt2w, s2w, sovc: Check low power state in fb notifier
+(There is a low power state in the mdss.
+This mode is used when the device get an alarm and turn on the screen with black and white.
+If user enabled auto unlock screen feature, there will be a problem when mdss turn on the screen in low power state.
+The driver will not go into the resume state.
+So it must be check this low power state in fb notifier.)
+
+== Recovery ==
+- Re-built with lastest LineageOS/cm-14.1 sources
+- Applied lastest omni TWRP changes
+- jolla-kernel_bullhead_II-v14.0 applied
+
+<b><#selectbg_g>[bullhead_II-v49514648]</#></b>
 == Kernel ==
 >> Common <<
 - msm_thermal: Adjust thermal limit (Jan, 2017)
