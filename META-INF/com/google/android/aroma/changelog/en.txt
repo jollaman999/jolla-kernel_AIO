@@ -3,8 +3,25 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v14.0.1]</#></b></@>
-- Test version for testing new jolla-kernel Updater with server
+<b><#selectbg_g>[bullhead_II-v14.1]</#></b></@>
+== Kernel ==
+>> Common <<
+- cpufreq: interactive: fix memory leak
+- Revert "f2fs: reset default idle interval value"
+(This will prevent deadlock in new f2fs changes.)
+
+== AIO ==
+- updater: Update libraries
+- updater: Source cleanup & replace deprecated lines
+- updater: Manifest: Ignore GoogleAppIndexingWarning
+- updater: Use my own server and view changelogs from Github
+- MultiROMMgr: Update libraries
+- MultiROMMgr: ko: Add more translations
+- MultiROMMgr: Update gradle version
+- MultiROMMgr: Some cleanup
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v14.1 applied
 
 <b><#selectbg_g>[bullhead_II-v14.0]</#></b>
 == Kernel ==

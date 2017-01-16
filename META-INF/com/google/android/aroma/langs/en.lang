@@ -46,10 +46,10 @@ main.inst=jolla-kernel Installation
 main.instdesc=jolla-kernel Installation with various options
 main.sysinfo=System Info
 main.sysinfodesc=Get and show device/partition informations
-main.changelog_recent=All of ChangeLogs
-main.changelog_recentdesc=Show all of jolla-kernel's ChangeLogs
-main.changelog_all=Recent ChangeLogs
-main.changelog_alldesc=Show jolla-kernel's recent ChangeLogs
+main.changelog_recent=Recent ChangeLogs
+main.changelog_recentdesc=Show jolla-kernel's recent ChangeLogs
+main.changelog_all=All of ChangeLogs
+main.changelog_alldesc=Show all of jolla-kernel's ChangeLogs
 main.quit=Quit Install
 main.quitdesc=Quit jolla-kernel installation :(
 

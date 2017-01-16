@@ -3,8 +3,25 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v14.0.1]</#></b></@>
-- 새로운 jolla-kernel Updater 를 테스트 하기 위한 테스트 버젼
+<b><#selectbg_g>[bullhead_II-v14.1]</#></b></@>
+== 커널 ==
+>> 공통 <<
+- cpufreq: interactive: 매모리 누수 수정
+- 변경 사항 취소 "f2fs: 기본 아이들 간격 값 리셋"
+(새로운 f2fs 변경사항에서의 데드락을 방지.)
+
+== AIO ==
+- updater: 라이브러리 업데이트
+- updater: 소스 클린업 & Deprecate 된 라인들 교체
+- updater: Manifest: GoogleAppIndexingWarning 무시
+- updater: 개인 서버 사용 및 체인지로그를 Github 로 부터 보여줌
+- MultiROMMgr: 라이브러리 업데이트
+- MultiROMMgr: ko: 더 번역함
+- MultiROMMgr: Gradle 버젼 업데이트
+- MultiROMMgr: 일부 클린업
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v14.1 적용
 
 <b><#selectbg_g>[bullhead_II-v14.0]</#></b>
 == 커널 ==
