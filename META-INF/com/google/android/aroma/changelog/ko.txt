@@ -3,7 +3,10 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v14.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v14.0.1]</#></b></@>
+- 새로운 jolla-kernel Updater 를 테스트 하기 위한 테스트 버젼
+
+<b><#selectbg_g>[bullhead_II-v14.0]</#></b>
 == 커널 ==
 >> 공통 <<
 - mdss, sovc: 균형이 맞지 않는 mdss 끄기 수정
