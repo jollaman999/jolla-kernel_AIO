@@ -177,8 +177,9 @@ menubox(
 	
     "<~main.inst>",              "<~main.instdesc>",                                           "@install",      #-- selected = 1
     "<~main.sysinfo>",           "<~main.sysinfodesc>",                                        "@info",         #-- selected = 2
-    "<~main.changelog>",         "<~main.changelogdesc>",                                      "@agreement",    #-- selected = 3
-    "<~main.quit>",              "<~main.quitdesc>",                                           "@install"       #-- selected = 4
+    "<~main.changelog_recent>",  "<~main.changelog_recentdesc>",                               "@agreement",    #-- selected = 3
+    "<~main.changelog_all>",     "<~main.changelog_alldesc>",                                  "@agreement",    #-- selected = 4
+    "<~main.quit>",              "<~main.quitdesc>",                                           "@install"       #-- selected = 5
 
 );
 
@@ -249,29 +250,29 @@ endif;
 
 
 ##
-# CHANGELOG DISPLAY
+# RECENT CHANGELOG DISPLAY
 #
 
 if prop("menu.prop","selected")=="3" then
 
 if prop("lang.prop","selected.0")=="1" then
-    #-- TextDialog 
+    #-- TextDialog
  textdialog(
     #-- Title
-    "<~changelog.title>",
+    "<~changelog_recent.title>",
 	  #-- Text
     resread("changelog/ko.txt"),
     #-- Custom OK Button Text (Optional)
-    "<~changelog.exit>"
+    "<~changelog_recent.exit>"
  );
- 
+
   #-- Back to Menu ( 2 Wizard UI to Back )
   back("1");
 endif;
 ## endif prop("lang.prop","selected.0")=="1"
 
 if prop("lang.prop","selected.0")=="2" then
-    #-- TextDialog 
+    #-- TextDialog
  textdialog(
     #-- Title
     "<~changelog.title>",
@@ -280,7 +281,7 @@ if prop("lang.prop","selected.0")=="2" then
     #-- Custom OK Button Text (Optional)
     "<~changelog.exit>"
  );
- 
+
   #-- Back to Menu ( 2 Wizard UI to Back )
   back("1");
 endif;
@@ -291,10 +292,52 @@ endif;
 
 
 ##
-# QUIT INSTALLER
+# ALL CHANGELOG DISPLAY
 #
 
 if prop("menu.prop","selected")=="4" then
+
+if prop("lang.prop","selected.0")=="1" then
+    #-- TextDialog
+ textdialog(
+    #-- Title
+    "<~changelog.title>",
+	  #-- Text
+    resread("changelog/all/ko.txt"),
+    #-- Custom OK Button Text (Optional)
+    "<~changelog.exit>"
+ );
+
+  #-- Back to Menu ( 2 Wizard UI to Back )
+  back("1");
+endif;
+## endif prop("lang.prop","selected.0")=="1"
+
+if prop("lang.prop","selected.0")=="2" then
+    #-- TextDialog
+ textdialog(
+    #-- Title
+    "<~changelog.title>",
+	  #-- Text
+    resread("changelog/all/en.txt"),
+    #-- Custom OK Button Text (Optional)
+    "<~changelog.exit>"
+ );
+
+  #-- Back to Menu ( 2 Wizard UI to Back )
+  back("1");
+endif;
+## endif prop("lang.prop","selected.0")=="2"
+
+endif;
+## endif prop("menu.prop","selected")=="4"
+
+
+##
+# QUIT INSTALLER
+#
+
+if prop("menu.prop","selected")=="5" then
 
 #-- Exit
 	if

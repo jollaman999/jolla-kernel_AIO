@@ -46,8 +46,10 @@ main.inst=jolla-kernel Installation
 main.instdesc=jolla-kernel Installation with various options
 main.sysinfo=System Info
 main.sysinfodesc=Get and show device/partition informations
-main.changelog=ChangeLog
-main.changelogdesc=Show jolla-kernel's ChangeLog
+main.changelog_recent=All of ChangeLogs
+main.changelog_recentdesc=Show all of jolla-kernel's ChangeLogs
+main.changelog_all=Recent ChangeLogs
+main.changelog_alldesc=Show jolla-kernel's recent ChangeLogs
 main.quit=Quit Install
 main.quitdesc=Quit jolla-kernel installation :(
 
@@ -64,7 +66,7 @@ sysinfo.subtitle=Current system Information on your Nexus 5X
 sysinfo.alert.title=Finished
 sysinfo.alert.text=You will be back to Menu
 
-changelog.title=jolla-kernel Changelog
+changelog.title=jolla-kernel Changelogs
 changelog.exit=Close
 
 quit.title=Exit
