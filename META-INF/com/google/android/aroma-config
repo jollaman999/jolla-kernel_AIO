@@ -259,11 +259,11 @@ if prop("lang.prop","selected.0")=="1" then
     #-- TextDialog
  textdialog(
     #-- Title
-    "<~changelog_recent.title>",
+    "<~changelog.title>",
 	  #-- Text
     resread("changelog/ko.txt"),
     #-- Custom OK Button Text (Optional)
-    "<~changelog_recent.exit>"
+    "<~changelog.exit>"
  );
 
   #-- Back to Menu ( 2 Wizard UI to Back )
