@@ -6,7 +6,6 @@
 <b><#selectbg_g>[bullhead_II-v14.1]</#></b></@>
 == Kernel ==
 >> Common <<
-- cpufreq: interactive: fix memory leak
 - Revert "f2fs: reset default idle interval value"
 (This will prevent deadlock in new f2fs changes.)
 
