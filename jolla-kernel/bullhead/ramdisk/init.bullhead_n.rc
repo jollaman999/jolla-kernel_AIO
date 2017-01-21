@@ -161,7 +161,6 @@ on boot
 
     # input boost configuration
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1248000 4:768000"
-    write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
     # enable rps static configuration
     write /sys/class/net/rmnet_ipa0/queues/rx-0/rps_cpus 8
