@@ -430,9 +430,7 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
   
     "<~window2.option1>",         "",                                                 2,      #-- Group 1. key = "selected.1"
-        "<~window2.option1-1>",         "<~window2.option1-1desc>",                              0,     #-- selected.1 = 1
-        "<~window2.option1-2>",         "<~window2.option1-2desc>",                              0,     #-- selected.1 = 2
-        "<~window2.option1-3>",         "<~window2.option1-3desc>",                              1      #-- selected.1 = 3
+        "<~window2.option1-1>",         "<~window2.option1-1desc>",                              1      #-- selected.1 = 1
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
