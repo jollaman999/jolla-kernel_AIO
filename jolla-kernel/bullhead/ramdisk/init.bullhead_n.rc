@@ -171,21 +171,6 @@ on boot
     # set GPU default power level to 5 (180MHz) instead of 4 (305MHz)
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 5
 
-    # devfreq
-    write /sys/class/devfreq/qcom,cpubw.27/governor bw_hwmon
-    restorecon_recursive /sys/class/devfreq/qcom,cpubw.27
-    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/sample_ms 4
-    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/io_percent 34
-    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/hist_memory 20
-    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/hyst_length 10
-    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/low_power_ceil_mbps 0
-    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/low_power_io_percent 34
-    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/low_power_delay 20
-    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/guard_band_mbps 0
-    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/up_scale 250
-    write /sys/class/devfreq/qcom,cpubw.27/bw_hwmon/idle_mbps 1600
-    write /sys/class/devfreq/qcom,mincpubw.28/governor cpufreq
-
     # per-process reclaim
     write /sys/module/process_reclaim/parameters/enable_process_reclaim 1
     write /sys/module/process_reclaim/parameters/pressure_max 70
