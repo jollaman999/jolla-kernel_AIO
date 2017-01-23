@@ -32,7 +32,6 @@
 안드로이드에 대해서, 128 을 기본값으로 한다. 테스트 된 기기들에서 300ms 의 부팅 시간이 줄었다.)
 - 'LineageOS/android_kernel_oneplus_msm8996' 로 부터 일부 CAF 패치들 적용
 - CAF 로 부터 카메라 패치들 적용
-- %p 를 %pK 로 변경
 - cpufreq: Relaxed 거버너 추가
 - Makefile: Linaro 최적화 추가
 - qcacld-2.0: O3 로 빌드

@@ -32,7 +32,6 @@ Let's increase this value to keep higher frequncy while touching the screen.)
 For android, set it to default 128. saved boot-up time by 300ms in tested device)
 - Applied some CAF patches from 'LineageOS/android_kernel_oneplus_msm8996'
 - Applied camera patches from CAF
-- Change %p to %pK
 - cpufreq: Add Relaxed governor
 - Makefile: Add Linaro optimizations
 - qcacld-2.0: Build with O3
