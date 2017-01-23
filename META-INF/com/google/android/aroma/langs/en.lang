@@ -123,7 +123,7 @@ a2dp.desc=This app supports Screen Off Volume Control for Bluetooth headsets.
 usbkeyboard.item=USB-Keyboard
 usbkeyboard.desc=This app supports to use Android device as USB Keyboard/Mouse.
 dynfsync.item=Dynamic fsync
-dynfsync.desc=If enabled, fsync will work when the screen is on and it will not work when the screen is off.\
+dynfsync.desc=If enabled, fsync will work when the screen is turned off and it will not work when the screen is turned on.\
 If disabled, fsync will work whether the screen is on or off.
 
 

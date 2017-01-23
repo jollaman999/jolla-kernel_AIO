@@ -123,7 +123,7 @@ a2dp.desc=이 앱은 블루투스 헤드셋에 대해 Screen Off Volume Control 
 usbkeyboard.item=USB-Keyboard
 usbkeyboard.desc=이 앱은 안드로이드 디바이스를 USB 키보드/마우스로 사용 하는 것을 지원합니다.
 dynfsync.item=Dynamic fsync
-dynfsync.desc=활성화 되어있으면, fsync 는 화면이 켜져있을 때 작동하고 화면이 꺼지면 작동하지 않습니다.\
+dynfsync.desc=활성화 되어있으면, fsync 는 화면이 꺼져있을 때 작동하고 화면이 켜지면 작동하지 않습니다.\
 비활성화 되어있으면, fsync 는 화면이 켜져있든 꺼져있든 작동합니다.
 
 checkbox2.title=멀티롬 옵션
