@@ -21,9 +21,6 @@ SHA-256-Digest: lp2YyxKJEx5TkaBVHQMJO+STu0o3/u3RkOmLGkhiUnM=
 Name: jolla-kernel/bullhead/multirom/uninst/erase_multirom_all.sh
 SHA-256-Digest: ycTDzYwdhWTjrdxURuSQ9yhWzVuMi5yFZmJ4HXjgDz8=
 
-Name: jolla-kernel/bullhead/Image/23/Image.gz-dtb
-SHA-256-Digest: 2e3X4mjDoBpSgX3wU583+iD0h4vdR9X4RJWH2Hw9ZjQ=
-
 Name: jolla-kernel/bullhead/multirom/inst/scripts/extract_multirom.sh
 SHA-256-Digest: 3se3zW+aC7SXaT/2JNoEygszfd+mArbstxXrV4wy67s=
 
@@ -33,9 +30,6 @@ SHA-256-Digest: HDv1YbiCshGynGPmfj8Re7Mp9/0wQMOPbTcwfLDcc9g=
 Name: jolla-kernel/bullhead/multirom/inst/multirom/icons/romic_linux.p
  ng
 SHA-256-Digest: T0YWl3AJY4pq81xSWf5NYOH433t7TpvH8lHBG8C3yRU=
-
-Name: jolla-kernel/bullhead/sdcardfs/sdcardfs_enable_m.sh
-SHA-256-Digest: jrpK2d8XVTkJVHvjr1+bPjjPPb6zyo6oZseUlnOFswk=
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.welcome.p
  ng
@@ -61,7 +55,7 @@ Name: jolla-kernel/bullhead/block/block_io_sched_set.sh
 SHA-256-Digest: s7VL/vyQ+pZjYa4Yms92RiVlH1pFhF6LxAOz66uGRBU=
 
 Name: jolla-recovery/twrp/recovery.img
-SHA-256-Digest: xBYaYVZXylGYt55yxSz2f73f0pITmPDa/pA9WS36+64=
+SHA-256-Digest: fkhAaBkA8UvkPCGr6fELUe1MgiUXRWE/TQE7rkzPsWw=
 
 Name: jolla-kernel/bullhead/multirom/inst/multirom/enc/libdiag.so
 SHA-256-Digest: HjizZxPrk0+drH/g4TAVYc7TCsbvy7f4PPSvlRIvAko=
@@ -138,7 +132,7 @@ Name: META-INF/com/google/android/aroma/icons/alert.png
 SHA-256-Digest: h5t3u0Pu2/7eIdCABPChZ6EZjl8qkVslxh7kUDvWxdg=
 
 Name: META-INF/com/google/android/aroma/changelog/all/ko.txt
-SHA-256-Digest: GmJwIN05P41FXAcl2sBleoXbESC6S2GRr5vlzA6A/aQ=
+SHA-256-Digest: T7Ivva5PcAfx+JW0VLPL30iZhGdfyXfwI4opb6rcXoU=
 
 Name: jolla-kernel/bullhead/multirom/inst/multirom/icons/romic_android
  l.png
@@ -192,7 +186,7 @@ Name: jolla-kernel/bullhead/multirom/inst/multirom/icons/romic_viperon
 SHA-256-Digest: yQUYy2nOCGSA9Dv/+vppfoumoMx/Uo7rEUE+81LwHzU=
 
 Name: META-INF/com/google/android/updater-script
-SHA-256-Digest: R5pLSOFRBlZxt6xn8A9TnV44+Wwo5KUx+FnVJAA2cpo=
+SHA-256-Digest: NrfZqmV31IrlkpiUIol94hFonmgN1YHy3IACA2WuQ0U=
 
 Name: jolla-kernel/bullhead/mkbootimg/bin/lz4
 SHA-256-Digest: 6i58D/I8pYlyeuL3QXbs7TNYuEJ88tnEMVHAecj0sVw=
@@ -221,7 +215,7 @@ Name: jolla-kernel/bullhead/mkbootimg/bin/unpackbootimg
 SHA-256-Digest: i0uDgWXIk/1+4q7+3ogWFdX2n2aARllBQ5Zl8Dm5o4U=
 
 Name: META-INF/com/google/android/aroma/changelog/all/en.txt
-SHA-256-Digest: s7JG0I2VkvB8/jhOMpRq1yOG9YIxSYiESXGyLsH+fzM=
+SHA-256-Digest: BrQie3soAkkpTfx34nHCdcoDVL8RkBUvbJX8WdO2dc4=
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/dialog_titleba
  r.9.png
@@ -254,9 +248,6 @@ SHA-256-Digest: dnP8lx848ByUhjE7Cv0qboYguLPlz4lGAIr36Hx8IMU=
 Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.update.pn
  g
 SHA-256-Digest: hRn9HgM2b3iL7E9Un7G7jDxv0yBSIHk/drGoZrUpRCU=
-
-Name: jolla-kernel/bullhead/Image/25/Image.gz-dtb
-SHA-256-Digest: JZZ08YqfxTXd+uTejksjei5uDbnnqEM/8nHzQUWQj0U=
 
 Name: jolla-kernel/bullhead/ramdisk/fstab.bullhead
 SHA-256-Digest: CMyjxZgH6RXZRvSRRLoNQrdiqGzhm0xkX2pCL9LdseU=
@@ -335,9 +326,6 @@ Name: jolla-kernel/bullhead/multirom/inst/multirom/icons/romic_miui.pn
  g
 SHA-256-Digest: gJjcw/FvYh7fqfI881GObUnUVOaJiXeY4CORy9bevLU=
 
-Name: jolla-kernel/bullhead/sdcardfs/sdcardfs_enable_n.sh
-SHA-256-Digest: 5Wm7W081RNotuyFx91WHzfg8w0O1wNAeYrQuxr5UcyE=
-
 Name: jolla-kernel/bullhead/multirom/uninst/clear_ramdisk.sh
 SHA-256-Digest: w4MbniiDOo/ZnrqK2KpSv+TKjm7YoDvy+/1lWOm7Slw=
 
@@ -391,7 +379,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.agreement
 SHA-256-Digest: H+Wliw390SHV7B7kyWkHFxJFx12zNlxqXdqNbTmDFK4=
 
 Name: META-INF/com/google/android/aroma/langs/ko.lang
-SHA-256-Digest: WfhMz+NTGHRKc/J49WxFJn4BVzCKsjMXqn6LurEIBUY=
+SHA-256-Digest: ji2zu8qCx0oyVxAtlKJCMYUBnuVhEjUL7whpu73eelc=
 
 Name: META-INF/com/google/android/aroma/ttf/Roboto-Regular.ttf
 SHA-256-Digest: 8kOfUD6mf2o3rmVKhQdzbSZVEvuiPGtCrkMIYL3YcaU=
@@ -413,6 +401,9 @@ SHA-256-Digest: XbVFiydXOYuEdcMievgHtZlFKpzhb/yJgn0gmQ1diiU=
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.back.png
 SHA-256-Digest: CdHyCvc/h10iW7/+0gGnsR9/cLhMzFwsDK4yjasSlAw=
+
+Name: jolla-kernel/bullhead/Image/Image.gz-dtb
+SHA-256-Digest: l9Y6/mHNp4RlgEm2kXxYyfe2Le3Umhde2gLgKpCY6A8=
 
 Name: jolla-kernel/bullhead/multirom/inst/multirom/enc/libm.so
 SHA-256-Digest: t+xaI/GJDkzXGDocstSeA0Pff7AE7m7aF0/wwfx3nzs=
@@ -457,7 +448,7 @@ Name: jolla-kernel/bullhead/multirom/inst/multirom/exfat-fuse
 SHA-256-Digest: 4x30g4zGFAn8goNmuR474QjNJQdG03/tY0XGLG9IHR4=
 
 Name: META-INF/com/google/android/aroma-config
-SHA-256-Digest: kMO/nHOwh4mC2xMQUnYLq3IaeNadX1/Ghubbizj38iA=
+SHA-256-Digest: EtbIbAWoqWXW+vZ5fj9sgqCCIBXWdC/T4AyP+DzB9Dc=
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.modem.png
 SHA-256-Digest: OSHxlY5eug4k9uap2nCkzMmexNjdJoytpGNwFPmHSV0=
@@ -494,7 +485,10 @@ Name: jolla-kernel/bullhead/multirom/inst/multirom/enc/libcrypto.so
 SHA-256-Digest: OE8STYVMGj0/nO9bcvk2M92fbRxYnM/IDXq1PKRdWnU=
 
 Name: META-INF/com/google/android/aroma/changelog/ko.txt
-SHA-256-Digest: ii9TTW+kYnGrkbI2ZeVZWrxDW1ymEfyzMScx6v/cx34=
+SHA-256-Digest: F9uxCkJU0qH7H/kMcieVSbFq39i+cN4ITvKL4yiabs0=
+
+Name: jolla-kernel/bullhead/sdcardfs/sdcardfs_enable.sh
+SHA-256-Digest: 5Wm7W081RNotuyFx91WHzfg8w0O1wNAeYrQuxr5UcyE=
 
 Name: jolla-kernel/bullhead/mkbootimg/gzip.sh
 SHA-256-Digest: 6rktiEoVfgvGa3PVoXSjRKcZJYm6c+s5II2kqrSDtQw=
@@ -502,8 +496,8 @@ SHA-256-Digest: 6rktiEoVfgvGa3PVoXSjRKcZJYm6c+s5II2kqrSDtQw=
 Name: jolla-kernel/bullhead/sovc/sovc_auto_off_set.sh
 SHA-256-Digest: UhikDIDeP7sf1YVArzMExn2nFq42DYJlhDM3rjM3gPE=
 
-Name: jolla-kernel/bullhead/ramdisk/init.bullhead_m.rc
-SHA-256-Digest: c7ljDOrkwgAwK2zi9LghG5geEsYgaXYBTOV1J3MXAhU=
+Name: jolla-kernel/bullhead/ramdisk/init.bullhead.rc
+SHA-256-Digest: CKyAo21dPEVKTm2sTHh4MBMnIsdsHWS0I6ZnZQ6jqXQ=
 
 Name: jolla-kernel/bullhead/mkbootimg/bin/file
 SHA-256-Digest: zgcGnNtKu5jHBHHGfJHZAHSpUqmJKMOUuvgjl87IAM0=
@@ -627,7 +621,7 @@ Name: jolla-kernel/bullhead/multirom/inst/multirom/icons/romic_ubuntu1
 SHA-256-Digest: 1q0CcaI10cJQcOuImIIwFuLqA+pNX6VCKq0wAojEy0A=
 
 Name: META-INF/com/google/android/aroma/langs/en.lang
-SHA-256-Digest: PZt6TqHIODhmLLfiPvU30tdWuWhrPuTQmpyBW4pPXQE=
+SHA-256-Digest: 8IMAUeefjYtfHXoAp/KIcc+GEUmb3XjBIiPooRd8O/8=
 
 Name: README.md
 SHA-256-Digest: CttWEBaPpxD08oDrsR1i+v1Mt2Arall5g99AKvcRP5I=
@@ -647,9 +641,6 @@ SHA-256-Digest: o6kRpP2oPJ3GVkcKJfvh16yBUFTAUaUI+oI+wKTgP3o=
 
 Name: META-INF/com/google/android/aroma/icons/confirm.png
 SHA-256-Digest: +6h1D83TuA+0XS5VY5CAR9VzQC+VvNnoS4dfm7NVxQc=
-
-Name: jolla-kernel/bullhead/ramdisk/init.bullhead_n.rc
-SHA-256-Digest: 3yfgYwV/5a5N9+YwOh1TDA4XOu93g0m7aBjbzv3OQ2c=
 
 Name: jolla-kernel/bullhead/multirom/inst/multirom/enc/libcutils.so
 SHA-256-Digest: uLfpCSN97hlE0bjo4cIvo5lqnmr96jX4K/pbrJBXbM8=
@@ -675,14 +666,11 @@ Name: jolla-kernel/bullhead/multirom/inst/multirom/icons/romic_android
 SHA-256-Digest: KGaoIBeY8vobyHtZ42/cKgL9M+RkSPq4LzniX+oA3kM=
 
 Name: META-INF/com/google/android/aroma/changelog/en.txt
-SHA-256-Digest: vhAhwsrt4C7jjnDJ5MfFJdcdV3UM8wNzvaB0gq7xFas=
+SHA-256-Digest: BHsaKKPob90Y8seU85m9VTqzwNGG6qvAFmJeC+GeWeo=
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.default.p
  ng
 SHA-256-Digest: cEUTJS/bfzxPtoEHUUbbURtgna5hsVmdjSp44jDb2CE=
-
-Name: jolla-kernel/bullhead/Image/24/Image.gz-dtb
-SHA-256-Digest: dFv8chBrHUvV2kOS55HWcZyliEfgrAymuSOt2FKD4zo=
 
 Name: jolla-kernel/bullhead/multirom/inst/multirom/icons/romic_pa.png
 SHA-256-Digest: xQhBJGGWn5D30tW43ZhcbJJg5KA7qx5Ly2qTzXBtqSs=

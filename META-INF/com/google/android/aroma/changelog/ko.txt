@@ -3,57 +3,58 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v14.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v15.0]</#></b></@>
 == 커널 ==
->> 공통 <<
-- 변경 사항 취소 "f2fs: 기본 아이들 간격 값 리셋"
-(새로운 f2fs 변경사항에서의 데드락을 방지.)
+- 리베이스!! (엄청 부드럽고 거의 0~1% 에 가까운 배터리 드레인!!)
+- msm_thermal: vdd 제한에 대한 메세지 출력
+- msm8992: vdd 제한 비활성화
+- msm_thermal: 일부 파라미터들 이름 변경
+- msm_thermal: 빅 클러스터를 개별적으로 조절함 (더 부드러워짐.)
+(현재, 쓰로틀링 온도에 도달하면, 리틀과 빅이 동시에 주파수를 감소하게 됩니다.
+빅 클러스터를 개별적으로 조절할 수 있도록 하였습니다.
+따라서 이로 인해, 더 높은 온도에서 빅클러스터의 주파수를 감소시킬 수 있습니다.)
+- msm_thermal: 파라미터들 설명 수정
+- touchscreen, mdss: 사운드가 멈춘 후 터치하여 깨우기 기능들이 작동하지 않는 문제 수정.
+- touchscreen: synaptics: 화면이 켜져있는 경우 터치스크린을 끄도록 시도하지 않음.
+- s2w: s2w_input_event() 에서의 잘못된 체크들 수정
+- mdss, touchscreen: touch on 체크들 단순화
+- cpufreq: cpu-boost: input_boost_ms 를 '1500' 으로 증가
+('msm_performance' 를 포함하여 많은 것들을 비활성화 시키고 최적화를 하였습니다. 그리고 40 은 높은 주파수를 유지하기에 너무 짧습니다.
+터치를 하는 동안 높은 주파수를 유지 할 수 있도록 이 값을 증가시켰습니다.)
+- tcp: 소켓들이 MSG_FASTOPEN 을 기본으로 사용 할 수 있도록 함.
+- ASoC: msm: qdsp6v2: 돌비의 CVE-2016-2469 수정 (CAF 로 부터 가져옴)
+- ASoC: msm: qdsp6v2: 비활성화된 모듈들을 컴파일 하도록 복구
+- crypto: sha256 - SHA-256 에 대한 베이스 레이어 구현
+- crypto: sha512 - SHA-512 에 대한 베이스 레이어 구현
+- crypto: arm64/sha2 - OpenSSL 의 SHA256/SHA512 구현 통합
+- ANDROID: dm verity: 최소 프리패치 크기 추가
+(eMMC 와 같은 장치는, 한번에 더 많은 해시 블럭을 읽는데 더 나은 성능을 보여준다.
+안드로이드에 대해서, 128 을 기본값으로 한다. 테스트 된 기기들에서 300ms 의 부팅 시간이 줄었다.)
+- 'LineageOS/android_kernel_oneplus_msm8996' 로 부터 일부 CAF 패치들 적용
+- CAF 로 부터 카메라 패치들 적용
+- %p 를 %pK 로 변경
+- cpufreq: Relaxed 거버너 추가
+- Makefile: Linaro 최적화 추가
+- qcacld-2.0: O3 로 빌드
+- qcacld-2.0: maybe-uninitialized 경고 메세지 수정
+- ext4: 3.18.y 로 부터 일부 업스트림 패치들 적용
+- adredo-idler 제거
+- per-process reclaim 제거
+- 오래된 CAF 패치들 제거
 
 == AIO ==
-- updater: 라이브러리 업데이트
-- updater: 소스 클린업 & Deprecate 된 라인들 교체
-- updater: Manifest: GoogleAppIndexingWarning 무시
-- updater: 개인 서버 사용 및 체인지로그를 Github 로 부터 보여줌
-- MultiROMMgr: 라이브러리 업데이트
-- MultiROMMgr: ko: 더 번역함
-- MultiROMMgr: Gradle 버젼 업데이트
-- MultiROMMgr: 일부 클린업
+- ramdisk: 'input_boost_ms' 라인 제거
+(기본값이 커널에 의해 1500 으로 변경됨.)
+- ramdisk: devfreq 라인들 제거
+- ramdisk: per-process reclaim 라인들 제거
+- 마쉬멜로우 지원 제거
 
 == 리커버리 ==
-- jolla-kernel_bullhead_II-v14.1 적용
-
-<b><#selectbg_g>[bullhead_II-v14.0]</#></b>
-== 커널 ==
->> 공통 <<
-- mdss, sovc: 균형이 맞지 않는 mdss 끄기 수정
-(진짜 문제는 균형이 맞지 않는 mdss vreg(전원) 상태였습니다.
-사운드가 정지되고 난 후 또 다시 끄려고 시도합니다.
-따라서 균형이 맞지 않는 상태를 초래하게 되고 디바이스가 화면을 다시 켤 수 없게 됩니다.
-이미 꺼져 있는 경우에 mdss vreg(전원)을 끄지 않도록 하였습니다.)
-- mdss, sovc: 저전력 모드에 진입 했을시 mdss 를 끄지 않음
-(mdss 에 저전력 모드가 있습니다.
-이 모드는 디바이스가 알람을 받아서 화면을 검정과 흰색으로 켤때 사용됩니다.
-따라서 저전력 모드로 들어갔을때 mdss 를 끄면 안됩니다.
-그렇지 않으면 타임아웃 에러 메세지들을 발생시킵니다.)
-- 변경사항 취소 "block: maple: 디스플레이 상태를 필요할 때 체크"
-(필요없는 커밋.)
-- Google android-3.10 로 부터 sdcardfs 와 관련된 Android mnt 변경사항 적용
-- android: binder: Google 의 hwbinder 브랜치 변경 사항들 적용
-- net: Google 의 hwbinder 브랜치 변경 사항들 적용
-- sound: msm, soc: 사이즈 최적화
-- lib/vsprintf.c: 업스트림 변경 사항들 적용
-- Input: xpad: 업스트림 변경 사항들 적용
-- ksm, msm_thermal, dt2w, s2w, sovc: fb notifier 에서 저전력 상태 체크
-(mdss 에 저전력 모드가 있습니다.
-이 모드는 디바이스가 알람을 받아서 화면을 검정과 흰색으로 켤때 사용됩니다.
-만약 사용자가 자동 잠금 해제 기능을 활성화 하였다면, mdss 가 화면을 저전력 모드로 킬때 문제가 발생할 것입니다.
-드라이버가 resume 상태로 전환되지 않습니다.
-따라서 이 저전력 상태를 fb notifier 에서 체크하여야 합니다.)
-
-== 리커버리 ==
-- 최신 LineageOS/cm-14.1 소스들과 재빌드
-- 최신 omni TWRP 변경 사항들 적용
-- jolla-kernel_bullhead_II-v14.0 적용
+- 새 LineageOS 소스들과 빌드
+- omni TWRP 의 최신 패치들 적용
+- recovery: 'input_boost_ms' 라인 제거
+- recovery: devfreq 라인들 제거
+- jolla-kernel_bullhead_II-v15.0 적용
 
 
 <b><#selectbg_g>[Thanks to..]</#></b>

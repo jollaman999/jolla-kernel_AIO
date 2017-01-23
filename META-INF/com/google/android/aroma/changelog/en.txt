@@ -3,57 +3,58 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v14.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v15.0]</#></b></@>
 == Kernel ==
->> Common <<
-- Revert "f2fs: reset default idle interval value"
-(This will prevent deadlock in new f2fs changes.)
+- Rebased!! (Super smooth and battery drain is nearly 0~1%!!)
+- msm_thermal: Print message of vdd restriction
+- msm8992: Disable vdd restriction
+- msm_thermal: Rename some parameters
+- msm_thermal: Control big cluster separately (More smooth.)
+(Currently, when threshold temp is reached, both little and big will decrease frequency same time.
+Add support to control big cluster separately.
+So with this, it can start to decrease the frequency of big cluster in higher temperature.)
+- msm_thermal: Fix explanation of prameters
+- touchscreen, mdss: Fix touch wake functions not working after sound stopped
+- touchscreen: synaptics: Do not try to turn off the touchscreen when screen turned on
+- s2w: Fix wrong checks in s2w_input_event()
+- mdss, touchscreen: Simplify touch on checks
+- cpufreq: cpu-boost: Increase input_boost_ms to '1500'
+(We disabled and tuned lots of things include 'msm_performance' and 40 is too short to keep higher frequncy.
+Let's increase this value to keep higher frequncy while touching the screen.)
+- tcp: enable sockets to use MSG_FASTOPEN by default
+- ASoC: msm: qdsp6v2: Fix CVE-2016-2469 in Dolby (from CAF)
+- ASoC: msm: qdsp6v2: Restore compliation of disabled modules
+- crypto: sha256 - implement base layer for SHA-256
+- crypto: sha512 - implement base layer for SHA-512
+- crypto: arm64/sha2 - integrate OpenSSL implementations of SHA256/SHA512
+- ANDROID: dm verity: add minimum prefetch size
+(For device like eMMC, it gives better performance to read more hash blocks at a time.
+For android, set it to default 128. saved boot-up time by 300ms in tested device)
+- Applied some CAF patches from 'LineageOS/android_kernel_oneplus_msm8996'
+- Applied camera patches from CAF
+- Change %p to %pK
+- cpufreq: Add Relaxed governor
+- Makefile: Add Linaro optimizations
+- qcacld-2.0: Build with O3
+- qcacld-2.0: Fix maybe-uninitialized warning messages
+- ext4: Applied some upstream patches from 3.18.y
+- Remove adredo-idler
+- Remove per-process reclaim
+- Remove old CAF patches
 
 == AIO ==
-- updater: Update libraries
-- updater: Source cleanup & replace deprecated lines
-- updater: Manifest: Ignore GoogleAppIndexingWarning
-- updater: Use my own server and view changelogs from Github
-- MultiROMMgr: Update libraries
-- MultiROMMgr: ko: Add more translations
-- MultiROMMgr: Update gradle version
-- MultiROMMgr: Some cleanup
+- ramdisk: Remove 'input_boost_ms' line
+(The default value is changed to 1500 by kernel.)
+- ramdisk: Remove devfreq lines
+- ramdisk: Remove per-process reclaim lines
+- Remove Marshmallow support
 
 == Recovery ==
-- jolla-kernel_bullhead_II-v14.1 applied
-
-<b><#selectbg_g>[bullhead_II-v14.0]</#></b>
-== Kernel ==
->> Common <<
-- mdss, sovc: Fix unbalanced mdss off
-(The real problem was unbalanced mdss vreg(power) state.
-It will try to turn off again after sound stopped.
-So it will cause unbalanced state and device can't turn on the screen again.
-Do not turn off mdss vreg when already turned off.)
-- mdss, sovc: Do not turn off the mdss when it entered low power state
-(There is a low power state in the mdss.
-This mode is used when the device get an alarm and turn on the screen with black and white.
-So it must be not turn off the mdss when it entered low power state.
-Otherwise, it makes timeout error messages.)
-- Revert "block: maple: Check display state when needed"
-(This is useless commit.)
-- Applied a sdcardfs related Android mnt change from Google android-3.10
-- android: binder: Applied Google's hwbinder branch changes
-- net: Applied Google's hwbinder branch changes
-- sound: msm, soc: optimize for size
-- lib/vsprintf.c: Applied upstream changes
-- Input: xpad: Applied upstream changes
-- ksm, msm_thermal, dt2w, s2w, sovc: Check low power state in fb notifier
-(There is a low power state in the mdss.
-This mode is used when the device get an alarm and turn on the screen with black and white.
-If user enabled auto unlock screen feature, there will be a problem when mdss turn on the screen in low power state.
-The driver will not go into the resume state.
-So it must be check this low power state in fb notifier.)
-
-== Recovery ==
-- Re-built with lastest LineageOS/cm-14.1 sources
-- Applied lastest omni TWRP changes
-- jolla-kernel_bullhead_II-v14.0 applied
+- Built with new LineageOS sources
+- Applied omni TWRP's recent patches
+- recovery: Remove 'input_boost_ms' line
+- recovery: Remove devfreq lines
+- jolla-kernel_bullhead_II-v15.0 applied
 
 
 <b><#selectbg_g>[Thanks to..]</#></b>
