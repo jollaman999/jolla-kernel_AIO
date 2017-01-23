@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v15.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v15.1]</#></b></@>
+== Kernel ==
+- Revert "netfilter: use jump_label for nf_hooks"
+(This breaks tethering and some apps that use filtering when CONFIG_JUMP_LABEL is enabled.)
+- netfilter: Applied some upstream patches
+- arm64, jump label: Applied some upstream patches
+- PCI: Fix lockdep warning
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v15.1 applied
+
+<b><#selectbg_g>[bullhead_II-v15.0]</#></b>
 == Kernel ==
 - Rebased!! (Super smooth and battery drain is nearly 0~1%!!)
 - msm_thermal: Print message of vdd restriction

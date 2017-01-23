@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v15.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v15.1]</#></b></@>
+== 커널 ==
+- 변경사항 취소 "netfilter: nf_hooks 에 jump_label 사용"
+(CONFIG_JUMP_LABEL 이 활성화 되었을때 테더링과 일부 필터링을 사용하는 앱들을 망가트림.)
+- netfilter: 일부 업스트림 패치들 적용
+- arm64, jump label: 일부 업스트림 패치들 적용
+- PCI: lockdep 경고 수정
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v15.1 적용
+
+<b><#selectbg_g>[bullhead_II-v15.0]</#></b>
 == 커널 ==
 - 리베이스!! (엄청 부드럽고 거의 0~1% 에 가까운 배터리 드레인!!)
 - msm_thermal: vdd 제한에 대한 메세지 출력
