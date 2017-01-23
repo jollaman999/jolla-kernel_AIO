@@ -1,5 +1,5 @@
 Signature-Version: 1.0
-SHA-256-Digest-Manifest: S7XWQm1qRqN8kaPbOHzuDqFlfR/YM29itGQEbE4jCv4=
+SHA-256-Digest-Manifest: Ghj9BbMoLS0FQU6wf097ePO3oX4Ms3gG9KYw3x0ikKo=
 Created-By: 1.0 (Android SignApk)
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.reboot.pn
@@ -380,7 +380,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.agreement
 SHA-256-Digest: 3GnpAN4G8nFUMxiIGJcHUd+ylUpeVRpQWEy9gaaSlMM=
 
 Name: META-INF/com/google/android/aroma/langs/ko.lang
-SHA-256-Digest: wQZH2WVWp3oFHLxCiAKv7Ba4hkhBp/u5r9DZJtj2s+g=
+SHA-256-Digest: hE7yjHCUNojK2FbzL2KvrhABgQC8w7+XxKge+oUYEFw=
 
 Name: META-INF/com/google/android/aroma/ttf/Roboto-Regular.ttf
 SHA-256-Digest: tUL9XYO4Vx1XFYxMVsvgaXvNMewIs1eTtO6LupHgaxg=
@@ -622,7 +622,7 @@ Name: jolla-kernel/bullhead/multirom/inst/multirom/icons/romic_ubuntu1
 SHA-256-Digest: O1wUDQoTe6Gs6J0KJ9WgyOOckq657lq1aqdM2YsanX0=
 
 Name: META-INF/com/google/android/aroma/langs/en.lang
-SHA-256-Digest: WSLGr/o3eUOiSEkHLQovHoAPcr5er28t4dA79JH3fZ4=
+SHA-256-Digest: IvHB/+fxGs3+JSOY9Tafdv6TTBsiQjrMyxcaPMRVh0I=
 
 Name: README.md
 SHA-256-Digest: 4chrdLQEEMWHnME8PfAzBjh7h9vxqEMJEgAVn2L/CSE=

@@ -155,12 +155,7 @@ f2fs.attentiondesc=This action will modify your system partition!
 sdcardfs.itemtitle=sdcardfs support
 sdcardfs.item=Enable sdcardfs
 sdcardfs.desc=Change Google's fuse to samsung's sdcardfs.\
-It gives better performance and power consumption.\
-\
-In Android 6.x.x, some of roms will not support sdcardfs.\
-But there is no problems to enable it.\
-\
-In Anroid 7.x.x, it is supported by default.
+It gives better performance and power consumption.
 sdcardfs.attention=sdcardfs Attention
 sdcardfs.attentiondesc=If sdcardfs is not enabled by default,\
 this action will modify your system partition!
