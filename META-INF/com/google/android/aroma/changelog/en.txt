@@ -3,7 +3,28 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v15.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v15.2]</#></b></@>
+== Kernel ==
+- mdss: Enable backlight dimmer by default
+- Revert "workqueue: make sure delayed work run in local cpu"
+- msm8992, msm_thermal: Restore poll-ms to 250
+- msm8992, msm_thermal: Get smooth performance in lower temperature
+- rmnet_data, ion, msm: Change %p to %pK (CAF)
+- ASoC: soc: prevent risk of buffer overflow (CAF)
+- ASoC: qdsp6v2: fix potential bug of infinite loop (CAF)
+- qcacld-2.0 (WLAN Driver): LA.BF64.1.2.3_rb1.8 from CAF
+
+== AIO ==
+- init.bullhead.rc: Reduce LITTLE's boost freq to 960MHz
+- init.bullhead.rc: Adjust hispeed load speedly
+
+== Recovery ==
+- Revert "gui: Actions: Toggle backlight on power key"
+(Can't turn on the screen after turned off.)
+- init.recovery.bullhead.rc: Reduce LITTLE's boost freq to 960MHz
+- init.recovery.bullhead.rc: Adjust hispeed load speedly
+
+<b><#selectbg_g>[bullhead_II-v15.1]</#></b>
 == Kernel ==
 - Revert "netfilter: use jump_label for nf_hooks"
 (This breaks tethering and some apps that use filtering when CONFIG_JUMP_LABEL is enabled.)

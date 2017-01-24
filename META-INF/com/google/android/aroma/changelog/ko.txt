@@ -3,7 +3,28 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v15.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v15.2]</#></b></@>
+== 커널 ==
+- mdss: backlight dimmer 를 기본으로 활성화
+- 변경사항 취소 "workqueue: delayed work 가 로컬 cpu 에서 동작 하도록 함"
+- msm8992, msm_thermal: poll-ms 를 250 으로 되돌림
+- msm8992, msm_thermal: 낮은 온도에서의 부드러운 성능
+- rmnet_data, ion, msm: %p 를 %pK 로 변경 (CAF)
+- ASoC: soc: 버퍼 오버플로 위험 방지 (CAF)
+- ASoC: qdsp6v2: 잠재적인 무한 루프 버그 수정 (CAF)
+- qcacld-2.0 (WLAN 드라이버): LA.BF64.1.2.3_rb1.8 from CAF
+
+== AIO ==
+- init.bullhead.rc: LITTLE 의 부스트 freq 를 960MHz 로 감소
+- init.bullhead.rc: hispeed load 를 빠르게 조정
+
+== 리커버리 ==
+- 변경사항 취소 "gui: Actions: 파워키를 누를때 백라이트 작동"
+(화면이 꺼진 후 화면을 킬 수 없음.)
+- init.recovery.bullhead.rc: LITTLE 의 부스트 freq 를 960MHz 로 감소
+- init.recovery.bullhead.rc: hispeed load 를 빠르게 조정
+
+<b><#selectbg_g>[bullhead_II-v15.1]</#></b>
 == 커널 ==
 - 변경사항 취소 "netfilter: nf_hooks 에 jump_label 사용"
 (CONFIG_JUMP_LABEL 이 활성화 되었을때 테더링과 일부 필터링을 사용하는 앱들을 망가트림.)
