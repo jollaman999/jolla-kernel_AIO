@@ -3,7 +3,31 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v15.2]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v15.3]</#></b></@>
+== Kernel ==
+- Built with Linaro gcc 6.3.1
+- tty: Fix hang at ldsem_down_read()
+- mm: Per-Process Reclaim
+- power: bcl: Re-evaluate hotplug for unexpected cpu online
+- jolla-kernel_defconfig: Disable WLAN_UDP_RESPONSE_OFFLOAD
+- jolla-kernel_defconfig: Disable WLAN_FEATURE_RX_WAKELOCK
+- msm_thermal: Remove duplicated index checks
+- msm_thermal, msm8992: Remove unused line
+- msm_thermal: Fix frequencise are set to max after resumed at high temperatures
+- msm_thermal: Remove useless variables
+- Revert "PCI: Avoid unnecessary CPU switch when calling driver .probe() method
+- kgsl: convert some workqueues to use kthreads
+- mdss: move to a kthread for vsync_retire_work_handler
+
+== AIO ==
+- Revert "ramdisk: Remove per-process reclaim lines"
+- ramdisk: Reduce per-process reclaim's per_swap_size to 512
+
+== Recovery ==
+- Built with Linaro gcc 6.3.1
+- jolla-kernel_bullhead_II-v15.3 applied
+
+<b><#selectbg_g>[bullhead_II-v15.2]</#></b>
 == Kernel ==
 - mdss: Enable backlight dimmer by default
 - Revert "workqueue: make sure delayed work run in local cpu"
@@ -23,6 +47,7 @@
 (Can't turn on the screen after turned off.)
 - init.recovery.bullhead.rc: Reduce LITTLE's boost freq to 960MHz
 - init.recovery.bullhead.rc: Adjust hispeed load speedly
+- jolla-kernel_bullhead_II-v15.2 applied
 
 <b><#selectbg_g>[bullhead_II-v15.1]</#></b>
 == Kernel ==
