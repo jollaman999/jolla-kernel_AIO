@@ -3,7 +3,17 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v15.3]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v15.4]</#></b></@>
+== Kernel ==
+- tcp: fix 0 divide in __tcp_select_window()
+- crypto: arm64/aes-blk - honour iv_out requirement in CBC and CTR modes
+- Revert "msm_thermal: Remove useless variables"
+(This makes a problem that frequency is not restored to max.)
+
+== Recovery ==
+- jolla-kernel_bullhead_II-v15.4 applied
+
+<b><#selectbg_g>[bullhead_II-v15.3]</#></b>
 == Kernel ==
 - Built with Linaro gcc 6.3.1
 - tty: Fix hang at ldsem_down_read()
