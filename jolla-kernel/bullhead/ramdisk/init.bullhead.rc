@@ -176,7 +176,7 @@ on boot
     write /sys/module/process_reclaim/parameters/pressure_max 70
     write /sys/module/process_reclaim/parameters/swap_opt_eff 30
     write /sys/module/process_reclaim/parameters/pressure_min 10
-    write /sys/module/process_reclaim/parameters/per_swap_size 512
+    write /sys/module/process_reclaim/parameters/per_swap_size 1024
 
     write /sys/devices/platform/kcal_ctrl.0/kcal_fix_yellow 1
     write /sys/android_touch/sweep2wake 0
