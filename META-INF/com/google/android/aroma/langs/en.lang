@@ -241,7 +241,7 @@ block.subtitle=Select what you want.
 block.sched.title=IO Scheduler
 block.sched.bfq=BFQ (Default)
 block.read.title=Read ahead size
-block.read.128=128 KB (Default)
+block.read.2048=2048 KB (Default)
 block.read.desc=Higher read ahead size will increase read speed. But it will also increase memory usage.
 
 kcal.title=KCAL Fix Yellow

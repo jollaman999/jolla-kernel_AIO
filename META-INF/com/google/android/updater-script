@@ -285,10 +285,13 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
   ############ Read ahead ############
   ui_print("-> Setting read ahead...");
-  if file_getprop("/tmp/aroma-data/block.prop","selected.2")!="1" then
+  if file_getprop("/tmp/aroma-data/block.prop","selected.2")!="5" then
     package_extract_file("jolla-kernel/bullhead/block/block_read_ahead_set.sh", "/tmp/block_read_ahead_set.sh");
     set_perm(0, 0, 0755, "/tmp/block_read_ahead_set.sh");
 
+    if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="1" then
+      run_program("/tmp/block_read_ahead_set.sh", "128");
+    endif;
     if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="2" then
       run_program("/tmp/block_read_ahead_set.sh", "256");
     endif;
@@ -297,9 +300,6 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
     endif;
     if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="4" then
       run_program("/tmp/block_read_ahead_set.sh", "1024");
-    endif;
-    if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="5" then
-      run_program("/tmp/block_read_ahead_set.sh", "2048");
     endif;
     if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="6" then
       run_program("/tmp/block_read_ahead_set.sh", "4096");

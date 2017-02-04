@@ -239,7 +239,7 @@ block.title=블럭 설정
 block.sched.title=IO 스케줄러
 block.sched.bfq=BFQ (기본값)
 block.read.title=미리 읽기 크기
-block.read.128=128 KB (기본값)
+block.read.2048=2048 KB (기본값)
 block.read.desc=높은 미리 읽기 크기는 읽기 속도를 증가시킵니다. 그러나 메모리 사용량 또한 증가합니다.
 
 kcal.title=KCAL Fix Yellow
