@@ -62,11 +62,6 @@ on init
     # NXP HAL expects /dev/pn54x
     symlink /dev/pn548 /dev/pn54x
 
-    # ZRAM
-    # max_comp_streams must be set before the disksize.
-    write /sys/block/zram0/max_comp_streams 4
-    write /sys/block/zram0/disksize 533413200
-
     write /proc/sys/vm/page-cluster 0
 
 on fs
