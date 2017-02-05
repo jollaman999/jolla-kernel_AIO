@@ -166,13 +166,8 @@ on boot
     # set GPU default power level to 5 (180MHz) instead of 4 (305MHz)
     write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 5
 
-    # per-process reclaim & lowmemorykiller
-    write /sys/module/process_reclaim/parameters/enable_process_reclaim 1
-    write /sys/module/process_reclaim/parameters/pressure_max 70
-    write /sys/module/process_reclaim/parameters/swap_opt_eff 30
+    # lowmemorykiller
     write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
-    write /sys/module/process_reclaim/parameters/pressure_min 10
-    write /sys/module/process_reclaim/parameters/per_swap_size 2048
     write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 81250
 
     write /sys/devices/platform/kcal_ctrl.0/kcal_fix_yellow 1
