@@ -3,7 +3,34 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v15.4]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v16.0]</#></b></@>
+== Kernel ==
+- zram: Applied CAF patches
+- zram: Backported per-cpu compress streams
+- lowmemorykiller: Applied CAF patches with adaptive lmk
+- lowmemorykiller: Applied motolora's rbtree optimization
+- mm: vmpressure: Applied some upstream patches
+- mm: Fix missed page zone checks
+- msm_thermal: -5 degree cooler without lose smooth performance
+- binder, net: Applied Google's hwbinder branch patches
+- msm_rng: Be quiet random failed messages
+- arm64: irq: Be quiet affinity broken messages
+- Bye per-process reclaim (It makes system lags and freezes.)
+
+== AIO ==
+- aroma: Fix installtion fail after installed magisk
+(magisk make '/tmp/busybox' folder.
+So, busybox will not run and the kernel installation will fail immediately.)
+- ramdisk: Enable adaptive lmk
+- ramdisk: Remove per-process reclaim lines
+- f2fs-tools: v1.8.0
+
+== Recovery ==
+- Applied omni's recent patches
+- f2fs-tools: v1.8.0
+- Appiled jolla-kernel_bullhead_II-v16.0
+
+<b><#selectbg_g>[bullhead_II-v15.4]</#></b>
 == Kernel ==
 - tcp: fix 0 divide in __tcp_select_window()
 - crypto: arm64/aes-blk - honour iv_out requirement in CBC and CTR modes

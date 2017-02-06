@@ -3,7 +3,34 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v15.4]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v16.0]</#></b></@>
+== 커널 ==
+- zram: CAF 패치들 적용
+- zram: CPU 별 압축 스트림 백포트
+- lowmemorykiller: adaptive lmk 와 함께 CAF 패치들 적용
+- lowmemorykiller: motolora 의 레드블랙트리 최적화 적용
+- mm: vmpressure: 일부 업스트림 패치들 적용
+- mm: 빠진 zone 체크들 수정
+- msm_thermal: 부드러운 성능을 잃지 않고 -5 도 차갑게 함
+- binder, net: 구글의 hwbinder 브랜치 패치들 적용
+- msm_rng: 시끄럽다 랜덤 실패 메세지들아
+- arm64: irq: 시끄럽다 affinity broken 메세지들아
+- 잘가렴 per-process reclaim (시스템 성능 저하 및 프리징을 일으킴.)
+
+== AIO ==
+- aroma: magisk 설치 후 설치가 실패하는 문제 수정
+(magisk 는 '/tmp/busybox' 폴더를 생성합니다.
+따라서, busybox 가 실행되지 않고 커널 설치가 즉시 실패하게 됩니다.)
+- ramdisk: adaptive lmk 활성화
+- ramdisk: per-process reclaim 라인들 제거
+- f2fs-tools: v1.8.0
+
+== 리커버리 ==
+- omni 의 최신 패치들 적용
+- f2fs-tools: v1.8.0
+- jolla-kernel_bullhead_II-v16.0 적용
+
+<b><#selectbg_g>[bullhead_II-v15.4]</#></b>
 == 커널 ==
 - tcp: __tcp_select_window() 에서 0 으로 나눠지는 문제 수정
 - crypto: arm64/aes-blk - CBC 및 CTR 모드에서 iv_out 요구 사항 준수

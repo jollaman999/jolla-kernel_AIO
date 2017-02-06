@@ -3,124 +3,32 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v15.4]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v16.0]</#></b></@>
 == Kernel ==
-- tcp: fix 0 divide in __tcp_select_window()
-- crypto: arm64/aes-blk - honour iv_out requirement in CBC and CTR modes
-- Revert "msm_thermal: Remove useless variables"
-(This makes a problem that frequency is not restored to max.)
-
-== Recovery ==
-- jolla-kernel_bullhead_II-v15.4 applied
-
-<b><#selectbg_g>[bullhead_II-v15.3]</#></b>
-== Kernel ==
-- Built with Linaro gcc 6.3.1
-- tty: Fix hang at ldsem_down_read()
-- mm: Per-Process Reclaim
-- power: bcl: Re-evaluate hotplug for unexpected cpu online
-- jolla-kernel_defconfig: Disable WLAN_UDP_RESPONSE_OFFLOAD
-- jolla-kernel_defconfig: Disable WLAN_FEATURE_RX_WAKELOCK
-- msm_thermal: Remove duplicated index checks
-- msm_thermal, msm8992: Remove unused line
-- msm_thermal: Fix frequencise are set to max after resumed at high temperatures
-- msm_thermal: Remove useless variables
-- Revert "PCI: Avoid unnecessary CPU switch when calling driver .probe() method
-- kgsl: convert some workqueues to use kthreads
-- mdss: move to a kthread for vsync_retire_work_handler
+- zram: Applied CAF patches
+- zram: Backported per-cpu compress streams
+- lowmemorykiller: Applied CAF patches with adaptive lmk
+- lowmemorykiller: Applied motolora's rbtree optimization
+- mm: vmpressure: Applied some upstream patches
+- mm: Fix missed page zone checks
+- msm_thermal: -5 degree cooler without lose smooth performance
+- binder, net: Applied Google's hwbinder branch patches
+- msm_rng: Be quiet random failed messages
+- arm64: irq: Be quiet affinity broken messages
+- Bye per-process reclaim (It makes system lags and freezes.)
 
 == AIO ==
-- Revert "ramdisk: Remove per-process reclaim lines"
-- ramdisk: Reduce per-process reclaim's per_swap_size to 512
-
-== Recovery ==
-- Built with Linaro gcc 6.3.1
-- jolla-kernel_bullhead_II-v15.3 applied
-
-<b><#selectbg_g>[bullhead_II-v15.2]</#></b>
-== Kernel ==
-- mdss: Enable backlight dimmer by default
-- Revert "workqueue: make sure delayed work run in local cpu"
-- msm8992, msm_thermal: Restore poll-ms to 250
-- msm8992, msm_thermal: Get smooth performance in lower temperature
-- rmnet_data, ion, msm: Change %p to %pK (CAF)
-- ASoC: soc: prevent risk of buffer overflow (CAF)
-- ASoC: qdsp6v2: fix potential bug of infinite loop (CAF)
-- qcacld-2.0 (WLAN Driver): LA.BF64.1.2.3_rb1.8 from CAF
-
-== AIO ==
-- init.bullhead.rc: Reduce LITTLE's boost freq to 960MHz
-- init.bullhead.rc: Adjust hispeed load speedly
-
-== Recovery ==
-- Revert "gui: Actions: Toggle backlight on power key"
-(Can't turn on the screen after turned off.)
-- init.recovery.bullhead.rc: Reduce LITTLE's boost freq to 960MHz
-- init.recovery.bullhead.rc: Adjust hispeed load speedly
-- jolla-kernel_bullhead_II-v15.2 applied
-
-<b><#selectbg_g>[bullhead_II-v15.1]</#></b>
-== Kernel ==
-- Revert "netfilter: use jump_label for nf_hooks"
-(This breaks tethering and some apps that use filtering when CONFIG_JUMP_LABEL is enabled.)
-- netfilter: Applied some upstream patches
-- arm64, jump label: Applied some upstream patches
-- PCI: Fix lockdep warning
-
-== Recovery ==
-- jolla-kernel_bullhead_II-v15.1 applied
-
-<b><#selectbg_g>[bullhead_II-v15.0]</#></b>
-== Kernel ==
-- Rebased!! (Super smooth and battery drain is nearly 0~1%!!)
-- msm_thermal: Print message of vdd restriction
-- msm8992: Disable vdd restriction
-- msm_thermal: Rename some parameters
-- msm_thermal: Control big cluster separately (More smooth.)
-(Currently, when threshold temp is reached, both little and big will decrease frequency same time.
-Add support to control big cluster separately.
-So with this, it can start to decrease the frequency of big cluster in higher temperature.)
-- msm_thermal: Fix explanation of prameters
-- touchscreen, mdss: Fix touch wake functions not working after sound stopped
-- touchscreen: synaptics: Do not try to turn off the touchscreen when screen turned on
-- s2w: Fix wrong checks in s2w_input_event()
-- mdss, touchscreen: Simplify touch on checks
-- cpufreq: cpu-boost: Increase input_boost_ms to '1500'
-(We disabled and tuned lots of things include 'msm_performance' and 40 is too short to keep higher frequncy.
-Let's increase this value to keep higher frequncy while touching the screen.)
-- tcp: enable sockets to use MSG_FASTOPEN by default
-- ASoC: msm: qdsp6v2: Fix CVE-2016-2469 in Dolby (from CAF)
-- ASoC: msm: qdsp6v2: Restore compliation of disabled modules
-- crypto: sha256 - implement base layer for SHA-256
-- crypto: sha512 - implement base layer for SHA-512
-- crypto: arm64/sha2 - integrate OpenSSL implementations of SHA256/SHA512
-- ANDROID: dm verity: add minimum prefetch size
-(For device like eMMC, it gives better performance to read more hash blocks at a time.
-For android, set it to default 128. saved boot-up time by 300ms in tested device)
-- Applied some CAF patches from 'LineageOS/android_kernel_oneplus_msm8996'
-- Applied camera patches from CAF
-- cpufreq: Add Relaxed governor
-- Makefile: Add Linaro optimizations
-- qcacld-2.0: Build with O3
-- qcacld-2.0: Fix maybe-uninitialized warning messages
-- ext4: Applied some upstream patches from 3.18.y
-- Remove adredo-idler
-- Remove per-process reclaim
-- Remove old CAF patches
-
-== AIO ==
-- ramdisk: Remove 'input_boost_ms' line
-(The default value is changed to 1500 by kernel.)
-- ramdisk: Remove devfreq lines
+- aroma: Fix installtion fail after installed magisk
+(magisk make '/tmp/busybox' folder.
+So, busybox will not run and the kernel installation will fail immediately.)
+- ramdisk: Enable adaptive lmk
 - ramdisk: Remove per-process reclaim lines
-- Remove Marshmallow support
+- f2fs-tools: v1.8.0
 
 == Recovery ==
-- Built with new LineageOS sources
-- Applied omni TWRP's recent patches
-- recovery: Remove 'input_boost_ms' line
-- recovery: Remove devfreq lines
-- jolla-kernel_bullhead_II-v15.0 applied
+- Applied omni's recent patches
+- f2fs-tools: v1.8.0
+- Appiled jolla-kernel_bullhead_II-v16.0
 
 
 <b><#selectbg_g>[Thanks to..]</#></b>

@@ -3,124 +3,32 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v15.4]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v16.0]</#></b></@>
 == 커널 ==
-- tcp: __tcp_select_window() 에서 0 으로 나눠지는 문제 수정
-- crypto: arm64/aes-blk - CBC 및 CTR 모드에서 iv_out 요구 사항 준수
-- 변경사항 취소 "msm_thermal: 불필요한 변수들 제거"
-(주파수가 최대로 돌아오지 않는 문제를 발생시킴.)
-
-== 리커버리 ==
-- jolla-kernel_bullhead_II-v15.4 적용
-
-<b><#selectbg_g>[bullhead_II-v15.3]</#></b>
-== 커널 ==
-- Linaro gcc 6.3.1 로 빌드
-- tty: ldsem_down_read() 에서의 멈춤 현상 수정
-- mm: Per-Process Reclaim
-- power: bcl: 예상치 못한 cpu 온라인에 대해 핫플러그 재평가
-- jolla-kernel_defconfig: WLAN_UDP_RESPONSE_OFFLOAD 비활성화
-- jolla-kernel_defconfig: WLAN_FEATURE_RX_WAKELOCK 비활성화
-- msm_thermal: 중복된 인덱스 체크들 제거
-- msm_thermal, msm8992: 사용되지 않는 라인 제거
-- msm_thermal: 높은 온도에서 깨어난 후에 주파수들이 최대로 설정되는 문제 수정
-- msm_thermal: 불필요한 변수들 제거
-- 변경사항 취소 "PCI: lockdep 경고 수정"
-- kgsl: 일부 workqueues 들을 kthreads 로 변경
-- mdss: vsync_retire_work_handler 에 대해 kthread 로 변경
+- zram: CAF 패치들 적용
+- zram: CPU 별 압축 스트림 백포트
+- lowmemorykiller: adaptive lmk 와 함께 CAF 패치들 적용
+- lowmemorykiller: motolora 의 레드블랙트리 최적화 적용
+- mm: vmpressure: 일부 업스트림 패치들 적용
+- mm: 빠진 zone 체크들 수정
+- msm_thermal: 부드러운 성능을 잃지 않고 -5 도 차갑게 함
+- binder, net: 구글의 hwbinder 브랜치 패치들 적용
+- msm_rng: 시끄럽다 랜덤 실패 메세지들아
+- arm64: irq: 시끄럽다 affinity broken 메세지들아
+- 잘가렴 per-process reclaim (시스템 성능 저하 및 프리징을 일으킴.)
 
 == AIO ==
-- 변경사항 취소 "ramdisk: per-process reclaim 라인들 제거"
-- ramdisk: per-process reclaim 의 per_swap_size 를 512 로 감소
-
-== 리커버리 ==
-- Linaro gcc 6.3.1 로 빌드
-- jolla-kernel_bullhead_II-v15.3 적용
-
-<b><#selectbg_g>[bullhead_II-v15.2]</#></b>
-== 커널 ==
-- mdss: backlight dimmer 를 기본으로 활성화
-- 변경사항 취소 "workqueue: delayed work 가 로컬 cpu 에서 동작 하도록 함"
-- msm8992, msm_thermal: poll-ms 를 250 으로 되돌림
-- msm8992, msm_thermal: 낮은 온도에서의 부드러운 성능
-- rmnet_data, ion, msm: %p 를 %pK 로 변경 (CAF)
-- ASoC: soc: 버퍼 오버플로 위험 방지 (CAF)
-- ASoC: qdsp6v2: 잠재적인 무한 루프 버그 수정 (CAF)
-- qcacld-2.0 (WLAN 드라이버): LA.BF64.1.2.3_rb1.8 from CAF
-
-== AIO ==
-- init.bullhead.rc: LITTLE 의 부스트 freq 를 960MHz 로 감소
-- init.bullhead.rc: hispeed load 를 빠르게 조정
-
-== 리커버리 ==
-- 변경사항 취소 "gui: Actions: 파워키를 누를때 백라이트 작동"
-(화면이 꺼진 후 화면을 킬 수 없음.)
-- init.recovery.bullhead.rc: LITTLE 의 부스트 freq 를 960MHz 로 감소
-- init.recovery.bullhead.rc: hispeed load 를 빠르게 조정
-- jolla-kernel_bullhead_II-v15.2 적용
-
-<b><#selectbg_g>[bullhead_II-v15.1]</#></b>
-== 커널 ==
-- 변경사항 취소 "netfilter: nf_hooks 에 jump_label 사용"
-(CONFIG_JUMP_LABEL 이 활성화 되었을때 테더링과 일부 필터링을 사용하는 앱들을 망가트림.)
-- netfilter: 일부 업스트림 패치들 적용
-- arm64, jump label: 일부 업스트림 패치들 적용
-- PCI: lockdep 경고 수정
-
-== 리커버리 ==
-- jolla-kernel_bullhead_II-v15.1 적용
-
-<b><#selectbg_g>[bullhead_II-v15.0]</#></b>
-== 커널 ==
-- 리베이스!! (엄청 부드럽고 거의 0~1% 에 가까운 배터리 드레인!!)
-- msm_thermal: vdd 제한에 대한 메세지 출력
-- msm8992: vdd 제한 비활성화
-- msm_thermal: 일부 파라미터들 이름 변경
-- msm_thermal: 빅 클러스터를 개별적으로 조절함 (더 부드러워짐.)
-(현재, 쓰로틀링 온도에 도달하면, 리틀과 빅이 동시에 주파수를 감소하게 됩니다.
-빅 클러스터를 개별적으로 조절할 수 있도록 하였습니다.
-따라서 이로 인해, 더 높은 온도에서 빅클러스터의 주파수를 감소시킬 수 있습니다.)
-- msm_thermal: 파라미터들 설명 수정
-- touchscreen, mdss: 사운드가 멈춘 후 터치하여 깨우기 기능들이 작동하지 않는 문제 수정.
-- touchscreen: synaptics: 화면이 켜져있는 경우 터치스크린을 끄도록 시도하지 않음.
-- s2w: s2w_input_event() 에서의 잘못된 체크들 수정
-- mdss, touchscreen: touch on 체크들 단순화
-- cpufreq: cpu-boost: input_boost_ms 를 '1500' 으로 증가
-('msm_performance' 를 포함하여 많은 것들을 비활성화 시키고 최적화를 하였습니다. 그리고 40 은 높은 주파수를 유지하기에 너무 짧습니다.
-터치를 하는 동안 높은 주파수를 유지 할 수 있도록 이 값을 증가시켰습니다.)
-- tcp: 소켓들이 MSG_FASTOPEN 을 기본으로 사용 할 수 있도록 함.
-- ASoC: msm: qdsp6v2: 돌비의 CVE-2016-2469 수정 (CAF 로 부터 가져옴)
-- ASoC: msm: qdsp6v2: 비활성화된 모듈들을 컴파일 하도록 복구
-- crypto: sha256 - SHA-256 에 대한 베이스 레이어 구현
-- crypto: sha512 - SHA-512 에 대한 베이스 레이어 구현
-- crypto: arm64/sha2 - OpenSSL 의 SHA256/SHA512 구현 통합
-- ANDROID: dm verity: 최소 프리패치 크기 추가
-(eMMC 와 같은 장치는, 한번에 더 많은 해시 블럭을 읽는데 더 나은 성능을 보여준다.
-안드로이드에 대해서, 128 을 기본값으로 한다. 테스트 된 기기들에서 300ms 의 부팅 시간이 줄었다.)
-- 'LineageOS/android_kernel_oneplus_msm8996' 로 부터 일부 CAF 패치들 적용
-- CAF 로 부터 카메라 패치들 적용
-- cpufreq: Relaxed 거버너 추가
-- Makefile: Linaro 최적화 추가
-- qcacld-2.0: O3 로 빌드
-- qcacld-2.0: maybe-uninitialized 경고 메세지 수정
-- ext4: 3.18.y 로 부터 일부 업스트림 패치들 적용
-- adredo-idler 제거
-- per-process reclaim 제거
-- 오래된 CAF 패치들 제거
-
-== AIO ==
-- ramdisk: 'input_boost_ms' 라인 제거
-(기본값이 커널에 의해 1500 으로 변경됨.)
-- ramdisk: devfreq 라인들 제거
+- aroma: magisk 설치 후 설치가 실패하는 문제 수정
+(magisk 는 '/tmp/busybox' 폴더를 생성합니다.
+따라서, busybox 가 실행되지 않고 커널 설치가 즉시 실패하게 됩니다.)
+- ramdisk: adaptive lmk 활성화
 - ramdisk: per-process reclaim 라인들 제거
-- 마쉬멜로우 지원 제거
+- f2fs-tools: v1.8.0
 
 == 리커버리 ==
-- 새 LineageOS 소스들과 빌드
-- omni TWRP 의 최신 패치들 적용
-- recovery: 'input_boost_ms' 라인 제거
-- recovery: devfreq 라인들 제거
-- jolla-kernel_bullhead_II-v15.0 적용
+- omni 의 최신 패치들 적용
+- f2fs-tools: v1.8.0
+- jolla-kernel_bullhead_II-v16.0 적용
 
 
 <b><#selectbg_g>[Thanks to..]</#></b>
