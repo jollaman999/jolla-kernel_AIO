@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v16.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v17.0]</#></b></@>
+== Kernel ==
+- Linux 3.10.105-rc2
+- lowmemorykiller: Back to stock with motorola's rbtree optimization
+- Remove all of patches related with per-process reclaim and vmpressure
+- qcacld-2.0: Get back CAF's wlan driver with Google's Feburary security patch
+- USB wireless support
+
+== Recovery ==
+- Appiled jolla-kernel_bullhead_II-v17.0
+
+<b><#selectbg_g>[bullhead_II-v16.1]</#></b>
 == Kernel ==
 - Applied Google's Feburary security patches
 - qcacld-2.0 (wlan): Back to stock driver

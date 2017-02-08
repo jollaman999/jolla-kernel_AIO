@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v16.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v17.0]</#></b></@>
+== 커널 ==
+- Linux 3.10.105-rc2
+- lowmemorykiller:  motolora 의 레드블랙트리 최적화와 함께 스톡으로 되돌림
+- per-process reclaim 과 vmpressure 와 관련된 모든 패치들 제거
+- qcacld-2.0: 구글의 2월 패치와 함께 CAF 의 wlan 드라이버 다시 가져옴
+- USB wireless 지원
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v17.0 적용
+
+<b><#selectbg_g>[bullhead_II-v16.1]</#></b>
 == 커널 ==
 - Google 의 2월 보안 패치들 적용
 - qcacld-2.0 (wlan): 스톡 드라이버로 되돌림
