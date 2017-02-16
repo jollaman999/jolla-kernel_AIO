@@ -3,7 +3,23 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v17.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v17.1]</#></b></@>
+== Kernel ==
+- Linux 3.10.105
+- jolla-kernel_defconfig: enable RCU_BOOST
+- Android 7.1.2 compatible
+
+== AIO ==
+- ramdisk: Add '50 768000' target load for big cluster
+- ramdisk: Disable input boost
+- ramdisk: Set little's hispeed_freq to 960MHz
+- Thank you for jugoslavpetrovic's Splash Screen!
+
+== Recovery ==
+- Re-built with lastest LineageOS sources
+- Appiled jolla-kernel_bullhead_II-v17.1
+
+<b><#selectbg_g>[bullhead_II-v17.0]</#></b>
 == Kernel ==
 - Linux 3.10.105-rc2
 - lowmemorykiller: Back to stock with motorola's rbtree optimization
