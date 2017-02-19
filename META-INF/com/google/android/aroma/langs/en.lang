@@ -159,6 +159,11 @@ It gives better performance and power consumption.
 sdcardfs.attention=sdcardfs Attention
 sdcardfs.attentiondesc=If sdcardfs is not enabled by default,\
 this action will modify your system partition!
+aptx.itemtitle=aptX Codec support
+aptx.item=Enable aptX Codec
+aptx.desc=This will enable aptX codec that used by Bluetooth audio.
+aptx.attention=aptX Attention
+aptx.attentiondesc=This action will modify your system partition!
 
 wake.title=Wake options
 wake.subtitle=Wake gestures to turn on the screen.

@@ -501,8 +501,10 @@ checkbox(
 
   "<~f2fs.itemtitle>",      "",                                               2,      #-- group 1
     "<~f2fs.item>",           "<~f2fs.desc>",                                   0,     #-- item.1.1
-  "<~sdcardfs.itemtitle>",      "",                                           2,      #-- group 2
-    "<~sdcardfs.item>",       "<~sdcardfs.desc>",                               1      #-- item.2.1
+  "<~sdcardfs.itemtitle>",  "",                                               2,      #-- group 2
+    "<~sdcardfs.item>",       "<~sdcardfs.desc>",                               1,     #-- item.2.1
+  "<~aptx.itemtitle>",      "",                                               2,      #-- group 3
+    "<~aptx.item>",           "<~aptx.desc>",                                   0      #-- item.3.1
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
 
@@ -511,6 +513,9 @@ if prop("additional.prop","item.1.1")=="1" then
 endif;
 if prop("additional.prop","item.2.1")=="1" then
   alert( "<~sdcardfs.attention>", "<~sdcardfs.attentiondesc>");
+endif;
+if prop("additional.prop","item.3.1")=="1" then
+  alert( "<~aptx.attention>", "<~aptx.attentiondesc>");
 endif;
 
 

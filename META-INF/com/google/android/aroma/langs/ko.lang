@@ -158,6 +158,11 @@ sdcardfs.desc=Google 의 fuse 를 samsung 의 sdcardfs 로 변경합니다.\
 sdcardfs.attention=sdcardfs 경고
 sdcardfs.attentiondesc=sdcardfs 가 기본으로 활성화 되어있지 않은 경우,\
 이 작업은 시스템 파티션을 수정합니다!
+aptx.itemtitle=aptX 코덱 지원
+aptx.item=aptX 코덱 활성화
+aptx.desc=블루투스 오디오에서 사용될 aptX 코덱을 활성화 합니다.
+aptx.attention=aptX 경고
+aptx.attentiondesc=이 작업은 시스템 파티션을 수정합니다!
 
 wake.title=화면 켜기 옵션
 wake.subtitle=화면을 켜기위한 제스쳐들.
