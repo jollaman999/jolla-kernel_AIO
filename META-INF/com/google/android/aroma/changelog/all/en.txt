@@ -3,7 +3,19 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v17.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v17.2]</#></b></@>
+== Kernel ==
+- Revert "jolla-kernel_defconfig: enable RCU_BOOST"
+- sdcardfs, ext4 crypto: Applied android-3.10 patches
+
+== AIO ==
+- aptX codec support
+
+== Recovery ==
+- Built with lastest omni patches and LineageOS sources
+- Appiled jolla-kernel_bullhead_II-v17.2
+
+<b><#selectbg_g>[bullhead_II-v17.1]</#></b>
 == Kernel ==
 - Linux 3.10.105
 - jolla-kernel_defconfig: enable RCU_BOOST
