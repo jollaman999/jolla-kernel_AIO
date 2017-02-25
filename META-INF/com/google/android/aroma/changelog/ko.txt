@@ -3,7 +3,20 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v17.2]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v17.3]</#></b></@>
+== 커널 ==
+- 스톡 WLAN 드라이버로 돌아옴
+- sdcardfs: android-3.10 패치들 적용
+- cpufreq: cpu-boost: input boost 를 기본으로 비활성화
+- msm_thermal: 화면이 꺼졌을 때 빅 코어들을 끔
+
+== AIO ==
+- fstab.bullhead: 'background_gc=sync' 와 'inline_data' f2fs 옵션들 활성화
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v17.3 적용
+
+<b><#selectbg_g>[bullhead_II-v17.2]</#></b>
 == 커널 ==
 - 변경사항 취소 "jolla-kernel_defconfig: RCU_BOOST 활성화"
 - sdcardfs, ext4 crypto: android-3.10 패치들 적용

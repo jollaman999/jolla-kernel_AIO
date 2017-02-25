@@ -3,7 +3,20 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v17.2]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v17.3]</#></b></@>
+== Kernel ==
+- Back to Stock WLAN driver
+- sdcardfs: Applied android-3.10 patches
+- cpufreq: cpu-boost: Disable input boost by default
+- msm_thermal: Turn off big cores when the screen is turned off
+
+== AIO ==
+- fstab.bullhead: Enable 'background_gc=sync' and 'inline_data' f2fs options
+
+== Recovery ==
+- Appiled jolla-kernel_bullhead_II-v17.3
+
+<b><#selectbg_g>[bullhead_II-v17.2]</#></b>
 == Kernel ==
 - Revert "jolla-kernel_defconfig: enable RCU_BOOST"
 - sdcardfs, ext4 crypto: Applied android-3.10 patches
