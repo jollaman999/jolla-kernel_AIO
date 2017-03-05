@@ -3,7 +3,26 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v17.3]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v17.4]</#></b></@>
+== 커널 ==
+- Linaro gcc 6.3.1 stable 버젼으로 빌드
+- lib/lz4: 업스트림의 업데이트 된 버젼 적용 (upstream)
+- zram: 새로운 버젼의 LZ4 와 동작하도록 수정 (upstream/squash)
+- qcacld-2.0 (wlan): 7.1.2 Preview 변경사항들 적용
+- cpufreq: interactive: 64bit 에 대해 수정 (Google android-3.10)
+- android: binder: 잘못된 포인터 사이즈 수정 (Google android-3.10)
+- ASoC: msm: qdsp6v2: 메모리 누수 현상 수정 (CAF)
+
+== AIO ==
+- 변경사항 취소 "ramdisk: 빅 클러스터에 대해 '50 768000' 타겟 로드 추가"
+(장치를 쉽게 뜨겁게 하며, 배터리를 많이 소모함.)
+
+== 리커버리 ==
+- omni TWRP 최신 패치들 적용
+- MultiROM: Internal ROM 이름의 공백 허용
+- jolla-kernel_bullhead_II-v17.4 적용
+
+<b><#selectbg_g>[bullhead_II-v17.3]</#></b>
 == 커널 ==
 - 스톡 WLAN 드라이버로 돌아옴
 - sdcardfs: android-3.10 패치들 적용

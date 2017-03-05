@@ -3,7 +3,26 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v17.3]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v17.4]</#></b></@>
+== Kernel ==
+- Built with Linaro gcc 6.3.1 stable version
+- lib/lz4: Applied upstream's udated version (upstream)
+- zram: change usage of LZ4 to work with new LZ4 version (upstream/squash)
+- qcacld-2.0 (wlan): Applied 7.1.2 Preview changes
+- cpufreq: interactive: Fix for 64bit (Google android-3.10)
+- android: binder: Correct the wrong pointer size (Google android-3.10)
+- ASoC: msm: qdsp6v2: Fix memory leaks (CAF)
+
+== AIO ==
+- Revert "ramdisk: Add '50 768000' target load for big cluster"
+(This causes device getting hot easilly and eats lots of battery.)
+
+== Recovery ==
+- Applied latest omni TWRP patches
+- MultiROM: Allow using white spaces in internal ROM name
+- Appiled jolla-kernel_bullhead_II-v17.4
+
+<b><#selectbg_g>[bullhead_II-v17.3]</#></b>
 == Kernel ==
 - Back to Stock WLAN driver
 - sdcardfs: Applied android-3.10 patches
