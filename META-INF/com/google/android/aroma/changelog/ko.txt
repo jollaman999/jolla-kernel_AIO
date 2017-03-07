@@ -3,7 +3,16 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v17.4]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v17.5]</#></b></@>
+== 커널 ==
+- Google 의 3월 패치들 적용
+- crypto: lz4 Cryptographic API 추가
+- zram: 잘못된 초기화 수정 및 crypto 압축 API 로 전환
+
+== 리커버리 ==
+- Appiled jolla-kernel_bullhead_II-v17.5
+
+<b><#selectbg_g>[bullhead_II-v17.4]</#></b>
 == 커널 ==
 - Linaro gcc 6.3.1 stable 버젼으로 빌드
 - lib/lz4: 업스트림의 업데이트 된 버젼 적용 (upstream)
