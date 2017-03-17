@@ -19,7 +19,7 @@
 
 == 리커버리 ==
 - init.recovery.bullhead.rc: 빅 클러스터의 '50 768000' target load 제거
-- omni TWRP v3.1.0 변경 ㅛ하아들 적용
+- omni TWRP v3.1.0 변경 사항들 적용
 - jolla-kernel_bullhead_II-v18.0 적용
 
 <b><#selectbg_g>[bullhead_II-v17.5]</#></b>
