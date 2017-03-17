@@ -3,7 +3,26 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v17.5]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v18.0]</#></b></@>
+== Kernel ==
+- f2fs: Add a missed check while mergeing upstream patches
+- f2fs: Applied lastest f2fs-stable patches (git.kernel.org jaegeuk)
+- sdcardfs: Applied lastest android-3.10 patches (Google android-3.10)
+- binder: Applied lastest android-3.10 patches (Google android-3.10)
+- cpufreq: conservative, ondemand, despair, relaxed: cache tunables (flar2)
+- cpufreq: relaxed: Fix down_threshold_suspended sysfs input (frap129)
+- cpufreq: blu_active: sync up with android-4.4 linux, bring back fastlane (engstk)
+- usb: gadget: f_accessory: Fix kernel panic when unplugged the device after used USB Keyboard (Google android-3.10)
+
+== AIO ==
+- None
+
+== Recovery ==
+- init.recovery.bullhead.rc: Remove '50 768000' target load of big cluster
+- Applied omni TWRP v3.1.0 changes
+- Appiled jolla-kernel_bullhead_II-v18.0
+
+<b><#selectbg_g>[bullhead_II-v17.5]</#></b>
 == Kernel ==
 - Applied Google's March patches
 - crypto: add lz4 Cryptographic API

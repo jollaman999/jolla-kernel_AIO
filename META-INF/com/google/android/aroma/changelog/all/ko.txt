@@ -3,7 +3,26 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v17.5]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v18.0]</#></b></@>
+== 커널 ==
+- f2fs: 업스트림 패치들을 적용하는 동안 빠진 체크 추가
+- f2fs: 최신 f2fs-stable 패치들 적용 (git.kernel.org jaegeuk)
+- sdcardfs: 최신 android-3.10 패치들 적용 (Google android-3.10)
+- binder: 최신 android-3.10 패치들 적용 (Google android-3.10)
+- cpufreq: conservative, ondemand, despair, relaxed: cache tunables (flar2)
+- cpufreq: relaxed: down_threshold_suspended sysfs input 수정 (frap129)
+- cpufreq: blu_active: android-4.4 와 맞춤 , fastlane 다시 추가 (engstk)
+- usb: gadget: f_accessory: USB Keyboard 사용 후 장치 분리시 발생하는 커널 패닉 수정 (Google android-3.10)
+
+== AIO ==
+- 없음
+
+== 리커버리 ==
+- init.recovery.bullhead.rc: 빅 클러스터의 '50 768000' target load 제거
+- omni TWRP v3.1.0 변경 ㅛ하아들 적용
+- jolla-kernel_bullhead_II-v18.0 적용
+
+<b><#selectbg_g>[bullhead_II-v17.5]</#></b>
 == 커널 ==
 - Google 의 3월 패치들 적용
 - crypto: lz4 Cryptographic API 추가
