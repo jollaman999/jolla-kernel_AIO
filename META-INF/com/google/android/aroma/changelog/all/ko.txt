@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v18.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v18.1]</#></b></@>
+== 커널 ==
+- input: misc: fpc:(지문 센서) 화면이 켜져있을 때 불필요한 호출들 방지
+- msm_thermal, fpc: 모든 코어들을 켜서 지문 인식 속도 향상
+
+== AIO ==
+- 없음
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v18.1 적용
+
+<b><#selectbg_g>[bullhead_II-v18.0]</#></b>
 == 커널 ==
 - f2fs: 업스트림 패치들을 적용하는 동안 빠진 체크 추가
 - f2fs: 최신 f2fs-stable 패치들 적용 (git.kernel.org jaegeuk)
