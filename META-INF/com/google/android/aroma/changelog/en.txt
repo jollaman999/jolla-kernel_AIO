@@ -3,7 +3,21 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v18.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v18.2]</#></b></@>
+== Kernel ==
+- sdcardfs: Applied lastest android-3.10 patches (Google android-3.10)
+- power: wakelock blocking improvements by franciscofranco
+- Got some patches from Google android-3.10
+
+== AIO ==
+- None
+
+== Recovery ==
+- Re-built with recent LineageOS sources
+- Try to fix FBE support (Please give me some feedbacks.)
+- Appiled jolla-kernel_bullhead_II-v18.2
+
+<b><#selectbg_g>[bullhead_II-v18.1]</#></b>
 == Kernel ==
 - input: misc: fpc:(fingerprint sensor) Prevent unneeded calls when screen turned on
 - msm_thermal, fpc: Speed up fingerprint recognition by turning on all of cores
