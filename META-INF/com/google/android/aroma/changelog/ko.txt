@@ -3,7 +3,19 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v19.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v20.0]</#></b></@>
+== Kernel ==
+- May!
+- sdcardfs: Applied lastest android-3.10 patches from Google android-3.10
+- ext2, ext4, mbcache patch from Google android-3.10
+
+== AIO ==
+- None
+
+== Recovery ==
+- Appiled jolla-kernel_bullhead_II-v20.0
+
+<b><#selectbg_g>[bullhead_II-v19.0]</#></b>
 == 커널 ==
 - 4월, Android 7.1.2, Android O Preview, hwbinder 패치들 적용
 
