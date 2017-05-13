@@ -138,7 +138,7 @@ Name: META-INF/com/google/android/aroma/icons/alert.png
 SHA-256-Digest: h5t3u0Pu2/7eIdCABPChZ6EZjl8qkVslxh7kUDvWxdg=
 
 Name: META-INF/com/google/android/aroma/changelog/all/ko.txt
-SHA-256-Digest: lka2ll8baP7stWFIHo+mkONhOErqBCBP+wrUJ/HacRM=
+SHA-256-Digest: wdhhXnrLrqkM6FzzfsC8F2STJFAklbpPIaSZCUgR1R8=
 
 Name: jolla-kernel/bullhead/multirom/inst/multirom/icons/romic_android
  l.png

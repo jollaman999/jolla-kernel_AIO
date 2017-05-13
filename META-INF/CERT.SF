@@ -1,5 +1,5 @@
 Signature-Version: 1.0
-SHA-256-Digest-Manifest: w8b8NOlVjlvZTE18TO/erLXqpavWzDff6b8HcG5Jk5U=
+SHA-256-Digest-Manifest: Cn1Lmu1rKBylrBmBw9kMz/5+b+bvJwRFUn7V8mV5jyM=
 Created-By: 1.0 (Android SignApk)
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.reboot.pn
@@ -139,7 +139,7 @@ Name: META-INF/com/google/android/aroma/icons/alert.png
 SHA-256-Digest: yq7EUu+0FBZ97J36WH0GkX8z0zsFZjhftyo1O2xaaM0=
 
 Name: META-INF/com/google/android/aroma/changelog/all/ko.txt
-SHA-256-Digest: egwt/weflXbiYEdiSXwqPHEfPMjRORp7R5SX5x0i4C8=
+SHA-256-Digest: ORlzJUwzv/8q0Fn6D+R9Z9ay3iFnxbbnoWDrWD6N3wg=
 
 Name: jolla-kernel/bullhead/multirom/inst/multirom/icons/romic_android
  l.png
