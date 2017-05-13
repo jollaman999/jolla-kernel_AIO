@@ -4,16 +4,16 @@
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
 <b><#selectbg_g>[bullhead_II-v20.0]</#></b></@>
-== Kernel ==
-- May!
-- sdcardfs: Applied lastest android-3.10 patches from Google android-3.10
-- ext2, ext4, mbcache patch from Google android-3.10
+== 커널 ==
+- 5월!
+- sdcardfs: Google android-3.10 으로 부터 최신 android-3.10 패치들 적용
+- Google android-3.10 의 ext2, ext4, mbcache 패치들 적용
 
 == AIO ==
-- None
+- 없음
 
-== Recovery ==
-- Appiled jolla-kernel_bullhead_II-v20.0
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v20.0 적용
 
 <b><#selectbg_g>[bullhead_II-v19.0]</#></b>
 == 커널 ==

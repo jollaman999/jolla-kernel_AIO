@@ -3,17 +3,33 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v20.0]</#></b></@>
-== Kernel ==
-- May!
-- sdcardfs: Applied lastest android-3.10 patches from Google android-3.10
-- ext2, ext4, mbcache patch from Google android-3.10
+<b><#selectbg_g>[bullhead_II-v21.0]</#></b></@>
+== 커널 ==
+- Linaro gcc-linaro-6.3.1-2017.05-rc1 로 빌드
+- Google android-3.10 로 부터 timerfd, tty, net 패치들 적용
+- sdcardfs: Google android-3.10 로 부터 최신 android-3.10 패치들 적용
+- f2fs: jaegeuk/f2fs-stable 로 부터 linux-4.4.y stable 브랜치 패치들 적용
 
 == AIO ==
-- None
+- f2fs-tools: jaegeuk/f2fs-tools 로 부터 최신 dev 브랜치 패치들 적용
 
-== Recovery ==
-- Appiled jolla-kernel_bullhead_II-v20.0
+== 리커버리 ==
+- 최신 LineageOS 소스들로 빌드
+- TWRP 를 AOSP 7.1.2 로 업데이트
+- TWRP 3.1.1 로 버젼 업
+- jolla-kernel_bullhead_II-v21.0 적용
+
+<b><#selectbg_g>[bullhead_II-v20.0]</#></b>
+== 커널 ==
+- 5월!
+- sdcardfs: Google android-3.10 으로 부터 최신 android-3.10 패치들 적용
+- Google android-3.10 의 ext2, ext4, mbcache 패치들 적용
+
+== AIO ==
+- 없음
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v20.0 적용
 
 <b><#selectbg_g>[bullhead_II-v19.0]</#></b>
 == 커널 ==

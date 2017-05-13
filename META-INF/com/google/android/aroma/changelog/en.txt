@@ -3,7 +3,23 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v20.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v21.0]</#></b></@>
+== Kernel ==
+- Built with Linaro gcc-linaro-6.3.1-2017.05-rc1
+- Applied timerfd, tty and net patches from Google android-3.10
+- sdcardfs: Applied lastest android-3.10 patches from Google android-3.10
+- f2fs: Appied linux-4.4.y stable branch patches from jaegeuk/f2fs-stable
+
+== AIO ==
+- f2fs-tools: Applied lastest dev branch patches from jaegeuk/f2fs-tools
+
+== Recovery ==
+- Built with lastest LineageOS sources
+- Update TWRP to AOSP 7.1.2
+- TWRP version up to 3.1.1
+- Appiled jolla-kernel_bullhead_II-v21.0
+
+<b><#selectbg_g>[bullhead_II-v20.0]</#></b>
 == Kernel ==
 - May!
 - sdcardfs: Applied lastest android-3.10 patches from Google android-3.10
