@@ -256,6 +256,9 @@ on boot
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
+    # Wifi firmware reload path
+    chown wifi wifi /sys/module/wlan/parameters/fwpath
+
     write /sys/block/mmcblk0/queue/rq_affinity 0
     write /sys/block/mmcblk0/queue/scheduler bfq
     write /sys/block/mmcblk0/queue/read_ahead_kb 2048
@@ -301,6 +304,7 @@ on post-fs-data
 
     # NFC: create data/nfc for nv storage
     mkdir /data/nfc 0770 nfc nfc
+    mkdir /data/vendor/nfc 0770 nfc nfc
     mkdir /data/nfc/param 0770 nfc nfc
 
     # use qcril.db to handle Ecc and load MBN
@@ -410,7 +414,7 @@ on property:ro.boot.hardware.sku=LGH791F
 on property:ro.boot.hardware.sku=LGH798
     setprop ro.boot.wificountrycode 00
 
-service wpa_supplicant /system/bin/wpa_supplicant \
+service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
     -I/system/etc/wifi/p2p_supplicant_overlay.conf -N \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
