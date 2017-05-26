@@ -3,7 +3,35 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v21.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v22.0]</#></b></@>
+== Kernel ==
+- Appiled Android O DP2 patches
+- f2fs: Add missed 'bio_put(bio)' in 'f2fs_submit_discard_endio()'
+- nanohub: Applied lastest marlin patches and Android O DP2 patch from Google msm
+- kernel: Only expose su when daemon is running (from LineageOS android_kernel_oneplus_msm8996)
+- kernel: Fix potential refcount leak in su check (from LineageOS android_kernel_oneplus_msm8996)
+- sdcardfs: Applied lastest android-3.10 patches from Google android-3.10
+- net/packet: Fix overflow patches from Google android-3.10
+- msm_thermal: Check high temp and decrease LITTLE's frequency to lower values
+( When big core is turned off, LITTLE's decrease step will set to 2
+by 'temp_count_max_little_with_big_off'.
+ In some cases, when device is too hot, there is no way to decrease frequency.
+ It needs to check high temp to get lower frequencies of LITTLE cores.)
+- arm/arm64: Applies some complie related patches from Google android-3.10
+
+== AIO ==
+- Updater: Update libraries to O
+- Updater: Main: Do not call 'getApplicationContext()' when not needed
+- Updater: Fix SELinux denials and check root status
+- Updater: Version up to v1.8
+- A2DP Checker: Update libraries to O
+
+== Recovery ==
+- Appiled lastest omni TWRP patches
+- Built with lastest LineageOS sources
+- Appiled jolla-kernel_bullhead_II-v22.0
+
+<b><#selectbg_g>[bullhead_II-v21.0]</#></b>
 == Kernel ==
 - Built with Linaro gcc-linaro-6.3.1-2017.05-rc1
 - Applied timerfd, tty and net patches from Google android-3.10
