@@ -3,7 +3,22 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v22.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v22.1]</#></b></@>
+== 커널 ==
+- misc: fpc1020: 화면이 꺼졌을 때 fingerprintd 우선순위를 최대로 함 (by sultanxda)
+- cpufreq: fingerprint boost 드라이버 소개 (by frap129 origin codes by sultanxda)
+- + fingerprint boost 드라이버에 대한 마이너 픽스들
+
+== AIO ==
+- Updater: su 명령 실행 에러 확인 (SU 가 업데이터에 대해서 허용되지 않았을때 강제 종료되는 문제 수정.)
+- Updater: 사용 되지 않는 구문들 제거
+- Updater: 토스트 메세지들을 긴 시간 동안 보여줌
+- Updater: v1.9 로 버젼업
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v22.1 적용
+
+<b><#selectbg_g>[bullhead_II-v22.0]</#></b>
 == 커널 ==
 - Android O DP2 패치들 적용
 - f2fs: 'f2fs_submit_discard_endio()' 에서 빠진 'bio_put(bio)' 추

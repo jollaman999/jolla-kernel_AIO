@@ -3,7 +3,22 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v22.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v22.1]</#></b></@>
+== Kernel ==
+- misc: fpc1020: Set fingerprintd priority to max when screen is off (by sultanxda)
+- cpufreq: Introduce fingerprint boost driver (by frap129 origin codes by sultanxda)
+- + Minor fixes for fingerprint boost driver
+
+== AIO ==
+- Updater: Check the error of executing su command (Fix force close when SU is not allowed for updater.)
+- Updater: Cleanup unused usages
+- Updater: Show toast messages for a long time
+- Updater: Version up to v1.9
+
+== Recovery ==
+- Appiled jolla-kernel_bullhead_II-v22.1
+
+<b><#selectbg_g>[bullhead_II-v22.0]</#></b>
 == Kernel ==
 - Appiled Android O DP2 patches
 - f2fs: Add missed 'bio_put(bio)' in 'f2fs_submit_discard_endio()'
