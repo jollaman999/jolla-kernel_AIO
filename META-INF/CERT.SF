@@ -1,5 +1,5 @@
 Signature-Version: 1.0
-SHA-256-Digest-Manifest: 96ruTlv2gFKwAapEUZ0UEqPPKqNbRfFXHOHbw2G699I=
+SHA-256-Digest-Manifest: c0t7GV6pSaJKAup+/sIXMtWNoYGfXvIErKID7b6yQCA=
 Created-By: 1.0 (Android SignApk)
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.reboot.pn
@@ -596,7 +596,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/radio_on.png
 SHA-256-Digest: nrk25IEjBliS7v7O6wS/7UlCMVOUggqlX9uypMkS3L8=
 
 Name: jolla-kernel/bullhead/Image/O/Image.gz-dtb
-SHA-256-Digest: fTYTE6DtnKxV84wl3PUL9e0HvuaB0hQeL59yv7wLM6Q=
+SHA-256-Digest: /1JW+qHUHOjIJzwDo2ZPHOQRM6BYqYg6ugwHhe+Mmjo=
 
 Name: jolla-kernel/bullhead/multirom/inst/multirom/busybox
 SHA-256-Digest: TUaMBLdHZAHVSOvFkZmEBRJ4Fk0x/ATFFkM5Z0vCRek=

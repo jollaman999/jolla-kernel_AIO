@@ -595,7 +595,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/radio_on.png
 SHA-256-Digest: +nbVEW0BYNoXnHERby9Qg5V5eNjNzqpVy3MSEHf5fYI=
 
 Name: jolla-kernel/bullhead/Image/O/Image.gz-dtb
-SHA-256-Digest: ho/iIN1Ubztw1iXNHxqN1y8GiGyMLn+U9HRx5eFgAjE=
+SHA-256-Digest: I+NhyzxPOl/JxGPqsFtAr++n9F61q+tFEII/Fu/AXWQ=
 
 Name: jolla-kernel/bullhead/multirom/inst/multirom/busybox
 SHA-256-Digest: R4b2md2l7NECfNKRqtskMszfiZl8Lzp18aBsMlHoV6M=
