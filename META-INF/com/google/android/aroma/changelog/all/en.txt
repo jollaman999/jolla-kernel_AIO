@@ -3,7 +3,41 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v22.1]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v22.2]</#></b></@>
+== Kernel ==
+- Seperate N and O kernels.
+
+>> N <<
+- Reverted Android O commits and only appiled nanohub and ipv6 related patches.
+(Android O commits reduce the performance of the device.)
+
+>> O <<
+- Cleanup Android O commits.
+
+>> Common <<
+- arp: Add 'ignore_proxy_arp' option and enable it by default
+(There is no need to use proxy ARP in mobile devices.
+Also it is safe to ignore these packets.)
+- arp: Remove gateway update detection in proxy ARP
+(It makes no sense to check gateway update in proxy ARP.
+Because with proxy ARP, it will not use gateway IP address to forward traffics.)
+- arp: Check ARP request to gateway and detect attacker's hw address
+- arp: arp_project: Version up to v1.0
+- ANDROID: hid: uhid: implement refcount for open and close (from Google android-3.10)
+- msm: kgsl: Add accounting for memory mapped in userspace
+(It was missed while merging Nougat's mr2 patches.)
+- Applied some CAF's security related patches.
+
+== AIO ==
+- f2fs-tools: Applied lastest changes of dev branch.
+- Separate N and O kernel images.
+
+== Recovery ==
+- f2fs-tools: Applied lastest changes of dev branch.
+- Built with lastest LineageOS sources
+- Appiled jolla-kernel_bullhead_II-v22.2
+
+<b><#selectbg_g>[bullhead_II-v22.1]</#></b>
 == Kernel ==
 - misc: fpc1020: Set fingerprintd priority to max when screen is off (by sultanxda)
 - cpufreq: Introduce fingerprint boost driver (by frap129 origin codes by sultanxda)

@@ -104,10 +104,14 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
   ############ Replace Image.gz-dtb ############
   show_progress(0.5, 0.1);
-  ## if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
-    ui_print("-> Replacing bullhead Image.gz-dtb...");
-    package_extract_file("jolla-kernel/bullhead/Image/Image.gz-dtb", "/tmp/split_img/boot.img-zImage");
-  ## endif;
+  if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
+    ui_print("-> Replacing Nougat's bullhead Image.gz-dtb...");
+    package_extract_file("jolla-kernel/bullhead/Image/N/Image.gz-dtb", "/tmp/split_img/boot.img-zImage");
+  endif;
+  if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="2" then
+    ui_print("-> Replacing O's bullhead Image.gz-dtb...");
+    package_extract_file("jolla-kernel/bullhead/Image/O/Image.gz-dtb", "/tmp/split_img/boot.img-zImage");
+  endif;
 
 
   ############ Old jolla-kernel.prop Cleanup ############
