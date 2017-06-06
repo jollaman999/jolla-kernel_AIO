@@ -3,7 +3,19 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v22.2]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v22.3]</#></b></@>
+== Kernel ==
+>> Common <<
+- Appiled Google's June patches
+
+== AIO ==
+- Updater: Update libraries and fix installation in Nougat
+- A2DPChecker: Update libraries and fix installation in Nougat
+
+== Recovery ==
+- Appiled jolla-kernel_bullhead_II-v22.3
+
+<b><#selectbg_g>[bullhead_II-v22.2]</#></b>
 == Kernel ==
 - Seperate N and O kernels.
 

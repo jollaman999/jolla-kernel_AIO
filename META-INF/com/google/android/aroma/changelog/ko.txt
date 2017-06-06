@@ -3,7 +3,19 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v22.2]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v22.3]</#></b></@>
+== 커널 ==
+>> Common <<
+- Google 의 6월 패치들 적용
+
+== AIO ==
+- Updater: 라이브러리들을 업데이트 하고 누가에서의 설치 문제 수정
+- A2DPChecker: 라이브러리들을 업데이트 하고 누가에서의 설치 문제 수정
+
+== 리커버리 ==
+- jolla-kernel_bullhead_II-v22.3 적용
+
+<b><#selectbg_g>[bullhead_II-v22.2]</#></b>
 == 커널 ==
 - N 과 O 커널 분리.
 
