@@ -479,35 +479,61 @@ if prop("checkbox1.prop","item.1.1")=="1" then
   alert( "<~led.attention>", "<~led.attentiondesc>");
 endif;
 
-
 ##
 # Sub Window with CheckBoxes - Additional Options
 #
-checkbox(
-  # Title
-	"<~additional.title>",
+if prop("window2.option1-2","selected.1")=="1" then
+	checkbox(
+	  # Title
+		"<~additional.title>",
 
-  # Sub Title
-	"<~additional.subtitle>",
+	  # Sub Title
+		"<~additional.subtitle>",
 
-  # Icon
-	"@update",
+	  # Icon
+		"@update",
 
-  # Will be saved in /tmp/aroma/additional.prop
-	"additional.prop",
+	  # Will be saved in /tmp/aroma/additional.prop
+		"additional.prop",
 
-  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-  # TITLE            |  SUBTITLE                                                 | Initial Value #
-  #------------------+-----------------------------------------------------------+---------------#
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
 
-  "<~f2fs.itemtitle>",      "",                                               2,      #-- group 1
-    "<~f2fs.item>",           "<~f2fs.desc>",                                   0,     #-- item.1.1
-  "<~sdcardfs.itemtitle>",  "",                                               2,      #-- group 2
-    "<~sdcardfs.item>",       "<~sdcardfs.desc>",                               1,     #-- item.2.1
-  "<~aptx.itemtitle>",      "",                                               2,      #-- group 3
-    "<~aptx.item>",           "<~aptx.desc>",                                   0      #-- item.3.1
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-);
+	  "<~f2fs.itemtitle>",      "",                                               2,      #-- group 1
+	    "<~f2fs.item>",           "<~f2fs.desc>",                                   0,     #-- item.1.1
+	  "<~sdcardfs.itemtitle>",  "",                                               2,      #-- group 2
+	    "<~sdcardfs.item>",       "<~sdcardfs.desc>",                               1,     #-- item.2.1
+	  "<~aptx.itemtitle>",      "",                                               2,      #-- group 3
+	    "<~aptx.item>",           "<~aptx.desc>",                                   0      #-- item.3.1
+		  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+	);
+endif;
+if prop("window2.option1-2","selected.1")=="2" then
+	checkbox(
+	  # Title
+		"<~additional.title>",
+
+	  # Sub Title
+		"<~additional.subtitle>",
+
+	  # Icon
+		"@update",
+
+	  # Will be saved in /tmp/aroma/additional.prop
+		"additional.prop",
+
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+
+	  "<~f2fs.itemtitle>",      "",                                               2,      #-- group 1
+	    "<~f2fs.item>",           "<~f2fs.desc>",                                   0,     #-- item.1.1
+	  "<~sdcardfs.itemtitle>",  "",                                               2,      #-- group 2
+	    "<~sdcardfs.item>",       "<~sdcardfs.desc>",                               1      #-- item.2.1
+		  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+	);
+endif;
 
 if prop("additional.prop","item.1.1")=="1" then
   alert( "<~f2fs.attention>", "<~f2fs.attentiondesc>");
@@ -515,8 +541,10 @@ endif;
 if prop("additional.prop","item.2.1")=="1" then
   alert( "<~sdcardfs.attention>", "<~sdcardfs.attentiondesc>");
 endif;
-if prop("additional.prop","item.3.1")=="1" then
-  alert( "<~aptx.attention>", "<~aptx.attentiondesc>");
+if prop("window2.option1-2","selected.1")=="1" then
+  if prop("additional.prop","item.3.1")=="1" then
+    alert( "<~aptx.attention>", "<~aptx.attentiondesc>");
+  endif;
 endif;
 
 

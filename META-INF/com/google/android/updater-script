@@ -419,30 +419,32 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   ############ aptX ############
   show_progress(0.83, 0.1);
 
-  ### Disable aptX ###
-  if file_getprop("/tmp/aroma-data/additional.prop","item.3.1")=="0" then
-    ui_print("-> Disabling aptX...");
-    package_extract_file("jolla-kernel/bullhead/aptX/aptx_cleanup.sh", "/tmp/aptx_cleanup.sh");
-    set_perm(0, 0, 0755, "/tmp/aptx_cleanup.sh");
-    run_program("/tmp/aptx_cleanup.sh");
-    delete("/system/lib/libaptX-1.0.0-rel-Android21-ARMv7A.so");
-    delete("/system/lib/libaptXHD-1.0.0-rel-Android21-ARMv7A.so");
-    delete("/system/lib/libaptXScheduler.so");
-  endif;
-  ## endif file_getprop("/tmp/aroma-data/additional.prop","item.3.1")=="0" then
-
-  ### Enable aptX ###
-  if file_getprop("/tmp/aroma-data/additional.prop","item.3.1")=="1" then
-    if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
-      ui_print("-> Enabling aptX...");
-      package_extract_file("jolla-kernel/bullhead/aptX/aptx_enable.sh", "/tmp/aptx_enable.sh");
-      set_perm(0, 0, 0755, "/tmp/aptx_enable.sh");
-      run_program("/tmp/aptx_enable.sh");
-      package_extract_dir("jolla-kernel/bullhead/aptX/system/", "/system/");
+  if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
+    ### Disable aptX ###
+    if file_getprop("/tmp/aroma-data/additional.prop","item.3.1")=="0" then
+      ui_print("-> Disabling aptX...");
+      package_extract_file("jolla-kernel/bullhead/aptX/aptx_cleanup.sh", "/tmp/aptx_cleanup.sh");
+      set_perm(0, 0, 0755, "/tmp/aptx_cleanup.sh");
+      run_program("/tmp/aptx_cleanup.sh");
+      delete("/system/lib/libaptX-1.0.0-rel-Android21-ARMv7A.so");
+      delete("/system/lib/libaptXHD-1.0.0-rel-Android21-ARMv7A.so");
+      delete("/system/lib/libaptXScheduler.so");
     endif;
-  endif;
-  ## endif file_getprop("/tmp/aroma-data/additional.prop","item.3.1")=="1" then
+    ## endif file_getprop("/tmp/aroma-data/additional.prop","item.3.1")=="0" then
 
+    ### Enable aptX ###
+    if file_getprop("/tmp/aroma-data/additional.prop","item.3.1")=="1" then
+      if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
+        ui_print("-> Enabling aptX...");
+        package_extract_file("jolla-kernel/bullhead/aptX/aptx_enable.sh", "/tmp/aptx_enable.sh");
+        set_perm(0, 0, 0755, "/tmp/aptx_enable.sh");
+        run_program("/tmp/aptx_enable.sh");
+        package_extract_dir("jolla-kernel/bullhead/aptX/system/", "/system/");
+      endif;
+    endif;
+    ## endif file_getprop("/tmp/aroma-data/additional.prop","item.3.1")=="1" then
+  endif;
+  ## endif file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
 
   ############ Copy Applications ############
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1" then
