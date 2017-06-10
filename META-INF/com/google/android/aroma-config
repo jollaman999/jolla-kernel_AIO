@@ -482,7 +482,7 @@ endif;
 ##
 # Sub Window with CheckBoxes - Additional Options
 #
-if prop("window2.option1-2","selected.1")=="1" then
+if prop("window2.prop","selected.1")=="1" then
 	checkbox(
 	  # Title
 		"<~additional.title>",
@@ -509,7 +509,7 @@ if prop("window2.option1-2","selected.1")=="1" then
 		  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 	);
 endif;
-if prop("window2.option1-2","selected.1")=="2" then
+if prop("window2.prop","selected.1")=="2" then
 	checkbox(
 	  # Title
 		"<~additional.title>",
@@ -541,7 +541,7 @@ endif;
 if prop("additional.prop","item.2.1")=="1" then
   alert( "<~sdcardfs.attention>", "<~sdcardfs.attentiondesc>");
 endif;
-if prop("window2.option1-2","selected.1")=="1" then
+if prop("window2.prop","selected.1")=="1" then
   if prop("additional.prop","item.3.1")=="1" then
     alert( "<~aptx.attention>", "<~aptx.attentiondesc>");
   endif;
