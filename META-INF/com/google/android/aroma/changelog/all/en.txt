@@ -3,7 +3,31 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v22.3]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v23.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- Reverted CAF's security related patches in v22.2 (It shows battery drain.)
+- qcacld-2.0(wlan): Use CAF's LA.BF64.1.2.3_rb1.13 driver
+- msm_thermal: Increase 'poll_ms' when the device is cool
+- msm_thermal: When the screen is turned off, check temperature until
+ the device is cool then enter suspend state
+- msm_thermal: Remove repeated actions of frequency control
+- wcnss: fix the potential memory leak and heap overflow (from CAF)
+- sdcardfs, tcp, dm, gre: Applied lastest patches from Google android-3.10
+
+== AIO ==
+- f2fs-tools: Applied lastest changes of dev branch
+- aroma: Only show aptX installation in Nougat
+- Updater: Update libraries and rebuilt with API 26
+- A2DPChecker: Update libraries and rebuilt with API 26
+
+== Recovery ==
+- f2fs-tools: Applied lastest changes of dev branch
+- Appiled lastest omni TWRP patches
+- Built with lastest LineageOS sources
+- Appiled jolla-kernel_bullhead_II-v23.0
+
+<b><#selectbg_g>[bullhead_II-v22.3]</#></b>
 == Kernel ==
 >> Common <<
 - Appiled Google's June patches

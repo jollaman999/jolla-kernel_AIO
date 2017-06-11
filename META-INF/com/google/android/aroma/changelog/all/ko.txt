@@ -3,7 +3,31 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v22.3]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v23.0]</#></b></@>
+== 커널 ==
+>> Common <<
+- v22.2 에서 적용된 CAF 의 보안 관련 패치들 취소 (배터리 드레인을 보임.)
+- qcacld-2.0(wlan): CAF 의 LA.BF64.1.2.3_rb1.13 드라이버 사용
+- msm_thermal: 장치가 시원할 때 'poll_ms' 를 늘림
+- msm_thermal: 화면이 꺼졌을 때, 온도를 장치가
+ 시원해질 때까지 확인한 후 suspend 상태로 들어가도록 함
+- msm_thermal: 주파수 제어의 반복되는 행동들 제거
+- wcnss: 잠재적인 메모리 누수와 힙 오버플로 수정 (from CAF)
+- sdcardfs, tcp, dm, gre: Google android-3.10 으로 부터 최신 패치들 적용
+
+== AIO ==
+- f2fs-tools: dev 브랜치의 최신 변경 사항들 적용
+- aroma: 누가에서만 aptX 설치를 보여줌
+- Updater: 라이브러리들을 업데이트하고 API 26 으로 재빌드
+- A2DPChecker: 라이브러리들을 업데이트하고 API 26 으로 재빌드
+
+== 리커버리 ==
+- f2fs-tools: dev 브랜치의 최신 변경 사항들 적용
+- omni TWRP 최신 패치들 적용
+- 최신 LineageOS 소스들로 빌드
+- jolla-kernel_bullhead_II-v23.0 적용
+
+<b><#selectbg_g>[bullhead_II-v22.3]</#></b>
 == 커널 ==
 >> Common <<
 - Google 의 6월 패치들 적용
