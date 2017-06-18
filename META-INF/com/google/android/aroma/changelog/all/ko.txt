@@ -3,7 +3,23 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v23.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v24.0]</#></b></@>
+== 커널 ==
+>> Common <<
+- Linux 3.10.106
+- CAF 의 일부 메모리 누수, 오버플로우, 보안 관련 패치들 적용
+- 변경사항 취소 "wcnss: 잠재적인 메모리 누수와 힙 오버플로 수정"
+(이것이 배터리 드레인의 진짜 원인이였습니다!!)
+
+== AIO ==
+- 없음
+
+== 리커버리 ==
+- Squash 된 twrpDigest refactor 와 함께 omni TWRP 최신 패치들 적용
+- 최신 LineageOS 소스들로 빌드
+- jolla-kernel_bullhead_II-v24.0 적용
+
+<b><#selectbg_g>[bullhead_II-v23.0]</#></b>
 == 커널 ==
 >> Common <<
 - v22.2 에서 적용된 CAF 의 보안 관련 패치들 취소 (배터리 드레인을 보임.)

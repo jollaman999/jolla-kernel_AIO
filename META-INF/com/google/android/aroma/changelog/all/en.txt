@@ -3,7 +3,23 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v23.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v24.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- Linux 3.10.106
+- Applied some CAF's memory leak, overflow, security related patches
+- Revert "wcnss: fix the potential memory leak and heap overflow"
+(This is the real reason of the battery drain!!)
+
+== AIO ==
+- None
+
+== Recovery ==
+- Appiled lastest omni TWRP patches with Squashed twrpDigest refactor
+- Built with lastest LineageOS sources
+- Appiled jolla-kernel_bullhead_II-v24.0
+
+<b><#selectbg_g>[bullhead_II-v23.0]</#></b>
 == Kernel ==
 >> Common <<
 - Reverted CAF's security related patches in v22.2 (It shows battery drain.)

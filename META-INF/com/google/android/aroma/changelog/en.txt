@@ -3,7 +3,23 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v23.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v24.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- Linux 3.10.106
+- Applied some CAF's memory leak, overflow, security related patches
+- Revert "wcnss: fix the potential memory leak and heap overflow"
+(This is the real reason of the battery drain!!)
+
+== AIO ==
+- None
+
+== Recovery ==
+- Appiled lastest omni TWRP patches with Squashed twrpDigest refactor
+- Built with lastest LineageOS sources
+- Appiled jolla-kernel_bullhead_II-v24.0
+
+<b><#selectbg_g>[bullhead_II-v23.0]</#></b>
 == Kernel ==
 >> Common <<
 - Reverted CAF's security related patches in v22.2 (It shows battery drain.)
@@ -26,123 +42,6 @@
 - Appiled lastest omni TWRP patches
 - Built with lastest LineageOS sources
 - Appiled jolla-kernel_bullhead_II-v23.0
-
-<b><#selectbg_g>[bullhead_II-v22.3]</#></b>
-== Kernel ==
->> Common <<
-- Appiled Google's June patches
-
-== AIO ==
-- Updater: Update libraries and fix installation in Nougat
-- A2DPChecker: Update libraries and fix installation in Nougat
-
-== Recovery ==
-- Appiled jolla-kernel_bullhead_II-v22.3
-
-<b><#selectbg_g>[bullhead_II-v22.2]</#></b>
-== Kernel ==
-- Seperate N and O kernels.
-
->> N <<
-- Reverted Android O commits and only appiled nanohub and ipv6 related patches.
-(Android O commits reduce the performance of the device.)
-
->> O <<
-- Cleanup Android O commits.
-
->> Common <<
-- arp: Add 'ignore_proxy_arp' option and enable it by default
-(There is no need to use proxy ARP in mobile devices.
-Also it is safe to ignore these packets.)
-- arp: Remove gateway update detection in proxy ARP
-(It makes no sense to check gateway update in proxy ARP.
-Because with proxy ARP, it will not use gateway IP address to forward traffics.)
-- arp: Check ARP request to gateway and detect attacker's hw address
-- arp: arp_project: Version up to v1.0
-- ANDROID: hid: uhid: implement refcount for open and close (from Google android-3.10)
-- msm: kgsl: Add accounting for memory mapped in userspace
-(It was missed while merging Nougat's mr2 patches.)
-- Applied some CAF's security related patches.
-
-== AIO ==
-- f2fs-tools: Applied lastest changes of dev branch.
-- Separate N and O kernel images.
-
-== Recovery ==
-- f2fs-tools: Applied lastest changes of dev branch.
-- Built with lastest LineageOS sources
-- Appiled jolla-kernel_bullhead_II-v22.2
-
-<b><#selectbg_g>[bullhead_II-v22.1]</#></b>
-== Kernel ==
-- misc: fpc1020: Set fingerprintd priority to max when screen is off (by sultanxda)
-- cpufreq: Introduce fingerprint boost driver (by frap129 origin codes by sultanxda)
-- + Minor fixes for fingerprint boost driver
-
-== AIO ==
-- Updater: Check the error of executing su command (Fix force close when SU is not allowed for updater.)
-- Updater: Cleanup unused usages
-- Updater: Show toast messages for a long time
-- Updater: Version up to v1.9
-
-== Recovery ==
-- Appiled jolla-kernel_bullhead_II-v22.1
-
-<b><#selectbg_g>[bullhead_II-v22.0]</#></b>
-== Kernel ==
-- Appiled Android O DP2 patches
-- f2fs: Add missed 'bio_put(bio)' in 'f2fs_submit_discard_endio()'
-- nanohub: Applied lastest marlin patches and Android O DP2 patch from Google msm
-- kernel: Only expose su when daemon is running (from LineageOS android_kernel_oneplus_msm8996)
-- kernel: Fix potential refcount leak in su check (from LineageOS android_kernel_oneplus_msm8996)
-- sdcardfs: Applied lastest android-3.10 patches from Google android-3.10
-- net/packet: Fix overflow patches from Google android-3.10
-- msm_thermal: Check high temp and decrease LITTLE's frequency to lower values
-( When big core is turned off, LITTLE's decrease step will set to 2
-by 'temp_count_max_little_with_big_off'.
- In some cases, when device is too hot, there is no way to decrease frequency.
- It needs to check high temp to get lower frequencies of LITTLE cores.)
-- arm/arm64: Applies some complie related patches from Google android-3.10
-
-== AIO ==
-- Updater: Update libraries to O
-- Updater: Main: Do not call 'getApplicationContext()' when not needed
-- Updater: Fix SELinux denials and check root status
-- Updater: Version up to v1.8
-- A2DP Checker: Update libraries to O
-
-== Recovery ==
-- Appiled lastest omni TWRP patches
-- Built with lastest LineageOS sources
-- Appiled jolla-kernel_bullhead_II-v22.0
-
-<b><#selectbg_g>[bullhead_II-v21.0]</#></b>
-== Kernel ==
-- Built with Linaro gcc-linaro-6.3.1-2017.05-rc1
-- Applied timerfd, tty and net patches from Google android-3.10
-- sdcardfs: Applied lastest android-3.10 patches from Google android-3.10
-- f2fs: Appied linux-4.4.y stable branch patches from jaegeuk/f2fs-stable
-
-== AIO ==
-- f2fs-tools: Applied lastest dev branch patches from jaegeuk/f2fs-tools
-
-== Recovery ==
-- Built with lastest LineageOS sources
-- Update TWRP to AOSP 7.1.2
-- TWRP version up to 3.1.1
-- Appiled jolla-kernel_bullhead_II-v21.0
-
-<b><#selectbg_g>[bullhead_II-v20.0]</#></b>
-== Kernel ==
-- May!
-- sdcardfs: Applied lastest android-3.10 patches from Google android-3.10
-- ext2, ext4, mbcache patch from Google android-3.10
-
-== AIO ==
-- None
-
-== Recovery ==
-- Appiled jolla-kernel_bullhead_II-v20.0
 
 
 <b><#selectbg_g>[Thanks to..]</#></b>

@@ -3,7 +3,23 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v23.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v24.0]</#></b></@>
+== 커널 ==
+>> Common <<
+- Linux 3.10.106
+- CAF 의 일부 메모리 누수, 오버플로우, 보안 관련 패치들 적용
+- 변경사항 취소 "wcnss: 잠재적인 메모리 누수와 힙 오버플로 수정"
+(이것이 배터리 드레인의 진짜 원인이였습니다!!)
+
+== AIO ==
+- 없음
+
+== 리커버리 ==
+- Squash 된 twrpDigest refactor 와 함께 omni TWRP 최신 패치들 적용
+- 최신 LineageOS 소스들로 빌드
+- jolla-kernel_bullhead_II-v24.0 적용
+
+<b><#selectbg_g>[bullhead_II-v23.0]</#></b>
 == 커널 ==
 >> Common <<
 - v22.2 에서 적용된 CAF 의 보안 관련 패치들 취소 (배터리 드레인을 보임.)
@@ -26,123 +42,6 @@
 - omni TWRP 최신 패치들 적용
 - 최신 LineageOS 소스들로 빌드
 - jolla-kernel_bullhead_II-v23.0 적용
-
-<b><#selectbg_g>[bullhead_II-v22.3]</#></b>
-== 커널 ==
->> Common <<
-- Google 의 6월 패치들 적용
-
-== AIO ==
-- Updater: 라이브러리들을 업데이트 하고 누가에서의 설치 문제 수정
-- A2DPChecker: 라이브러리들을 업데이트 하고 누가에서의 설치 문제 수정
-
-== 리커버리 ==
-- jolla-kernel_bullhead_II-v22.3 적용
-
-<b><#selectbg_g>[bullhead_II-v22.2]</#></b>
-== 커널 ==
-- N 과 O 커널 분리.
-
->> N <<
-- Android O 커밋들을 취소하고 nanohub 와 ipv6 관련 패치들만 적용.
-(Android O 커밋들이 장치의 성능을 감소시킴.)
-
->> O <<
-- Android O 커밋들 정리.
-
->> 공통 <<
-- arp: 'ignore_proxy_arp' 옵션을 추가하고 기본으로 활성화 함.
-(모바일 장치에서 proxy ARP 를 사용할 필요가 없습니다.
-또한, 이 패킷들을 무시하는 것이 안전합니다.)
-- arp: Proxy ARP 에서 게이트웨이 업데이트 탐지 제거.
-(Proxy ARP 에서 게이트웨이 업데이트를 탐지하는 것이 말이 안됩니다.
-Proxy ARP 를 사용하면, 트래픽들을 포워드 시키기 위해 게이트웨이 IP 주소를 사용하지 않기 때문입니다.)
-- arp: 게이트웨이로 향하는 ARP 요청들을 확인하여 공격자의 하드웨어 주소 감지.
-- arp: arp_project: v1.0 으로 버젼업
-- ANDROID: hid: uhid: implement refcount for open and close (from Google android-3.10)
-- msm: kgsl: Add accounting for memory mapped in userspace
-(누가의 mr2 패치들을 적용하는 동안 빠져 있었습니다.)
-- CAF 의 보안 관련 패치들 일부 적용.
-
-== AIO ==
-- f2fs-tools: dev 브랜치의 최신 변경 사항들 적용.
-- N 과 O 커널 이미지 분리.
-
-== 리커버리 ==
-- f2fs-tools: dev 브랜치의 최신 변경 사항들 적용.
-- LineageOS 최신 소스들과 빌드
-- jolla-kernel_bullhead_II-v22.2 적용
-
-<b><#selectbg_g>[bullhead_II-v22.1]</#></b>
-== 커널 ==
-- misc: fpc1020: 화면이 꺼졌을 때 fingerprintd 우선순위를 최대로 함 (by sultanxda)
-- cpufreq: fingerprint boost 드라이버 소개 (by frap129 origin codes by sultanxda)
-- + fingerprint boost 드라이버에 대한 마이너 픽스들
-
-== AIO ==
-- Updater: su 명령 실행 에러 확인 (SU 가 업데이터에 대해서 허용되지 않았을때 강제 종료되는 문제 수정.)
-- Updater: 사용 되지 않는 구문들 제거
-- Updater: 토스트 메세지들을 긴 시간 동안 보여줌
-- Updater: v1.9 로 버젼업
-
-== 리커버리 ==
-- jolla-kernel_bullhead_II-v22.1 적용
-
-<b><#selectbg_g>[bullhead_II-v22.0]</#></b>
-== 커널 ==
-- Android O DP2 패치들 적용
-- f2fs: 'f2fs_submit_discard_endio()' 에서 빠진 'bio_put(bio)' 추
-- nanohub: Google msm 으로 부터 최신 marlin 패치들과 Android O DP2 패치 적용
-- kernel: 데몬이 작동중일 때만 su 가 실행되도록 함 (from LineageOS android_kernel_oneplus_msm8996)
-- kernel: su 체크에서 잠재적인 refcount 누수 수정  (from LineageOS android_kernel_oneplus_msm8996)
-- sdcardfs: Google android-3.10 으로 부터 최신 android-3.10 패치들 적용
-- net/packet: Google android-3.10 으로 부터 오버플로우 패치들 적용
-- msm_thermal: 높은 온도를 체크하여 LITTLE 의 주파수를 낮은 값으로 감소시킴
-( 빅코어가 꺼졌을 때, LITTLE 의 주파수 감소 스텝은 'temp_count_max_little_with_big_off'
-에 의해 2가 됩니다.
- 몇몇의 상황에서, 장치가 매우 뜨거울 경우, 주파수를 감소시킬 방법이 없습니다.
- LITTLE 코어들이 낮은 주파수를 얻기 위해 높은 온도를 체크할 필요가 있습니다.)
-- arm/arm64: Google android-3.10 으로 부터 컴파일 관련 일부 패치들 적용
-
-== AIO ==
-- Updater: 라이브러리들 O 로 업데이트
-- Updater: Main: 'getApplicationContext()' 가 필요하지 않을때 호출하지 않음
-- Updater: SELinux 거부 수정 및 root 상태 확인
-- Updater: v1.8 로 버젼업
-- A2DP Checker: 라이브러리들 O 로 업데이트
-
-== 리커버리 ==
-- omni TWRP 최신 패치들 적용
-- 최신 LineageOS 소스들로 빌드
-- jolla-kernel_bullhead_II-v22.0 적용
-
-<b><#selectbg_g>[bullhead_II-v21.0]</#></b>
-== 커널 ==
-- Linaro gcc-linaro-6.3.1-2017.05-rc1 로 빌드
-- Google android-3.10 로 부터 timerfd, tty, net 패치들 적용
-- sdcardfs: Google android-3.10 로 부터 최신 android-3.10 패치들 적용
-- f2fs: jaegeuk/f2fs-stable 로 부터 linux-4.4.y stable 브랜치 패치들 적용
-
-== AIO ==
-- f2fs-tools: jaegeuk/f2fs-tools 로 부터 최신 dev 브랜치 패치들 적용
-
-== 리커버리 ==
-- 최신 LineageOS 소스들로 빌드
-- TWRP 를 AOSP 7.1.2 로 업데이트
-- TWRP 3.1.1 로 버젼 업
-- jolla-kernel_bullhead_II-v21.0 적용
-
-<b><#selectbg_g>[bullhead_II-v20.0]</#></b>
-== 커널 ==
-- 5월!
-- sdcardfs: Google android-3.10 으로 부터 최신 android-3.10 패치들 적용
-- Google android-3.10 의 ext2, ext4, mbcache 패치들 적용
-
-== AIO ==
-- 없음
-
-== 리커버리 ==
-- jolla-kernel_bullhead_II-v20.0 적용
 
 
 <b><#selectbg_g>[Thanks to..]</#></b>
