@@ -3,7 +3,33 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v24.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v25.0]</#></b></@>
+== 커널 ==
+>> Common <<
+- Google 의 7월 패치들과 Android O DP3 패치들 적용
+- Linux 3.10.107
+- xpad: 최신 Linux 업스트림 패치들 적용
+- kms: 최신 Linux 업스트림 패치들 적용
+- net, mm, sdcardfs: Google android-3.10 로 부터 최신 패치들 적용
+- msm_thermal: 낮은 온도에서 더 부드러운 성능을 낼 수 있도록 조정!
+- msm_thermal: 쓰로틀링 지연 구현
+(주파수가 바로 제한되지 않고, 약간의 지연이 된 후에 제한이 됩니다.
+ 또한, 온도가 내려가면 제한을 해제하고, 지연시간을 초기화 시킵니다.
+ 따라서, 이 시간동안 성능을 보장합니다. 기본값은 4초입니다.)
+- msm_thermal: Little 의 코어 컨트롤 구현
+(성능과 온도가 일부 Little 코어들을 끄고, 남아있는 코어들에게
+ 높은 주파수들을 주는 것이 더 좋습니다.)
+- qcacld-2.0(wlan driver): LA.BF64.1.2.3_rb1.14 로 업데이트 (from CAF)
+
+== AIO ==
+- 없음
+
+== 리커버리 ==
+- omni TWRP 최신 패치들 적용
+- 최신 LineageOS 소스들로 빌드
+- jolla-kernel_bullhead_II-v25.0 적용
+
+<b><#selectbg_g>[bullhead_II-v24.0]</#></b>
 == 커널 ==
 >> Common <<
 - Linux 3.10.106

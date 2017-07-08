@@ -3,7 +3,34 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v24.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v25.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- Appiled Google's July patches and Android O DP3 patches
+- Linux 3.10.107
+- xpad: Applied lastest Linux upstream patches
+- kms: Applied lastest Linux upstream patches
+- net, mm, sdcardfs: Applied lastest patches from Google android-3.10
+- msm_thermal: Adjust for more smooth performance with lower temperature!
+- msm_thermal: Implement 'threshold_delay_ms'
+(Frequency will not be limited immediately.
+ It will be limited to lower index after some delay.
+ Also, release the limit and reset the delay when the temperature drops.
+ So, it will guarantee of performance during this time. Default is 4 seconds.)
+- msm_thermal: Implement Little's core control
+(Performance and temerature is better with turn off some Little cores
+while give higher frequencies to remained Little cores.)
+- qcacld-2.0(wlan driver): Update to LA.BF64.1.2.3_rb1.14 (from CAF)
+
+== AIO ==
+- None
+
+== Recovery ==
+- Appiled lastest omni TWRP patches with Squashed twrpDigest refactor
+- Built with lastest LineageOS sources
+- Appiled jolla-kernel_bullhead_II-v25.0
+
+<b><#selectbg_g>[bullhead_II-v24.0]</#></b>
 == Kernel ==
 >> Common <<
 - Linux 3.10.106
