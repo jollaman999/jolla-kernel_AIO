@@ -58,7 +58,7 @@ Name: jolla-kernel/bullhead/block/block_io_sched_set.sh
 SHA-256-Digest: 9iftAtlqfNzS/AAP91ygipOGuznE33rm4tZXjl36tYI=
 
 Name: jolla-recovery/twrp/recovery.img
-SHA-256-Digest: 9aVL1fssxNO6HM04SDfQqbeyWE2PsKTh3q/4huCkgo8=
+SHA-256-Digest: 6dZ1nHAZ0SjSqxdA1DQ+CoJpS0WQ7alTYkx4H/0tSXM=
 
 Name: jolla-kernel/bullhead/multirom/inst/multirom/enc/libdiag.so
 SHA-256-Digest: HjizZxPrk0+drH/g4TAVYc7TCsbvy7f4PPSvlRIvAko=

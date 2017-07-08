@@ -1,5 +1,5 @@
 Signature-Version: 1.0
-SHA-256-Digest-Manifest: 8UZINZWWk4Mau1f6Pugp2UxbyQdis1QxSUX0CDIWkQw=
+SHA-256-Digest-Manifest: MVWK1YFKY4q4qTOTo5gKj4YHkf3A8hjcb6irVwD+5Dg=
 Created-By: 1.0 (Android SignApk)
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.reboot.pn
@@ -59,7 +59,7 @@ Name: jolla-kernel/bullhead/block/block_io_sched_set.sh
 SHA-256-Digest: dLwB63pquZpc/vo31IgdIJ+z1ubQPx/9at9sHFRpECI=
 
 Name: jolla-recovery/twrp/recovery.img
-SHA-256-Digest: bYrzAISwpdkvjGRkK1eK1bp8juTApO3pry7cXJ01lRU=
+SHA-256-Digest: UHEXL7mf9JWL/HBXSlY+94Pva1pZtweWlWvK30GUXuM=
 
 Name: jolla-kernel/bullhead/multirom/inst/multirom/enc/libdiag.so
 SHA-256-Digest: wgzw20rXIqaD2wiOtbQR/LcdUqtE7DstNTnxOqqT2Ao=
