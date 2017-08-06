@@ -149,6 +149,18 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
     run_program("/tmp/s2s_on_set.sh");
   endif;
 
+
+  ############ S2W/S2S Vibration ############
+  if file_getprop("/tmp/aroma-data/wake.prop","item.1.3")=="0" then
+    run_program("/sbin/sh", "-c", "sed -i '/sweep2wake_vibration/d' /tmp/ramdisk/init.bullhead.rc");
+  endif;
+  if file_getprop("/tmp/aroma-data/wake.prop","item.1.3")=="1" then
+    ui_print("-> Setting S2W/S2S Vibration...");
+    package_extract_file("jolla-kernel/bullhead/wake/s2w_vib_on_set.sh", "/tmp/s2w_vib_on_set.sh");
+    set_perm(0, 0, 0755, "/tmp/s2w_vib_on_set.sh");
+    run_program("/tmp/s2w_vib_on_set.sh");
+  endif;
+
   ############ DT2W ############
   if file_getprop("/tmp/aroma-data/wake.prop","item.2.1")=="0" then
     run_program("/sbin/sh", "-c", "sed -i '/doubletap2wake/d' /tmp/ramdisk/init.bullhead.rc");
@@ -197,6 +209,18 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
     package_extract_file("jolla-kernel/bullhead/wake/dt2s_on_set.sh", "/tmp/dt2s_on_set.sh");
     set_perm(0, 0, 0755, "/tmp/dt2s_on_set.sh");
     run_program("/tmp/dt2s_on_set.sh");
+  endif;
+
+
+  ############ D2W/D2S Vibration ############
+  if file_getprop("/tmp/aroma-data/wake.prop","item.2.3")=="0" then
+    run_program("/sbin/sh", "-c", "sed -i '/doubletap2wake_vibration/d' /tmp/ramdisk/init.bullhead.rc");
+  endif;
+  if file_getprop("/tmp/aroma-data/wake.prop","item.2.3")=="1" then
+    ui_print("-> Setting D2W/D2S Vibration...");
+    package_extract_file("jolla-kernel/bullhead/wake/dt2w_vib_on_set.sh", "/tmp/dt2w_vib_on_set.sh");
+    set_perm(0, 0, 0755, "/tmp/dt2w_vib_on_set.sh");
+    run_program("/tmp/dt2w_vib_on_set.sh");
   endif;
 
 

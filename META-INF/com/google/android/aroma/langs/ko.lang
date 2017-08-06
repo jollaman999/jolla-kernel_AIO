@@ -179,6 +179,8 @@ s2s.subtitle=네비게이션 바 영역을 밀어서 화면을 끕니다. (화�
 \
 이 옵션은 화면이 켜져있는 동안에만 작동합니다. (배터리 드레인 없음.)\
 그러나 화면을 터치하는 동안 터치 작업 큐가 증가하게 됩니다.
+s2w.vib_title=S2W/S2S 진동 활성화
+s2w.vib_subtitle=Sweep2Wake 와 Sweep2Sleep 의 진동 옵션을 활성화 합니다.
 d2w_d2s.title=DoubleTap2Wake & DoubleTap2Sleep
 d2w.title=DoubleTap2Wake 활성화
 d2w.subtitle=화면을 탭하여 켭니다.\
@@ -193,6 +195,9 @@ d2s.subtitle=상태바를 더블탭 하여 화면을 끕니다. (화면의 상�
 \
 이 옵션은 화면이 켜져있는 동안에만 작동합니다. (배터리 드레인 없음.)\
 그러나 화면을 터치하는 동안 터치 작업 큐가 증가하게 됩니다.
+d2w.vib_title=DT2W/DT2S 진동 활성화
+d2w.vib_subtitle=DoubleTap2Wake 와 DoubleTap2Sleep 의 진동 옵션을 활성화 합니다.\
+(이 옵션은 SOVC 의 임시로 작동하는 DT2W 에도 영향을 미칩니다.)
 
 d2w_count.title=더블탭 깨우기 탭 횟수
 d2w_count.subtitle=더블탭 깨우기의 탭 횟수를 선택하세요.

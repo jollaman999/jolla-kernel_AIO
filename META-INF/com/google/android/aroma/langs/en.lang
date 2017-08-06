@@ -180,6 +180,8 @@ s2s.subtitle=Turn off the screen by swiping the navigation bar location. (Bottom
 \
 This option only work while screen turned on. (No battery drain.)\
 But it will increase touch work queues while touching the screen.
+s2w.vib_title=Enable Vibration for S2W/S2S
+s2w.vib_subtitle=Turn on vibration option for Sweep2Wake and Sweep2Sleep.
 d2w_d2s.title=DoubleTap2Wake & DoubleTap2Sleep
 d2w.title=Enable DoubleTap2Wake
 d2w.subtitle=Turn on the screen by tapping the screen.\
@@ -194,6 +196,9 @@ If your custom rom has this feature, you don't need this.\
 \
 This option only work while screen turned on. (No battery drain.)\
 But it will increase touch work queues while touching the screen.
+d2w.vib_title=Enable Vibration for DT2W/DT2S
+d2w.vib_subtitle=Turn on vibration option for DoubleTap2Wake and DoubleTap2Sleep.\
+(This option will also affect to the SOVC's temporary working DT2W.)
 
 d2w_count.title=DoubleTap2Wake Tab Counts
 d2w_count.subtitle=Select tap counts for DoubleTap2Wake.
