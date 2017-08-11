@@ -3,7 +3,38 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v25.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v26.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- Applied Google August security patches
+- Applied Google Android O Preview 4 patches
+- sdcardfs: Applied lastest patches from Google android-3.10
+- f2fs: Merged f2fs-stable-4.13-rc2-4.9 upstream patches
+- power: bcl: Remove useless __ref and __refdata flags
+- msm_thermal: Increase 'temp_little_off_threshold' (Restore balanced performance.)
+- fs/exec: Fix the crash in su vulnerability patch (from Lineage OS)
+- clk: qcom: clock-pll: Applied fixes patched by myfluxi
+- scsi: sg, af_key, perf/core: Applied some upstream patches from Google android-3.10
+- arm64: avoid overflow in PAGE_OFFSET (Linux master upstream)
+- s2w, dt2w: Add vibration on/off option
+- ext4: Applied some overflow and error fixes from Linux master upstream
+- qcacld-2.0(wlan driver): Update to LA.BF64.1.2.3_rb1.15
+
+== AIO ==
+- multirom: ui: Prevent interaction with booting final card
+- multirom: trampoline: Fully handle /proc/cmdline outputs
+- Updater: Update libraries
+- Updater: Change the digest from md5 to sha256
+- Updater: Version up to v1.10
+- MultiROMMgr: Update libraries
+- MultiROMMgr: Change the digest from md5 to sha256
+- aroma: s2w, dt2w: Add vibration on/off option
+
+== Recovery ==
+- Built with lastest LineageOS sources
+- Appiled jolla-kernel_bullhead_II-v26.0
+
+<b><#selectbg_g>[bullhead_II-v25.0]</#></b>
 == Kernel ==
 >> Common <<
 - Appiled Google's July patches and Android O DP3 patches
