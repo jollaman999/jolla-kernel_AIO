@@ -13,10 +13,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "jolla-kernel_II");
-ini_set("rom_version",          "26.0");
+ini_set("rom_version",          "27.0");
 ini_set("rom_author",           "jollaman999");
 ini_set("rom_device",           "bullhead");
-ini_set("rom_date",             "Aug 12, 2017");
+ini_set("rom_date",             "Oct 15, 2017");
 
 
 ##
@@ -501,11 +501,7 @@ if prop("window2.prop","selected.1")=="1" then
 	  #------------------+-----------------------------------------------------------+---------------#
 
 	  "<~f2fs.itemtitle>",      "",                                               2,      #-- group 1
-	    "<~f2fs.item>",           "<~f2fs.desc>",                                   0,     #-- item.1.1
-	  "<~sdcardfs.itemtitle>",  "",                                               2,      #-- group 2
-	    "<~sdcardfs.item>",       "<~sdcardfs.desc>",                               1,     #-- item.2.1
-	  "<~aptx.itemtitle>",      "",                                               2,      #-- group 3
-	    "<~aptx.item>",           "<~aptx.desc>",                                   0      #-- item.3.1
+	    "<~f2fs.item>",           "<~f2fs.desc>",                                   0      #-- item.1.1
 		  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 	);
 endif;
@@ -530,7 +526,9 @@ if prop("window2.prop","selected.1")=="2" then
 	  "<~f2fs.itemtitle>",      "",                                               2,      #-- group 1
 	    "<~f2fs.item>",           "<~f2fs.desc>",                                   0,     #-- item.1.1
 	  "<~sdcardfs.itemtitle>",  "",                                               2,      #-- group 2
-	    "<~sdcardfs.item>",       "<~sdcardfs.desc>",                               1      #-- item.2.1
+	    "<~sdcardfs.item>",       "<~sdcardfs.desc>",                               1,     #-- item.2.1
+	  "<~aptx.itemtitle>",      "",                                               2,      #-- group 3
+	    "<~aptx.item>",           "<~aptx.desc>",                                   0      #-- item.3.1
 		  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 	);
 endif;
@@ -538,10 +536,10 @@ endif;
 if prop("additional.prop","item.1.1")=="1" then
   alert( "<~f2fs.attention>", "<~f2fs.attentiondesc>");
 endif;
-if prop("additional.prop","item.2.1")=="1" then
-  alert( "<~sdcardfs.attention>", "<~sdcardfs.attentiondesc>");
-endif;
-if prop("window2.prop","selected.1")=="1" then
+if prop("window2.prop","selected.1")=="2" then
+  if prop("additional.prop","item.2.1")=="1" then
+    alert( "<~sdcardfs.attention>", "<~sdcardfs.attentiondesc>");
+  endif;
   if prop("additional.prop","item.3.1")=="1" then
     alert( "<~aptx.attention>", "<~aptx.attentiondesc>");
   endif;

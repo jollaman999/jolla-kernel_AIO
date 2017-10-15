@@ -3,7 +3,37 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v26.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v27.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- Android Oreo support
+- Applied Google September, October security patches
+- Applied Google android-3.10 lastest patches
+- sdcardfs: Applied lastest patches from Google android-3.10
+- f2fs: Applied lastest linux-3.18.y stable branch patches
+- Revert ext4 upstream patches from v26.0
+- Bluetooth: Properly check L2CAP config option output buffer length (Security upstream patch)
+- s2w, dt2w, sovc: Fix some minor bugs
+- msm_serial_hs: Applied interrupt related patches
+- android: binder: Applied Google android-3.18 upstream patches
+- lib/lz4: make arrays static const, reduces object code size
+- msm_thermal, bcl: Do not hotplugging little cores when bcl hotplug is requested
+- qcacld-2.0(wlan driver): Restore to stock driver and update to Oreo October release
+
+== AIO ==
+- multirom: Android Oreo support
+- f2fs-tools: Change source base to Google Android master branch
+- aroma: s2w, dt2w: Fix vibrator not enabled by aroma installer
+- aroma: Change Oreo to default version selection
+- aroma: Remove sdcardfs option in Oreo (It is enabled by default.)
+- aroma: Update MultiROM license
+
+== Recovery ==
+- Android Oreo support
+- Built with lastest LineageOS sources
+- Change base source to nkk71's MultiROM recovery
+
+<b><#selectbg_g>[bullhead_II-v26.0]</#></b>
 == Kernel ==
 >> Common <<
 - Applied Google August security patches
@@ -33,73 +63,6 @@
 == Recovery ==
 - Built with lastest LineageOS sources
 - Appiled jolla-kernel_bullhead_II-v26.0
-
-<b><#selectbg_g>[bullhead_II-v25.0]</#></b>
-== Kernel ==
->> Common <<
-- Appiled Google's July patches and Android O DP3 patches
-- Linux 3.10.107
-- xpad: Applied lastest Linux upstream patches
-- kms: Applied lastest Linux upstream patches
-- net, mm, sdcardfs: Applied lastest patches from Google android-3.10
-- msm_thermal: Adjust for more smooth performance with lower temperature!
-- msm_thermal: Implement throttling delay
-(Frequency will not be limited immediately.
- It will be limited to lower index after some delay.
- Also, release the limit and reset the delay when the temperature drops.
- So, it will guarantee of performance during this time. Default is 4 seconds.)
-- msm_thermal: Implement Little's core control
-(Performance and temerature is better with turn off some Little cores
-while give higher frequencies to remained Little cores.)
-- qcacld-2.0(wlan driver): Update to LA.BF64.1.2.3_rb1.14 (from CAF)
-
-== AIO ==
-- None
-
-== Recovery ==
-- Appiled lastest omni TWRP patches with Squashed twrpDigest refactor
-- Built with lastest LineageOS sources
-- Appiled jolla-kernel_bullhead_II-v25.0
-
-<b><#selectbg_g>[bullhead_II-v24.0]</#></b>
-== Kernel ==
->> Common <<
-- Linux 3.10.106
-- Applied some CAF's memory leak, overflow, security related patches
-- Revert "wcnss: fix the potential memory leak and heap overflow"
-(This is the real reason of the battery drain!!)
-
-== AIO ==
-- None
-
-== Recovery ==
-- Appiled lastest omni TWRP patches with Squashed twrpDigest refactor
-- Built with lastest LineageOS sources
-- Appiled jolla-kernel_bullhead_II-v24.0
-
-<b><#selectbg_g>[bullhead_II-v23.0]</#></b>
-== Kernel ==
->> Common <<
-- Reverted CAF's security related patches in v22.2 (It shows battery drain.)
-- qcacld-2.0(wlan): Use CAF's LA.BF64.1.2.3_rb1.13 driver
-- msm_thermal: Increase 'poll_ms' when the device is cool
-- msm_thermal: When the screen is turned off, check temperature until
- the device is cool then enter suspend state
-- msm_thermal: Remove repeated actions of frequency control
-- wcnss: fix the potential memory leak and heap overflow (from CAF)
-- sdcardfs, tcp, dm, gre: Applied lastest patches from Google android-3.10
-
-== AIO ==
-- f2fs-tools: Applied lastest changes of dev branch
-- aroma: Only show aptX installation in Nougat
-- Updater: Update libraries and rebuilt with API 26
-- A2DPChecker: Update libraries and rebuilt with API 26
-
-== Recovery ==
-- f2fs-tools: Applied lastest changes of dev branch
-- Appiled lastest omni TWRP patches
-- Built with lastest LineageOS sources
-- Appiled jolla-kernel_bullhead_II-v23.0
 
 
 <b><#selectbg_g>[Thanks to..]</#></b>

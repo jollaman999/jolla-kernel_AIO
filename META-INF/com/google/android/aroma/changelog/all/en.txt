@@ -3,7 +3,37 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v26.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v27.0]</#></b></@>
+== Kernel ==
+>> Common <<
+- Android Oreo support
+- Applied Google September, October security patches
+- Applied Google android-3.10 lastest patches
+- sdcardfs: Applied lastest patches from Google android-3.10
+- f2fs: Applied lastest linux-3.18.y stable branch patches
+- Revert ext4 upstream patches from v26.0
+- Bluetooth: Properly check L2CAP config option output buffer length (Security upstream patch)
+- s2w, dt2w, sovc: Fix some minor bugs
+- msm_serial_hs: Applied interrupt related patches
+- android: binder: Applied Google android-3.18 upstream patches
+- lib/lz4: make arrays static const, reduces object code size
+- msm_thermal, bcl: Do not hotplugging little cores when bcl hotplug is requested
+- qcacld-2.0(wlan driver): Restore to stock driver and update to Oreo October release
+
+== AIO ==
+- multirom: Android Oreo support
+- f2fs-tools: Change source base to Google Android master branch
+- aroma: s2w, dt2w: Fix vibrator not enabled by aroma installer
+- aroma: Change Oreo to default version selection
+- aroma: Remove sdcardfs option in Oreo (It is enabled by default.)
+- aroma: Update MultiROM license
+
+== Recovery ==
+- Android Oreo support
+- Built with lastest LineageOS sources
+- Change base source to nkk71's MultiROM recovery
+
+<b><#selectbg_g>[bullhead_II-v26.0]</#></b>
 == Kernel ==
 >> Common <<
 - Applied Google August security patches

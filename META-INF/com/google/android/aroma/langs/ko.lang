@@ -100,10 +100,10 @@ window1.option3desc=jolla-kernel 기반의 MultiROM TWRP 만 설치합니다.\
 window2.title=버젼 선택
 window2.subtitle=해당 Android 버젼을 선택해 주세요.
 window2.option1=롬 종류
-window2.option1-1=Nougat (Android 7.x.x, cm-14.1)
-window2.option1-1desc=LineageOS-14.1/Android 7.x.x 기반 롬에 설치 하실 경우 선택합니다.
-window2.option1-2=O (Android O)
-window2.option1-2desc=Android O 기반 롬에 설치 하실 경우 선택합니다.
+window2.option1-1=Oreo (Android 8.x.x, lineage-15.x)
+window2.option1-1desc=LineageOS-15.x/Android 8.x.x 기반 롬에 설치 하실 경우 선택합니다.
+window2.option1-2=Nougat (Android 7.x.x, cm-14.x)
+window2.option1-2desc=LineageOS-14.x/Android 7.x.x 기반 롬에 설치 하실 경우 선택합니다.
 
 fs.attention=F2FS 사용안내
 fs.attentiondesc=현재 커널상에는 /data, /cache 파티션을 EXT4, 또는 F2FS 파일 시스템으로 사용할 수 있도록 되어있습니다.\
