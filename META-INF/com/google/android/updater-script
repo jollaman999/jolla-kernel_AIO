@@ -415,9 +415,10 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
     set_perm(0, 0, 0755, "/tmp/make_symlinks.sh");
     run_program("/tmp/make_symlinks.sh");
 
-    set_perm(0, 2000, 0755, "/system/bin/fsck.f2fs");
-    set_perm(0, 2000, 0755, "/system/bin/mkfs.f2fs");
+    run_program("/tmp/busybox", "chmod", "0755", "/system/bin/fsck.f2fs");
+    run_program("/tmp/busybox", "chmod", "0755", "/system/bin/mkfs.f2fs");
     run_program("/tmp/busybox", "chown", "-h", "0.2000", "/system/bin/dump.f2fs");
+    run_program("/tmp/busybox", "chown", "-h", "0.2000", "/system/bin/fsck.f2fs");
     run_program("/tmp/busybox", "chown", "-h", "0.2000", "/system/bin/make_f2fs");
     run_program("/tmp/busybox", "chcon", "-R", "u:object_r:fsck_exec:s0", "/system/bin/fsck.f2fs");
   endif;
@@ -427,25 +428,26 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   ############ sdcardfs ############
   show_progress(0.825, 0.1);
 
-  ### Disable sdcardfs ###
-  if file_getprop("/tmp/aroma-data/additional.prop","item.2.1")=="0" then
-    ui_print("-> Disabling sdcardfs...");
-    package_extract_file("jolla-kernel/bullhead/sdcardfs/sdcardfs_cleanup.sh", "/tmp/sdcardfs_cleanup.sh");
-    set_perm(0, 0, 0755, "/tmp/sdcardfs_cleanup.sh");
-    run_program("/tmp/sdcardfs_cleanup.sh");
-  endif;
-  ## endif file_getprop("/tmp/aroma-data/additional.prop","item.2.1")=="0" then
+  if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
+    ### Disable sdcardfs ###
+    if file_getprop("/tmp/aroma-data/additional.prop","item.2.1")=="0" then
+      ui_print("-> Disabling sdcardfs...");
+      package_extract_file("jolla-kernel/bullhead/sdcardfs/sdcardfs_cleanup.sh", "/tmp/sdcardfs_cleanup.sh");
+      set_perm(0, 0, 0755, "/tmp/sdcardfs_cleanup.sh");
+      run_program("/tmp/sdcardfs_cleanup.sh");
+    endif;
+    ## endif file_getprop("/tmp/aroma-data/additional.prop","item.2.1")=="0" then
 
   ### Enable sdcardfs ###
-  if file_getprop("/tmp/aroma-data/additional.prop","item.2.1")=="1" then
-    if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
+    if file_getprop("/tmp/aroma-data/additional.prop","item.2.1")=="1" then
       ui_print("-> Enabling sdcardfs...");
       package_extract_file("jolla-kernel/bullhead/sdcardfs/sdcardfs_enable.sh", "/tmp/sdcardfs_enable.sh");
       set_perm(0, 0, 0755, "/tmp/sdcardfs_enable.sh");
       run_program("/tmp/sdcardfs_enable.sh");
     endif;
+    ## endif file_getprop("/tmp/aroma-data/additional.prop","item.2.1")=="1" then
   endif;
-  ## endif file_getprop("/tmp/aroma-data/additional.prop","item.2.1")=="1" then
+  ## endif file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
 
 
   ############ aptX ############
