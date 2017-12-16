@@ -3,7 +3,24 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v27.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v28.0]</#></b></@>
+== Kernel ==
+>> Oreo <<
+- Build with Linaro gcc 6.4.1 2017.11
+- Applied previous security patches and Android 8.1.0 updates
+>> Nougat <<
+- No more updates
+
+== AIO ==
+- multirom: Android 8.x.x support and working now!
+(Magisk and systemless rooting will not working in secondary roms.
+There are some patches by nkk71 but it breaks MultiROM with my build.)
+
+== Recovery ==
+- Build with latest lineage-14.1 sources and Linaro gcc 6.4.1 2017.11
+- Use v28.0 Oreo kernel
+
+<b><#selectbg_g>[bullhead_II-v27.0]</#></b>
 == Kernel ==
 >> Common <<
 - Android Oreo support

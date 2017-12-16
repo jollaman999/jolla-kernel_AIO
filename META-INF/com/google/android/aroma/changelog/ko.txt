@@ -3,7 +3,24 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v27.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v28.0]</#></b></@>
+== 커널 ==
+>> Oreo <<
+- Linaro gcc 6.4.1 2017.11 로 빌드
+- 이전 보안 패치들과 Android 8.1.0 업데이트들 적용
+>> Nougat <<
+- 업데이트 중단
+
+== AIO ==
+- multirom: Android 8.x.x 지원 및 작동!
+(Magisk 와 systemless 루팅이 세컨 롬들에서 작동하지 않을 것 입니다.
+nkk71 님의 패치들이 있긴 하지만 제 빌드에서는 MultiROM 이 망가지네요.)
+
+== 리커버리 ==
+- 최신 lineage-14.1 소스들과 Linaro gcc 6.4.1 2017.11 로 빌드
+- v28.0 Oreo 커널 사용
+
+<b><#selectbg_g>[bullhead_II-v27.0]</#></b>
 == 커널 ==
 >> 공통 <<
 - Android Oreo 지원
