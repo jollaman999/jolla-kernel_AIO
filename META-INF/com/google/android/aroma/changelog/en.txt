@@ -3,7 +3,16 @@
 <b><#selectbg_g>jollaman999 @xda developers</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v28.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v29.0]</#></b></@>
+== Kernel ==
+>> Oreo <<
+- Build with Linaro gcc 6.4.1 2018.05
+- Applied security patches until October 2018.
+
+== Recovery ==
+- Use v29.0 Oreo kernel
+
+<b><#selectbg_g>[bullhead_II-v28.0]</#></b>
 == Kernel ==
 >> Oreo <<
 - Build with Linaro gcc 6.4.1 2017.11
