@@ -3,97 +3,25 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v29.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v28.0]</#></b></@>
 == 커널 ==
 >> Oreo <<
-- Linaro gcc 6.4.1 2018.05 로 빌드
-- 2018년 10월 까지의 보안 패치들 적용
-
-== 리커버리 ==
-- v29.0 Oreo 커널 사용
-
-<b><#selectbg_g>[bullhead_II-v28.0]</#></b>
-== 커널 ==
->> Oreo <<
-- Linaro gcc 6.4.1 2017.11 로 빌드
-- 이전 보안 패치들과 Android 8.1.0 업데이트들 적용
->> Nougat <<
-- 업데이트 중단
+- 첫 릴리즈.
+- Linaro gcc 7.3.1 2018.05 로 빌드
 
 == AIO ==
-- multirom: Android 8.x.x 지원 및 작동!
-(Magisk 와 systemless 루팅이 세컨 롬들에서 작동하지 않을 것 입니다.
-nkk71 님의 패치들이 있긴 하지만 제 빌드에서는 MultiROM 이 망가지네요.)
+- 첫 릴리즈.
+
+== 업데이터 ==
+- 아직 작업하지 않음.
 
 == 리커버리 ==
-- 최신 lineage-14.1 소스들과 Linaro gcc 6.4.1 2017.11 로 빌드
-- v28.0 Oreo 커널 사용
-
-<b><#selectbg_g>[bullhead_II-v27.0]</#></b>
-== 커널 ==
->> 공통 <<
-- Android Oreo 지원
-- Google 9월, 10월 보안 패치들 적용
-- Google android-3.10 최신 패치들 적용
-- sdcardfs: Google android-3.10 으로 부터 최신 패치들 적용
-- f2fs: 최신 linux-3.18.y 안정화 브랜치 패치들 적용
-- v26.0 에서 적용된 ext4 업스트림 패치들 되돌림
-- Bluetooth: 설정 옵션 출력 버퍼 길이를 올바르게 확인 (보안 업스트립 패치)
-- s2w, dt2w, sovc: 몇몇 마이너 버그들 수정
-- msm_serial_hs: 인터럽트 관련 패치들 적용
-- android: binder: Google android-3.18 업스트립 패치들 적용
-- lib/lz4: 배열을 static const 로 함, 오브젝트 코드 사이즈 감소
-- msm_thermal, bcl: Do not hotplugging little cores when bcl hotplug is requested
-- qcacld-2.0(wlan driver): Restore to stock driver and update to Oreo October release
-
-== AIO ==
-- multirom: Android Oreo support
-- f2fs-tools: Change source base to Google Android master branch
-- aroma: s2w, dt2w: Fix vibrator not enabled by aroma installer
-- aroma: Change Oreo to default version selection
-- aroma: Remove sdcardfs option in Oreo (It is enabled by default.)
-- aroma: Update MultiROM license
-
-== Recovery ==
-- Android Oreo support
-- Built with lastest LineageOS sources
-- Change base source to nkk71's MultiROM recovery
-
-<b><#selectbg_g>[bullhead_II-v26.0]</#></b>
-== 커널 ==
->> 공통 <<
-- Google 의 8월 보안 패치들 적용
-- Google 의 Android O Preview 4 패치들 적용
-- sdcardfs: Google android-3.10 으로 부터 최신 패치들 적용
-- f2fs: f2fs-stable-4.13-rc2-4.9 업스트림 패치들 병합
-- power: bcl: 불필요한 __ref 와 __refdata 플래그들 제거
-- msm_thermal: 'temp_little_off_threshold' 증가 (균형 있는 성능 되돌림.)
-- fs/exec: su 취약점 패치의 충돌 문제 수정 (from Lineage OS)
-- clk: qcom: clock-pll: myfluxi 님이 패치하신 수정 패치들 적용
-- scsi: sg, af_key, perf/core: Google android-3.10 으로 부터 일부 업스트림 패치들 적용
-- arm64: PAGE_OFFSET 에 있는 오버 플로우 방지 (Linux master 업스트림)
-- s2w, dt2w: 진동 on/off 옵션 추가
-- ext4: Linux master 업스트림으로 부터 일부 오버플로우와 에러 수정 패치들 적용
-- qcacld-2.0(wlan 드라이버): LA.BF64.1.2.3_rb1.15 로 업데이트
-
-== AIO ==
-- multirom: ui: 부팅시 마지막 카드에서 터치 작동 방지
-- multirom: trampoline: /proc/cmdline 출력 완전히 다룰수 있도록 함
-- Updater: 라이브러리들 업데이트
-- Updater: 다이제스트를 md5 에서 sha256 으로 변경
-- Updater: v1.10 으로 버젼 업
-- MultiROMMgr: 라이브러리들 업데이트
-- MultiROMMgr: 다이제스트를 md5 에서 sha256 으로 변경
-- aroma: s2w, dt2w: 진동 on/off 옵션 추가
-
-== 리커버리 ==
-- LineageOS 최신 소스들로 빌드
-- jolla-kernel_bullhead_II-v26.0 적용
+- 아직 작업하지 않음.
 
 
 <b><#selectbg_g>[Thanks to..]</#></b>
 The Linux Kernel Archives : https://www.kernel.org/
 LineageOS : https://github.com/LineageOS
-Developers : jaegeuk, Tasssadar, savoca and all of commited in their sources & all of xda developers
+And all of commited in their sources & all of xda developers
 
 <#selectbg_g>->></#> 제 jolla-kernel 을 선택해 주셔서 감사합니다!! :)

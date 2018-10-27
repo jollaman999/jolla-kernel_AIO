@@ -12,11 +12,11 @@ ini_set("force_colorspace","rgba");
 # Initializing Information
 #
 
-ini_set("rom_name",             "jolla-kernel_II");
-ini_set("rom_version",          "29.0");
+ini_set("rom_name",             "jolla-kernel");
+ini_set("rom_version",          "0.1");
 ini_set("rom_author",           "jollaman999");
-ini_set("rom_device",           "bullhead");
-ini_set("rom_date",             "Oct 26, 2018");
+ini_set("rom_device",           "joan");
+ini_set("rom_date",             "Oct 27, 2018");
 
 
 ##
@@ -200,8 +200,8 @@ if prop("menu.prop","selected")=="2" then
     #-- Variable Value
       "<@center><b>"+"<~sysinfo.maintext>"+"</b></@>\n\n"+
       
-      "<~sysinfo.device>"+"\t\t: <#469>"+"Nexus 5X"+"</#>\n"+
-      "<~sysinfo.board>"+"\t\t: <#469>"+"msm8992"+"</#>\n"+
+      "<~sysinfo.device>"+"\t\t: <#469>"+"LG V30"+"</#>\n"+
+      "<~sysinfo.board>"+"\t\t: <#469>"+"msm8998"+"</#>\n"+
       "<~sysinfo.manufac>"+"\t\t: <#469>"+"LG Electronics"+"</#>\n"+
 	  
 	  "\n"+
@@ -430,8 +430,7 @@ selectbox(
 	  #------------------+-----------------------------------------------------------+---------------#  
   
     "<~window2.option1>",         "",                                                 2,      #-- Group 1. key = "selected.1"
-        "<~window2.option1-1>",         "<~window2.option1-1desc>",                              1,     #-- selected.1 = 1
-        "<~window2.option1-2>",         "<~window2.option1-2desc>",                              0      #-- selected.1 = 2
+        "<~window2.option1-1>",         "<~window2.option1-1desc>"                               1      #-- selected.1 = 1
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
@@ -463,21 +462,15 @@ checkbox(
   # TITLE            |  SUBTITLE                                                 | Initial Value #
   #------------------+-----------------------------------------------------------+---------------#
 
-  "<~led.title>",           "",                                               2,      #-- group 1
-    "<~led.item>",            "<~led.desc>",                                    0,      #-- item.1.1
-  "<~app.title>",           "",                                               2,      #-- group 2
-    "<~updater.item>",        "<~updater.desc>",                                0,      #-- item.2.1
-    "<~a2dp.item>",           "<~a2dp.desc>",                                   0,      #-- item.2.2
-    "<~usbkeyboard.item>",    "<~usbkeyboard.desc>",                            0,      #-- item.2.3
-  "MISC",                   "",                                               2,      #-- group 3
-    "<~dynfsync.item>",       "<~dynfsync.desc>",                               1       #-- item.3.1
+  "<~app.title>",           "",                                               2,      #-- group 1
+    "<~updater.item>",        "<~updater.desc>",                                0,      #-- item.1.1
+    "<~a2dp.item>",           "<~a2dp.desc>",                                   0,      #-- item.1.2
+    "<~usbkeyboard.item>",    "<~usbkeyboard.desc>",                            0,      #-- item.1.3
+  "MISC",                   "",                                               2,      #-- group 2
+    "<~dynfsync.item>",       "<~dynfsync.desc>",                               1       #-- item.2.1
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
-
-if prop("checkbox1.prop","item.1.1")=="1" then
-  alert( "<~led.attention>", "<~led.attentiondesc>");
-endif;
 
 ##
 # Sub Window with CheckBoxes - Additional Options
@@ -505,44 +498,9 @@ if prop("window2.prop","selected.1")=="1" then
 		  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 	);
 endif;
-if prop("window2.prop","selected.1")=="2" then
-	checkbox(
-	  # Title
-		"<~additional.title>",
-
-	  # Sub Title
-		"<~additional.subtitle>",
-
-	  # Icon
-		"@update",
-
-	  # Will be saved in /tmp/aroma/additional.prop
-		"additional.prop",
-
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#
-
-	  "<~f2fs.itemtitle>",      "",                                               2,      #-- group 1
-	    "<~f2fs.item>",           "<~f2fs.desc>",                                   0,     #-- item.1.1
-	  "<~sdcardfs.itemtitle>",  "",                                               2,      #-- group 2
-	    "<~sdcardfs.item>",       "<~sdcardfs.desc>",                               1,     #-- item.2.1
-	  "<~aptx.itemtitle>",      "",                                               2,      #-- group 3
-	    "<~aptx.item>",           "<~aptx.desc>",                                   0      #-- item.3.1
-		  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-	);
-endif;
 
 if prop("additional.prop","item.1.1")=="1" then
   alert( "<~f2fs.attention>", "<~f2fs.attentiondesc>");
-endif;
-if prop("window2.prop","selected.1")=="2" then
-  if prop("additional.prop","item.2.1")=="1" then
-    alert( "<~sdcardfs.attention>", "<~sdcardfs.attentiondesc>");
-  endif;
-  if prop("additional.prop","item.3.1")=="1" then
-    alert( "<~aptx.attention>", "<~aptx.attentiondesc>");
-  endif;
 endif;
 
 
@@ -719,175 +677,6 @@ selectbox(
     "8192 KB",                "",                                                  0       #-- selected.2 = 7
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
-
-
-##
-# Sub Window with SelectBox - KCAL Options
-#
-selectbox(
-  # Title
-	"<~kcal.title>",
-
-  # Sub Title
-	"<~kcal.subtitle>",
-
-  # Icon
-	"@update",
-
-  # Will be saved in /tmp/aroma/kcal.prop
-	"kcal.prop",
-
-  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-  # TITLE            |  SUBTITLE                                                 | Initial Value #
-  #------------------+-----------------------------------------------------------+---------------#
-
-  "<~kcal_fix_yellow_onoff.title>", "",                                           2,      #-- Group 1. key = "selected.1"
-    "<~kcal_fix_yellow_on.item>",    "<~kcal_fix_yellow_on.desc>",           1,      #-- selected.1 = 1
-    "<~kcal_fix_yellow_off.item>",   "<~kcal_fix_yellow_off.desc>",          0       #-- selected.1 = 2
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-);
-
-########################################### MultiROM ###########################################
-## multirom enabled
-if prop("window1.prop","selected.1")!="2" then
-
-checkbox(
-  # Title
-	"<~checkbox2.title>",
-
-  # Sub Title
-	"<~checkbox2.subtitle>",
-
-  # Icon
-	"@update",
-
-  # Will be saved in /tmp/aroma/checkbox2.prop
-	"checkbox2.prop",
-
-  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-  # TITLE            |  SUBTITLE                                                 | Initial Value #
-  #------------------+-----------------------------------------------------------+---------------#
-
-  "<~checkbox2.item1>",      "",                                                       2,      #-- group 1
-    "<~checkbox2.item1-1>",  "<~checkbox2.item1-1desc>",                               0       #-- item.1.1
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-);
-
-if prop("checkbox2.prop","item.1.1")=="1" then
-  alert( "<~multirom.attention>", "<~multirom.attentiondesc>");
-
-  if prop("lang.prop","selected.0")=="1" then
-  agreebox(
-    #-- Title
-      "<~terms.title>",
-
-    #-- Subtitle / Description
-      "<~terms.desc>",
-
-    #-- Icon:
-      "@license",
-
-    #-- Text Content
-    resread("license_multirom/ko.txt"),
-
-    #-- Checkbox Text
-      "<~terms.check>",
-
-    #-- Unchecked Alert Message
-      "<~terms.confirm>"
-  );
-  endif;
-  ## endif prop("lang.prop","selected.0")=="1"
-
-  if prop("lang.prop","selected.0")=="2" then
-  agreebox(
-    #-- Title
-      "<~terms.title>",
-
-    #-- Subtitle / Description
-      "<~terms.desc>",
-
-    #-- Icon:
-      "@license",
-
-    #-- Text Content
-    resread("license_multirom/en.txt"),
-
-    #-- Checkbox Text
-      "<~terms.check>",
-
-    #-- Unchecked Alert Message
-      "<~terms.confirm>"
-  );
-  endif;
-  ## endif prop("lang.prop","selected.0")=="2"
-
-endif;
-## endif - checkbox2.prop
-
-endif;
-## endif - window1.prop
-
-
-## multirom disabled
-if prop("window1.prop","selected.1")=="2" then
-
-checkbox(
-  # Title
-	"<~checkbox2.title>",
-
-  # Sub Title
-	"<~checkbox2.subtitle>",
-
-  # Icon
-	"@update",
-
-  # Will be saved in /tmp/aroma/checkbox2.prop
-	"checkbox2.prop",
-
-  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-  # TITLE            |  SUBTITLE                                                 | Initial Value #
-  #------------------+-----------------------------------------------------------+---------------#
-
-  "<~checkbox2.item1uninst>","",                                                       2,      #-- group 1
-    "<~checkbox2.item1-1>",  "<~checkbox2.item1-1desc>",                               3       #-- item.1.1
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-);
-
-## multirom - second roms delete check
-checkbox(
-  # Title
-	"<~checkbox3.title>",
-
-  # Sub Title
-	"<~checkbox3.subtitle>",
-
-  # Icon
-	"@update",
-
-  # Will be saved in /tmp/aroma/checkbox3.prop
-	"checkbox3.prop",
-
-  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-  # TITLE            |  SUBTITLE                                                 | Initial Value #
-  #------------------+-----------------------------------------------------------+---------------#
-
-  "<~checkbox3.item1>",      "",                                                       2,      #-- group 1
-    "<~checkbox3.item1-1>",  "<~checkbox3.item1-1desc>",                               0       #-- item.1.1
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-);
-
-##
-# Alert Window - Warning about Delete Second Roms
-#
-if prop("checkbox3.prop","item.1.1")=="1" then
-  alert( "<~multidel.attention>", "<~multidel.attentiondesc>");
-endif;
-## endif - checkbox3.prop
-
-endif;
-## endif - window1.prop
-########################################### MultiROM ###########################################
 
 
 selectbox(
