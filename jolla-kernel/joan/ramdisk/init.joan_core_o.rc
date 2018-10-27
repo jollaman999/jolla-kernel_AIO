@@ -83,7 +83,7 @@ on post-fs-data
 
 # change preload directory permission for movetosd about preload app
 service chmod_dp /system/vendor/bin/change_permission_preload.sh
-    disable
+    disabled
     oneshot
 
 on early-boot
