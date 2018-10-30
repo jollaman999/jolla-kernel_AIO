@@ -27,7 +27,7 @@ if [ ! -z "$(ls *-new.* 2> /dev/null)" ]; then
   echo " ";
 fi;
 
-rm -f ramdisk-new.cpio*;
+rm -f "*-new.*";
 case $1 in
   --original)
     echo "Repacking with original ramdisk...";;
@@ -44,7 +44,7 @@ case $1 in
     compext=$ramdiskcomp;
     case $ramdiskcomp in
       gzip) compext=gz;;
-      lz4) repackcmd="$bin/lz4 $level -l stdin stdout 2> /dev/null";;
+      lz4) repackcmd="$bin/lz4 $level -l";;
       *) abort; exit 1;;
     esac;
     cd ramdisk;
@@ -94,10 +94,6 @@ if [ ! $? -eq "0" ]; then
   abort;
   exit 1;
 fi;
-
-
-# Make backup for MultiROM
-cp image-new.img /sdcard/boot.img_bak;
 
 echo "Done!";
 exit 0;

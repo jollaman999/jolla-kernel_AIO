@@ -58,7 +58,7 @@ esac;
 if [ "$compext" ]; then
   compext=.$compext;
 fi;
-mv "$file-ramdisk.gz" "$file-ramdisk.cpio$compext";
+mv -f "$(ls *-ramdisk*.gz)" "$file-ramdisk.cpio$compext" 2>/dev/null;
 cd ..;
 
 echo " ";
@@ -70,7 +70,7 @@ if [ ! "$compext" ]; then
   abort;
   exit 1;
 fi;
-$unpackcmd "../split_img/$file-ramdisk.cpio$compext" $extra | cpio -i;
+$unpackcmd "../split_img/$file-ramdisk.cpio$compext" $extra | cpio -i -d --no-absolute-filenames;
 if [ ! $? -eq "0" ]; then
   abort;
   exit 1;
@@ -81,4 +81,3 @@ cd ..;
 echo " ";
 echo "Done!";
 exit 0;
-
