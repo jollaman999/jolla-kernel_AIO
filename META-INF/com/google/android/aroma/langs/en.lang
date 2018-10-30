@@ -54,7 +54,7 @@ main.quit=Quit Install
 main.quitdesc=Quit jolla-kernel installation :(
 
 sysinfo.wait=Getting System Information...
-sysinfo.maintext=Nexus 5X System Information
+sysinfo.maintext=LG V30 System Information
 sysinfo.device=Device Name
 sysinfo.board=Board Name
 sysinfo.manufac=Manufacturer
@@ -62,7 +62,7 @@ sysinfo.system=System Size
 sysinfo.data=Data Size
 sysinfo.sdcard=SDCard Size
 sysinfo.title=System Information
-sysinfo.subtitle=Current system Information on your Nexus 5X
+sysinfo.subtitle=Current system Information on your LG V30
 sysinfo.alert.title=Finished
 sysinfo.alert.text=You will be back to Menu
 
@@ -100,10 +100,10 @@ After you move your rom, install Multi ROM.
 window2.title=Version Selection
 window2.subtitle=Select your Android version.
 window2.option1=Rom type
-window2.option1-1=Oreo (Android 8.x.x, lineage-15.x)
-window2.option1-1desc=If you want to install in LineageOS-15.x/Android 8.x.x based roms, select this.
-window2.option1-2=Nougat (Android 7.x.x, cm-14.x)
-window2.option1-2desc=If you want to install in LineageOS-14.x/Android 7.x.x based roms, select this.
+window2.option1-1=Oreo (Android 8.1.x)
+window2.option1-1desc=If you want to install in Android 8.1.x based roms, select this.
+window2.option1-2=Pie (Android 9.x.x)
+window2.option1-2desc=If you want to install in Android 9.x.x based roms, select this.
 
 fs.attention=F2FS information
 fs.attentiondesc=On current kernel, /data and /cache partitions are able to use by EXT4 or F2FS.\
@@ -111,12 +111,6 @@ You can use F2FS by change file system in Wipe option of TWRP recovery.
 
 checkbox1.title=Kernel Installatin Options
 checkbox1.subtitle=Check what you want.
-led.title=LED Patch
-led.item=Charging LED support
-led.desc=Select this option if you want use charging LED.
-led.attention=LED Patch Warning
-led.attentiondesc=This option will copy library files to system partition.\
-Uncheck if you don't want to modify system partition.
 app.title=Application Selection
 updater.item=jolla-kernel Updater
 updater.desc=This app supports updates for jolla-kernel.
@@ -161,11 +155,6 @@ It gives better performance and power consumption.
 sdcardfs.attention=sdcardfs Attention
 sdcardfs.attentiondesc=If sdcardfs is not enabled by default,\
 this action will modify your system partition!
-aptx.itemtitle=aptX Codec support
-aptx.item=Enable aptX Codec
-aptx.desc=This will enable aptX codec that used by Bluetooth audio.
-aptx.attention=aptX Attention
-aptx.attentiondesc=This action will modify your system partition!
 
 wake.title=Wake options
 wake.subtitle=Wake gestures to turn on the screen.
@@ -275,13 +264,6 @@ lz4.item=LZ4
 lz4.desc=Select this option if you want to use lz4 compressed ramdisk image.\
 \
 lz4 supports fastest decompress speed.
-lz4.attention=How To Use LZ4 with SuperSU
-lz4.attentiondesc=1. Flash original boot.img that comes with your rom.\
-2. Flash SuperSU zip file.\
-3. Install jolla-kernel with LZ4 option.\
-4. It will reboot the device once at first boot.\
-\
-If the SuperSU is already installed in the jolla-kernel, the above tasks are not necessary.
 
 ini_set.next=Begin Inst
 ini_set.title=Proceed Installation

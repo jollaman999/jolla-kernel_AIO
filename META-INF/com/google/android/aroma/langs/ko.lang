@@ -54,7 +54,7 @@ main.quit=설치 종료
 main.quitdesc=jolla-kernel 의 설치를 종료합니다 :(
 
 sysinfo.wait=시스템 정보 조회중...
-sysinfo.maintext=Nexus 5X 시스템 정보
+sysinfo.maintext=LG V30 시스템 정보
 sysinfo.device=장치명
 sysinfo.board=보드명
 sysinfo.manufac=제조업체
@@ -62,7 +62,7 @@ sysinfo.system=System 용량
 sysinfo.data=Data 용량
 sysinfo.sdcard=SDCard 용량
 sysinfo.title=시스템 정보
-sysinfo.subtitle=당신의 Nexus 5X 시스템 정보입니다.
+sysinfo.subtitle=당신의 LG V30 시스템 정보입니다.
 sysinfo.alert.title=완료
 sysinfo.alert.text=메뉴로 돌아갑니다.
 
@@ -100,10 +100,10 @@ window1.option3desc=jolla-kernel 기반의 MultiROM TWRP 만 설치합니다.\
 window2.title=버젼 선택
 window2.subtitle=해당 Android 버젼을 선택해 주세요.
 window2.option1=롬 종류
-window2.option1-1=Oreo (Android 8.x.x, lineage-15.x)
-window2.option1-1desc=LineageOS-15.x/Android 8.x.x 기반 롬에 설치 하실 경우 선택합니다.
-window2.option1-2=Nougat (Android 7.x.x, cm-14.x)
-window2.option1-2desc=LineageOS-14.x/Android 7.x.x 기반 롬에 설치 하실 경우 선택합니다.
+window2.option1-1=Oreo (Android 8.1.x)
+window2.option1-1desc=Android 8.1.x 기반 롬에 설치 하실 경우 선택합니다.
+window2.option1-2=Pie (Android 9.x.x)
+window2.option1-2desc=Android 9.x.x 기반 롬에 설치 하실 경우 선택합니다.
 
 fs.attention=F2FS 사용안내
 fs.attentiondesc=현재 커널상에는 /data, /cache 파티션을 EXT4, 또는 F2FS 파일 시스템으로 사용할 수 있도록 되어있습니다.\
@@ -111,11 +111,6 @@ F2FS 파일시스템은 TWRP 리커버리에서 Wipe(와이프) 옵션에 들어
 
 checkbox1.title=커널 설치 옵션
 checkbox1.subtitle=원하시는 옵션에 체크해 주세요.
-led.title=LED 패치
-led.item=충전 LED 지원
-led.desc=충전 LED 사용을 원할 경우 이 옵션을 체크하세요.
-led.attention=LED 패치 경고
-led.attentiondesc=이 옵션은 라이브러리 파일들을 system 파티션에 복사합니다.\
 system 파티션 수정을 원치 않을 경우 체크를 해제하세요.
 app.title=애플리케이션 선택
 updater.item=jolla-kernel Updater
@@ -160,11 +155,6 @@ sdcardfs.desc=Google 의 fuse 를 samsung 의 sdcardfs 로 변경합니다.\
 sdcardfs.attention=sdcardfs 경고
 sdcardfs.attentiondesc=sdcardfs 가 기본으로 활성화 되어있지 않은 경우,\
 이 작업은 시스템 파티션을 수정합니다!
-aptx.itemtitle=aptX 코덱 지원
-aptx.item=aptX 코덱 활성화
-aptx.desc=블루투스 오디오에서 사용될 aptX 코덱을 활성화 합니다.
-aptx.attention=aptX 경고
-aptx.attentiondesc=이 작업은 시스템 파티션을 수정합니다!
 
 wake.title=화면 켜기 옵션
 wake.subtitle=화면을 켜기위한 제스쳐들.
@@ -273,13 +263,6 @@ lz4.item=LZ4
 lz4.desc=lz4 로 압축된 램디스크 이미지 사용을 원하실 경우 이 옵션을 선택하세요.\
 \
 lz4 는 가장 빠른 압축해제를 지원합니다.
-lz4.attention=LZ4 를 SuperSU 와 사용하는 방법
-lz4.attentiondesc=1. 롬과 함께 제공되는 원본 boot.img 를 플래싱 합니다.\
-2. SuperSU zip 파일을 플래싱 합니다.\
-3. jolla-kernel 을 LZ4 옵션과 함께 설치합니다.\
-4. 첫 부팅시 재부팅이 한번 진행됩니다.\
-\
-이미 SuperSU 가 jolla-kernel 에 설치된 상태라면 위 작업들이 필요하지 않습니다.
 
 ini_set.next=설치 진행
 ini_set.title=설치 진행
