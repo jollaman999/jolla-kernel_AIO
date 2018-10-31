@@ -434,11 +434,6 @@ selectbox(
 
 );
 
-##
-# Alert Window - Show about F2FS information
-#
-
-alert( "<~fs.attention>", "<~fs.attentiondesc>");
 
 ##
 # Sub Window with CheckBoxes - Kernel1 Options
@@ -469,37 +464,6 @@ checkbox(
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
-
-##
-# Sub Window with CheckBoxes - Additional Options
-#
-if prop("window2.prop","selected.1")=="1" then
-	checkbox(
-	  # Title
-		"<~additional.title>",
-
-	  # Sub Title
-		"<~additional.subtitle>",
-
-	  # Icon
-		"@update",
-
-	  # Will be saved in /tmp/aroma/additional.prop
-		"additional.prop",
-
-	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#
-
-	  "<~f2fs.itemtitle>",      "",                                               2,      #-- group 1
-	    "<~f2fs.item>",           "<~f2fs.desc>",                                   0      #-- item.1.1
-		  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-	);
-endif;
-
-if prop("additional.prop","item.1.1")=="1" then
-  alert( "<~f2fs.attention>", "<~f2fs.attentiondesc>");
-endif;
 
 
 ##
