@@ -111,6 +111,13 @@ on early-boot
   chmod 644 /sys/class/graphics/fb2/hdcp/tp
   chown system graphics /sys/class/graphics/fb2/hdcp/tp
 
+  # jolla-kernel - io-sched tweak
+  write /sys/block/sda/queue/scheduler bfq
+  write /sys/block/sda/queue/add_random 0
+  write /sys/block/sda/queue/rotation 0
+  write /sys/block/sda/queue/rq_affinity 2
+  write /sys/block/sda/queue/read_ahead_kb 2048
+
 on boot
 #for Dynamic Resolution Switching
   chmod 644 /sys/class/graphics/fb0/mode
