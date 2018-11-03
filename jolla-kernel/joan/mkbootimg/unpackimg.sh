@@ -5,6 +5,23 @@
 cleanup() { rm -rf ramdisk split_img *new.*; }
 abort() { cd "$aik"; echo "Error!"; }
 
+# remove_service <service name>
+# this comments out a service entry entirely, as well as commands referencing it
+remove_service() {
+	for rc in "$ramdisk"/*.rc; do
+		grep -q "^[[:space:]]*\(service\|start\|stop\|restart\)[[:space:]]\+$1\b" "$rc" || continue
+		echo "Found service $1 in $rc"
+		awk -vsc_name="$1" '
+			!NF || $1 ~ /^#/ { print; next }
+			$1 == "service" || $1 == "on" { in_sc = 0 }
+			$1 == "service" && $2 == sc_name { in_sc = 1 }
+			in_sc || ($2 == sc_name && ($1 == "start" || $1 == "stop" || $1 == "restart")) { printf "#" }
+			{ print }
+		' "$rc" > "$rc-"
+		replace_file "$rc" "$rc-"
+	done
+}
+
 aik="/tmp/";
 bin="$aik/bin";
 chmod -R 755 "$bin" "$aik"/*.sh;
@@ -76,7 +93,9 @@ if [ ! $? -eq "0" ]; then
   exit 1;
 fi;
 
-cd ..;
+echo "Removing LG root checker rctd service...";
+rm -f sbin/rctd
+remove_service rctd
 
 echo " ";
 echo "Done!";
