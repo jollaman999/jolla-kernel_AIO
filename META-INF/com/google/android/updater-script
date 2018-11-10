@@ -56,17 +56,19 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   ## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="2"
 
 
-  ############ Replace ramdisk ############
+  ############ Patch ramdisk ############
   show_progress(0.4, 0.1);
-  ui_print("-> Replacing ramdisk...");
+  ui_print("-> Replacing fstab.joan...");
   package_extract_file("jolla-kernel/joan/ramdisk/fstab.joan", "/tmp/ramdisk/fstab.joan");
   set_perm(0, 0, 0644, "/tmp/ramdisk/fstab.joan");
 
   if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
-    ui_print("-> Replacing Oreo's init.joan_core.rc...");
-    package_extract_file("jolla-kernel/joan/ramdisk/init.joan_core_o.rc", "/tmp/ramdisk/init.joan_core.rc");
+    ui_print("-> Adding init.jolla-kernel.rc...");
+    package_extract_file("jolla-kernel/joan/ramdisk/init.jolla-kernel.rc", "/tmp/ramdisk/init.jolla-kernel.rc");
+    set_perm(0, 0, 0755, "/tmp/add_jolla_kernel.sh");
+    run_program("/tmp/add_jolla_kernel.sh");
   endif;
-  set_perm(0, 0, 0750, "/tmp/ramdisk/init.joan_core.rc");
+  set_perm(0, 0, 0750, "/tmp/ramdisk/init.jolla-kernel.rc");
 
 
   ############ Replace Image.gz-dtb ############
@@ -77,230 +79,28 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   endif;
 
 
-  ############ Old jolla-kernel.prop Cleanup ############
-  delete("/tmp/ramdisk/jolla-kernel.prop");
-
-
-  ############ S2W ############
-  show_progress(0.65, 0.1);
-  if file_getprop("/tmp/aroma-data/wake.prop","item.1.1")=="0" then
-    run_program("/sbin/sh", "-c", "sed -i '/sweep2wake 0/d' /tmp/ramdisk/init.joan_core.rc");
-  endif;
-  if file_getprop("/tmp/aroma-data/wake.prop","item.1.1")=="1" then
-    ui_print("-> Setting S2W...");
-    package_extract_file("jolla-kernel/joan/wake/s2w_on_set.sh", "/tmp/s2w_on_set.sh");
-    set_perm(0, 0, 0755, "/tmp/s2w_on_set.sh");
-    run_program("/tmp/s2w_on_set.sh");
-  endif;
-
-
-  ############ S2S ############
-  if file_getprop("/tmp/aroma-data/wake.prop","item.1.2")=="0" then
-    run_program("/sbin/sh", "-c", "sed -i '/sweep2sleep/d' /tmp/ramdisk/init.joan_core.rc");
-  endif;
-  if file_getprop("/tmp/aroma-data/wake.prop","item.1.2")=="1" then
-    ui_print("-> Setting S2S...");
-    package_extract_file("jolla-kernel/joan/wake/s2s_on_set.sh", "/tmp/s2s_on_set.sh");
-    set_perm(0, 0, 0755, "/tmp/s2s_on_set.sh");
-    run_program("/tmp/s2s_on_set.sh");
-  endif;
-
-
-  ############ S2W/S2S Vibration ############
-  if file_getprop("/tmp/aroma-data/wake.prop","item.1.3")=="0" then
-    run_program("/sbin/sh", "-c", "sed -i '/sweep2wake_vibration/d' /tmp/ramdisk/init.joan_core.rc");
-  endif;
-  if file_getprop("/tmp/aroma-data/wake.prop","item.1.3")=="1" then
-    ui_print("-> Setting S2W/S2S Vibration...");
-    package_extract_file("jolla-kernel/joan/wake/s2w_vib_on_set.sh", "/tmp/s2w_vib_on_set.sh");
-    set_perm(0, 0, 0755, "/tmp/s2w_vib_on_set.sh");
-    run_program("/tmp/s2w_vib_on_set.sh");
-  endif;
-
-
-  ############ DT2W ############
-  if file_getprop("/tmp/aroma-data/wake.prop","item.2.1")=="0" then
-    run_program("/sbin/sh", "-c", "sed -i '/doubletap2wake 0/d' /tmp/ramdisk/init.joan_core.rc");
-  endif;
-  if file_getprop("/tmp/aroma-data/wake.prop","item.2.1")=="1" then
-    ui_print("-> Setting DT2W...");
-    package_extract_file("jolla-kernel/joan/wake/dt2w_on_set.sh", "/tmp/dt2w_on_set.sh");
-    set_perm(0, 0, 0755, "/tmp/dt2w_on_set.sh");
-
-    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="1" then
-      run_program("/tmp/dt2w_on_set.sh", "1");
-    endif;
-    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="2" then
-      run_program("/tmp/dt2w_on_set.sh", "2");
-    endif;
-    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="3" then
-      run_program("/tmp/dt2w_on_set.sh", "3");
-    endif;
-    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="4" then
-      run_program("/tmp/dt2w_on_set.sh", "4");
-    endif;
-    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="5" then
-      run_program("/tmp/dt2w_on_set.sh", "5");
-    endif;
-    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="6" then
-      run_program("/tmp/dt2w_on_set.sh", "6");
-    endif;
-    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="7" then
-      run_program("/tmp/dt2w_on_set.sh", "7");
-    endif;
-    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="8" then
-      run_program("/tmp/dt2w_on_set.sh", "8");
-    endif;
-    if file_getprop("/tmp/aroma-data/dt2w_count.prop","selected.1")=="9" then
-      run_program("/tmp/dt2w_on_set.sh", "9");
-    endif;
-  endif;
-
-
-  ############ DT2S ############
-  if file_getprop("/tmp/aroma-data/wake.prop","item.2.2")=="0" then
-    run_program("/sbin/sh", "-c", "sed -i '/doubletap2sleep/d' /tmp/ramdisk/init.joan_core.rc");
-  endif;
-  if file_getprop("/tmp/aroma-data/wake.prop","item.2.2")=="1" then
-    ui_print("-> Setting DT2S...");
-    package_extract_file("jolla-kernel/joan/wake/dt2s_on_set.sh", "/tmp/dt2s_on_set.sh");
-    set_perm(0, 0, 0755, "/tmp/dt2s_on_set.sh");
-    run_program("/tmp/dt2s_on_set.sh");
-  endif;
-
-
-  ############ D2W/D2S Vibration ############
-  if file_getprop("/tmp/aroma-data/wake.prop","item.2.3")=="0" then
-    run_program("/sbin/sh", "-c", "sed -i '/doubletap2wake_vibration/d' /tmp/ramdisk/init.joan_core.rc");
-  endif;
-  if file_getprop("/tmp/aroma-data/wake.prop","item.2.3")=="1" then
-    ui_print("-> Setting D2W/D2S Vibration...");
-    package_extract_file("jolla-kernel/joan/wake/dt2w_vib_on_set.sh", "/tmp/dt2w_vib_on_set.sh");
-    set_perm(0, 0, 0755, "/tmp/dt2w_vib_on_set.sh");
-    run_program("/tmp/dt2w_vib_on_set.sh");
-  endif;
-
-
   ############ SOVC ############
   ui_print("-> Setting SOVC...");
   if file_getprop("/tmp/aroma-data/sovc.prop","selected.1")=="1" then
-    run_program("/sbin/sh", "-c", "sed -i '/scroff_volctr/d' /tmp/ramdisk/init.joan_core.rc");
-
-    if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="1" then
-      run_program("/sbin/sh", "-c", "sed -i '/sovc_auto_off_delay/d' /tmp/ramdisk/init.joan_core.rc");
-    endif;
-    if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")!="1" then
-      package_extract_file("jolla-kernel/joan/sovc/sovc_auto_off_set.sh", "/tmp/sovc_auto_off_set.sh");
-      set_perm(0, 0, 0755, "/tmp/sovc_auto_off_set.sh");
-
-      if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="2" then
-        run_program("/tmp/sovc_auto_off_set.sh", "3000");
-      endif;
-      if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="3" then
-        run_program("/tmp/sovc_auto_off_set.sh", "3500");
-      endif;
-      if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="4" then
-        run_program("/tmp/sovc_auto_off_set.sh", "4000");
-      endif;
-      if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="5" then
-        run_program("/tmp/sovc_auto_off_set.sh", "4500");
-      endif;
-      if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="6" then
-        run_program("/tmp/sovc_auto_off_set.sh", "5000");
-      endif;
-      if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="7" then
-        run_program("/tmp/sovc_auto_off_set.sh", "6000");
-      endif;
-      if file_getprop("/tmp/aroma-data/sovc_auto_off.prop","selected.1")=="8" then
-        run_program("/tmp/sovc_auto_off_set.sh", "7000");
-      endif;
-    endif;
+    run_program("/sbin/sh", "-c", "sed -i '/scroff_volctr/d' /tmp/ramdisk/init.jolla-kernel.rc");
   endif;
-
   if file_getprop("/tmp/aroma-data/sovc.prop","selected.1")=="2" then
     ui_print("-> Turning Off SOVC...");
     package_extract_file("jolla-kernel/joan/sovc/sovc_off_set.sh", "/tmp/sovc_off_set.sh");
     set_perm(0, 0, 0755, "/tmp/sovc_off_set.sh");
     run_program("/tmp/sovc_off_set.sh");
-    run_program("/sbin/sh", "-c", "sed -i '/sovc_auto_off_delay/d' /tmp/ramdisk/init.joan_core.rc");
   endif;
 
 
   ############ Dynamic fsync ############
-  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="1" then
-    run_program("/sbin/sh", "-c", "sed -i '/Dyn_fsync_active/d' /tmp/ramdisk/init.joan_core.rc");
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.1")=="1" then
+    run_program("/sbin/sh", "-c", "sed -i '/Dyn_fsync_active/d' /tmp/ramdisk/init.jolla-kernel.rc");
   endif;
-  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="0" then
-    ui_print("-> Setting Dynamic fsync...");
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.1")=="0" then
+    ui_print("-> Turning Off Dynamic fsync...");
     package_extract_file("jolla-kernel/joan/dynamic_fsync/dyn_fsync_off_set.sh", "/tmp/dyn_fsync_off_set.sh");
     set_perm(0, 0, 0755, "/tmp/dyn_fsync_off_set.sh");
     run_program("/tmp/dyn_fsync_off_set.sh");
-  endif;
-
-
-  ############ IO scheduler ############
-  ui_print("-> Setting IO scheduler...");
-  if file_getprop("/tmp/aroma-data/block.prop","selected.1")!="1" then
-    package_extract_file("jolla-kernel/joan/block/block_io_sched_set.sh", "/tmp/block_io_sched_set.sh");
-    set_perm(0, 0, 0755, "/tmp/block_io_sched_set.sh");
-
-    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="2" then
-      run_program("/tmp/block_io_sched_set.sh", "noop");
-    endif;
-    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="3" then
-      run_program("/tmp/block_io_sched_set.sh", "deadline");
-    endif;
-    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="4" then
-      run_program("/tmp/block_io_sched_set.sh", "row");
-    endif;
-    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="5" then
-      run_program("/tmp/block_io_sched_set.sh", "cfq");
-    endif;
-    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="6" then
-      run_program("/tmp/block_io_sched_set.sh", "fiops");
-    endif;
-    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="7" then
-      run_program("/tmp/block_io_sched_set.sh", "sio");
-    endif;
-    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="8" then
-      run_program("/tmp/block_io_sched_set.sh", "sioplus");
-    endif;
-    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="9" then
-      run_program("/tmp/block_io_sched_set.sh", "zen");
-    endif;
-    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="10" then
-      run_program("/tmp/block_io_sched_set.sh", "vr");
-    endif;
-    if file_getprop("/tmp/aroma-data/block.prop","selected.1")=="11" then
-      run_program("/tmp/block_io_sched_set.sh", "maple");
-    endif;
-  endif;
-
-
-  ############ Read ahead ############
-  ui_print("-> Setting read ahead...");
-  if file_getprop("/tmp/aroma-data/block.prop","selected.2")!="5" then
-    package_extract_file("jolla-kernel/joan/block/block_read_ahead_set.sh", "/tmp/block_read_ahead_set.sh");
-    set_perm(0, 0, 0755, "/tmp/block_read_ahead_set.sh");
-
-    if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="1" then
-      run_program("/tmp/block_read_ahead_set.sh", "128");
-    endif;
-    if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="2" then
-      run_program("/tmp/block_read_ahead_set.sh", "256");
-    endif;
-    if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="3" then
-      run_program("/tmp/block_read_ahead_set.sh", "512");
-    endif;
-    if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="4" then
-      run_program("/tmp/block_read_ahead_set.sh", "1024");
-    endif;
-    if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="6" then
-      run_program("/tmp/block_read_ahead_set.sh", "4096");
-    endif;
-    if file_getprop("/tmp/aroma-data/block.prop","selected.2")=="7" then
-      run_program("/tmp/block_read_ahead_set.sh", "8192");
-    endif;
   endif;
 
 
@@ -323,30 +123,6 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   ui_print("-> Repacking boot.img...");
   run_program("/tmp/repackimg.sh");
   run_program("/tmp/busybox", "dd", "if=/tmp/image-new.img", "of=/dev/block/bootdevice/by-name/boot");
-
-
-  ############ Copy Applications ############
-  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.1")=="1" then
-    show_progress(0.85, 0.2);
-    ui_print("-> Copying jolla-kernel Updater...");
-    package_extract_dir("updater/", "/data/app/");
-    run_program("/tmp/busybox", "chown", "-R", "system.system", "/data/app/com.jollakernelupdater-1/");
-    run_program("/tmp/busybox", "chcon", "-R", "u:object_r:apk_data_file:s0", "/data/app/com.jollakernelupdater-1/");
-  endif;
-  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.2")=="1" then
-    show_progress(0.875, 0.2);
-    ui_print("-> Copying A2DPChecker...");
-    package_extract_dir("jolla-kernel/app/A2DPChecker/", "/data/app/");
-    run_program("/tmp/busybox", "chown", "-R", "system.system", "/data/app/com.jollaman999.bluetootha2dp-1/");
-    run_program("/tmp/busybox", "chcon", "-R", "u:object_r:apk_data_file:s0", "/data/app/com.jollaman999.bluetootha2dp-1/");
-  endif;
-  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.3")=="1" then
-    show_progress(0.9, 0.2);
-    ui_print("-> Copying USB-Keyboard...");
-    package_extract_dir("jolla-kernel/app/USB-Keyboard/", "/data/app/");
-    run_program("/tmp/busybox", "chown", "-R", "system.system", "/data/app/remote.hid.keyboard.client-1/");
-    run_program("/tmp/busybox", "chcon", "-R", "u:object_r:apk_data_file:s0", "/data/app/remote.hid.keyboard.client-1/");
-  endif;
 
 
 endif;

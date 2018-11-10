@@ -107,81 +107,9 @@ window2.option1-2desc=If you want to install in Android 9.x.x based roms, select
 checkbox1.title=Kernel Installatin Options
 checkbox1.subtitle=Check what you want.
 app.title=Application Selection
-updater.item=jolla-kernel Updater
-updater.desc=This app supports updates for jolla-kernel.
-a2dp.item=A2DP Checker
-a2dp.desc=This app supports Screen Off Volume Control for Bluetooth headsets.
-usbkeyboard.item=USB-Keyboard
-usbkeyboard.desc=This app supports to use Android device as USB Keyboard/Mouse.
 dynfsync.item=Dynamic fsync
 dynfsync.desc=If enabled, fsync will work when the screen is turned off and it will not work when the screen is turned on.\
 If disabled, fsync will work whether the screen is on or off.
-
-
-checkbox2.title=MultiROM Option
-checkbox2.subtitle=Check what you want.
-checkbox2.item1=MultiROM Boot
-checkbox2.item1uninst=Uninstall MultiROM is selected.
-checkbox2.item1-1=Install MultiROM Boot
-checkbox2.item1-1desc=Install MultiROM Boot that is possible to boot various roms with jolla-TWRP.
-multirom.attention=Multi ROM Warning
-multirom.attentiondesc=Do this option only in main rom!!
-
-checkbox3.title=Multi ROM Delete Option
-checkbox3.subtitle=Select Multi ROM delete option.
-checkbox3.item1=Delete Multi ROM
-checkbox3.item1-1=Delete second roms
-checkbox3.item1-1desc=This will remove all of roms except main rom.
-multidel.attention=Delete second roms Warning
-multidel.attentiondesc=This will remove all of roms except main rom!!\
-Please check again if there are backup needed.
-
-wake.title=Wake options
-wake.subtitle=Wake gestures to turn on the screen.
-s2w_s2s.title=Sweep2Wake & Sweep2Sleep
-s2w.title=Enable Sweep2Wake
-s2w.subtitle=Turn on the screen by swiping the screen.\
-\
-This option will turn on the touchscreen while screen turned off.\
-It will increase battery drain.
-s2s.title=Enable Sweep2Sleep
-s2s.subtitle=Turn off the screen by swiping the navigation bar location. (Bottom of the screen.)\
-\
-This option only work while screen turned on. (No battery drain.)\
-But it will increase touch work queues while touching the screen.
-s2w.vib_title=Enable Vibration for S2W/S2S
-s2w.vib_subtitle=Turn on vibration option for Sweep2Wake and Sweep2Sleep.
-d2w_d2s.title=DoubleTap2Wake & DoubleTap2Sleep
-d2w.title=Enable DoubleTap2Wake
-d2w.subtitle=Turn on the screen by tapping the screen.\
-Also, you can set tapping counts for wake the device.\
-\
-This option will turn on the touchscreen while screen turned off.\
-It will increase battery drain.
-d2s.title=Enable DoubleTap2Sleep
-d2s.subtitle=Turn off the screen by double tapping the status bar location. (Top of the screen.)\
-It is useful for non-customized roms.\
-If your custom rom has this feature, you don't need this.\
-\
-This option only work while screen turned on. (No battery drain.)\
-But it will increase touch work queues while touching the screen.
-d2w.vib_title=Enable Vibration for DT2W/DT2S
-d2w.vib_subtitle=Turn on vibration option for DoubleTap2Wake and DoubleTap2Sleep.\
-(This option will also affect to the SOVC's temporary working DT2W.)
-
-d2w_count.title=DoubleTap2Wake Tab Counts
-d2w_count.subtitle=Select tap counts for DoubleTap2Wake.
-d2w_count.tap.title=Select tap counts. ~ms/~sec is timeout value.
-d2w_count.tap.default=2 taps / 200 ms (Default)
-d2w_count.tap.3=3 taps / 300 ms
-d2w_count.tap.4=4 taps / 400 ms
-d2w_count.tap.5=5 taps / 500 ms
-d2w_count.tap.6=6 taps / 600 ms
-d2w_count.tap.7=7 taps / 700 ms
-d2w_count.tap.8=8 taps / 800 ms
-d2w_count.tap.9=9 taps / 900 ms
-d2w_count.tap.10=10 taps / 1 sec\
-(Let me show your finger speed! :p)
 
 sovc.title=SOVC
 sovc.subtitle=Screen Off Volume Control
@@ -190,48 +118,18 @@ sovc_on.item=Turn on SOVC
 sovc_on.desc=You can control volume or track with touchscreen while screen turned off.\
 \
 There is no battery drain because it only works while playing music.\
+(It is not working while using USB DAC.)\
+(If you want to use with Bluetooth, you need to install A2DPChecker app.)\
 \
 <Swipe direction / Action>\
 ← / Next Track\
 → / Previous Track\
 ↑ / Volume Up\
-↓ / Volume Down\
-\
-DoubleTap2Wake works temporarily while playing music.\
-\
-You can temporarily disable it by touching and holding the screen to prevent abnormal actions while you are moving.
+↓ / Volume Down
 sovc_off.item=Turn off SOVC
 sovc_off.desc=Did you try it..? :(\
 \
 It is very useful for those who enjoy music!
-
-sovc.auto_off.title=SOVC Auto Off
-sovc.auto_off.subtitle=Touchscreen will turned off automatically when user pressing the screen for a long time.
-sovc.auto_off.time.title=Select Timeout Value
-sovc.auto_off.time.default=2.5 sec (Default)
-sovc.auto_off.time.3=3 sec
-sovc.auto_off.time.3.5=3.5 sec
-sovc.auto_off.time.4=4 sec
-sovc.auto_off.time.4.5=4.5 sec
-sovc.auto_off.time.5=5 sec
-sovc.auto_off.time.6=6 sec
-sovc.auto_off.time.7=7 sec
-
-block.title=Block Options
-block.subtitle=Select what you want.
-block.sched.title=IO Scheduler
-block.sched.bfq=BFQ (Default)
-block.read.title=Read ahead size
-block.read.2048=2048 KB (Default)
-block.read.desc=Higher read ahead size will increase read speed. But it will also increase memory usage.
-
-kcal.title=KCAL Fix Yellow
-kcal.subtitle=Adjust KCAL values to fix yellow screen.
-kcal_fix_yellow_onoff.title=On or Off?
-kcal_fix_yellow_on.item=Turn on kcal_fix_yellow
-kcal_fix_yellow_on.desc=If you have yellow screen, select this.
-kcal_fix_yellow_off.item=Turn off kcal_fix_yellow
-kcal_fix_yellow_off.desc=If you have normal screen or not want to change KCAL values, select this.
 
 ramdisk.title=Ramdisk Options
 ramdisk.subtitle=Select compress type.

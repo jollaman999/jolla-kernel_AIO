@@ -96,7 +96,7 @@ if [ ! $? -eq "0" ]; then
 fi;
 
 
-# Make backup for MultiROM
+# Make backup
 cp image-new.img /sdcard/boot.img_bak;
 
 echo "Done!";

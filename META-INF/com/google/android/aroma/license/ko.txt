@@ -1,5 +1,5 @@
 <@center><b><#selectbg_g>jolla-kernel 라이선스</#></b>
-버젼 3.0, 2018년 10월
+버젼 3.0, 2018년 11월
 
 <b><#selectbg_g>사용권 동의서</#></b></@>
 

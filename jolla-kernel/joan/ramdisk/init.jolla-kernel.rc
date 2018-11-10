@@ -1,0 +1,12 @@
+# Copyright (c) 2018, jollaman999 <admin@jollaman999.com>. All rights reserved.
+
+on early-boot
+  write /sys/block/sda/queue/scheduler bfq
+  write /sys/block/sda/queue/add_random 0
+  write /sys/block/sda/queue/rotation 0
+  write /sys/block/sda/queue/rq_affinity 2
+  write /sys/block/sda/queue/read_ahead_kb 2048
+  write /sys/android_touch/scroff_volctr 1
+
+on post-fs
+  write /sys/kernel/dyn_fsync/Dyn_fsync_active 1

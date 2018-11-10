@@ -13,10 +13,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "jolla-kernel");
-ini_set("rom_version",          "0.1");
+ini_set("rom_version",          "0.2");
 ini_set("rom_author",           "jollaman999");
 ini_set("rom_device",           "joan");
-ini_set("rom_date",             "Oct 27, 2018");
+ini_set("rom_date",             "Nov 11, 2018");
 
 
 ##
@@ -455,84 +455,11 @@ checkbox(
   # TITLE            |  SUBTITLE                                                 | Initial Value #
   #------------------+-----------------------------------------------------------+---------------#
 
-  "<~app.title>",           "",                                               2,      #-- group 1
-    "<~updater.item>",        "<~updater.desc>",                                0,      #-- item.1.1
-    "<~a2dp.item>",           "<~a2dp.desc>",                                   0,      #-- item.1.2
-    "<~usbkeyboard.item>",    "<~usbkeyboard.desc>",                            0,      #-- item.1.3
-  "MISC",                   "",                                               2,      #-- group 2
-    "<~dynfsync.item>",       "<~dynfsync.desc>",                               1       #-- item.2.1
+  "MISC",                   "",                                               2,      #-- group 1
+    "<~dynfsync.item>",       "<~dynfsync.desc>",                               1       #-- item.1.1
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
-
-
-##
-# Sub Window with CheckBoxes - Wake Options
-#
-checkbox(
-  # Title
-	"<~wake.title>",
-
-  # Sub Title
-	"<~wake.subtitle>",
-
-  # Icon
-	"@update",
-
-  # Will be saved in /tmp/aroma/wake.prop
-	"wake.prop",
-
-  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-  # TITLE            |  SUBTITLE                                                 | Initial Value #
-  #------------------+-----------------------------------------------------------+---------------#
-
-  "<~s2w_s2s.title>",       "",                                               2,      #-- group 1
-    "<~s2w.title>",           "<~s2w.subtitle>",                                0,     #-- item.1.1
-    "<~s2s.title>",           "<~s2s.subtitle>",                                0,     #-- item.1.2
-    "<~s2w.vib_title>",       "<~s2w.vib_subtitle>",                            0,     #-- item.1.3
-  "<~d2w_d2s.title>",       "",                                               2,      #-- group 2
-    "<~d2w.title>",           "<~d2w.subtitle>",                                0,     #-- item.2.1
-    "<~d2s.title>",           "<~d2s.subtitle>",                                0,     #-- item.2.2
-    "<~d2w.vib_title>",       "<~d2w.vib_subtitle>",                            0      #-- item.2.3
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-);
-
-
-##
-# Sub Window with SelectBox - DoubleTap2Wake Tab Counts Options
-#
-if prop("wake.prop","item.2.1")=="1" then
-selectbox(
-  # Title
-	"<~d2w_count.title>",
-
-  # Sub Title
-	"<~d2w_count.subtitle>",
-
-  # Icon
-	"@update",
-
-  # Will be saved in /tmp/aroma/dt2w_count.prop
-	"dt2w_count.prop",
-
-  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-  # TITLE            |  SUBTITLE                                                 | Initial Value #
-  #------------------+-----------------------------------------------------------+---------------#
-
-  "<~d2w_count.tap.title>","",                                                2,      #-- Group 1. key = "selected.1"
-    "<~d2w_count.tap.default>","",                                              1,     #-- selected.1 = 1
-    "<~d2w_count.tap.3>",     "",                                               0,     #-- selected.1 = 2
-    "<~d2w_count.tap.4>",     "",                                               0,     #-- selected.1 = 3
-    "<~d2w_count.tap.5>",     "",                                               0,     #-- selected.1 = 4
-    "<~d2w_count.tap.6>",     "",                                               0,     #-- selected.1 = 5
-    "<~d2w_count.tap.7>",     "",                                               0,     #-- selected.1 = 6
-    "<~d2w_count.tap.8>",     "",                                               0,     #-- selected.1 = 7
-    "<~d2w_count.tap.9>",     "",                                               0,     #-- selected.1 = 8
-    "<~d2w_count.tap.10>",    "",                                               0      #-- selected.1 = 9
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-);
-endif;
-## endif prop("wake.prop","item.2.1")=="1"
 
 
 ##
@@ -558,85 +485,6 @@ selectbox(
   "<~sovc_onoff.title>",    "",                                               2,      #-- Group 1. key = "selected.1"
     "<~sovc_on.item>",        "<~sovc_on.desc>",                                   1,      #-- selected.1 = 1
     "<~sovc_off.item>",       "<~sovc_off.desc>",                                  0       #-- selected.1 = 2
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-);
-
-##
-# Sub Window with SelectBox - SOVC Timeout Options
-#
-if prop("sovc.prop","selected.1")=="1" then
-selectbox(
-  # Title
-	"<~sovc.auto_off.title>",
-
-  # Sub Title
-	"<~sovc.auto_off.subtitle>",
-
-  # Icon
-	"@update",
-
-  # Will be saved in /tmp/aroma/sovc_auto_off.prop
-	"sovc_auto_off.prop",
-
-  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-  # TITLE            |  SUBTITLE                                                 | Initial Value #
-  #------------------+-----------------------------------------------------------+---------------#
-
-  "<~sovc.auto_off.time.title>",      "",                                     2,      #-- Group 1. key = "selected.1"
-    "<~sovc.auto_off.time.default>", "",                                           1,      #-- selected.1 = 1
-    "<~sovc.auto_off.time.3>",       "",                                           0,      #-- selected.1 = 2
-    "<~sovc.auto_off.time.3.5>",     "",                                           0,      #-- selected.1 = 3
-    "<~sovc.auto_off.time.4>",       "",                                           0,      #-- selected.1 = 4
-    "<~sovc.auto_off.time.4.5>",     "",                                           0,      #-- selected.1 = 5
-    "<~sovc.auto_off.time.5>",       "",                                           0,      #-- selected.1 = 6
-    "<~sovc.auto_off.time.6>",       "",                                           0,      #-- selected.1 = 7
-    "<~sovc.auto_off.time.7>",       "",                                           0       #-- selected.1 = 8
-	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
-);
-endif;
-## endif prop("sovc.prop","selected.1")=="1"
-
-
-##
-# Sub Window with SelectBox - Block Options
-#
-selectbox(
-  # Title
-	"<~block.title>",
-
-  # Sub Title
-	"<~block.read.desc>",
-
-  # Icon
-	"@update",
-
-  # Will be saved in /tmp/aroma/block.prop
-	"block.prop",
-
-  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
-  # TITLE            |  SUBTITLE                                                 | Initial Value #
-  #------------------+-----------------------------------------------------------+---------------#
-
-  "<~block.sched.title>",   "",                                               2,      #-- Group 1. key = "selected.1"
-    "<~block.sched.bfq>",     "",                                                  1,      #-- selected.1 = 1
-    "NOOP",                   "",                                                  0,      #-- selected.1 = 2
-    "DEADLINE",               "",                                                  0,      #-- selected.1 = 3
-    "ROW",                    "",                                                  0,      #-- selected.1 = 4
-    "CFQ",                    "",                                                  0,      #-- selected.1 = 5
-    "FIOPS",                  "",                                                  0,      #-- selected.1 = 6
-    "SIO",                    "",                                                  0,      #-- selected.1 = 7
-    "SIOPLUS",                "",                                                  0,      #-- selected.1 = 8
-    "ZEN",                    "",                                                  0,      #-- selected.1 = 9
-    "VR",                     "",                                                  0,      #-- selected.1 = 10
-    "MAPLE",                  "",                                                  0,      #-- selected.1 = 11
-  "<~block.read.title>",    "",                                               2,      #-- Group 2. key = "selected.2"
-    "128 KB",                 "",                                                  0,      #-- selected.2 = 1
-    "256 KB",                 "",                                                  0,      #-- selected.2 = 2
-    "512 KB",                 "",                                                  0,      #-- selected.2 = 3
-    "1024 KB",                "",                                                  0,      #-- selected.2 = 4
-    "<~block.read.2048>",     "",                                                  1,      #-- selected.2 = 5
-    "4096 KB",                "",                                                  0,      #-- selected.2 = 6
-    "8192 KB",                "",                                                  0       #-- selected.2 = 7
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
 

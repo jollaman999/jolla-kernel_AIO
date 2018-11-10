@@ -1,5 +1,5 @@
 <@center><b><#selectbg_g>jolla-kernel License</#></b>
-Version 3.0, Oct 2018
+Version 3.0, Nov 2018
 
 <b><#selectbg_g>TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION</#></b></@>
 

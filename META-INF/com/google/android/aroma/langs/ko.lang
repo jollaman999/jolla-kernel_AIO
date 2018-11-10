@@ -106,82 +106,9 @@ window2.option1-2desc=Android 9.x.x 기반 롬에 설치 하실 경우 선택합
 
 checkbox1.title=커널 설치 옵션
 checkbox1.subtitle=원하시는 옵션에 체크해 주세요.
-system 파티션 수정을 원치 않을 경우 체크를 해제하세요.
-app.title=애플리케이션 선택
-updater.item=jolla-kernel Updater
-updater.desc=이 앱은 jolla-kernel 의 업데이트를 지원합니다.
-a2dp.item=A2DP Checker
-a2dp.desc=이 앱은 블루투스 헤드셋에 대해 Screen Off Volume Control 을 지원합니다.
-usbkeyboard.item=USB-Keyboard
-usbkeyboard.desc=이 앱은 안드로이드 디바이스를 USB 키보드/마우스로 사용 하는 것을 지원합니다.
 dynfsync.item=Dynamic fsync
 dynfsync.desc=활성화 되어있으면, fsync 는 화면이 꺼져있을 때 작동하고 화면이 켜지면 작동하지 않습니다.\
 비활성화 되어있으면, fsync 는 화면이 켜져있든 꺼져있든 작동합니다.
-
-checkbox2.title=멀티롬 옵션
-checkbox2.subtitle=원하시는 옵션에 체크해 주세요.
-checkbox2.item1=멀티롬 부팅
-checkbox2.item1uninst=멀티롬 제거가 선택되었습니다.
-checkbox2.item1-1=멀티롬 부팅 설치
-checkbox2.item1-1desc=jolla-TWRP 와 함께 여러 롬들을 부팅할 수 있게 해주는 멀티롬을 설치합니다.
-multirom.attention=멀티롬 경고
-multirom.attentiondesc=이 옵션은 메인롬에서만 진행해 주시기 바랍니다!!
-
-checkbox3.title=멀티롬 제거 옵션
-checkbox3.subtitle=멀티롬 제거 옵션을 선택해 주세요.
-checkbox3.item1=멀티롬 제거
-checkbox3.item1-1=세컨롬들 제거
-checkbox3.item1-1desc=메인롬을 제외한 나머지 세컨롬들을 모두 제거합니다.
-multidel.attention=세컨롬들 제거 경고
-multidel.attentiondesc=이 작업을 수행하면 메인롬을 제외한 모든 롬들이 지워집니다!!\
-세컨롬들을 제거하시기 전에 백업이 필요한지 다시 한번 확인해 주시기 바랍니다.
-
-wake.title=화면 켜기 옵션
-wake.subtitle=화면을 켜기위한 제스쳐들.
-s2w_s2s.title=Sweep2Wake & Sweep2Sleep
-s2w.title=Sweep2Wake 활성화
-s2w.subtitle=밀어서 화면을 켭니다.\
-\
-이 옵션은 화면이 꺼져있는 동안 터치스크린을 켭니다.\
-이는 배터리 드레인을 증가시킵니다.
-s2s.title=Sweep2Sleep 활성화
-s2s.subtitle=네비게이션 바 영역을 밀어서 화면을 끕니다. (화면의 하단.)\
-\
-이 옵션은 화면이 켜져있는 동안에만 작동합니다. (배터리 드레인 없음.)\
-그러나 화면을 터치하는 동안 터치 작업 큐가 증가하게 됩니다.
-s2w.vib_title=S2W/S2S 진동 활성화
-s2w.vib_subtitle=Sweep2Wake 와 Sweep2Sleep 의 진동 옵션을 활성화 합니다.
-d2w_d2s.title=DoubleTap2Wake & DoubleTap2Sleep
-d2w.title=DoubleTap2Wake 활성화
-d2w.subtitle=화면을 탭하여 켭니다.\
-또한, 기기를 깨우기 위한 탭 횟수를 설정할 수 있습니다.\
-\
-이 옵션은 화면이 꺼져있는 동안 터치스크린을 켭니다.\
-이는 배터리 드레인을 증가시킵니다.
-d2s.title=DoubleTap2Sleep 활성화
-d2s.subtitle=상태바를 더블탭 하여 화면을 끕니다. (화면의 상단.)\
-커스텀 되지 않은 롬들에 유용합니다.\
-사용중인 커스텀 롬에 이 기능이 있을 경우, 필요치 않습니다.\
-\
-이 옵션은 화면이 켜져있는 동안에만 작동합니다. (배터리 드레인 없음.)\
-그러나 화면을 터치하는 동안 터치 작업 큐가 증가하게 됩니다.
-d2w.vib_title=DT2W/DT2S 진동 활성화
-d2w.vib_subtitle=DoubleTap2Wake 와 DoubleTap2Sleep 의 진동 옵션을 활성화 합니다.\
-(이 옵션은 SOVC 의 임시로 작동하는 DT2W 에도 영향을 미칩니다.)
-
-d2w_count.title=더블탭 깨우기 탭 횟수
-d2w_count.subtitle=더블탭 깨우기의 탭 횟수를 선택하세요.
-d2w_count.tap.title=탭 횟수를 선택하세요. ~밀리초/~초 는 시간 초과 값입니다.
-d2w_count.tap.default=2 번탭 / 200 ms (기본값)
-d2w_count.tap.3=3 번탭 / 300 밀리초
-d2w_count.tap.4=4 번탭 / 400 밀리초
-d2w_count.tap.5=5 번탭 / 500 밀리초
-d2w_count.tap.6=6 번탭 / 600 밀리초
-d2w_count.tap.7=7 번탭 / 700 밀리초
-d2w_count.tap.8=8 번탭 / 800 밀리초
-d2w_count.tap.9=9 번탭 / 900 밀리초
-d2w_count.tap.10=10 번탭 / 1 초\
-(당신의 손가락 속도를 보여주세요! :p)
 
 sovc.title=SOVC
 sovc.subtitle=Screen Off Volume Control
@@ -190,47 +117,18 @@ sovc_on.item=SOVC 를 켭니다.
 sovc_on.desc=화면이 꺼져있는 동안 터치스크린으로 볼륨이나 트랙을 조절 할 수 있습니다.\
 \
 음악을 재생하는 중에만 동작하기 때문에 배터리 드레인이 없습니다.\
+(USB DAC를 이용하실 경우에는 작동하지 않습니다.)\
+(블루투스와 사용하시려면 A2DPChecker 앱 설치가 필요합니다.)\
 \
 <스와이프 방향 / 동작>\
 ← / 다음 트랙\
 → / 이전 트랙\
 ↑ / 볼륨 증가\
-↓ / 볼륨 감소\
-\
-음악을 재생하는 동안 DoubleTap2Wake가 일시적으로 동작합니다.\
-\
-이동 중 비정상적인 동작 방지를 위해 화면을 길게 터치하여 일시적으로 비활성화 할 수 있습니다.
+↓ / 볼륨 감소
 sovc_off.item=SOVC 를 끕니다.
 sovc_off.desc=시도해 보셨나요..? :(\
 \
 음악을 즐기시는 분들에게는 매우 유용한 기능입니다!
-
-sovc.auto_off.title=SOVC 자동 끄기
-sovc.auto_off.subtitle=사용자가 화면을 오랫 동안 누르고 있을 경우 터치스크린이 자동으로 꺼집니다.
-sovc.auto_off.time.title=시간 초과 값을 선택하세요
-sovc.auto_off.time.default=2.5 초 (기본값)
-sovc.auto_off.time.3=3 초
-sovc.auto_off.time.3.5=3.5 초
-sovc.auto_off.time.4=4 초
-sovc.auto_off.time.4.5=4.5 초
-sovc.auto_off.time.5=5 초
-sovc.auto_off.time.6=6 초
-sovc.auto_off.time.7=7 초
-
-block.title=블럭 설정
-block.sched.title=IO 스케줄러
-block.sched.bfq=BFQ (기본값)
-block.read.title=미리 읽기 크기
-block.read.2048=2048 KB (기본값)
-block.read.desc=높은 미리 읽기 크기는 읽기 속도를 증가시킵니다. 그러나 메모리 사용량 또한 증가합니다.
-
-kcal.title=KCAL Fix Yellow
-kcal.subtitle=노란 액정을 수정 하기 위해 KCAL 값들을 조정합니다.
-kcal_fix_yellow_onoff.title=켜시겠습니까 끄시겠습니까?
-kcal_fix_yellow_on.item=kcal_fix_yellow 를 켭니다.
-kcal_fix_yellow_on.desc=노란 액정을 가지고 계시다면, 이 옵션을 선택하세요.
-kcal_fix_yellow_off.item=kcal_fix_yellow 를 끕니다.
-kcal_fix_yellow_off.desc=일반 액정을 가지고 계시고 계시거나 KCAL 값들의 변경을 원치 않을 경우, 이 옵션을 선택하세요.
 
 ramdisk.title=램디스크 옵션
 ramdisk.subtitle=압축 옵션을 선택하세요.
