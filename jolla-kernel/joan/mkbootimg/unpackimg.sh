@@ -5,6 +5,13 @@
 cleanup() { rm -rf ramdisk split_img *new.*; }
 abort() { cd "$aik"; echo "Error!"; }
 
+# replace_file <old file> <new file> (preserving metadata)
+# replace a file, preserving metadata (using cat)
+replace_file() {
+	cat "$2" > "$1" || return
+	rm -f "$2"
+}
+
 # remove_service <service name>
 # this comments out a service entry entirely, as well as commands referencing it
 remove_service() {
