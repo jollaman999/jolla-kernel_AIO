@@ -107,8 +107,8 @@ window2.option1-2desc=Android 9.x.x 기반 롬에 설치 하실 경우 선택합
 checkbox1.title=커널 설치 옵션
 checkbox1.subtitle=원하시는 옵션에 체크해 주세요.
 dynfsync.item=Dynamic fsync
-dynfsync.desc=활성화 되어있으면, fsync 는 화면이 꺼져있을 때 작동하고 화면이 켜지면 작동하지 않습니다.\
-비활성화 되어있으면, fsync 는 화면이 켜져있든 꺼져있든 작동합니다.
+dynfsync.desc=활성화 하면 화면이 꺼질때만 쓰기 동기화를 수행하여\
+화면이 켜진동안 쓰기 부하를 줄여줍니다.
 
 sovc.title=SOVC
 sovc.subtitle=Screen Off Volume Control

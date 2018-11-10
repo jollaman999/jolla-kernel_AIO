@@ -106,10 +106,9 @@ window2.option1-2desc=If you want to install in Android 9.x.x based roms, select
 
 checkbox1.title=Kernel Installatin Options
 checkbox1.subtitle=Check what you want.
-app.title=Application Selection
 dynfsync.item=Dynamic fsync
-dynfsync.desc=If enabled, fsync will work when the screen is turned off and it will not work when the screen is turned on.\
-If disabled, fsync will work whether the screen is on or off.
+dynfsync.desc=If enabled, write sync only work when the screen is turned off.\
+It will reduce write load when the screen is turned on.
 
 sovc.title=SOVC
 sovc.subtitle=Screen Off Volume Control
