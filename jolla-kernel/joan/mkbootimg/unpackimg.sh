@@ -101,8 +101,16 @@ if [ ! $? -eq "0" ]; then
 fi;
 
 echo "Removing LG root checker rctd service...";
-rm -f sbin/rctd
-remove_service rctd
+rm -f sbin/rctd;
+remove_service rctd;
+
+echo "Cleanup triton service...";
+remove_service triton;
+sed -i '/start\ triton/d' $aik/ramdisk/init.joan.power.rc;
+sed -i '/\/sys\/devices\/system\/cpu\/triton\//d' $aik/ramdisk/init.joan.power.rc;
+
+echo "Cleanup cpu_boost...";
+sed -i '/\/sys\/module\/cpu_boost\//d' $aik/ramdisk/init.joan.power.rc;
 
 echo " ";
 echo "Done!";
