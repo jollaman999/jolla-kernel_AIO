@@ -15,7 +15,7 @@ replace_file() {
 # remove_service <service name>
 # this comments out a service entry entirely, as well as commands referencing it
 remove_service() {
-	for rc in "$ramdisk"/*.rc; do
+	for rc in *.rc; do
 		grep -q "^[[:space:]]*\(service\|start\|stop\|restart\)[[:space:]]\+$1\b" "$rc" || continue
 		echo "Found service $1 in $rc"
 		awk -vsc_name="$1" '
