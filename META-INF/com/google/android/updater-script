@@ -105,14 +105,14 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   ############ Ramdisk Compress Option ############
   show_progress(0.725, 0.1);
   if file_getprop("/tmp/aroma-data/ramdisk.prop","selected.1")=="1" then
-    ui_print("-> Using gzip compressed ramdisk image...");
-    set_perm(0, 0, 0755, "/tmp/gzip.sh");
-    run_program("/tmp/gzip.sh");
-  endif;
-  if file_getprop("/tmp/aroma-data/ramdisk.prop","selected.1")=="2" then
     ui_print("-> Using lz4 compressed ramdisk image...");
     set_perm(0, 0, 0755, "/tmp/lz4.sh");
     run_program("/tmp/lz4.sh");
+  endif;
+  if file_getprop("/tmp/aroma-data/ramdisk.prop","selected.1")=="2" then
+    ui_print("-> Using gzip compressed ramdisk image...");
+    set_perm(0, 0, 0755, "/tmp/gzip.sh");
+    run_program("/tmp/gzip.sh");
   endif;
 
 
