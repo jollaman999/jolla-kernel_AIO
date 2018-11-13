@@ -507,8 +507,8 @@ selectbox(
   #------------------+-----------------------------------------------------------+---------------#
 
   "<~compress.title>",      "",                                               2,      #-- Group 1. key = "selected.1"
-    "<~gzip.item>",           "<~gzip.desc>",                                   1,      #-- selected.1 = 1
-    "<~lz4.item>",            "<~lz4.desc>",                                    0       #-- selected.1 = 2
+    "<~lz4.item>",            "<~lz4.desc>",                                    1,      #-- selected.1 = 2
+    "<~gzip.item>",           "<~gzip.desc>",                                   0       #-- selected.1 = 1
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
 

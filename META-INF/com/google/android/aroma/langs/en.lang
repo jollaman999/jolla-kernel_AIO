@@ -134,9 +134,7 @@ ramdisk.title=Ramdisk Options
 ramdisk.subtitle=Select compress type.
 compress.title=Compress options
 gzip.item=GZIP
-gzip.desc=Select this option if you want to use gzip compressed ramdisk image.\
-\
-If you don't know what to choose, select this option.
+gzip.desc=Select this option if you want to use gzip compressed ramdisk image.
 lz4.item=LZ4
 lz4.desc=Select this option if you want to use lz4 compressed ramdisk image.\
 \
