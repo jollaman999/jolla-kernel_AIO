@@ -456,7 +456,8 @@ checkbox(
   #------------------+-----------------------------------------------------------+---------------#
 
   "MISC",                   "",                                               2,      #-- group 1
-    "<~dynfsync.item>",       "<~dynfsync.desc>",                               1       #-- item.1.1
+    "<~dynfsync.item>",       "<~dynfsync.desc>",                               1,      #-- item.1.1
+    "<~forceadvancedhifi.item>","<~forceadvancedhifi.desc>",                    1       #-- item.1.2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );

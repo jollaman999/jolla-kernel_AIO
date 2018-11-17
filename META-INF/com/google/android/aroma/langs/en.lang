@@ -109,6 +109,10 @@ checkbox1.subtitle=Check what you want.
 dynfsync.item=Dynamic fsync
 dynfsync.desc=If enabled, write sync only work when the screen is turned off.\
 It will reduce write load when the screen is turned on.
+forceadvancedhifi.item=Quad DAC Force Advanced Mode
+forceadvancedhifi.desc=If enabled, Quad DAC will force to play in advanced mode when normal earphone is connected.\
+Volume will not increase to protect your ear.\
+It will detect in normal mode in 3rd party apps.
 
 sovc.title=SOVC
 sovc.subtitle=Screen Off Volume Control

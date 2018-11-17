@@ -109,6 +109,10 @@ checkbox1.subtitle=원하시는 옵션에 체크해 주세요.
 dynfsync.item=Dynamic fsync
 dynfsync.desc=활성화 하면 화면이 꺼질때만 쓰기 동기화를 수행합니다.\
 화면이 켜진동안 쓰기 부하를 줄여줍니다.
+forceadvancedhifi.item=Quad DAC 강제 전문가 모드
+forceadvancedhifi.desc=활성화 하면 일반 이어폰 사용시 Quad DAC 가 강제로 전문가 모드로 재생됩니다.\
+청력 보호를 위해 볼륨은 증가하지 않습니다.\
+Hi-Fi Status 어플 사용시에는 일반 음향 기기로 감지됩니다.
 
 sovc.title=SOVC
 sovc.subtitle=Screen Off Volume Control

@@ -102,6 +102,12 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   endif;
 
 
+  ############ Force Advanced Hi-Fi ############
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.2")=="0" then
+    run_program("/sbin/sh", "-c", "sed -i '/force_advanced_mode/d' /tmp/ramdisk/init.jolla-kernel.rc");
+  endif;
+
+
   ############ Ramdisk Compress Option ############
   show_progress(0.725, 0.1);
   if file_getprop("/tmp/aroma-data/ramdisk.prop","selected.1")=="1" then

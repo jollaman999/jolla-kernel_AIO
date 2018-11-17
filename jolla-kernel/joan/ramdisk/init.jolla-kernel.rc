@@ -6,6 +6,7 @@ on early-boot
   write /sys/block/sda/queue/rotation 0
   write /sys/block/sda/queue/rq_affinity 2
   write /sys/block/sda/queue/read_ahead_kb 2048
+  write /sys/devices/soc/c175000.i2c/i2c-1/1-0048/force_advanced_mode 1
   write /sys/android_touch/scroff_volctr 1
 
 on post-fs
