@@ -1,22 +1,27 @@
 ﻿<@center><b><#selectbg_g>jolla-kernel 체인지로그</#></b>
 
-<b><#selectbg_g>jollaman999 @xda 개발자</#></b>
+<b><#selectbg_g>jollaman999 jolla-kernel 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[joan-v0.1]</#></b></@>
+<b><#selectbg_g>[joan-v1.0]</#></b></@>
 == 커널 ==
 >> Oreo <<
 - 첫 릴리즈.
-- Linaro gcc 7.3.1 2018.05 로 빌드
-
-== AIO ==
-- 첫 릴리즈.
-
-== 업데이터 ==
-- 아직 작업하지 않음.
+- Linaro gcc 6.4.1 2018.05 로 빌드
+- Screen Off Volume Control 추가. (화면이 꺼진 동안 터치스크린 제스쳐들로 음악의 볼륨과 트랙을 제어합니다. 음악이 재생중 일때만 동작합니다.)
+- 빠른 앱실행을 위해 bfq io 스케줄러 사용.
+- 높은 미리 읽기(read-ahead) 값 사용 (2048kb).
+- 안드로이드 기본 LMK 대신에 Simple LMK 사용 (더 나은 메모리 사용량 제공.)
+- 기본 CPU 부스트를 sultanxda 님의 CPU input boost 로 교체 (더 부드러운 스크롤링과 게임 성능 향상. 빠른 앱 실행.)
+- Linux 4.4.163 까지 리눅스 업데이트 적용.
+- 퀄컴 최신 업데이트들 적용.
+- 퀄컴 최신 무선랜 드라이버 사용.
+- Dynamic fsync 지원. (화면이 켜진동안 쓰기 동기화를 하지 않고 화면이 꺼지면 동기화를 수행. 쓰기 부하 감소.)
+- 등등...
 
 == 리커버리 ==
-- 아직 작업하지 않음.
+- jolla_kernel_joan_v1.0 사용
+- Lineage 15.0 과 TWRP 리커버리 기반.
 
 
 <b><#selectbg_g>[Thanks to..]</#></b>
