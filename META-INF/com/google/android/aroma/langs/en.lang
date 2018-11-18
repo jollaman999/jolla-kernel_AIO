@@ -134,6 +134,14 @@ sovc_off.desc=Did you try it..? :(\
 \
 It is very useful for those who enjoy music!
 
+kcal.title=KCAL Fix Yellow
+kcal.subtitle=Adjust KCAL values to fix yellow screen.
+kcal_fix_yellow_onoff.title=On or Off?
+kcal_fix_yellow_on.item=Turn on kcal_fix_yellow
+kcal_fix_yellow_on.desc=If you have yellow screen, select this.
+kcal_fix_yellow_off.item=Turn off kcal_fix_yellow
+kcal_fix_yellow_off.desc=If you have normal screen or not want to change KCAL values, select this.
+
 ramdisk.title=Ramdisk Options
 ramdisk.subtitle=Select compress type.
 compress.title=Compress options

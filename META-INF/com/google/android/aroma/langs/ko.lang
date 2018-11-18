@@ -134,6 +134,14 @@ sovc_off.desc=시도해 보셨나요..? :(\
 \
 음악을 즐기시는 분들에게는 매우 유용한 기능입니다!
 
+kcal.title=KCAL Fix Yellow
+kcal.subtitle=노란 액정을 수정 하기 위해 KCAL 값들을 조정합니다.
+kcal_fix_yellow_onoff.title=켜시겠습니까 끄시겠습니까?
+kcal_fix_yellow_on.item=kcal_fix_yellow 를 켭니다.
+kcal_fix_yellow_on.desc=노란 액정을 가지고 계시다면, 이 옵션을 선택하세요.
+kcal_fix_yellow_off.item=kcal_fix_yellow 를 끕니다.
+kcal_fix_yellow_off.desc=일반 액정을 가지고 계시고 계시거나 KCAL 값들의 변경을 원치 않을 경우, 이 옵션을 선택하세요.
+
 ramdisk.title=램디스크 옵션
 ramdisk.subtitle=압축 옵션을 선택하세요.
 compress.title=압축 옵션
