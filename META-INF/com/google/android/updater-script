@@ -112,7 +112,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   ############ kcal_fix_yellow ############
   show_progress(0.7, 0.1);
   if file_getprop("/tmp/aroma-data/kcal.prop","selected.1")=="2" then
-    run_program("/sbin/sh", "-c", "sed -i '/on\ boot/d' /tmp/ramdisk/init.jolla-kernel.rc");
+    run_program("/sbin/sh", "-c", "sed -i '/boot_completed/d' /tmp/ramdisk/init.jolla-kernel.rc");
     run_program("/sbin/sh", "-c", "sed -i '/kcal/d' /tmp/ramdisk/init.jolla-kernel.rc");
   endif;
 
