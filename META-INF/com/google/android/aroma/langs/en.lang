@@ -99,8 +99,8 @@ After you move your rom, install Multi ROM.
 window2.title=Version Selection
 window2.subtitle=Select your Android version.
 window2.option1=Rom type
-window2.option1-1=Oreo (Android 8.1.x)
-window2.option1-1desc=If you want to install in Android 8.1.x based roms, select this.
+window2.option1-1=Oreo (Android 8.x.x)
+window2.option1-1desc=If you want to install in Android 8.x.x based roms, select this.
 window2.option1-2=Pie (Android 9.x.x)
 window2.option1-2desc=If you want to install in Android 9.x.x based roms, select this.
 

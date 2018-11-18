@@ -99,8 +99,8 @@ window1.option3desc=jolla-kernel 기반의 MultiROM TWRP 만 설치합니다.\
 window2.title=버젼 선택
 window2.subtitle=해당 Android 버젼을 선택해 주세요.
 window2.option1=롬 종류
-window2.option1-1=Oreo (Android 8.1.x)
-window2.option1-1desc=Android 8.1.x 기반 롬에 설치 하실 경우 선택합니다.
+window2.option1-1=Oreo (Android 8.x.x)
+window2.option1-1desc=Android 8.x.x 기반 롬에 설치 하실 경우 선택합니다.
 window2.option1-2=Pie (Android 9.x.x)
 window2.option1-2desc=Android 9.x.x 기반 롬에 설치 하실 경우 선택합니다.
 
