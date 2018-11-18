@@ -9,5 +9,9 @@ on early-boot
   write /sys/devices/soc/c175000.i2c/i2c-1/1-0048/force_advanced_mode 1
   write /sys/android_touch/scroff_volctr 1
 
+on boot
+  write /sys/devices/platform/kcal_ctrl.0/kcal 252 250 256
+  write /sys/devices/platform/kcal_ctrl.0/kcal_sat 258
+
 on post-fs
   write /sys/kernel/dyn_fsync/Dyn_fsync_active 1
