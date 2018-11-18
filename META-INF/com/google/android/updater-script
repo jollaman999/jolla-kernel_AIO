@@ -92,6 +92,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
   ############ Dynamic fsync ############
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.1")=="1" then
+    run_program("/sbin/sh", "-c", "sed -i '/on\ post-fs/d' /tmp/ramdisk/init.jolla-kernel.rc");
     run_program("/sbin/sh", "-c", "sed -i '/Dyn_fsync_active/d' /tmp/ramdisk/init.jolla-kernel.rc");
   endif;
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.1")=="0" then
@@ -111,6 +112,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   ############ kcal_fix_yellow ############
   show_progress(0.7, 0.1);
   if file_getprop("/tmp/aroma-data/kcal.prop","selected.1")=="2" then
+    run_program("/sbin/sh", "-c", "sed -i '/on\ boot/d' /tmp/ramdisk/init.jolla-kernel.rc");
     run_program("/sbin/sh", "-c", "sed -i '/kcal/d' /tmp/ramdisk/init.jolla-kernel.rc");
   endif;
 
