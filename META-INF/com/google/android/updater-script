@@ -79,9 +79,6 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
   ############ SOVC ############
   ui_print("-> Setting SOVC...");
-  if file_getprop("/tmp/aroma-data/sovc.prop","selected.1")=="1" then
-    run_program("/sbin/sh", "-c", "sed -i '/scroff_volctr/d' /tmp/ramdisk/init.jolla-kernel.rc");
-  endif;
   if file_getprop("/tmp/aroma-data/sovc.prop","selected.1")=="2" then
     ui_print("-> Turning Off SOVC...");
     package_extract_file("jolla-kernel/joan/sovc/sovc_off_set.sh", "/tmp/sovc_off_set.sh");
@@ -91,10 +88,7 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
 
   ############ Dynamic fsync ############
-  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.1")=="1" then
-    run_program("/sbin/sh", "-c", "sed -i '/on\ post-fs/d' /tmp/ramdisk/init.jolla-kernel.rc");
-    run_program("/sbin/sh", "-c", "sed -i '/Dyn_fsync_active/d' /tmp/ramdisk/init.jolla-kernel.rc");
-  endif;
+  ui_print("-> Setting Dynamic fsync...");
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.1")=="0" then
     ui_print("-> Turning Off Dynamic fsync...");
     package_extract_file("jolla-kernel/joan/dynamic_fsync/dyn_fsync_off_set.sh", "/tmp/dyn_fsync_off_set.sh");
@@ -104,15 +98,18 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
 
   ############ Force Advanced Hi-Fi ############
+  ui_print("-> Setting Force Advanced Hi-Fi...");
   if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.2")=="0" then
-    run_program("/sbin/sh", "-c", "sed -i '/force_advanced_mode/d' /tmp/ramdisk/init.jolla-kernel.rc");
+    package_extract_file("jolla-kernel/joan/hi-fi/hifi_force_advanced_mode_off_set.sh", "/tmp/hifi_force_advanced_mode_off_set.sh");
+    set_perm(0, 0, 0755, "/tmp/hifi_force_advanced_mode_off_set.sh");
+    run_program("/tmp/hifi_force_advanced_mode_off_set.sh");
   endif;
 
 
   ############ kcal_fix_yellow ############
+  ui_print("-> Setting kcal_fix_yellow...");
   show_progress(0.7, 0.1);
   if file_getprop("/tmp/aroma-data/kcal.prop","selected.1")=="2" then
-    run_program("/sbin/sh", "-c", "sed -i '/boot_completed/d' /tmp/ramdisk/init.jolla-kernel.rc");
     run_program("/sbin/sh", "-c", "sed -i '/kcal/d' /tmp/ramdisk/init.jolla-kernel.rc");
   endif;
 
