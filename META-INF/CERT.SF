@@ -1,6 +1,6 @@
 Signature-Version: 1.0
 Created-By: 1.0 (Android SignApk)
-SHA-256-Digest-Manifest: PYiVePkMZfBfx7/PVs+5ioM5nxySLu09/CfSEBcCoxM=
+SHA-256-Digest-Manifest: xh8M2p7760y2l3e0FZf70zVGaUHuCcFlDUbDCX2Xof8=
 
 Name: META-INF/com/google/android/aroma/ttf/DroidSans.ttf
 SHA-256-Digest: 5RfLdgcDM2ysjT6KFqmh4lzdQb6tGpAUK81wl7QN7xw=
@@ -73,7 +73,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.info.png
 SHA-256-Digest: Mss3rRU+zIgyBuVA3GzAvPopNzLmm8vv7cmDIVekfa0=
 
 Name: jolla-recovery/twrp/recovery.img
-SHA-256-Digest: 6v40WwgPAvik+ur0ENJDUQwyuQo/9c8X4UKO8yfMzII=
+SHA-256-Digest: l+DnRiDUC4QSlubOUq8hryvBBc5WJfL1bhmRIlOuokc=
 
 Name: jolla-kernel/joan/mkbootimg/bin/mkbootimg
 SHA-256-Digest: 0LfPZq7hw1qHarBBSn/qfh5SEjEZF7LwiMq8oWUA4YM=

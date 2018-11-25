@@ -72,7 +72,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.info.png
 SHA-256-Digest: k6Q3YcU5R7CMA0vi1Hga7Dt/u/n+mBrNBNuVn/ScUqM=
 
 Name: jolla-recovery/twrp/recovery.img
-SHA-256-Digest: VpH4DniXrQyBKF+eFZCsGejXbESIn4h41t79OzWlav4=
+SHA-256-Digest: V2cliMdljChY8P9DpBdKHUz551WxPCBRIYU3ExfQt5k=
 
 Name: jolla-kernel/joan/mkbootimg/bin/mkbootimg
 SHA-256-Digest: 0lZe/PejxpjkXmcKwBdkk7WHIcyWj/xR8aUwnleVmRg=
