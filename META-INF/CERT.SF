@@ -1,6 +1,6 @@
 Signature-Version: 1.0
 Created-By: 1.0 (Android SignApk)
-SHA-256-Digest-Manifest: xh8M2p7760y2l3e0FZf70zVGaUHuCcFlDUbDCX2Xof8=
+SHA-256-Digest-Manifest: 3yHPccXsf9qrpwyBxfXGBAbNMorbrIgHe18Wyn706vE=
 
 Name: META-INF/com/google/android/aroma/ttf/DroidSans.ttf
 SHA-256-Digest: 5RfLdgcDM2ysjT6KFqmh4lzdQb6tGpAUK81wl7QN7xw=
@@ -26,7 +26,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/button_press.9
 SHA-256-Digest: AMXx5Smq2mt+Qo7Pm5+8RZgPFhuDKc2yDasRpLcIIRk=
 
 Name: jolla-kernel/joan/Image/O/Image.gz-dtb
-SHA-256-Digest: QDm9t6vUpKVqFe91K/m7xzwqgCDR/M+F3VNPKRH5hRA=
+SHA-256-Digest: Tbeouk05gV11URtA5LpwjGZ4yUfgTd9BE0A/1qDnTeM=
 
 Name: jolla-kernel/joan/mkbootimg/bin/magic
 SHA-256-Digest: HOuMCTuJSII/wdqFErHeSR51EO/z8gB43WKQdHkGxH0=
@@ -73,7 +73,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.info.png
 SHA-256-Digest: Mss3rRU+zIgyBuVA3GzAvPopNzLmm8vv7cmDIVekfa0=
 
 Name: jolla-recovery/twrp/recovery.img
-SHA-256-Digest: l+DnRiDUC4QSlubOUq8hryvBBc5WJfL1bhmRIlOuokc=
+SHA-256-Digest: EM34TLe+fil8rU5U2AZ87QxcSmBwPMwZh17wcWrrSvs=
 
 Name: jolla-kernel/joan/mkbootimg/bin/mkbootimg
 SHA-256-Digest: 0LfPZq7hw1qHarBBSn/qfh5SEjEZF7LwiMq8oWUA4YM=

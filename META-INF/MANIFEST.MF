@@ -25,7 +25,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/button_press.9
 SHA-256-Digest: 7nRqOxdXVwLoyJhgry7jpfZ9GFfPR6VI0q/RqPj5l5E=
 
 Name: jolla-kernel/joan/Image/O/Image.gz-dtb
-SHA-256-Digest: 1FCbBEeMk0uPFW78Ho2Gwa6+RAqJIcws9mkQgOHOmXE=
+SHA-256-Digest: DsfiQJTdDY7sQGFnvTIrGmAzEYhh/QlpqTvYk+s5CFI=
 
 Name: jolla-kernel/joan/mkbootimg/bin/magic
 SHA-256-Digest: 82G+pHEKwAuIZUTWHIy7yji726dtGC+wlT7kka3ESTA=
@@ -72,7 +72,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.info.png
 SHA-256-Digest: k6Q3YcU5R7CMA0vi1Hga7Dt/u/n+mBrNBNuVn/ScUqM=
 
 Name: jolla-recovery/twrp/recovery.img
-SHA-256-Digest: V2cliMdljChY8P9DpBdKHUz551WxPCBRIYU3ExfQt5k=
+SHA-256-Digest: QgfcbxisxlUFry2KzZNChZ/awJSrbtaP624nly+pizU=
 
 Name: jolla-kernel/joan/mkbootimg/bin/mkbootimg
 SHA-256-Digest: 0lZe/PejxpjkXmcKwBdkk7WHIcyWj/xR8aUwnleVmRg=
