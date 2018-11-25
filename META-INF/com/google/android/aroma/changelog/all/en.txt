@@ -3,7 +3,27 @@
 <b><#selectbg_g>jollaman999 jolla-kernel developer</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[joan-v1.0]</#></b></@>
+<b><#selectbg_g>[joan-v1.1]</#></b></@>
+== Kernel ==
+>> Oreo <<
+- mdss KCAL support (Adjust screen RGB values and gamma value, etc. Use Kernel Adiutor app to adjust values.)
+- Fix boost only connected to touch screen instead all of input drivers
+- Fix sync operation performed additionally except dynamic fsync
+- Implement LGE background sync function to dynamic fsync (Prevent delay while processing sync operation.)
+- Change Simple LMK to default LMK (Applications killed easily while testing multitasking with Simple LMK.)
+- Use westwood as default TCP congestion control
+- Fix playback of DSD files while using earphone
+
+== Recovery ==
+- Use jolla_kernel_joan_v1.1
+
+== AIO ==
+- Add kcal_fix_yellow support (Improving yellow screen.)
+- Fix Android version in selection (8.1.x -> 8.x.x)
+- Enable Adaptive LMK and adjust LMK value to run more apps at the same time
+
+
+<b><#selectbg_g>[joan-v1.0]</#></b>
 == Kernel ==
 >> Oreo <<
 - First release.

@@ -3,7 +3,27 @@
 <b><#selectbg_g>jollaman999 jolla-kernel 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[joan-v1.0]</#></b></@>
+<b><#selectbg_g>[joan-v1.1]</#></b></@>
+== 커널 ==
+>> Oreo <<
+- mdss KCAL 지원 (화면 RGB 값, 감마 값 등 조절. Kernel Adiutor 앱을 이용하세요.)
+- 모든 입력 드라이버에 부스트가 연결 되어 있던 것을 터치 스크린에만 적용되도록 수정
+- dynamic fsync 외에 sync 가 추가적으로 수행되는 부분 수정
+- LGE의 백그라운드 sync 기능을 dynamic fsync에 구현 (sync 가 수행되는 동안 지연이 생기지 않게 함.)
+- Simple LMK 를 기본 LMK 로 변경 (Simple LMK 멀티태스킹 테스트시 어플들이 쉽게 종료됨.)
+- westwood를 기본 TCP 혼잡 제어 알고리즘으로 사용
+- DSD 음원 재생시 이어폰 출력이 안되는 현상 수정
+
+== 리커버리 ==
+- jolla_kernel_joan_v1.1 사용
+
+== AIO ==
+- kcal_fix_yellow 지원 추가 (노란 액정 화면 개선)
+- Android 버젼 표기 수정 (8.1.x -> 8.x.x)
+- Adaptive LMK 활성화 및 더 많은 어플들이 동시에 실행 가능하도록 LMK 값 조정
+
+
+<b><#selectbg_g>[joan-v1.0]</#></b>
 == 커널 ==
 >> Oreo <<
 - 첫 릴리즈.
