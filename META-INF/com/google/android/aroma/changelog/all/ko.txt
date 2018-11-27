@@ -3,7 +3,16 @@
 <b><#selectbg_g>jollaman999 @xda 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[bullhead_II-v28.0]</#></b></@>
+<b><#selectbg_g>[bullhead_II-v29.0]</#></b></@>
+== 커널 ==
+>> Oreo <<
+- Linaro gcc 6.4.1 2018.05 로 빌드
+- 2018년 11월 까지의 보안 패치들 적용
+
+== 리커버리 ==
+- v29.0 Oreo 커널 사용
+
+<b><#selectbg_g>[bullhead_II-v28.0]</#></b>
 == 커널 ==
 >> Oreo <<
 - Linaro gcc 6.4.1 2017.11 로 빌드

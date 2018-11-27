@@ -7,7 +7,7 @@
 == Kernel ==
 >> Oreo <<
 - Build with Linaro gcc 6.4.1 2018.05
-- Applied security patches until October 2018.
+- Applied security patches until November 2018.
 
 == Recovery ==
 - Use v29.0 Oreo kernel
