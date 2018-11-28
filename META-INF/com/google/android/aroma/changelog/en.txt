@@ -16,6 +16,9 @@ The attacker can show all of Internet stream passing to a router when ARP spoofi
 Depending on the ARP structure, it's hard to prevent attck when it is already proceeded by an attcker.
 Search for ARP Spoofing attck.)
 
+== Recovery ==
+- Use jolla_kernel_joan_v1.2
+
 
 <b><#selectbg_g>[joan-v1.1]</#></b>
 == Kernel ==

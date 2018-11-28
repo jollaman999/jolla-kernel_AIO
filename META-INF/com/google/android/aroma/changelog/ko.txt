@@ -15,6 +15,9 @@
 이미 위장된 상태에서의 방어는 ARP 구조상 어렵습니다.
 ARP Spoofing 공격에 대해 검색해 보세요.)
 
+== 리커버리 ==
+- jolla_kernel_joan_v1.2 사용
+
 
 <b><#selectbg_g>[joan-v1.1]</#></b>
 == 커널 ==

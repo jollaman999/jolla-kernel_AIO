@@ -103,7 +103,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/font.roboto.bi
 SHA-256-Digest: /7d6uRbN63qjNsKERrsgTbNMSdqRs7pyDDYEx9G1Wsc=
 
 Name: META-INF/com/google/android/aroma/changelog/ko.txt
-SHA-256-Digest: +he51hrzNSvf96R/Qmlw6rGnjV2Q2BXtinSjpElEB6Y=
+SHA-256-Digest: VxsUSrOfVsuHYxgcB/5jjYEDH5IzbdBmAcoVIddH2LE=
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.confirm.p
  ng
@@ -131,7 +131,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.exit.png
 SHA-256-Digest: iFLCTJOl6hGtj0nBkuKD0MMfRpKZkpT48AtmkU5HKHc=
 
 Name: META-INF/com/google/android/aroma/changelog/all/ko.txt
-SHA-256-Digest: +he51hrzNSvf96R/Qmlw6rGnjV2Q2BXtinSjpElEB6Y=
+SHA-256-Digest: VxsUSrOfVsuHYxgcB/5jjYEDH5IzbdBmAcoVIddH2LE=
 
 Name: jolla-kernel/joan/hi-fi/hifi_force_advanced_mode_off_set.sh
 SHA-256-Digest: 53S7MHkSocugVO2kwB3vKCi03CY9I3uub18pKc3bvCo=
@@ -176,7 +176,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.license.p
 SHA-256-Digest: DfXJ0r+C/hnDdbrFvMwAopoGd+UMX4qLCxn3NUYaV6Q=
 
 Name: META-INF/com/google/android/aroma/changelog/all/en.txt
-SHA-256-Digest: gaeMAsJRihUInSkT4gknY0nw/tzYuKDvhSjsKLVaYsU=
+SHA-256-Digest: 3ferkJmbldYl54+h8DXrHPr+PaL5o3SJk/PMpWo2KxU=
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/button_focus.9
  .png
@@ -289,7 +289,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.menu.png
 SHA-256-Digest: rDQSuMUpIbj3eEWo4wUmqhxE2doRuRBsQdRn5LgCw7c=
 
 Name: META-INF/com/google/android/aroma/changelog/en.txt
-SHA-256-Digest: gaeMAsJRihUInSkT4gknY0nw/tzYuKDvhSjsKLVaYsU=
+SHA-256-Digest: 3ferkJmbldYl54+h8DXrHPr+PaL5o3SJk/PMpWo2KxU=
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.default.p
  ng

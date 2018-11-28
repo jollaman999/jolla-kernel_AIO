@@ -1,6 +1,6 @@
 Signature-Version: 1.0
 Created-By: 1.0 (Android SignApk)
-SHA-256-Digest-Manifest: uanTHBs6eu/WaNjVI5tBGI1UbvDe3LQu9aRpvh7/zuA=
+SHA-256-Digest-Manifest: h8ivNvb5jCXkbmj3NKUhGTe9AxNB0BqS7ZyMGPLinqc=
 
 Name: META-INF/com/google/android/aroma/ttf/DroidSans.ttf
 SHA-256-Digest: 5RfLdgcDM2ysjT6KFqmh4lzdQb6tGpAUK81wl7QN7xw=
@@ -104,7 +104,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/font.roboto.bi
 SHA-256-Digest: swsyaaRT+pSHyrmM2nIQiA4cF+tNneLMT6R24GML/7c=
 
 Name: META-INF/com/google/android/aroma/changelog/ko.txt
-SHA-256-Digest: m6ucu5AC3i7P0yOQAeCim1/VW/hjK2gc2gc1M2pzHtU=
+SHA-256-Digest: iRe4/P8wv94V3WjIt5RKiNmW/3l/935lSgEd3nEeRWU=
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.confirm.p
  ng
@@ -132,7 +132,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.exit.png
 SHA-256-Digest: zgU6NkaA6Z/XGvsH1BTDBu3sWBTD+tOak0E/sZKMV1s=
 
 Name: META-INF/com/google/android/aroma/changelog/all/ko.txt
-SHA-256-Digest: 5Of5pH4vPSFtONf7lmJ0cd8Fje47zqRqu2J5AdF3K5k=
+SHA-256-Digest: 72Laod+ZTZ2ANNs2ODSVpbecZYs64Ke278Qm1406rKo=
 
 Name: jolla-kernel/joan/hi-fi/hifi_force_advanced_mode_off_set.sh
 SHA-256-Digest: gL1ORbuCiT2m4b3OuP95myZcwHcQ251fuEI0TBAcUJc=
@@ -177,7 +177,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.license.p
 SHA-256-Digest: fuXPK3dBX3UdPKlcoWmE5mawcKdjRUCwXXakZmLb2ug=
 
 Name: META-INF/com/google/android/aroma/changelog/all/en.txt
-SHA-256-Digest: xk/764qakPSb8OMjgBNFOyifRLMY/bHUrrscSzRambw=
+SHA-256-Digest: iUFLxYR5uaRe1pYiOaNLyyhElgAQ/ZxVX4uE0HhNlGw=
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/button_focus.9
  .png
@@ -290,7 +290,7 @@ Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.menu.png
 SHA-256-Digest: fURTQ+hFY0c0PJwClm6d75TUgLExzLiRColICsZ4dvU=
 
 Name: META-INF/com/google/android/aroma/changelog/en.txt
-SHA-256-Digest: HgdwDQQquuQhBrTtiMFPkkE8IfXrvZMX3Gl6ZMh7TAI=
+SHA-256-Digest: ESLkQpnpDNZPwOFH88L7dBAQI64Ua+lh1evOr/SnDSs=
 
 Name: META-INF/com/google/android/aroma/themes/touchwiz/icon.default.p
  ng
