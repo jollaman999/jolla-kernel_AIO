@@ -3,7 +3,21 @@
 <b><#selectbg_g>jollaman999 jolla-kernel developer</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[joan-v1.1]</#></b></@>
+<b><#selectbg_g>[joan-v1.2]</#></b></@>
+== Kernel ==
+>> Oreo <<
+- Applied Linux updates to Linux 4.4.165
+- Fix suspend checks of sovc, dynamic fsync drivers
+- Enable power saving technology that assign a task to a wake CPU by default.
+- arp: Implement arp_project ARP Spoofing prevent technology
+(It's a ARP Spoofing prevent technology that worked by graduate project to prevent gateway changing.
+When using public Wi-Fi, it can prevent from attacking an external user by pretending to be a router.
+The attacker can show all of Internet stream passing to a router when ARP spoofing attack is suceeded.
+Depending on the ARP structure, it's hard to prevent attck when it is already proceeded by an attcker.
+Search for ARP Spoofing attck.)
+
+
+<b><#selectbg_g>[joan-v1.1]</#></b>
 == Kernel ==
 >> Oreo <<
 - mdss KCAL support (Adjust screen RGB values and gamma value, etc. Use Kernel Adiutor app to adjust values.)
