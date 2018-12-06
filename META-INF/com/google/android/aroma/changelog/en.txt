@@ -3,7 +3,28 @@
 <b><#selectbg_g>jollaman999 jolla-kernel developer</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[joan-v1.2]</#></b></@>
+<b><#selectbg_g>[joan-v2.0]</#></b></@>
+== Kernel ==
+>> Oreo <<
+- Adjusted for battery and performance.
+  - cpu_input_boost: Remove big cluster minimum frequency option
+  - cpu_input_boost: Remove little cluster minimum frequency option
+  - Disable LGE hswap function (lowmemory killer reclaim with zram)
+  - lowmemory killer: Disable adaptive LMK
+  - lowmemory killer: Add ANDROID_LMK_ADJ_RBTREE function
+  - Revert "msm: mdss: Boost cpubw devfreq device when a new frame is ready"
+  - Revert "msm: mdss: Boost CPU when a new frame is ready to be committed"
+  - Adjust input boost values refer to stock
+- Applied Linux updates to Linux 4.4.166
+- Fix msm8998 device tree for joan 21o version sound
+- ASoC: msm: qdsp6v2: Add LGE DTS support from V40 kernel source
+- Back to CFQ io scheduler (fastest in UX performance)
+
+== Recovery ==
+- Use jolla_kernel_joan_v2.0
+
+
+<b><#selectbg_g>[joan-v1.2]</#></b>
 == Kernel ==
 >> Oreo <<
 - Applied Linux updates to Linux 4.4.165
@@ -18,47 +39,6 @@ Search for ARP Spoofing attck.)
 
 == Recovery ==
 - Use jolla_kernel_joan_v1.2
-
-
-<b><#selectbg_g>[joan-v1.1]</#></b>
-== Kernel ==
->> Oreo <<
-- mdss KCAL support (Adjust screen RGB values and gamma value, etc. Use Kernel Adiutor app to adjust values.)
-- Fix boost only connected to touch screen instead all of input drivers
-- Fix sync operation performed additionally except dynamic fsync
-- Implement LGE background sync function to dynamic fsync (Prevent delay while processing sync operation.)
-- Change Simple LMK to default LMK (Applications killed easily while testing multitasking with Simple LMK.)
-- Use westwood as default TCP congestion control
-- Fix playback of DSD files while using earphone
-
-== Recovery ==
-- Use jolla_kernel_joan_v1.1
-
-== AIO ==
-- Add kcal_fix_yellow support (Improving yellow screen.)
-- Fix Android version in selection (8.1.x -> 8.x.x)
-- Enable Adaptive LMK and adjust LMK value to run more apps at the same time
-
-
-<b><#selectbg_g>[joan-v1.0]</#></b>
-== Kernel ==
->> Oreo <<
-- First release.
-- Built with Linaro gcc 6.4.1 2018.05
-- Screen Off Volume Control added. (Control music volume and tracks with touch screen gestures when screen turned off. It only working when playing music.)
-- Using bfq io-scheduler for fast app launch.
-- Using higher read-ahead value (2048kb).
-- Using Simple LMK instead of Android default LMK (Better memory usage.)
-- Replace default CPU boost with sultanxda's CPU input boost (More smoother scrolling and better game performance. Faster app lauch.)
-- Applied Linux updates to Linux 4.4.163
-- Applied lastest Qualcomm updates.
-- Using lastest Qualcomm wlan driver.
-- Dynamic fsync support. (Do not write sync when screen turned on and do sync operations when screen turned off. It can reduce write load.)
-- Etc...
-
-== Recovery ==
-- Using jolla_kernel_joan_v1.0
-- Based on Lineage 15.0 and TWRP recovery.
 
 
 <b><#selectbg_g>[Thanks to..]</#></b>

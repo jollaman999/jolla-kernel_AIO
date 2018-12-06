@@ -3,7 +3,28 @@
 <b><#selectbg_g>jollaman999 jolla-kernel developer</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[joan-v1.2]</#></b></@>
+<b><#selectbg_g>[joan-v2.0]</#></b></@>
+== Kernel ==
+>> Oreo <<
+- Adjusted for battery and performance.
+  - cpu_input_boost: Remove big cluster minimum frequency option
+  - cpu_input_boost: Remove little cluster minimum frequency option
+  - Disable LGE hswap function (lowmemory killer reclaim with zram)
+  - lowmemory killer: Disable adaptive LMK
+  - lowmemory killer: Add ANDROID_LMK_ADJ_RBTREE function
+  - Revert "msm: mdss: Boost cpubw devfreq device when a new frame is ready"
+  - Revert "msm: mdss: Boost CPU when a new frame is ready to be committed"
+  - Adjust input boost values refer to stock
+- Applied Linux updates to Linux 4.4.166
+- Fix msm8998 device tree for joan 21o version sound
+- ASoC: msm: qdsp6v2: Add LGE DTS support from V40 kernel source
+- Back to CFQ io scheduler (fastest in UX performance)
+
+== Recovery ==
+- Use jolla_kernel_joan_v2.0
+
+
+<b><#selectbg_g>[joan-v1.2]</#></b>
 == Kernel ==
 >> Oreo <<
 - Applied Linux updates to Linux 4.4.165

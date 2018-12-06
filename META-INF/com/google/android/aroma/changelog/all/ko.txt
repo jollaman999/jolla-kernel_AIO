@@ -3,7 +3,27 @@
 <b><#selectbg_g>jollaman999 jolla-kernel 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[joan-v1.2]</#></b></@>
+<b><#selectbg_g>[joan-v2.0]</#></b></@>
+== Kernel ==
+>> 커널 <<
+- 베터리와 성능에 맞게 조절
+  - cpu_input_boost: 빅 클러스터 최소 주파수 옵션 제거
+  - cpu_input_boost: 리틀 클러스터 최소 주파수 옵션 제거
+  - LGE hswap 기능 비활성화 (lowmemory killer reclaim with zram)
+  - lowmemory killer: adaptive LMK 비활성화
+  - lowmemory killer: ANDROID_LMK_ADJ_RBTREE 기능 추가
+  - 변경사항 취소 "msm: mdss: 새로운 프레임이 준비 될때 cpubw devfreq 부스트"
+  - 변경사항 취소 "msm: mdss: 새로운 프레임이 준비 될때 CPU 부스트"
+  - input boost 값들을 스톡에 따라 조정
+- Linux 4.4.166 까지 리눅스 업데이트 적용
+- joan 21o 버젼 사운드를 위해 msm8998 디바이스 트리 수정
+- ASoC: msm: qdsp6v2: V40 커널 소스로 부터 LGE DTS 지원 추가
+
+== 리커버리 ==
+- jolla_kernel_joan_v2.0 사용
+
+
+<b><#selectbg_g>[joan-v1.2]</#></b>
 == 커널 ==
 >> Oreo <<
 - Linux 4.4.165 까지 리눅스 업데이트 적용.
