@@ -106,6 +106,15 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   endif;
 
 
+  ############ KGSL Power Control Limit ############
+  ui_print("-> Setting KGSL Power Control Limit...");
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.1.3")=="1" then
+    package_extract_file("jolla-kernel/joan/kgsl/kgsl_pwrctrl_limit_enable_off.sh", "/tmp/kgsl_pwrctrl_limit_enable_off.sh");
+    set_perm(0, 0, 0755, "/tmp/kgsl_pwrctrl_limit_enable_off.sh");
+    run_program("/tmp/kgsl_pwrctrl_limit_enable_off.sh");
+  endif;
+
+
   ############ kcal_fix_yellow ############
   ui_print("-> Setting kcal_fix_yellow...");
   show_progress(0.7, 0.1);

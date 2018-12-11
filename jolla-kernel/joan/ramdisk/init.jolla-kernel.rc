@@ -24,6 +24,9 @@ on property:sys.boot_completed=1
     # Adjust LMK minfree values
     write /sys/module/lowmemorykiller/parameters/minfree "12288,15360,18432,21504,24576,30720"
 
+    # kgsl power control limit
+    write /sys/class/kgsl/kgsl-3d0/kgsl_pwrctrl_limit_enable 1
+
     # kcal_fix_yellow
     write /sys/devices/platform/kcal_ctrl.0/kcal "252 250 256"
     write /sys/devices/platform/kcal_ctrl.0/kcal_sat 258

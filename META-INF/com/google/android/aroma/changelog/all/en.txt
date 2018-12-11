@@ -3,7 +3,21 @@
 <b><#selectbg_g>jollaman999 jolla-kernel developer</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[joan-v2.0]</#></b></@>
+<b><#selectbg_g>[joan-v2.1]</#></b></@>
+== Kernel ==
+>> Oreo <<
+- Optimized for game performance
+  - msm: kgsl: Mark IRQ and worker thread as performance critical
+  - msm: kgsl: Let user to select enable kgsl power control limit
+  (Enable/Disable GPU thermal limit. Very smooth game performance when it is disabled.
+  But the device gets hotter.)
+  - cpu_input_boost, kgsl: Boost CPU and devfreq when GPU frequency is reached to 342Mhz
+
+== Recovery ==
+- Use jolla_kernel_joan_v2.1
+
+
+<b><#selectbg_g>[joan-v2.0]</#></b>
 == Kernel ==
 >> Oreo <<
 - Adjusted for battery and performance.

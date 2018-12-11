@@ -3,10 +3,24 @@
 <b><#selectbg_g>jollaman999 jolla-kernel 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[joan-v2.0]</#></b></@>
-== Kernel ==
->> 커널 <<
-- 베터리와 성능에 맞게 조절
+<b><#selectbg_g>[joan-v2.1]</#></b></@>
+== 커널 ==
+>> Oreo <<
+- 게임 성능에 최적화
+  - msm: kgsl: IRQ 와 작업 스레드를 performance critical 로 마크
+  - msm: kgsl: 사용자가 kgsl 전원 제어 제한 활성화를 선택 할 수 있도록 함
+  (GPU 온도 제한을 활성화/비활성화 합니다. 비활성화 되어있을시 게임 성능이 매우 부드러워집니다.
+  하지만 장치가 더 뜨거워 집니다.)
+  - cpu_input_boost, kgsl: GPU 주파수가 342Mhz 에 다다르면 CPU 와 devfreq 부스트
+
+== 리커버리 ==
+- jolla_kernel_joan_v2.1 사용
+
+
+<b><#selectbg_g>[joan-v2.0]</#></b>
+== 커널 ==
+>> Oreo <<
+- 배터리와 성능에 맞게 조절
   - cpu_input_boost: 빅 클러스터 최소 주파수 옵션 제거
   - cpu_input_boost: 리틀 클러스터 최소 주파수 옵션 제거
   - LGE hswap 기능 비활성화 (lowmemory killer reclaim with zram)

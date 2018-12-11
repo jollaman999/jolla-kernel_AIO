@@ -113,6 +113,10 @@ forceadvancedhifi.item=Quad DAC 강제 전문가 모드
 forceadvancedhifi.desc=활성화 하면 일반 이어폰 사용시 Quad DAC 가 강제로 전문가 모드로 재생됩니다.\
 청력 보호를 위해 볼륨은 증가하지 않습니다.\
 Hi-Fi Status 어플 사용시에는 일반 음향 기기로 감지됩니다.
+kgslnolimit.item=GPU 온도 제한 비활성화
+kgslnolimit.desc=KGSL GPU 온도 제한을 비활성화 합니다.\
+게임 성능이 이 옵션으로 매우 부드러워 집니다.\
+하지만 장치가 더 뜨거워 집니다.
 
 sovc.title=SOVC
 sovc.subtitle=Screen Off Volume Control
