@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 jolla-kernel developer</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[joan-v2.1]</#></b></@>
+<b><#selectbg_g>[joan-v2.2]</#></b></@>
+== Kernel ==
+>> Oreo <<
+- Applied Linux patches: 4.4.167, 4.4.168
+- Applied recent Qualcomm msm-4.4 patches
+- Applied recent Qualcomm WLAN patches
+
+== Recovery ==
+- Use jolla_kernel_joan_v2.2
+
+
+<b><#selectbg_g>[joan-v2.1]</#></b>
 == Kernel ==
 >> Oreo <<
 - Optimized for game performance

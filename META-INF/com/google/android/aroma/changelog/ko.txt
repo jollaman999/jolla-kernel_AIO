@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 jolla-kernel 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[joan-v2.1]</#></b></@>
+<b><#selectbg_g>[joan-v2.2]</#></b></@>
+== 커널 ==
+>> Oreo <<
+- 리눅스 패치들 적용: 4.4.167, 4.4.168
+- 최신 퀄컴 msm-4.4 패치들 적용
+- 최신 퀄컴 무선랜 패치들 적용
+
+== 리커버리 ==
+- jolla_kernel_joan_v2.2 사용
+
+
+<b><#selectbg_g>[joan-v2.1]</#></b>
 == 커널 ==
 >> Oreo <<
 - 게임 성능에 최적화
