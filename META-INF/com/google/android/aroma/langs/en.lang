@@ -104,6 +104,10 @@ window2.option1-1desc=If you want to install in Android 8.x.x based roms, select
 window2.option1-2=Pie (Android 9.x.x)
 window2.option1-2desc=If you want to install in Android 9.x.x based roms, select this.
 
+window3.title=Model Selection
+window3.subtitle=Select your Model.
+window3.option1=Model
+
 checkbox1.title=Kernel Installatin Options
 checkbox1.subtitle=Check what you want.
 dynfsync.item=Dynamic fsync
@@ -117,6 +121,10 @@ kgslnolimit.item=Disable GPU thermal limit
 kgslnolimit.desc=Disable KGSL GPU thermal limit.\
 Game performance will be very smooth with this option.\
 But the device gets hotter.
+treble.item=Enable treble rom support
+treble.desc=Enable mount of vendor partition.
+treble.attention=TREBLE WARNING
+treble.attentiondesc=If you enable it on a ROM that does not support treble, the device will not boot!!
 
 sovc.title=SOVC
 sovc.subtitle=Screen Off Volume Control

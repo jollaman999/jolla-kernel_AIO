@@ -18,24 +18,14 @@ run_program("/tmp/busybox", "mount", "/system");
 run_program("/tmp/busybox", "mount", "/data");
 
 
-############################ TWRP ################################
-if file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="3" then
-  ui_print("-> Installing TWRP");
-  show_progress(0.5, 1);
-  package_extract_file("jolla-recovery/twrp/recovery.img", "/dev/block/bootdevice/by-name/recovery");
-endif;
-## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")=="3"
-
-
-
-if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
-
   ############################ joan Kernel ###############################
   ui_print(">>>Installing joan Kernel<<<");
 
-  ui_print("-> Installing TWRP");
-  show_progress(0.5, 1);
-  package_extract_file("jolla-recovery/twrp/recovery.img", "/dev/block/bootdevice/by-name/recovery");
+  if file_getprop("/tmp/aroma-data/window3.prop","selected.1")=="1" then
+    ui_print("-> Installing TWRP");
+    show_progress(0.05, 1);
+    package_extract_file("jolla-recovery/twrp/recovery.img", "/dev/block/bootdevice/by-name/recovery");
+  endif;
 
   show_progress(0.1, 0.1);
   ui_print("-> Ready to install joan kernel...");
@@ -46,12 +36,9 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
 
   ############ Unpack boot.img ############
   show_progress(0.2, 1);
-  if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="2" then
-    ui_print("-> Unpacking boot.img...");
-    run_program("/tmp/busybox", "dd", "if=/dev/block/bootdevice/by-name/boot", "of=/tmp/boot.img");
-    run_program("/tmp/unpackimg.sh");
-  endif;
-  ## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="2"
+  ui_print("-> Unpacking boot.img...");
+  run_program("/tmp/busybox", "dd", "if=/dev/block/bootdevice/by-name/boot", "of=/tmp/boot.img");
+  run_program("/tmp/unpackimg.sh");
 
 
   ############ Patch ramdisk ############
@@ -72,9 +59,16 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   ############ Replace Image.gz-dtb ############
   show_progress(0.5, 0.1);
   if file_getprop("/tmp/aroma-data/window2.prop","selected.1")=="1" then
-    ui_print("-> Replacing Oreo's joan Image.gz-dtb...");
-    package_extract_file("jolla-kernel/joan/Image/O/Image.gz-dtb", "/tmp/split_img/boot.img-zImage");
+    if file_getprop("/tmp/aroma-data/window3.prop","selected.1")=="1" then
+      ui_print("-> Replacing Oreo's joan_kr Image.gz-dtb...");
+      package_extract_file("jolla-kernel/joan/Image/O/kr/Image.gz-dtb", "/tmp/split_img/boot.img-zImage");
+    endif;
+    if file_getprop("/tmp/aroma-data/window3.prop","selected.1")=="2" then
+      ui_print("-> Replacing Oreo's joan_h930 Image.gz-dtb...");
+      package_extract_file("jolla-kernel/joan/Image/O/h930/Image.gz-dtb", "/tmp/split_img/boot.img-zImage");
+    endif;
   endif;
+
 
 
   ############ SOVC ############
@@ -115,6 +109,15 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   endif;
 
 
+  ############ vendor partition support ############
+  ui_print("-> Setting vendor partition support...");
+  if file_getprop("/tmp/aroma-data/checkbox1.prop","item.2.1")=="0" then
+    package_extract_file("jolla-kernel/joan/treble/remove_vendor_mount.sh", "/tmp/remove_vendor_mount.sh");
+    set_perm(0, 0, 0755, "/tmp/remove_vendor_mount.sh");
+    run_program("/tmp/remove_vendor_mount.sh");
+  endif;
+
+
   ############ kcal_fix_yellow ############
   ui_print("-> Setting kcal_fix_yellow...");
   show_progress(0.7, 0.1);
@@ -143,9 +146,6 @@ if file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3" then
   run_program("/tmp/repackimg.sh");
   run_program("/tmp/busybox", "dd", "if=/tmp/image-new.img", "of=/dev/block/bootdevice/by-name/boot");
 
-
-endif;
-## endif file_getprop("/tmp/aroma-data/window1.prop","selected.1")!="3"
 
 show_progress(1.0, 0);
 ui_print("");

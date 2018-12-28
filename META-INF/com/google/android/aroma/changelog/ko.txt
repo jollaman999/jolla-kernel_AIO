@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 jolla-kernel 개발자</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[joan-v2.2]</#></b></@>
+<b><#selectbg_g>[joan-v2.3]</#></b></@>
+== 커널 ==
+>> Oreo <<
+- 4.4.169 리눅스 패치 적용
+- vendor 파티션을 사용하는 커스텀 롬들을 위한 호환성 추가.
+- h930 지원 추가.
+
+== 리커버리 ==
+- jolla_kernel_joan_v2.3 사용 (jolla-kernel 이 포함된 TWRP 는 h930 에서 설치되지 않습니다.)
+
+
+<b><#selectbg_g>[joan-v2.2]</#></b>
 == 커널 ==
 >> Oreo <<
 - 리눅스 패치들 적용: 4.4.167, 4.4.168

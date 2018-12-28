@@ -104,6 +104,10 @@ window2.option1-1desc=Android 8.x.x 기반 롬에 설치 하실 경우 선택합
 window2.option1-2=Pie (Android 9.x.x)
 window2.option1-2desc=Android 9.x.x 기반 롬에 설치 하실 경우 선택합니다.
 
+window3.title=모델 선택
+window3.subtitle=해당 모델을 선택해 주세요.
+window3.option1=모델
+
 checkbox1.title=커널 설치 옵션
 checkbox1.subtitle=원하시는 옵션에 체크해 주세요.
 dynfsync.item=Dynamic fsync
@@ -117,6 +121,10 @@ kgslnolimit.item=GPU 온도 제한 비활성화
 kgslnolimit.desc=KGSL GPU 온도 제한을 비활성화 합니다.\
 게임 성능이 이 옵션으로 매우 부드러워 집니다.\
 하지만 장치가 더 뜨거워 집니다.
+treble.item=treble 롬 지원 활성화
+treble.desc=vendor 파티션 마운트를 활성화 합니다.
+treble.attention=TREBLE 경고
+treble.attentiondesc=treble 을 지원하지 않는 롬에서 활성화 할 경우, 장치가 부팅되지 않을 것입니다!!
 
 sovc.title=SOVC
 sovc.subtitle=Screen Off Volume Control

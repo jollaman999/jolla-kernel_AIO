@@ -3,7 +3,18 @@
 <b><#selectbg_g>jollaman999 jolla-kernel developer</#></b>
 <b><#selectbg_g>https://github.com/jollaman999</#></b>
 
-<b><#selectbg_g>[joan-v2.2]</#></b></@>
+<b><#selectbg_g>[joan-v2.3]</#></b></@>
+== Kernel ==
+>> Oreo <<
+- Applied 4.4.169 Linux patch
+- Add a compatibility for custom roms using vendor partition.
+- Add h930 support.
+
+== Recovery ==
+- Use jolla_kernel_joan_v2.3 (TWRP with jolla-kernel will not be installed in h930.)
+
+
+<b><#selectbg_g>[joan-v2.2]</#></b>
 == Kernel ==
 >> Oreo <<
 - Applied Linux patches: 4.4.167, 4.4.168

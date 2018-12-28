@@ -13,10 +13,10 @@ ini_set("force_colorspace","rgba");
 #
 
 ini_set("rom_name",             "jolla-kernel");
-ini_set("rom_version",          "2.2");
+ini_set("rom_version",          "2.3");
 ini_set("rom_author",           "jollaman999");
 ini_set("rom_device",           "joan");
-ini_set("rom_date",             "Dec 19, 2018");
+ini_set("rom_date",             "Dec 28, 2018");
 
 
 ##
@@ -392,19 +392,6 @@ selectbox(
 
 );
 
-##
-# Alert Window - Warning about Multi ROM Selection
-#
-if prop("window1.prop","selected.1")=="2" then
-  alert( "<~multirom.attention>", "<~multirom.attentiondesc>");
-endif;
-## endif - window1.prop
-
-
-
-if prop("window1.prop","selected.1")!="3" then
-
-
 
 ##
 # Sub Window 2 - Version Selection
@@ -413,22 +400,52 @@ if prop("window1.prop","selected.1")!="3" then
 selectbox(
   #-- Title
     "<~window2.title>",
-  
+
   #-- Sub Title
     "<~window2.subtitle>",
-  
+
   #-- Icon:
      "icons/install",
-	 
+
   #-- Will be saved in /tmp/aroma/window2.prop
     "window2.prop",
-  
+
 	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
 	  # TITLE            |  SUBTITLE                                                 | Initial Value #
-	  #------------------+-----------------------------------------------------------+---------------#  
-  
+	  #------------------+-----------------------------------------------------------+---------------#
+
     "<~window2.option1>",         "",                                                 2,      #-- Group 1. key = "selected.1"
         "<~window2.option1-1>",         "<~window2.option1-1desc>",                               1       #-- selected.1 = 1
+
+	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
+
+);
+
+
+##
+# Sub Window 3 - Model Selection
+#
+
+selectbox(
+  #-- Title
+    "<~window3.title>",
+
+  #-- Sub Title
+    "<~window3.subtitle>",
+
+  #-- Icon:
+     "icons/install",
+
+  #-- Will be saved in /tmp/aroma/window3.prop
+    "window3.prop",
+
+	  #----------------------------------[ Selectbox With Groups ]-----------------------------------#
+	  # TITLE            |  SUBTITLE                                                 | Initial Value #
+	  #------------------+-----------------------------------------------------------+---------------#
+
+    "<~window3.option1>",         "",                                                 2,      #-- Group 1. key = "selected.1"
+        "V300K/S/L",                    "Korean",                                                 1,      #-- selected.1 = 1
+        "H930",                         "Europe Global",                                          0       #-- selected.1 = 2
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 
@@ -458,10 +475,20 @@ checkbox(
   "MISC",                   "",                                               2,      #-- group 1
     "<~dynfsync.item>",       "<~dynfsync.desc>",                               1,      #-- item.1.1
     "<~forceadvancedhifi.item>","<~forceadvancedhifi.desc>",                    1,      #-- item.1.2
-    "<~kgslnolimit.item>",    "<~kgslnolimit.desc>",                            1       #-- item.1.3
+    "<~kgslnolimit.item>",    "<~kgslnolimit.desc>",                            1,      #-- item.1.3
+  "TREBLE",                   "",                                             2,      #-- group 2
+    "<~treble.item>",       "<~treble.desc>",                                   0       #-- item.2.1
 
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
+
+##
+# Alert Window - Warning about treble support Selection
+#
+if prop("checkbox1.prop","item.2.1")=="1" then
+  alert( "<~treble.attention>", "<~treble.attentiondesc>");
+endif;
+## endif - checkbox1.prop
 
 
 ##
@@ -534,15 +561,10 @@ selectbox(
   #------------------+-----------------------------------------------------------+---------------#
 
   "<~compress.title>",      "",                                               2,      #-- Group 1. key = "selected.1"
-    "<~lz4.item>",            "<~lz4.desc>",                                    1,      #-- selected.1 = 2
-    "<~gzip.item>",           "<~gzip.desc>",                                   0       #-- selected.1 = 1
+    "<~lz4.item>",            "<~lz4.desc>",                                    1,      #-- selected.1 = 1
+    "<~gzip.item>",           "<~gzip.desc>",                                   0       #-- selected.1 = 2
 	  #--------[ Initial Value = 0: Unselected, 1: Selected, 2: Group Item, 3: Not Visible ]---------#
 );
-
-endif;
-## endif prop("window1.prop","selected.1")!="3"
-
-
 
 
 # Installation UI
